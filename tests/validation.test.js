@@ -35,7 +35,19 @@ describe('validate()', () => {
 
     const good = validate({ body: 'The lab is open until 6pm today.' }, postSchema);
     expect(good.ok).toBe(true);
-    expect(good.data.visibility).toBe('public');
+    expect(good.data.visibility).toBe('campus');
+    expect(validate({ body: 'Campus note.', visibility: 'public' }, postSchema).ok).toBe(false);
+    expect(validate({ body: 'Campus note.', visibility: 'campus' }, postSchema).ok).toBe(true);
+
+    const community = validate(
+      {
+        body: 'A note for this study group.',
+        community_id: '00000000-0000-4000-8000-000000000001',
+        visibility: 'community',
+      },
+      postSchema,
+    );
+    expect(community.ok).toBe(true);
   });
 
   it('trims text, collapses whitespace and strips control characters', () => {

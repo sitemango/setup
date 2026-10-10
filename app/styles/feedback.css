@@ -53,9 +53,9 @@
 
   .word-loader__track {
     display: block;
-    /* The source runs this on a 4s cycle with a 2% overshoot on every stop,
-       which is what keeps the words from stuttering into place. */
-    animation: campus-words 4s infinite;
+    /* Give each loading word a calmer hold while retaining the small overshoot
+       that keeps it from stuttering into place. */
+    animation: campus-words 6s infinite;
   }
 
   .word-loader__word {

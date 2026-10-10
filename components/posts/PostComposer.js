@@ -4,7 +4,7 @@ import { useRef, useState } from 'react';
 import { useFormAction } from '@/lib/forms';
 import { createPost } from '@/lib/actions/social';
 import { LIMITS } from '@/lib/constants';
-import { Button, Field, IdentityMark, Input, Notice, Select, Textarea } from '@/components/ui';
+import { Button, Field, IdentityMark, Input, Notice, Textarea } from '@/components/ui';
 import { GifPicker } from '@/components/media/GifPicker';
 import { Icon } from '@/components/ui/icons';
 import { cn } from '@/lib/utils';
@@ -64,6 +64,8 @@ export function PostComposer({ communityId = null, defaultKind = 'post', compact
         if (communityId) {
           data.set('community_id', communityId);
           data.set('visibility', 'community');
+        } else {
+          data.set('visibility', 'campus');
         }
         run(data);
       }}
@@ -186,17 +188,6 @@ export function PostComposer({ communityId = null, defaultKind = 'post', compact
             <div className="mt-3 flex flex-wrap items-center justify-between gap-3 border-t border-line pt-3">
               <div className="flex flex-wrap items-center gap-2">
                 <GifPicker value={gif} onPick={setGif} onRemove={() => setGif(null)} />
-                {!communityId ? (
-                  <Select
-                    name="visibility"
-                    defaultValue="public"
-                    className="h-8 w-32 py-0 text-2xs"
-                    aria-label="Who can see this"
-                  >
-                    <option value="public">Everyone</option>
-                    <option value="campus">Campus only</option>
-                  </Select>
-                ) : null}
               </div>
               <Button type="submit" tone="accent" size="lg" icon="send" loading={pending} disabled={!canSubmit}>
                 {pending ? 'Posting…' : isPoll ? 'Publish poll' : kind === 'discussion' ? 'Start discussion' : 'Post'}
