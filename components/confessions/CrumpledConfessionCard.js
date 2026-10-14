@@ -7,7 +7,7 @@ import { ReportDialog } from '@/components/social/ReportDialog';
 /** A lightweight crumpled-paper card. Creases are CSS-only so the feed never
  * creates a WebGL context or physics world per confession. */
 export function CrumpledConfessionCard({ item, number }) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
   return (
     <Card as="article" className={`confession-paper crumpled-page p-5 ${open ? 'is-unfolded' : 'is-crumpled'}`}>
       <span className="paper-crease paper-crease-a" aria-hidden="true" />

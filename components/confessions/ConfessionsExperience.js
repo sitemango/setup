@@ -28,7 +28,7 @@ export function ConfessionsExperience({ initialItems, initialCursor, quota }) {
       </form>
       <PaperToss active={success} content={tossedContent} onComplete={complete}/>
     </Card>
-    <section aria-labelledby="confession-feed-title"><h2 id="confession-feed-title" className="mb-3 text-lg font-semibold">Crumpled confessions</h2>
+    <section aria-labelledby="confession-feed-title"><div className="mb-3"><h2 id="confession-feed-title" className="text-lg font-semibold">Recently unfolded</h2><p className="mt-1 text-sm text-muted">Choose a crumpled page to unfold and read it.</p></div>
       {!items.length?<EmptyState title="No confessions yet" description="Published confessions will appear here after moderation."/>:<div className="grid gap-4 sm:grid-cols-2">{items.map((item,index)=><CrumpledConfessionCard key={item.id} item={item} number={items.length-index}/>)}</div>}
       <div className="mt-5 flex justify-center">{cursor?<Button variant="secondary" onClick={more} loading={pending}>Unfold more</Button>:items.length?<p className="text-sm text-muted">You are all caught up.</p>:null}</div>
     </section>
