@@ -3,6 +3,7 @@ import './globals.css';
 import localFont from 'next/font/local';
 import { PLATFORM } from '@/lib/constants';
 import { readTheme } from '@/lib/theme';
+import { SlideOverTransition } from '@/components/layout/SlideOverTransition';
 
 /* The Campus+ After Dark typefaces, self-hosted from the reference
    repository's assets (aminotkartik/loginpage). They are loaded once, here,
@@ -79,6 +80,7 @@ export default async function RootLayout({ children }) {
     <html lang="en" data-theme={theme} suppressHydrationWarning>
       <body className={`${displayFont.variable} ${microFont.variable} min-h-dvh bg-canvas text-ink antialiased`}>
         {children}
+        <SlideOverTransition />
       </body>
     </html>
   );

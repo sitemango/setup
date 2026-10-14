@@ -752,3 +752,23 @@
 .user-text a {
   text-underline-offset: 2px;
 }
+
+/* Random Confessions: tactile paper without compromising either theme. */
+.confession-composer { position: relative; background: color-mix(in srgb, var(--surface) 92%, var(--accent) 8%); }
+.confession-paper { position: relative; transform: rotate(-.2deg); background: color-mix(in srgb, var(--surface) 94%, #eadfb8 6%); box-shadow: var(--shadow-card); }
+.confession-paper:nth-child(even) { transform: rotate(.25deg); }
+.paper-toss { position:absolute; inset:auto 0 0; height:190px; pointer-events:none; overflow:hidden; z-index:2; }
+@media (prefers-reduced-motion: reduce) { .confession-paper { transform:none; } }
+
+/* MIT Interlude slide-over adaptation: outgoing still steps into the dark while the ready page rises. */
+.route-old-page { position:fixed; inset:0; z-index:80; overflow:hidden; background:var(--canvas); pointer-events:none; transform-origin:50% 50%; contain:paint; }
+.route-old-page::after { content:''; position:absolute; inset:0; background:#020617; opacity:0; animation:route-dim .7s cubic-bezier(.76,0,.24,1) forwards; }
+.route-old-forward { animation:route-step-back .7s cubic-bezier(.76,0,.24,1) forwards; clip-path:inset(0); }
+.route-old-back { animation:route-slide-away .7s cubic-bezier(.76,0,.24,1) forwards; }
+.route-wait-indicator { position:fixed; z-index:100; width:18px; height:18px; border:2px solid var(--line); border-top-color:var(--accent); border-radius:50%; left:var(--pointer-x,50%); top:var(--pointer-y,50%); opacity:0; pointer-events:none; }
+.route-waiting .route-wait-indicator { opacity:1; animation:spin .7s linear infinite; }
+@keyframes route-step-back { to { transform:scale(.94); clip-path:inset(0 0 100%); } }
+@keyframes route-slide-away { to { transform:translateY(100vh); } }
+@keyframes route-dim { to { opacity:.48; } }
+@keyframes spin { to { rotate:360deg; } }
+@media (prefers-reduced-motion:reduce) { .route-old-page,.route-wait-indicator { display:none!important; } }

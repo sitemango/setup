@@ -107,7 +107,7 @@ async function auditRls(client) {
 
   // Internal bookkeeping tables are intentionally deny-all for clients: they are
   // reached only through SECURITY DEFINER functions.
-  const denyAllByDesign = new Set(['rate_limits']);
+  const denyAllByDesign = new Set(['rate_limits', 'confessions', 'confession_identities', 'confession_daily_quotas']);
   const noPolicies = tables.filter((t) => !byTable.has(t.name) && !denyAllByDesign.has(t.name));
   const unexpectedDenyAll = tables.filter((t) => !byTable.has(t.name) && denyAllByDesign.has(t.name));
   if (noPolicies.length) {

@@ -37,6 +37,7 @@ export default async function AppLayout({ children }) {
   }
 
   const createItems = [
+    ...(can(actor, 'submit_confessions') ? [{ href: '/confessions', label: 'Anonymous confession', icon: 'comment' }] : []),
     ...(can(actor, 'create_posts')
       ? [
           { href: '/home', label: 'Post or poll', icon: 'comment' },
@@ -66,6 +67,7 @@ export default async function AppLayout({ children }) {
   const canModerate = can(actor, 'review_reports');
   const canAdmin = can(actor, 'view_audit_logs') || can(actor, 'manage_platform_settings');
   const paletteActions = [
+    { section: 'Navigation', label: 'Random Confessions', href: '/confessions', icon: 'comment' },
     { section: 'Navigation', label: 'Home', href: '/home', icon: 'home' },
     { section: 'Navigation', label: 'Explore', href: '/explore', icon: 'search' },
     { section: 'Navigation', label: 'Messages', href: '/chat', icon: 'chat' },

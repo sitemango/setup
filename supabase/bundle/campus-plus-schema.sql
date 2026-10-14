@@ -30,7 +30,7 @@
 --   that already has the schema is refused by Postgres rather than half-applied.
 --   Take a database backup from the dashboard before the first run.
 --
--- Contents (24 files):
+-- Contents (25 files):
 --   01  20261005000001_001_extensions_and_enums.sql  (117 lines)
 --   02  20261005000002_002_identity_roles.sql  (589 lines)
 --   03  20261005000003_003_blocks.sql  (143 lines)
@@ -55,9 +55,10 @@
 --   22  20261005000022_022_random_views_invoker_fix.sql  (69 lines)
 --   23  20261005000023_023_random_chat_flag_retired.sql  (26 lines)
 --   24  20261005000024_024_study_partners_and_discovery.sql  (469 lines)
+--   25  20261014000025_025_random_confessions.sql  (136 lines)
 
 -- ==========================================================================
--- FILE 01/24  20261005000001_001_extensions_and_enums.sql
+-- FILE 01/25  20261005000001_001_extensions_and_enums.sql
 -- ==========================================================================
 
 -- Campus+ migration 001 — extensions and enums
@@ -178,7 +179,7 @@ comment on function public.touch_updated_at() is
   'BEFORE UPDATE trigger that stamps updated_at. Attached to every mutable table.';
 
 -- ==========================================================================
--- FILE 02/24  20261005000002_002_identity_roles.sql
+-- FILE 02/25  20261005000002_002_identity_roles.sql
 -- ==========================================================================
 
 -- Campus+ migration 002 — identity roles
@@ -770,7 +771,7 @@ create trigger user_roles_no_escalation
 -- very first version of the view.
 
 -- ==========================================================================
--- FILE 03/24  20261005000003_003_blocks.sql
+-- FILE 03/25  20261005000003_003_blocks.sql
 -- ==========================================================================
 
 -- Campus+ migration 003 — blocks
@@ -917,7 +918,7 @@ comment on view public.public_profiles is
   'Public projection of profiles. Institutional email, auth ids and moderation state are structurally absent.';
 
 -- ==========================================================================
--- FILE 04/24  20261005000004_004_communities.sql
+-- FILE 04/25  20261005000004_004_communities.sql
 -- ==========================================================================
 
 -- Campus+ migration 004 — communities
@@ -1324,7 +1325,7 @@ create policy community_join_requests_cancel on public.community_join_requests
   for delete to authenticated using (user_id = public.current_profile_id());
 
 -- ==========================================================================
--- FILE 05/24  20261005000005_005_social.sql
+-- FILE 05/25  20261005000005_005_social.sql
 -- ==========================================================================
 
 -- Campus+ migration 005 — social
@@ -1947,7 +1948,7 @@ comment on function public.record_mentions(text, uuid, text[]) is
   'Records @mentions for a post/comment/message. Blocks and inactive accounts are filtered server-side.';
 
 -- ==========================================================================
--- FILE 06/24  20261005000006_006_moderation_core.sql
+-- FILE 06/25  20261005000006_006_moderation_core.sql
 -- ==========================================================================
 
 -- Campus+ migration 006 — moderation core
@@ -2422,7 +2423,7 @@ create trigger notifications_guard_update
   for each row execute function public.guard_notification_update();
 
 -- ==========================================================================
--- FILE 07/24  20261005000007_007_messaging.sql
+-- FILE 07/25  20261005000007_007_messaging.sql
 -- ==========================================================================
 
 -- Campus+ migration 007 — messaging
@@ -3011,7 +3012,7 @@ create policy message_reads_update_self on public.message_reads
   with check (user_id = public.current_profile_id());
 
 -- ==========================================================================
--- FILE 08/24  20261005000008_008_marketplace.sql
+-- FILE 08/25  20261005000008_008_marketplace.sql
 -- ==========================================================================
 
 -- Campus+ migration 008 — marketplace
@@ -3533,7 +3534,7 @@ create policy ratings_delete_own on public.ratings
   for delete to authenticated using (rater_id = public.current_profile_id());
 
 -- ==========================================================================
--- FILE 09/24  20261005000009_009_campus.sql
+-- FILE 09/25  20261005000009_009_campus.sql
 -- ==========================================================================
 
 -- Campus+ migration 009 — campus
@@ -4567,7 +4568,7 @@ create policy user_achievements_select on public.user_achievements
 -- Awarded rows are written by evaluate_achievements() only.
 
 -- ==========================================================================
--- FILE 10/24  20261005000010_010_random.sql
+-- FILE 10/25  20261005000010_010_random.sql
 -- ==========================================================================
 
 -- Campus+ migration 010 — random
@@ -5219,7 +5220,7 @@ comment on function public.sweep_random_state() is
   'Callable by any authenticated user (it only expires stale rows) and by the scheduled maintenance script.';
 
 -- ==========================================================================
--- FILE 11/24  20261005000011_011_platform.sql
+-- FILE 11/25  20261005000011_011_platform.sql
 -- ==========================================================================
 
 -- Campus+ migration 011 — platform
@@ -5959,7 +5960,7 @@ create policy feature_flags_manage on public.feature_flags
 -- rate_limits: intentionally no policies. Only the definer function touches it.
 
 -- ==========================================================================
--- FILE 12/24  20261005000012_012_auth_hooks.sql
+-- FILE 12/25  20261005000012_012_auth_hooks.sql
 -- ==========================================================================
 
 -- Campus+ migration 012 — auth hooks
@@ -6416,7 +6417,7 @@ create policy reserved_usernames_manage on public.reserved_usernames
   with check (public.has_permission('manage_platform_settings'));
 
 -- ==========================================================================
--- FILE 13/24  20261005000013_013_reference_data.sql
+-- FILE 13/25  20261005000013_013_reference_data.sql
 -- ==========================================================================
 
 -- Campus+ migration 013 — reference data
@@ -6690,7 +6691,7 @@ insert into public.platform_settings (key, value, description, category, is_publ
 on conflict (key) do nothing;
 
 -- ==========================================================================
--- FILE 14/24  20261005000014_014_realtime_and_grants.sql
+-- FILE 14/25  20261005000014_014_realtime_and_grants.sql
 -- ==========================================================================
 
 -- Campus+ migration 014 — realtime and grants
@@ -6903,7 +6904,7 @@ end;
 $$;
 
 -- ==========================================================================
--- FILE 15/24  20261005000015_015_column_privileges.sql
+-- FILE 15/25  20261005000015_015_column_privileges.sql
 -- ==========================================================================
 
 -- Campus+ migration 015 — column privileges
@@ -7131,7 +7132,7 @@ revoke update on public.reserved_usernames from authenticated, anon;
 grant all on all tables in schema public to service_role;
 
 -- ==========================================================================
--- FILE 16/24  20261005000016_016_staff_actions.sql
+-- FILE 16/25  20261005000016_016_staff_actions.sql
 -- ==========================================================================
 
 -- Campus+ migration 016 — staff actions
@@ -7838,7 +7839,7 @@ comment on function public.admin_set_platform_setting(text, jsonb) is
   'Admin/Super Admin entry point for platform configuration. Validates the value per key and writes an audit entry.';
 
 -- ==========================================================================
--- FILE 17/24  20261005000017_017_marketplace_hardening.sql
+-- FILE 17/25  20261005000017_017_marketplace_hardening.sql
 -- ==========================================================================
 
 -- Campus+ migration 017 — marketplace hardening
@@ -8036,7 +8037,7 @@ comment on view public.listing_interests_view is
   'Students who expressed interest in a listing. Visible only to the seller and staff (security_invoker + base-table RLS).';
 
 -- ==========================================================================
--- FILE 18/24  20261005000018_018_function_grants.sql
+-- FILE 18/25  20261005000018_018_function_grants.sql
 -- ==========================================================================
 
 -- =============================================================================
@@ -8151,7 +8152,7 @@ grant select on public.random_session_view to authenticated;
 grant select on public.random_messages_view to authenticated;
 
 -- ==========================================================================
--- FILE 19/24  20261005000019_019_staff_visibility.sql
+-- FILE 19/25  20261005000019_019_staff_visibility.sql
 -- ==========================================================================
 
 -- =============================================================================
@@ -8227,7 +8228,7 @@ comment on view public.public_profiles is
 grant select on public.public_profiles to authenticated;
 
 -- ==========================================================================
--- FILE 20/24  20261005000020_020_chat_inbox.sql
+-- FILE 20/25  20261005000020_020_chat_inbox.sql
 -- ==========================================================================
 
 -- =============================================================================
@@ -8321,7 +8322,7 @@ comment on function public.conversation_inbox(integer) is
   'Inbox read model (RLS-scoped): newest message plus the unread count within the newest 30 messages per visible conversation.';
 
 -- ==========================================================================
--- FILE 21/24  20261005000021_021_marketplace_and_security_fixes.sql
+-- FILE 21/25  20261005000021_021_marketplace_and_security_fixes.sql
 -- ==========================================================================
 
 -- Campus+ migration 021 — marketplace lifecycle fixes + security hardening
@@ -8659,7 +8660,7 @@ alter function public.content_moderation_permission(text) set search_path = publ
 -- correct fix is not to add it.
 
 -- ==========================================================================
--- FILE 22/24  20261005000022_022_random_views_invoker_fix.sql
+-- FILE 22/25  20261005000022_022_random_views_invoker_fix.sql
 -- ==========================================================================
 
 -- Campus+ migration 022 — restore random_session_view / random_messages_view
@@ -8732,7 +8733,7 @@ comment on view public.random_messages_view is
   'policy either.';
 
 -- ==========================================================================
--- FILE 23/24  20261005000023_023_random_chat_flag_retired.sql
+-- FILE 23/25  20261005000023_023_random_chat_flag_retired.sql
 -- ==========================================================================
 
 -- 023: Random Chat removed from the UI — reflect it in the feature flag.
@@ -8762,7 +8763,7 @@ set
 where key = 'random_chat';
 
 -- ==========================================================================
--- FILE 24/24  20261005000024_024_study_partners_and_discovery.sql
+-- FILE 24/25  20261005000024_024_study_partners_and_discovery.sql
 -- ==========================================================================
 
 -- Campus+ migration 024 — study partners and discovery
@@ -9233,6 +9234,146 @@ $$;
 
 comment on function public.global_search(text, text, integer, integer) is
   'Conventional PostgreSQL search across public entities. SECURITY INVOKER so RLS enforces blocks, visibility and privacy.';
+
+-- ==========================================================================
+-- FILE 25/25  20261014000025_025_random_confessions.sql
+-- ==========================================================================
+
+-- Campus+ 025 — Random Confessions
+-- Anonymous public content and its identity mapping are deliberately separate.
+
+alter type public.report_target_type add value if not exists 'confession';
+
+insert into public.permissions (key, label, description, group_name) values
+ ('submit_confessions','Submit confessions','Submit anonymous confessions subject to the daily quota.','Social'),
+ ('moderate_confessions','Moderate confessions','Review, publish, hide, or reject confession content without seeing author identity.','Moderation'),
+ ('reveal_confession_identity','Reveal confession identity','Sensitive safety authority: reveal a confession author with a required, audited reason.','Administration')
+on conflict (key) do update set label=excluded.label, description=excluded.description, group_name=excluded.group_name;
+
+insert into public.role_permissions(role_key, permission_key)
+select r.key, 'submit_confessions' from public.roles r where r.key in ('student','moderator','admin','super_admin') on conflict do nothing;
+insert into public.role_permissions(role_key, permission_key)
+select r.key, 'moderate_confessions' from public.roles r where r.key in ('moderator','admin','super_admin') on conflict do nothing;
+insert into public.role_permissions(role_key, permission_key)
+select r.key, 'reveal_confession_identity' from public.roles r where r.key in ('admin','super_admin') on conflict do nothing;
+
+insert into public.feature_flags(key,label,description,group_name,enabled)
+values ('random_confessions','Random Confessions','Anonymous, asynchronous confession feed.','social',true)
+on conflict(key) do update set label=excluded.label, description=excluded.description;
+insert into public.platform_settings(key,value,description,is_public)
+values ('confession_daily_limit','2'::jsonb,'Maximum accepted submissions per profile per Asia/Kolkata calendar day.',true)
+on conflict(key) do nothing;
+
+create table public.confessions (
+ id uuid primary key default gen_random_uuid(),
+ content text not null check (length(btrim(content)) between 10 and 1000 and content=btrim(content)),
+ status text not null default 'pending' check(status in ('pending','published','hidden','rejected','removed')),
+ submitted_at timestamptz not null default clock_timestamp(),
+ published_at timestamptz,
+ moderated_at timestamptz,
+ moderation_note text check(moderation_note is null or length(moderation_note)<=1000),
+ constraint confession_publication_time check ((status='published' and published_at is not null) or status<>'published')
+);
+create index confessions_public_cursor_idx on public.confessions(published_at desc,id desc) where status='published';
+create index confessions_moderation_idx on public.confessions(status,submitted_at asc);
+
+create table public.confession_identities (
+ confession_id uuid primary key references public.confessions(id) on delete restrict,
+ profile_id uuid not null references public.profiles(id) on delete restrict,
+ created_at timestamptz not null default clock_timestamp()
+);
+create index confession_identities_profile_idx on public.confession_identities(profile_id,created_at desc);
+
+-- A durable ledger means deletion or later moderation can never refund quota.
+create table public.confession_daily_quotas (
+ profile_id uuid not null references public.profiles(id) on delete restrict,
+ ist_day date not null,
+ accepted_count integer not null check(accepted_count between 0 and 100),
+ updated_at timestamptz not null default clock_timestamp(),
+ primary key(profile_id,ist_day)
+);
+
+alter table public.confessions enable row level security;
+alter table public.confession_identities enable row level security;
+alter table public.confession_daily_quotas enable row level security;
+-- No direct policies. All access is through narrow RPCs; this also prevents column-level identity leaks.
+revoke all on public.confessions, public.confession_identities, public.confession_daily_quotas from anon, authenticated, public;
+grant all on public.confessions, public.confession_identities, public.confession_daily_quotas to service_role;
+
+create or replace function public.submit_confession(p_content text)
+returns jsonb language plpgsql security definer set search_path=''
+as $$
+declare
+ v_profile uuid := public.current_profile_id(); v_day date := (clock_timestamp() at time zone 'Asia/Kolkata')::date;
+ v_limit integer; v_count integer; v_id uuid;
+begin
+ if v_profile is null or not public.has_permission('submit_confessions') then raise exception 'Not permitted.' using errcode='42501'; end if;
+ if p_content is null or length(btrim(p_content)) not between 10 and 1000 then raise exception 'A confession must be between 10 and 1000 characters.' using errcode='22023'; end if;
+ v_limit := greatest(1,least(public.setting_int('confession_daily_limit',2),20));
+ insert into public.confession_daily_quotas(profile_id,ist_day,accepted_count) values(v_profile,v_day,0)
+ on conflict(profile_id,ist_day) do nothing;
+ select accepted_count into v_count from public.confession_daily_quotas where profile_id=v_profile and ist_day=v_day for update;
+ if v_count >= v_limit then
+  return jsonb_build_object('ok',false,'code','daily_quota_exhausted','remaining',0,'limit',v_limit,'ist_day',v_day);
+ end if;
+ insert into public.confessions(content) values(btrim(p_content)) returning id into v_id;
+ insert into public.confession_identities(confession_id,profile_id) values(v_id,v_profile);
+ update public.confession_daily_quotas set accepted_count=accepted_count+1,updated_at=clock_timestamp() where profile_id=v_profile and ist_day=v_day returning accepted_count into v_count;
+ return jsonb_build_object('ok',true,'id',v_id,'status','pending','remaining',v_limit-v_count,'limit',v_limit,'ist_day',v_day);
+end $$;
+
+create or replace function public.confession_quota_status()
+returns jsonb language plpgsql stable security definer set search_path=''
+as $$ declare v_profile uuid:=public.current_profile_id(); v_day date:=(clock_timestamp() at time zone 'Asia/Kolkata')::date; v_limit integer; v_count integer;
+begin
+ if v_profile is null then raise exception 'Not permitted.' using errcode='42501'; end if;
+ v_limit:=greatest(1,least(public.setting_int('confession_daily_limit',2),20));
+ select accepted_count into v_count from public.confession_daily_quotas where profile_id=v_profile and ist_day=v_day;
+ return jsonb_build_object('limit',v_limit,'used',coalesce(v_count,0),'remaining',greatest(v_limit-coalesce(v_count,0),0),'ist_day',v_day);
+end $$;
+
+create or replace function public.browse_confessions(p_cursor_published_at timestamptz default null,p_cursor_id uuid default null,p_limit integer default 12)
+returns table(id uuid,content text,published_at timestamptz) language sql stable security definer set search_path=''
+as $$
+ select c.id,c.content,c.published_at from public.confessions c
+ where c.status='published' and (p_cursor_published_at is null or (c.published_at,c.id)<(p_cursor_published_at,p_cursor_id))
+ order by c.published_at desc,c.id desc limit greatest(1,least(coalesce(p_limit,12),24));
+$$;
+
+create or replace function public.list_confessions_for_moderation(p_limit integer default 50)
+returns table(id uuid,content text,status text,submitted_at timestamptz,published_at timestamptz) language plpgsql stable security definer set search_path=''
+as $$ begin
+ if not public.has_permission('moderate_confessions') then raise exception 'Not permitted.' using errcode='42501'; end if;
+ return query select c.id,c.content,c.status,c.submitted_at,c.published_at from public.confessions c order by (c.status='pending') desc,c.submitted_at asc limit least(greatest(p_limit,1),100);
+end $$;
+
+create or replace function public.moderate_confession(p_id uuid,p_status text,p_note text default null)
+returns jsonb language plpgsql security definer set search_path=''
+as $$ declare v_old text; v_actor uuid:=public.current_profile_id();
+begin
+ if not public.has_permission('moderate_confessions') then raise exception 'Not permitted.' using errcode='42501'; end if;
+ if p_status not in ('published','hidden','rejected','removed') or length(coalesce(p_note,''))>1000 then raise exception 'Invalid moderation request.' using errcode='22023'; end if;
+ select status into v_old from public.confessions where id=p_id for update; if v_old is null then raise exception 'Confession not found.' using errcode='22023'; end if;
+ update public.confessions set status=p_status,published_at=case when p_status='published' then coalesce(published_at,clock_timestamp()) else published_at end,moderated_at=clock_timestamp(),moderation_note=nullif(btrim(p_note),'') where id=p_id;
+ insert into public.moderation_actions(moderator_id,action,target_type,target_id,previous_status,new_status,note) values(v_actor,'moderate_confession','confession',p_id,v_old,p_status,nullif(btrim(p_note),''));
+ return jsonb_build_object('ok',true,'id',p_id,'status',p_status);
+end $$;
+
+create or replace function public.reveal_confession_identity(p_id uuid,p_reason text)
+returns table(profile_id uuid) language plpgsql security definer set search_path=''
+as $$ declare v_actor uuid:=public.current_profile_id();
+begin
+ if not public.has_permission('reveal_confession_identity') then raise exception 'Not permitted.' using errcode='42501'; end if;
+ if p_reason is null or length(btrim(p_reason)) not between 20 and 1000 then raise exception 'A specific investigation reason of at least 20 characters is required.' using errcode='22023'; end if;
+ insert into public.audit_logs(actor_user_id,action,target_type,target_id,metadata,visibility) values(v_actor,'reveal_confession_identity','confession',p_id,jsonb_build_object('reason',btrim(p_reason)),'admin');
+ return query select ci.profile_id from public.confession_identities ci where ci.confession_id=p_id;
+end $$;
+
+revoke all on function public.submit_confession(text),public.confession_quota_status(),public.browse_confessions(timestamptz,uuid,integer),public.list_confessions_for_moderation(integer),public.moderate_confession(uuid,text,text),public.reveal_confession_identity(uuid,text) from public,anon;
+grant execute on function public.submit_confession(text),public.confession_quota_status(),public.browse_confessions(timestamptz,uuid,integer),public.list_confessions_for_moderation(integer),public.moderate_confession(uuid,text,text),public.reveal_confession_identity(uuid,text) to authenticated,service_role;
+
+-- Preserve the retirement boundary for the old paired Random Chat RPCs.
+revoke execute on function public.can_access_random_session(uuid,uuid),public.end_random_session(uuid,text),public.join_random_queue(),public.leave_random_queue(),public.random_other_participant(uuid,uuid),public.random_queue_state(),public.random_session_state(uuid),public.report_random_session(uuid,text,text),public.send_random_message(uuid,text,jsonb) from public,anon,authenticated;
 
 -- ==========================================================================
 -- VERIFICATION — reports whether the install is complete (no changes made)

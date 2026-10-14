@@ -349,58 +349,8 @@ end;
 $$;
 
 -- ---------------------------------------------------------------------------
--- 13. Random match and 14. Random privacy
--- ---------------------------------------------------------------------------
--- Start from an empty queue so the pairing in this flow is deterministic. The
--- operator clears stale waiting entries exactly as sweep_random_state() would.
-reset role;
-select set_config('request.jwt.claim.role', 'service_role', false);
-select set_config('request.jwt.claim.sub', '', false);
-delete from public.random_queue;
-reset role;
+-- 13–14. Retired Random Chat is covered by 05_random_anonymity.sql.
 
-set role authenticated;
-select set_config('request.jwt.claim.role', 'authenticated', false);
-select set_config('request.jwt.claim.sub', '91000000-0000-4000-a000-000000000001', false);
-
-do $$
-declare
-  v jsonb;
-begin
-  v := public.join_random_queue();
-  perform public.test_assert(v->>'status' = 'waiting', '13. the first student waits');
-end;
-$$;
-
-select set_config('request.jwt.claim.sub', '91000000-0000-4000-a000-000000000002', false);
-
-do $$
-declare
-  v jsonb;
-  v_session uuid;
-begin
-  v := public.join_random_queue();
-  perform public.test_assert(v->>'status' = 'matched', '13. the second student is matched');
-  v_session := (v->>'session_id')::uuid;
-
-  perform public.test_assert(
-    (select count(*) from public.random_session_view where id = v_session) = 1,
-    '13. the participant can see the session state'
-  );
-  perform public.test_assert(
-    (select count(*) from public.random_sessions) = 0,
-    '14. the identity mapping is unreadable by participants'
-  );
-  perform public.test_assert(
-    (select count(*) from public.random_session_participants) = 1,
-    '14. only my own participant row is visible'
-  );
-
-  delete from public.marketplace_interactions where false;  -- no-op: keep this block read-only otherwise
-end;
-$$;
-
--- ---------------------------------------------------------------------------
 -- 15. Block, 16. report, 17. notification
 -- ---------------------------------------------------------------------------
 select set_config('request.jwt.claim.sub', '91000000-0000-4000-a000-000000000001', false);
