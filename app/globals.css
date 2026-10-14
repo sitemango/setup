@@ -772,3 +772,4 @@
 @keyframes route-dim { to { opacity:.48; } }
 @keyframes spin { to { rotate:360deg; } }
 @media (prefers-reduced-motion:reduce) { .route-old-page,.route-wait-indicator { display:none!important; } }
+.paper-toss { background:radial-gradient(circle at 50% 60%,color-mix(in srgb,var(--accent) 12%,transparent),transparent 68%); }
