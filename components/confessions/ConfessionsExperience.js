@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, useTransition } from 'react';
 import { submitConfession, loadMoreConfessions } from '@/lib/actions/confessions';
 import { Button, Card, EmptyState, Notice, Textarea } from '@/components/ui';
-import { ReportDialog } from '@/components/social/ReportDialog';
+import { CrumpledConfessionCard } from './CrumpledConfessionCard';
 import { PaperToss } from './PaperToss';
 
 const STORE='campus-confessions-state-v1';
@@ -28,8 +28,8 @@ export function ConfessionsExperience({ initialItems, initialCursor, quota }) {
       </form>
       <PaperToss active={success} content={tossedContent} onComplete={complete}/>
     </Card>
-    <section aria-labelledby="confession-feed-title"><h2 id="confession-feed-title" className="mb-3 text-lg font-semibold">Recently unfolded</h2>
-      {!items.length?<EmptyState title="No confessions yet" description="Published confessions will appear here after moderation."/>:<div className="grid gap-4 sm:grid-cols-2">{items.map((item,index)=><Card key={item.id} as="article" className="confession-paper p-5"><p className="whitespace-pre-wrap leading-relaxed">{item.content}</p><footer className="mt-5 flex items-center justify-between text-2xs text-muted"><time dateTime={item.published_at}>Confession #{items.length-index}</time><ReportDialog targetType="confession" targetRef={item.id} label="confession"/></footer></Card>)}</div>}
+    <section aria-labelledby="confession-feed-title"><h2 id="confession-feed-title" className="mb-3 text-lg font-semibold">Crumpled confessions</h2>
+      {!items.length?<EmptyState title="No confessions yet" description="Published confessions will appear here after moderation."/>:<div className="grid gap-4 sm:grid-cols-2">{items.map((item,index)=><CrumpledConfessionCard key={item.id} item={item} number={items.length-index}/>)}</div>}
       <div className="mt-5 flex justify-center">{cursor?<Button variant="secondary" onClick={more} loading={pending}>Unfold more</Button>:items.length?<p className="text-sm text-muted">You are all caught up.</p>:null}</div>
     </section>
   </div>;
