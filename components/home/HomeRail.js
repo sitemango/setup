@@ -21,9 +21,15 @@ import { formatCalendarBadge, formatDate, formatTime } from '@/lib/utils';
  */
 export function HomeRail({ events = [], notices = [], trending = [], marketplace = [], quickLinks = [] }) {
   // The busiest entries are ranked here by the counters already on the page, so
-  // the bars have a shared scale to be honest against.
-  const busiest = trending.map((post) => (post.reaction_count || 0) + (post.comment_count || 0));
-  const ceiling = Math.max(1, ...busiest);
+  // the bars have a shared scale to be honest against. Normalize backend values
+  // before adding them (counts may arrive as numeric strings), and keep empty or
+  // invalid counters at zero.
+  const countValue = (value) => {
+    const count = Number(value);
+    return Number.isFinite(count) && count > 0 ? count : 0;
+  };
+  const busiest = trending.map((post) => countValue(post.reaction_count) + countValue(post.comment_count));
+  const ceiling = Math.max(0, ...busiest);
 
   return (
     <aside className="home-body__rail" aria-label="Campus information">
@@ -120,7 +126,10 @@ export function HomeRail({ events = [], notices = [], trending = [], marketplace
         >
           <ol className="rail-activity">
             {trending.map((post, index) => {
-              const score = busiest[index] || 0;
+              const score = busiest[index];
+              const percentage = ceiling > 0
+                ? Math.min(100, Math.max(0, (score / ceiling) * 100))
+                : 0;
               return (
                 <li key={post.id}>
                   <div className="rail-activity__row">
@@ -141,7 +150,7 @@ export function HomeRail({ events = [], notices = [], trending = [], marketplace
                     </span>
                   </div>
                   <span className="rail-activity__bar" aria-hidden="true">
-                    <span style={{ width: `${Math.max(6, Math.round((score / ceiling) * 100))}%` }} />
+                    <span style={{ width: `${percentage}%` }} />
                   </span>
                 </li>
               );
