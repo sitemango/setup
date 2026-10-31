@@ -515,8 +515,9 @@ console.log(
 section('9. the mobile offer, in a browser that can touch');
 //
 // The install card lives below a week of timetable, so on a phone most students never
-// reach it. This section drives the proactive offer in an emulated Android Chrome
-// (touch, coarse pointer, phone viewport) against the production build.
+// reach it. This section drives the saved-copy-gated offer in emulated mobile
+// browsers against the production build. A fresh visit must stay quiet: the student
+// explicitly saves first, and only that durable offline copy unlocks the offer.
 //
 // What is real here: a real Chromium, a real IndexedDB, a real service worker, a real
 // manifest fetch, a real dispatch of a cancelable `beforeinstallprompt`, and the app's
@@ -563,21 +564,22 @@ manualPage.on('pageerror', (error) => manualErrors.push(String(error).slice(0, 1
 await manualPage.goto(`${BASE}/timetable/${FIRST}`, { waitUntil: 'domcontentloaded' });
 await manualPage.waitForTimeout(2600);
 const asked = await offerView(manualPage);
-check('the offer opens itself on a phone, unprompted', asked.dialog && /Add Division .* to your Home Screen/.test(asked.text), asked.offer);
-check('exactly one install surface is on screen', asked.dialogs === 1, `dialogs=${asked.dialogs}`);
-check('the offer explains the home screen, not a design idea', /home screen/i.test(asked.text) && /no signal/i.test(asked.text));
-check('it states the offline state it is standing on', /Offline copy|Nothing saved on this device yet/i.test(asked.text));
-check('it says what this browser can do, and this one cannot', /browser’s menu|no install button to pages/i.test(asked.text) && !/Chrome asks/i.test(asked.text), `path=${asked.installPath}`);
-check('there is a dismissal in the user’s words', asked.buttons.some((label) => /Not now/i.test(label)), asked.buttons.join(' · '));
-check('the manual case is offered steps, never a fake install button', asked.buttons.some((label) => /installation steps/i.test(label)) && !asked.buttons.some((label) => /^Install app$/i.test(label)), asked.buttons.join(' · '));
-check('no button in the offer is inert', asked.disabled.length === 0, asked.disabled.join(' · ') || 'none disabled');
-check('the timetable behind it is intact', asked.rows > 0 && asked.secure, `${asked.rows} rows · secure context: ${asked.secure}`);
+check('a fresh phone visit does not open an unsolicited install sheet', !asked.dialog && asked.offer === 'save-first', asked.offer);
+check('no install dialog competes with the timetable', asked.dialogs === 0, `dialogs=${asked.dialogs}`);
+check('the explicit action asks to save before offering installation', /Save timetable for offline use/i.test(asked.cardButton ?? ''), asked.cardButton);
+check('the fresh page did not download a snapshot behind the student’s back', await manualPage.evaluate(() => !performance.getEntriesByType('resource').some((entry) => new URL(entry.name).pathname.startsWith('/api/timetable/'))));
+check('no button on the card is inert', asked.disabled.length === 0, asked.disabled.join(' · ') || 'none disabled');
+check('the timetable behind the quiet card is intact', asked.rows > 0 && asked.secure, `${asked.rows} rows · secure context: ${asked.secure}`);
 
-// The one action the offer may take on this browser: prepare the copy, then show steps.
-await manualPage.locator('[role="dialog"] button').filter({ hasText: /installation steps/i }).first().click();
+// The explicit action prepares the durable copy, then unlocks the install offer.
+await manualPage.locator('.tt-install__actions .btn').first().click();
 await manualPage.waitForTimeout(4500);
+const savedOffer = await offerView(manualPage);
+check('the explicit save unlocks the saved-copy install offer', savedOffer.dialog && /Offline copy ready/i.test(savedOffer.text) && /installation steps/i.test(savedOffer.text), savedOffer.text.slice(0, 100));
+await manualPage.locator('[role="dialog"] button').filter({ hasText: /installation steps/i }).first().click();
+await manualPage.waitForTimeout(500);
 const guided = await offerView(manualPage);
-check('the offer becomes the steps, in the same dialog', guided.dialog && guided.steps.length >= 2, `${guided.steps.length} steps`);
+check('the offer opens the honest manual steps', guided.dialog && guided.steps.length >= 2, `${guided.steps.length} steps`);
 check('and the copy got saved while it was deciding', /Offline copy ready|saved/i.test((await manualPage.locator('.tt-install').innerText().catch(() => ''))));
 const manualStored = await manualPage.evaluate(
   () =>
@@ -639,9 +641,14 @@ const nativeErrors = [];
 nativePage.on('pageerror', (error) => nativeErrors.push(String(error).slice(0, 160)));
 await nativePage.goto(`${BASE}/timetable/${FIRST}`, { waitUntil: 'domcontentloaded' });
 await nativePage.waitForTimeout(2400);
+const nativeFresh = await offerView(nativePage);
+check('the native-capable fresh visit also waits for a saved copy', !nativeFresh.dialog && nativeFresh.offer === 'save-first', nativeFresh.offer);
+check('nothing has been prompted before a click', nativeFresh.promptCalls === 0, `calls=${nativeFresh.promptCalls}`);
+await nativePage.locator('.tt-install__actions .btn').first().click();
+await nativePage.waitForTimeout(4500);
+check('the explicit native-path save still prepares offline access', /Offline copy ready/i.test((await offerView(nativePage)).text));
 const beforeDispatch = await offerView(nativePage);
-check('nothing has been prompted before a click', beforeDispatch.promptCalls === 0, `calls=${beforeDispatch.promptCalls}`);
-check('the manual offer was up while no event existed', beforeDispatch.dialog && /installation steps/i.test(beforeDispatch.text));
+check('the saved-copy manual offer is up while no event exists', beforeDispatch.dialog && /installation steps/i.test(beforeDispatch.text));
 
 // A real cancelable event, dispatched at the document — exactly what the app sees.
 await nativePage.evaluate(
@@ -755,8 +762,12 @@ const firefoxPage = await firefoxContext.newPage();
 await firefoxPage.goto(`${BASE}/timetable/${SECOND}`, { waitUntil: 'domcontentloaded' });
 await firefoxPage.waitForTimeout(2400);
 const firefoxView = await offerView(firefoxPage);
-check('another mobile browser is offered the steps, not Chrome’s dialog', !/Install app/.test(firefoxView.buttons.join(' ')) && firefoxView.installPath === 'manual', firefoxView.buttons.join(' · '));
-check('and its guide is the one for that platform', firefoxView.dialog && /menu/i.test(firefoxView.text), firefoxView.offer ?? 'open');
+check('another mobile browser also starts quiet and manual', !firefoxView.dialog && firefoxView.offer === 'save-first' && firefoxView.installPath === 'manual', firefoxView.offer);
+await firefoxPage.locator('.tt-install__actions .btn').first().click();
+await firefoxPage.waitForTimeout(4500);
+const firefoxGuided = await offerView(firefoxPage);
+check('another mobile browser is offered the steps, not Chrome’s dialog', !/Install app/.test(firefoxGuided.buttons.join(' ')) && firefoxGuided.installPath === 'manual', firefoxGuided.buttons.join(' · '));
+check('and its guide is the one for that platform', firefoxGuided.dialog && /menu/i.test(firefoxGuided.text), firefoxGuided.offer ?? 'open');
 await firefoxContext.close();
 
 // A narrow window is not a phone. The desktop 412px layout already fits the card in

@@ -355,6 +355,35 @@
     pointer-events: none;
   }
 }
+
+/* The mobile sequence mirrors MOBILE_FADE_AT_MS / MOBILE_FINISH_AT_MS in
+   GalacticIntro.js. It keeps the wordmark, flare and tagline but gets out of
+   the student's way in 1.7 seconds instead of preserving desktop dwell time. */
+@media (max-width: 767px) and (prefers-reduced-motion: no-preference) {
+  .stage {
+    transition-duration: 0.3s;
+  }
+  .stage:not([data-phase='waiting']) .flare {
+    animation: flare 1s ease 0.05s forwards;
+  }
+  .stage:not([data-phase='waiting']) .campus {
+    animation:
+      draw 0.55s cubic-bezier(0.77, 0, 0.175, 1) 0.1s forwards,
+      fill 0.4s ease 0.65s forwards;
+  }
+  .stage:not([data-phase='waiting']) .plus {
+    animation:
+      draw 0.4s cubic-bezier(0.77, 0, 0.175, 1) 0.45s forwards,
+      fill 0.35s ease 0.85s forwards;
+  }
+  .stage:not([data-phase='waiting']) .logo {
+    animation: none;
+  }
+  .stage:not([data-phase='waiting']) .tagline {
+    animation: tagIn 0.35s ease 1s forwards;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .stage {
     transition: none;

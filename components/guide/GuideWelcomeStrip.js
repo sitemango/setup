@@ -16,10 +16,11 @@ import { deviceStorage, GUIDE_SEEN_KEY, markGuideSeen, readGuideSeen, shouldOffe
  * something; this one just stops repeating itself.
  *
  * The flag is read through `useSyncExternalStore`, which is the one correct way to
- * look at `localStorage` from a server-rendered page: the server and the first
- * hydration pass answer "already seen" (so nothing appears where the markup says
- * nothing), and the store's own value takes over as soon as the tree is live. No
- * effect, no setState during one, no flash of an offer nobody asked for.
+ * look at `localStorage` from a server-rendered page. The server and first
+ * hydration pass emit the offer so a new device never inserts it above a painted
+ * feed. A static pre-paint style hides that SSR node on devices whose stored flag
+ * is already set, then the store's value removes it as the tree goes live. No
+ * effect, no setState during one, and no post-paint offer insertion.
  *
  * Storage is treated as an expectation, not a guarantee: private windows and
  * blocked-storage WebViews read back `null`, in which case the strip still offers
@@ -44,9 +45,9 @@ function readSnapshot() {
   return readGuideSeen(deviceStorage());
 }
 
-/** On the server (and during hydration) the strip renders nothing at all. */
+/** Reserve the real offer in SSR; the pre-paint script handles prior dismissal. */
 function readServerSnapshot() {
-  return true;
+  return false;
 }
 
 export function GuideWelcomeStrip() {

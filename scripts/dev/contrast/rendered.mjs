@@ -40,6 +40,10 @@ async function sampleViewport(page, { root = 'body' } = {}) {
     const context = canvas.getContext('2d', { willReadFrequently: true });
     const rgba = (value) => {
       context.clearRect(0, 0, 1, 1);
+      // An unsupported paint value must not inherit the previous sample's
+      // fillStyle. SVG url(#gradient) paints are resolved to their real stops
+      // below before they reach this canvas parser.
+      context.fillStyle = '#00000000';
       context.fillStyle = value;
       context.fillRect(0, 0, 1, 1);
       return [...context.getImageData(0, 0, 1, 1).data].map((channel, i) => i === 3 ? channel / 255 : channel);
@@ -82,10 +86,15 @@ async function sampleViewport(page, { root = 'body' } = {}) {
     const add = (element, text, kind, color, rects, minimum, extraOpacity = 1) => {
       const points = rects.map(clippedRect).filter((rect) => rect.width > 2 && rect.height > 2).flatMap((rect) => visiblePoints(rect, element));
       if (!points.length) return;
-      const fg = rgba(color);
-      if (!fg[3]) return;
+      const foregrounds = (Array.isArray(color) ? color : [color]).map(rgba).filter((fg) => fg[3]);
+      if (!foregrounds.length) return;
+      // A gradient shares one hidden-ink marker and one background capture, but
+      // every stop is a separate foreground sample. This measures the worst
+      // actual stop instead of letting canvas reuse an unrelated prior color.
       element.dataset.contrastHide = String(id++);
-      output.push({ kind, text: text.slice(0, 140), selector: element.tagName.toLowerCase() + (element.className?.baseVal || element.className ? '.' + String(element.className?.baseVal || element.className).trim().replaceAll(' ', '.') : ''), foreground: fg, opacity: opacity(element) * extraOpacity, points, minimum });
+      for (const fg of foregrounds) {
+        output.push({ kind, text: text.slice(0, 140), selector: element.tagName.toLowerCase() + (element.className?.baseVal || element.className ? '.' + String(element.className?.baseVal || element.className).trim().replaceAll(' ', '.') : ''), foreground: fg, opacity: opacity(element) * extraOpacity, points, minimum });
+      }
     };
     const walker = document.createTreeWalker(rootElement, NodeFilter.SHOW_TEXT);
     while (walker.nextNode()) {
@@ -118,7 +127,14 @@ async function sampleViewport(page, { root = 'body' } = {}) {
       if (!shape) continue;
       const paint = getComputedStyle(shape);
       const color = paint.stroke !== 'none' ? paint.stroke : paint.fill;
-      add(svg, svg.parentElement?.getAttribute('aria-label') || svg.className.baseVal || 'Icon', 'icon', color, [svg.getBoundingClientRect()], 3, Number(paint.opacity));
+      let colors = [color];
+      const paintReference = /^url\(\s*['"]?#([^)'"\s]+)['"]?\s*\)/.exec(color);
+      if (paintReference) {
+        const gradient = [...svg.querySelectorAll('linearGradient, radialGradient')].find((item) => item.id === paintReference[1]);
+        const stops = [...(gradient?.querySelectorAll('stop') ?? [])].map((stop) => getComputedStyle(stop).stopColor);
+        if (stops.length) colors = stops;
+      }
+      add(svg, svg.parentElement?.getAttribute('aria-label') || svg.className.baseVal || 'Icon', 'icon', colors, [svg.getBoundingClientRect()], 3, Number(paint.opacity));
     }
     return output;
   }, root);

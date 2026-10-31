@@ -1,0 +1,1768 @@
+{
+  "runs": [
+    {
+      "variant": "no-chrome-backdrop",
+      "run": 1,
+      "selector": ".shell-header__bar,.bottom-dock__bar",
+      "click": {
+        "name": "click",
+        "start": 6358.600000000093,
+        "duration": 280,
+        "input": 67.59999999997672,
+        "processing": 8.900000000023283
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 6.800000000046566,
+          "processing": 1.3000000000465661
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.100000000093132,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "mouseover",
+          "start": 6358.5,
+          "duration": 280,
+          "input": 8.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6358.600000000093,
+          "duration": 280,
+          "input": 49.39999999990687,
+          "processing": 7.900000000023283
+        },
+        {
+          "name": "mousedown",
+          "start": 6358.600000000093,
+          "duration": 280,
+          "input": 57.29999999993015,
+          "processing": 3.5
+        },
+        {
+          "name": "pointerup",
+          "start": 6358.600000000093,
+          "duration": 280,
+          "input": 65.29999999993015,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "mouseup",
+          "start": 6358.600000000093,
+          "duration": 280,
+          "input": 65.39999999990687,
+          "processing": 2.200000000069849
+        },
+        {
+          "name": "click",
+          "start": 6358.600000000093,
+          "duration": 280,
+          "input": 67.59999999997672,
+          "processing": 8.900000000023283
+        }
+      ]
+    },
+    {
+      "variant": "no-chrome-backdrop",
+      "run": 2,
+      "selector": ".shell-header__bar,.bottom-dock__bar",
+      "click": {
+        "name": "click",
+        "start": 6643.900000000023,
+        "duration": 248,
+        "input": 40,
+        "processing": 10.800000000046566
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.099999999976717,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.20000000006985,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 11.300000000046566,
+          "processing": 5.599999999976717
+        },
+        {
+          "name": "mouseover",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 17,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 28.5,
+          "processing": 7.599999999976717
+        },
+        {
+          "name": "mousedown",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 36.09999999997672,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "pointerup",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 39.800000000046566,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "mouseup",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 40,
+          "processing": 0
+        },
+        {
+          "name": "click",
+          "start": 6643.900000000023,
+          "duration": 248,
+          "input": 40,
+          "processing": 10.800000000046566
+        }
+      ]
+    },
+    {
+      "variant": "no-chrome-backdrop",
+      "run": 3,
+      "selector": ".shell-header__bar,.bottom-dock__bar",
+      "click": {
+        "name": "click",
+        "start": 6666.900000000023,
+        "duration": 160,
+        "input": 66.19999999995343,
+        "processing": 14.300000000046566
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 28.800000000046566,
+          "processing": 2.300000000046566
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.100000000093132,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 6666.79999999993,
+          "duration": 160,
+          "input": 31.20000000006985,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerdown",
+          "start": 6666.900000000023,
+          "duration": 160,
+          "input": 38.199999999953434,
+          "processing": 15.5
+        },
+        {
+          "name": "mousedown",
+          "start": 6666.900000000023,
+          "duration": 160,
+          "input": 53.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 6666.900000000023,
+          "duration": 160,
+          "input": 65.5,
+          "processing": 0.6999999999534339
+        },
+        {
+          "name": "mouseup",
+          "start": 6666.900000000023,
+          "duration": 160,
+          "input": 66.19999999995343,
+          "processing": 0
+        },
+        {
+          "name": "click",
+          "start": 6666.900000000023,
+          "duration": 160,
+          "input": 66.19999999995343,
+          "processing": 14.300000000046566
+        }
+      ]
+    },
+    {
+      "variant": "no-stats-backdrop",
+      "run": 1,
+      "selector": ".home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6766.5,
+        "duration": 392,
+        "input": 78.79999999993015,
+        "processing": 6.599999999976717
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 13.800000000046566,
+          "processing": 5.400000000023283
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.20000000006985,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.300000000046566,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "mouseover",
+          "start": 6766.29999999993,
+          "duration": 392,
+          "input": 19.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6766.5,
+          "duration": 392,
+          "input": 43.29999999993015,
+          "processing": 18.20000000006985
+        },
+        {
+          "name": "mousedown",
+          "start": 6766.5,
+          "duration": 392,
+          "input": 61.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 6766.5,
+          "duration": 392,
+          "input": 77.89999999990687,
+          "processing": 0
+        },
+        {
+          "name": "mouseup",
+          "start": 6766.5,
+          "duration": 392,
+          "input": 77.89999999990687,
+          "processing": 0.9000000000232831
+        },
+        {
+          "name": "click",
+          "start": 6766.5,
+          "duration": 392,
+          "input": 78.79999999993015,
+          "processing": 6.599999999976717
+        }
+      ]
+    },
+    {
+      "variant": "no-stats-backdrop",
+      "run": 2,
+      "selector": ".home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6793.199999999953,
+        "duration": 352,
+        "input": 23.70000000006985,
+        "processing": 9.199999999953434
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 3.700000000069849,
+          "processing": 0.8999999999068677
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.599999999976717,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "mouseover",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 4.700000000069849,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 13.300000000046566,
+          "processing": 5.900000000023283
+        },
+        {
+          "name": "mousedown",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 19.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 23,
+          "processing": 0.5999999999767169
+        },
+        {
+          "name": "mouseup",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 23.599999999976717,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "click",
+          "start": 6793.199999999953,
+          "duration": 352,
+          "input": 23.70000000006985,
+          "processing": 9.199999999953434
+        }
+      ]
+    },
+    {
+      "variant": "no-stats-backdrop",
+      "run": 3,
+      "selector": ".home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6581,
+        "duration": 360,
+        "input": 52.79999999993015,
+        "processing": 8
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 16.79999999993015,
+          "processing": 1.900000000023283
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.699999999953434,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.79999999993015,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.79999999993015,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.79999999993015,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.79999999993015,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 6580.900000000023,
+          "duration": 360,
+          "input": 18.899999999906868,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6581,
+          "duration": 360,
+          "input": 32.40000000002328,
+          "processing": 16
+        },
+        {
+          "name": "mousedown",
+          "start": 6581,
+          "duration": 360,
+          "input": 48.40000000002328,
+          "processing": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 6581,
+          "duration": 360,
+          "input": 51.79999999993015,
+          "processing": 0.8000000000465661
+        },
+        {
+          "name": "mouseup",
+          "start": 6581,
+          "duration": 360,
+          "input": 52.59999999997672,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "click",
+          "start": 6581,
+          "duration": 360,
+          "input": 52.79999999993015,
+          "processing": 8
+        }
+      ]
+    },
+    {
+      "variant": "no-composer-stats-backdrop",
+      "run": 1,
+      "selector": ".home-composer .glass-premium,.home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6571.800000000047,
+        "duration": 224,
+        "input": 42.5,
+        "processing": 5.199999999953434
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 10.100000000093132,
+          "processing": 1.1999999999534339
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0
+        },
+        {
+          "name": "mouseover",
+          "start": 6571.699999999953,
+          "duration": 224,
+          "input": 11.300000000046566,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerdown",
+          "start": 6571.800000000047,
+          "duration": 224,
+          "input": 18.5,
+          "processing": 10.899999999906868
+        },
+        {
+          "name": "mousedown",
+          "start": 6571.800000000047,
+          "duration": 224,
+          "input": 29.399999999906868,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "pointerup",
+          "start": 6571.800000000047,
+          "duration": 224,
+          "input": 31.399999999906868,
+          "processing": 11.100000000093132
+        },
+        {
+          "name": "mouseup",
+          "start": 6571.800000000047,
+          "duration": 224,
+          "input": 42.5,
+          "processing": 0
+        },
+        {
+          "name": "click",
+          "start": 6571.800000000047,
+          "duration": 224,
+          "input": 42.5,
+          "processing": 5.199999999953434
+        }
+      ]
+    },
+    {
+      "variant": "no-composer-stats-backdrop",
+      "run": 2,
+      "selector": ".home-composer .glass-premium,.home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6509,
+        "duration": 112,
+        "input": 53.09999999997672,
+        "processing": 14.099999999976717
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 18.800000000046566,
+          "processing": 12.400000000023283
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.20000000006985,
+          "processing": 0.2999999999301508
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.5,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "mouseover",
+          "start": 6508.899999999907,
+          "duration": 112,
+          "input": 31.600000000093132,
+          "processing": 0
+        },
+        {
+          "name": "pointerdown",
+          "start": 6509,
+          "duration": 112,
+          "input": 41.39999999990687,
+          "processing": 7.900000000023283
+        },
+        {
+          "name": "mousedown",
+          "start": 6509,
+          "duration": 112,
+          "input": 49.29999999993015,
+          "processing": 0.09999999997671694
+        },
+        {
+          "name": "pointerup",
+          "start": 6509,
+          "duration": 112,
+          "input": 52.29999999993015,
+          "processing": 0.7000000000698492
+        },
+        {
+          "name": "mouseup",
+          "start": 6509,
+          "duration": 112,
+          "input": 53,
+          "processing": 0
+        },
+        {
+          "name": "click",
+          "start": 6509,
+          "duration": 112,
+          "input": 53.09999999997672,
+          "processing": 14.099999999976717
+        }
+      ]
+    },
+    {
+      "variant": "no-composer-stats-backdrop",
+      "run": 3,
+      "selector": ".home-composer .glass-premium,.home-pulse__stats",
+      "click": {
+        "name": "click",
+        "start": 6633.5,
+        "duration": 288,
+        "input": 28.400000000023283,
+        "processing": 5.199999999953434
+      },
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 6.299999999930151,
+          "processing": 0.9000000000232831
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.299999999930151,
+          "processing": 0.10000000009313226
+        },
+        {
+          "name": "mouseover",
+          "start": 6633.400000000023,
+          "duration": 288,
+          "input": 7.400000000023283,
+          "processing": 1
+        },
+        {
+          "name": "pointerdown",
+          "start": 6633.5,
+          "duration": 288,
+          "input": 16.5,
+          "processing": 7.400000000023283
+        },
+        {
+          "name": "mousedown",
+          "start": 6633.5,
+          "duration": 288,
+          "input": 23.900000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerup",
+          "start": 6633.5,
+          "duration": 288,
+          "input": 27.5,
+          "processing": 0.9000000000232831
+        },
+        {
+          "name": "mouseup",
+          "start": 6633.5,
+          "duration": 288,
+          "input": 28.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "click",
+          "start": 6633.5,
+          "duration": 288,
+          "input": 28.400000000023283,
+          "processing": 5.199999999953434
+        }
+      ]
+    }
+  ]
+}

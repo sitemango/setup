@@ -1,0 +1,9 @@
+
+> campus-plus@1.0.0 lint
+> eslint .
+
+
+> campus-plus@1.0.0 sw:check
+> node scripts/build-sw.mjs --check
+
+sw:check ✓ public/timetable/sw.js is current (15.2 kB)

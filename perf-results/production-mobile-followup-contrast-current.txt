@@ -1,0 +1,499 @@
+
+> campus-plus@1.0.0 test:contrast
+> node scripts/dev/contrast/audit.mjs
+
+Page dark-desktop-student-/home
+  axe
+  paint dark-desktop-student-/home-top
+  paint dark-desktop-student-/home-middle
+  paint dark-desktop-student-/home-bottom
+  paint dark-desktop-student-/home-search-typed-focused
+  paint dark-desktop-student-/home-search-placeholder-focused
+  paint dark-desktop-student-/home-nav-hover-aside .nav-item[aria-current="page"]
+  paint dark-desktop-student-/home-nav-pressed-aside .nav-item[aria-current="page"]
+  paint dark-desktop-student-/home-nav-hover-aside .nav-item[href="/explore"]
+  paint dark-desktop-student-/home-nav-pressed-aside .nav-item[href="/explore"]
+Page dark-desktop-student-/explore
+  axe
+  paint dark-desktop-student-/explore-top
+  paint dark-desktop-student-/explore-middle
+  paint dark-desktop-student-/explore-bottom
+  paint dark-desktop-student-/explore-search-typed-focused
+  paint dark-desktop-student-/explore-search-placeholder-focused
+Page dark-desktop-student-/communities
+  axe
+  paint dark-desktop-student-/communities-top
+Page dark-desktop-student-/chat
+  axe
+  paint dark-desktop-student-/chat-top
+Page dark-desktop-student-/market
+  axe
+  paint dark-desktop-student-/market-top
+  paint dark-desktop-student-/market-middle
+  paint dark-desktop-student-/market-bottom
+Page dark-desktop-student-/notifications
+  axe
+  paint dark-desktop-student-/notifications-top
+  paint dark-desktop-student-/notifications-middle
+  paint dark-desktop-student-/notifications-bottom
+Page dark-desktop-student-/settings
+  axe
+  paint dark-desktop-student-/settings-top
+Page dark-desktop-student-/profile
+  axe
+  paint dark-desktop-student-/profile-top
+  paint dark-desktop-student-/profile-middle
+  paint dark-desktop-student-/profile-bottom
+Page dark-desktop-student-/campus
+  axe
+  paint dark-desktop-student-/campus-top
+  paint dark-desktop-student-/campus-middle
+  paint dark-desktop-student-/campus-bottom
+Page dark-desktop-student-/campus/noticeboard
+  axe
+  paint dark-desktop-student-/campus/noticeboard-top
+  paint dark-desktop-student-/campus/noticeboard-middle
+  paint dark-desktop-student-/campus/noticeboard-bottom
+Page dark-desktop-student-/campus/events
+  axe
+  paint dark-desktop-student-/campus/events-top
+Page dark-desktop-student-/campus/utilities
+  axe
+  paint dark-desktop-student-/campus/utilities-top
+Page dark-desktop-student-/campus/lost-found
+  axe
+  paint dark-desktop-student-/campus/lost-found-top
+  paint dark-desktop-student-/campus/lost-found-middle
+  paint dark-desktop-student-/campus/lost-found-bottom
+Page dark-desktop-student-/campus/lost-found?kind=lost
+  axe
+  paint dark-desktop-student-/campus/lost-found?kind=lost-top
+  paint dark-desktop-student-/campus/lost-found?kind=lost-middle
+  paint dark-desktop-student-/campus/lost-found?kind=lost-bottom
+Page dark-desktop-student-/campus/lost-found?kind=found
+  axe
+  paint dark-desktop-student-/campus/lost-found?kind=found-top
+  paint dark-desktop-student-/campus/lost-found?kind=found-middle
+  paint dark-desktop-student-/campus/lost-found?kind=found-bottom
+Page dark-desktop-student-/campus/lost-found/new
+  axe
+  paint dark-desktop-student-/campus/lost-found/new-top
+Page dark-desktop-student-/campus/lost-found/new?kind=lost
+  axe
+  paint dark-desktop-student-/campus/lost-found/new?kind=lost-top
+Page dark-desktop-student-/campus/lost-found/new?kind=found
+  axe
+  paint dark-desktop-student-/campus/lost-found/new?kind=found-top
+Page dark-desktop-student-/campus/housing
+  axe
+  paint dark-desktop-student-/campus/housing-top
+  paint dark-desktop-student-/campus/housing-middle
+  paint dark-desktop-student-/campus/housing-bottom
+Page dark-desktop-student-/campus/housing/new
+  axe
+  paint dark-desktop-student-/campus/housing/new-top
+Page dark-desktop-student-/campus/rides
+  axe
+  paint dark-desktop-student-/campus/rides-top
+  paint dark-desktop-student-/campus/rides-middle
+  paint dark-desktop-student-/campus/rides-bottom
+Page dark-desktop-student-/campus/rides/new
+  axe
+  paint dark-desktop-student-/campus/rides/new-top
+Page dark-desktop-student-/campus/teams
+  axe
+  paint dark-desktop-student-/campus/teams-top
+  paint dark-desktop-student-/campus/teams-middle
+  paint dark-desktop-student-/campus/teams-bottom
+Page dark-desktop-student-/campus/teams/new
+  axe
+  paint dark-desktop-student-/campus/teams/new-top
+Page dark-desktop-student-/explore/resources
+  axe
+  paint dark-desktop-student-/explore/resources-top
+  paint dark-desktop-student-/explore/resources-middle
+  paint dark-desktop-student-/explore/resources-bottom
+Page dark-desktop-student-/explore/resources/new
+  axe
+  paint dark-desktop-student-/explore/resources/new-top
+Page dark-desktop-student-/explore/opportunities
+  axe
+  paint dark-desktop-student-/explore/opportunities-top
+  paint dark-desktop-student-/explore/opportunities-middle
+  paint dark-desktop-student-/explore/opportunities-bottom
+Page dark-desktop-student-/explore/opportunities/new
+  axe
+  paint dark-desktop-student-/explore/opportunities/new-top
+Page dark-desktop-student-/explore/projects
+  axe
+  paint dark-desktop-student-/explore/projects-top
+  paint dark-desktop-student-/explore/projects-middle
+  paint dark-desktop-student-/explore/projects-bottom
+Page dark-desktop-student-/explore/projects/new
+  axe
+  paint dark-desktop-student-/explore/projects/new-top
+Page dark-desktop-student-/market?tab=deals
+  axe
+  paint dark-desktop-student-/market?tab=deals-top
+Page dark-desktop-student-/market/new
+  axe
+  paint dark-desktop-student-/market/new-top
+Page dark-desktop-student-/market/new?type=gig
+  axe
+  paint dark-desktop-student-/market/new?type=gig-top
+  paint dark-desktop-student-/market/new?type=gig-middle
+  paint dark-desktop-student-/market/new?type=gig-bottom
+Page dark-desktop-student-/communities?tab=study_groups
+  axe
+  paint dark-desktop-student-/communities?tab=study_groups-top
+Page dark-desktop-student-/communities/new
+  axe
+  paint dark-desktop-student-/communities/new-top
+  paint dark-desktop-student-/communities/new-middle
+  paint dark-desktop-student-/communities/new-bottom
+Page dark-desktop-student-/communities/new?kind=study_group
+  axe
+  paint dark-desktop-student-/communities/new?kind=study_group-top
+Page dark-desktop-student-/communities/hostel-life
+  axe
+  paint dark-desktop-student-/communities/hostel-life-top
+Page dark-desktop-student-/user/aarav_p
+  axe
+  paint dark-desktop-student-/user/aarav_p-top
+  paint dark-desktop-student-/user/aarav_p-middle
+  paint dark-desktop-student-/user/aarav_p-bottom
+Page dark-desktop-student-/chat/dca83652-cf65-4755-a97b-804a438da5ab
+  axe
+  paint dark-desktop-student-/chat/dca83652-cf65-4755-a97b-804a438da5ab-top
+Page dark-desktop-student-/post/c034ba6e-5dd0-471a-843a-b6d9bf7c4f16
+  axe
+  paint dark-desktop-student-/post/c034ba6e-5dd0-471a-843a-b6d9bf7c4f16-top
+  paint dark-desktop-student-/post/c034ba6e-5dd0-471a-843a-b6d9bf7c4f16-middle
+  paint dark-desktop-student-/post/c034ba6e-5dd0-471a-843a-b6d9bf7c4f16-bottom
+Page dark-desktop-student-/post/93075e72-f857-4204-8d8e-0ff28c783917
+  axe
+  paint dark-desktop-student-/post/93075e72-f857-4204-8d8e-0ff28c783917-top
+  paint dark-desktop-student-/post/93075e72-f857-4204-8d8e-0ff28c783917-middle
+  paint dark-desktop-student-/post/93075e72-f857-4204-8d8e-0ff28c783917-bottom
+Page dark-desktop-student-/market/listing/494d872f-f393-47db-b9c3-2665b35d0e19
+  axe
+  paint dark-desktop-student-/market/listing/494d872f-f393-47db-b9c3-2665b35d0e19-top
+Page dark-desktop-student-/campus/events/90af7b0b-4e3f-49b5-8a88-563b7915b1db
+  axe
+  paint dark-desktop-student-/campus/events/90af7b0b-4e3f-49b5-8a88-563b7915b1db-top
+Page dark-desktop-student-/campus/noticeboard/c9f49800-e135-4e59-8795-a0428d75f553
+  axe
+  paint dark-desktop-student-/campus/noticeboard/c9f49800-e135-4e59-8795-a0428d75f553-top
+Page dark-desktop-student-/explore/resources/9c9732cf-aca9-4383-8fa6-1d4c6a0ab05b
+  axe
+  paint dark-desktop-student-/explore/resources/9c9732cf-aca9-4383-8fa6-1d4c6a0ab05b-top
+Page dark-desktop-student-/explore/opportunities/03e4cc4f-13b2-4d6c-84c1-91ef4d66f3c7
+  axe
+  paint dark-desktop-student-/explore/opportunities/03e4cc4f-13b2-4d6c-84c1-91ef4d66f3c7-top
+Page dark-desktop-student-/explore/projects/14f39b1a-5dac-4ebb-b77f-9aa196bb0f56
+  axe
+  paint dark-desktop-student-/explore/projects/14f39b1a-5dac-4ebb-b77f-9aa196bb0f56-top
+Page dark-desktop-student-/gigs
+  axe
+  paint dark-desktop-student-/gigs-top
+  paint dark-desktop-student-/gigs-middle
+  paint dark-desktop-student-/gigs-bottom
+Page dark-desktop-student-/gigs/new
+  axe
+  paint dark-desktop-student-/gigs/new-top
+  paint dark-desktop-student-/gigs/new-middle
+  paint dark-desktop-student-/gigs/new-bottom
+Page dark-desktop-student-/clubs
+  axe
+  paint dark-desktop-student-/clubs-top
+  paint dark-desktop-student-/clubs-middle
+  paint dark-desktop-student-/clubs-bottom
+Page dark-desktop-student-/clubs/new
+  axe
+  paint dark-desktop-student-/clubs/new-top
+Page dark-desktop-student-/gigs/ce6a5647-47dd-4875-ba63-2b906b375326
+  axe
+  paint dark-desktop-student-/gigs/ce6a5647-47dd-4875-ba63-2b906b375326-top
+Page dark-desktop-student-/clubs/85aed63b-ebc8-48bc-94f2-96799dba8fff
+  axe
+  paint dark-desktop-student-/clubs/85aed63b-ebc8-48bc-94f2-96799dba8fff-top
+Page dark-desktop-student-/campus/lost-found/81421645-ef88-4084-962e-eadeb2b4c49e
+  axe
+  paint dark-desktop-student-/campus/lost-found/81421645-ef88-4084-962e-eadeb2b4c49e-top
+Page dark-desktop-student-/campus/lost-found/ea3ec909-559a-4622-9d39-e1ebb5aa44d4
+  axe
+  paint dark-desktop-student-/campus/lost-found/ea3ec909-559a-4622-9d39-e1ebb5aa44d4-top
+Page dark-desktop-student-/settings?tab=profile
+  axe
+  paint dark-desktop-student-/settings?tab=profile-top
+Page dark-desktop-student-/settings?tab=username
+  axe
+  paint dark-desktop-student-/settings?tab=username-top
+Page dark-desktop-student-/settings?tab=notifications
+  axe
+  paint dark-desktop-student-/settings?tab=notifications-top
+Page dark-desktop-student-/settings?tab=privacy
+  axe
+  paint dark-desktop-student-/settings?tab=privacy-top
+Page dark-desktop-student-/settings?tab=blocked
+  axe
+  paint dark-desktop-student-/settings?tab=blocked-top
+Page dark-desktop-student-/settings?tab=account
+  axe
+  paint dark-desktop-student-/settings?tab=account-top
+Page dark-desktop-student-/explore?q=no_such_contrast_fixture_result
+  axe
+  paint dark-desktop-student-/explore?q=no_such_contrast_fixture_result-top
+Page dark-desktop-student-/moderator
+  axe
+  paint dark-desktop-student-/moderator-top
+Page dark-desktop-student-/admin
+  axe
+  paint dark-desktop-student-/admin-top
+Page dark-desktop-student-/post/00000000-0000-0000-0000-000000000001
+  axe
+  paint dark-desktop-student-/post/00000000-0000-0000-0000-000000000001-top
+Page dark-desktop-student-/a-missing-campus-page
+  axe
+  paint dark-desktop-student-/a-missing-campus-page-top
+Page dark-desktop-student-/market/listing/2df77064-67ed-4c42-920c-8c40ad5ffd35/edit
+  axe
+  paint dark-desktop-student-/market/listing/2df77064-67ed-4c42-920c-8c40ad5ffd35/edit-top
+Page dark-desktop-student-/rules
+  axe
+  paint dark-desktop-student-/rules-top
+Page dark-desktop-moderator-/moderator
+  axe
+  paint dark-desktop-moderator-/moderator-top
+  paint dark-desktop-moderator-/moderator-middle
+  paint dark-desktop-moderator-/moderator-bottom
+Page dark-desktop-moderator-/moderator?tab=marketplace
+  axe
+  paint dark-desktop-moderator-/moderator?tab=marketplace-top
+  paint dark-desktop-moderator-/moderator?tab=marketplace-middle
+  paint dark-desktop-moderator-/moderator?tab=marketplace-bottom
+Page dark-desktop-moderator-/moderator?tab=random
+  axe
+  paint dark-desktop-moderator-/moderator?tab=random-top
+Page dark-desktop-moderator-/moderator?tab=content
+  axe
+  paint dark-desktop-moderator-/moderator?tab=content-top
+Page dark-desktop-moderator-/moderator?tab=audit
+  axe
+  paint dark-desktop-moderator-/moderator?tab=audit-top
+  paint dark-desktop-moderator-/moderator?tab=audit-middle
+  paint dark-desktop-moderator-/moderator?tab=audit-bottom
+Page dark-desktop-admin-/admin
+  axe
+  paint dark-desktop-admin-/admin-top
+  paint dark-desktop-admin-/admin-middle
+  paint dark-desktop-admin-/admin-bottom
+Page dark-desktop-admin-/admin?tab=roles
+  axe
+  paint dark-desktop-admin-/admin?tab=roles-top
+Page dark-desktop-admin-/admin?tab=permissions
+  axe
+  paint dark-desktop-admin-/admin?tab=permissions-top
+  paint dark-desktop-admin-/admin?tab=permissions-middle
+  paint dark-desktop-admin-/admin?tab=permissions-bottom
+Page dark-desktop-admin-/admin?tab=reports
+  axe
+  paint dark-desktop-admin-/admin?tab=reports-top
+  paint dark-desktop-admin-/admin?tab=reports-middle
+  paint dark-desktop-admin-/admin?tab=reports-bottom
+Page dark-desktop-admin-/admin?tab=content
+  axe
+  paint dark-desktop-admin-/admin?tab=content-top
+  paint dark-desktop-admin-/admin?tab=content-middle
+  paint dark-desktop-admin-/admin?tab=content-bottom
+Page dark-desktop-admin-/admin?tab=marketplace
+  axe
+  paint dark-desktop-admin-/admin?tab=marketplace-top
+  paint dark-desktop-admin-/admin?tab=marketplace-middle
+  paint dark-desktop-admin-/admin?tab=marketplace-bottom
+Page dark-desktop-admin-/admin?tab=events
+  axe
+  paint dark-desktop-admin-/admin?tab=events-top
+  paint dark-desktop-admin-/admin?tab=events-middle
+  paint dark-desktop-admin-/admin?tab=events-bottom
+Page dark-desktop-admin-/admin?tab=settings
+  axe
+  paint dark-desktop-admin-/admin?tab=settings-top
+  paint dark-desktop-admin-/admin?tab=settings-middle
+  paint dark-desktop-admin-/admin?tab=settings-bottom
+Page dark-desktop-admin-/admin?tab=flags
+  axe
+  paint dark-desktop-admin-/admin?tab=flags-top
+  paint dark-desktop-admin-/admin?tab=flags-middle
+  paint dark-desktop-admin-/admin?tab=flags-bottom
+Page dark-desktop-admin-/admin?tab=audit
+  axe
+  paint dark-desktop-admin-/admin?tab=audit-top
+  paint dark-desktop-admin-/admin?tab=audit-middle
+  paint dark-desktop-admin-/admin?tab=audit-bottom
+Page dark-desktop-admin-/admin?tab=counts
+  axe
+  paint dark-desktop-admin-/admin?tab=counts-top
+Page dark-desktop-anonymous-/login
+  axe
+  paint dark-desktop-anonymous-/login-top
+Page dark-desktop-anonymous-/login?error=domain
+  axe
+  paint dark-desktop-anonymous-/login?error=domain-top
+Page dark-desktop-anonymous-/login?notice=google
+  axe
+  paint dark-desktop-anonymous-/login?notice=google-top
+Page dark-desktop-onboarding-/onboarding
+  axe
+  paint dark-desktop-onboarding-/onboarding-top
+  paint dark-desktop-onboarding-/onboarding-middle
+  paint dark-desktop-onboarding-/onboarding-bottom
+Page dark-desktop-suspended-/account-status
+  axe
+  paint dark-desktop-suspended-/account-status-top
+  axe
+  paint dark-gallery-buttons
+  paint dark-gallery-fields
+  paint dark-gallery-checks
+  paint dark-gallery-chips
+  paint dark-gallery-surfaces
+  paint dark-gallery-glass
+  paint dark-gallery-feedback
+  paint dark-gallery-contextual
+  paint dark-gallery-overlays
+  paint dark-gallery-wheel
+  paint dark-primary-rest
+  paint dark-primary-hover
+  paint dark-primary-focus
+  paint dark-primary-pressed
+  paint dark-primary-disabled
+  paint dark-accent-rest
+  paint dark-accent-hover
+  paint dark-accent-focus
+  paint dark-accent-pressed
+  paint dark-accent-disabled
+  paint dark-warm-rest
+  paint dark-warm-hover
+  paint dark-warm-focus
+  paint dark-warm-pressed
+  paint dark-warm-disabled
+  paint dark-sheen-rest
+  paint dark-sheen-hover
+  paint dark-sheen-focus
+  paint dark-sheen-pressed
+  paint dark-sheen-disabled
+  paint dark-secondary-rest
+  paint dark-secondary-hover
+  paint dark-secondary-focus
+  paint dark-secondary-pressed
+  paint dark-secondary-disabled
+  paint dark-quiet-rest
+  paint dark-quiet-hover
+  paint dark-quiet-focus
+  paint dark-quiet-pressed
+  paint dark-quiet-disabled
+  paint dark-subtle-rest
+  paint dark-subtle-hover
+  paint dark-subtle-focus
+  paint dark-subtle-pressed
+  paint dark-subtle-disabled
+  paint dark-danger-rest
+  paint dark-danger-hover
+  paint dark-danger-focus
+  paint dark-danger-pressed
+  paint dark-danger-disabled
+  paint dark-delete-rest
+  paint dark-delete-hover
+  paint dark-delete-focus
+  paint dark-delete-pressed
+  paint dark-delete-disabled
+  paint dark-keycap-rest
+  paint dark-keycap-hover
+  paint dark-keycap-focus
+  paint dark-keycap-pressed
+  paint dark-keycap-disabled
+  paint dark-keycap-accent-rest
+  paint dark-keycap-accent-hover
+  paint dark-keycap-accent-focus
+  paint dark-keycap-accent-pressed
+  paint dark-keycap-accent-disabled
+  paint dark-icon-button-rest
+  paint dark-icon-button-hover
+  paint dark-icon-button-focus
+  paint dark-icon-button-pressed
+  paint dark-icon-button-disabled
+  paint dark-chip-rest
+  paint dark-chip-hover
+  paint dark-chip-focus
+  paint dark-chip-pressed
+  paint dark-chip-disabled
+  paint dark-input-typed
+  paint dark-input-placeholder-or-selected
+  paint dark-textarea-typed
+  paint dark-textarea-placeholder-or-selected
+  paint dark-select-placeholder-or-selected
+  paint dark-checkbox-checked
+  paint dark-checkbox-unchecked
+  paint dark-switch-checked
+  paint dark-switch-unchecked
+  axe
+  paint dark-dropdown
+  axe
+  paint dark-modal
+  paint dark-toast-neutral
+  paint dark-toast-success
+  paint dark-toast-danger
+  paint dark-gallery-wheel-feed
+  paint dark-gallery-wheel-discussions
+  paint dark-gallery-wheel-polls
+Page dark-mobile-student-/home
+  axe
+  paint dark-mobile-student-/home-top
+  paint dark-mobile-student-/home-search-typed-focused
+  paint dark-mobile-student-/home-search-placeholder-focused
+  paint dark-mobile-student-/home-nav-hover-.tab-item[aria-current="page"]
+  paint dark-mobile-student-/home-nav-pressed-.tab-item[aria-current="page"]
+  paint dark-mobile-student-/home-nav-hover-.tab-item[href="/explore"]
+  paint dark-mobile-student-/home-nav-pressed-.tab-item[href="/explore"]
+Page dark-mobile-student-/explore
+  axe
+  paint dark-mobile-student-/explore-top
+  paint dark-mobile-student-/explore-search-typed-focused
+  paint dark-mobile-student-/explore-search-placeholder-focused
+Page dark-mobile-student-/chat
+  axe
+  paint dark-mobile-student-/chat-top
+Page dark-mobile-student-/market
+  axe
+  paint dark-mobile-student-/market-top
+Page dark-mobile-student-/notifications
+  axe
+  paint dark-mobile-student-/notifications-top
+Page dark-mobile-student-/settings
+  axe
+  paint dark-mobile-student-/settings-top
+Page dark-mobile-student-/profile
+  axe
+  paint dark-mobile-student-/profile-top
+Page dark-mobile-student-320px-/settings
+  axe
+  paint dark-mobile-student-320px-/settings-top
+Page dark-mobile-anonymous-/login?error=domain
+  axe
+  paint dark-mobile-anonymous-/login?error=domain-top
+  paint dark-desktop-intro-handover
+  paint dark-portrait-intro-handover
+  paint dark-home-animated-0
+  paint dark-home-animated-650
+  paint dark-home-animated-1350
+{
+  "pageAudits": 101,
+  "paintAudits": 285,
+  "foregroundSamples": 22319,
+  "textSamples": 15394,
+  "iconSamples": 6925,
+  "focusStates": 29,
+  "layoutChecks": 2,
+  "failures": 0
+}
+Evidence: /home/user/setup/node_modules/.cache/contrast

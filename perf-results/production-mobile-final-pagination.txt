@@ -1,0 +1,17 @@
+
+> campus-plus@1.0.0 verify:homefeed
+> node scripts/dev/home-feed-depth-check.mjs
+
+ok    the first paint is one page — ten entries, not the whole feed 10 entries, page size 10
+ok    the page is complete, not a skeleton that fills in later 10 cards, each with content
+ok    the rail and the stream agree about how much is loaded   10 entries
+ok    the route reports a full page and that an older page exists 10 rows, hasMore true
+ok    the next page continues the list without repeating or skipping 10 + 10 distinct entries, no overlap
+ok    "Show more" tap 1 appends one page under what is on screen 10 → 20 entries
+ok    "Show more" tap 2 appends one page under what is on screen 20 → 30 entries
+ok    it offers another page while one exists, and the rail keeps count button: Show more · rail: 30 entries
+ok    the pages stay in the feed’s own order across every seam 19 timestamps, descending across 2 page boundary(ies)
+ok    a fresh post lands in front without evicting the loaded tail 30 → 31 entries, new post in front of the loaded pages
+ok    nothing in the run threw in the page                     no page errors
+
+home-feed paging ✓  ·  30 entries on screen  ·  report: node_modules/.cache/home-feed-depth/report.json

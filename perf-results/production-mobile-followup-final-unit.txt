@@ -1,0 +1,160 @@
+
+> campus-plus@1.0.0 test
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.3 [39m[90m/home/user/setup[39m
+
+ [32m✓[39m tests/timetable-install-plumbing.test.js [2m([22m[2m38 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+ [32m✓[39m tests/guide.test.js [2m([22m[2m43 tests[22m[2m)[22m[32m 221[2mms[22m[39m
+ [32m✓[39m tests/timetable-live.test.js [2m([22m[2m51 tests[22m[2m)[22m[32m 127[2mms[22m[39m
+[90mstderr[2m | tests/post-create-feed.test.js[2m > [22m[2mcreatePost returns the canonical record a feed can render[2m > [22m[2mdoes not report success, and invalidates nothing, when the insert is refused
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:42.379Z","code":"forbidden","message":"You cannot post there."} AppError: You cannot post there.
+    at Object.forbidden (/home/user/setup/lib/errors.js:34:70)
+    at fromPostgresError (/home/user/setup/lib/errors.js:95:19)
+    at createPost (/home/user/setup/lib/actions/social.js:180:22)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at /home/user/setup/tests/post-create-feed.test.js:325:20
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20
+
+[90mstderr[2m | tests/post-create-feed.test.js[2m > [22m[2mcreatePost returns the canonical record a feed can render[2m > [22m[2mrolls a poll back and reports failure when its options cannot be saved
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:42.392Z","code":"conflict","message":"That already exists."} AppError: That already exists.
+    at Object.conflict (/home/user/setup/lib/errors.js:36:81)
+    at fromPostgresError (/home/user/setup/lib/errors.js:90:19)
+    at createPost (/home/user/setup/lib/actions/social.js:196:15)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at /home/user/setup/tests/post-create-feed.test.js:337:20
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20
+
+ [32m✓[39m tests/post-create-feed.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 41[2mms[22m[39m
+ [32m✓[39m tests/backup-processor.test.js [2m([22m[2m23 tests[22m[2m)[22m[32m 109[2mms[22m[39m
+ [32m✓[39m tests/timetable-offline-store.test.js [2m([22m[2m24 tests[22m[2m)[22m[32m 183[2mms[22m[39m
+ [32m✓[39m tests/spec.test.js [2m([22m[2m24 tests[22m[2m)[22m[32m 128[2mms[22m[39m
+ [32m✓[39m tests/timetable-offline-ui.test.js [2m([22m[2m35 tests[22m[2m)[22m[32m 61[2mms[22m[39m
+ [32m✓[39m tests/auth-oauth.test.js [2m([22m[2m26 tests[22m[2m)[22m[32m 23[2mms[22m[39m
+ [32m✓[39m tests/feed-realtime.test.js [2m([22m[2m28 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/sections.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/feed-instant-update.test.js [2m([22m[2m19 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/feed-live-state.test.js [2m([22m[2m25 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/timetable-install-offer.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m tests/intro.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/contrast.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 32[2mms[22m[39m
+ [32m✓[39m tests/timetable-sw-policy.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/backup-worker.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/timetable-offline-identity.test.js [2m([22m[2m16 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m tests/home-feed-pages.test.js [2m([22m[2m17 tests[22m[2m)[22m[32m 17[2mms[22m[39m
+ [32m✓[39m tests/realtime-channel-authorization.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 241[2mms[22m[39m
+ [32m✓[39m tests/timetable.test.js [2m([22m[2m18 tests[22m[2m)[22m[32m 38[2mms[22m[39m
+ [32m✓[39m tests/backup-drive.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/data-contract.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/linkify.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+[90mstderr[2m | tests/backup-admin-actions.test.js[2m > [22m[2mprocessBackupNow (admin-authorized processing)[2m > [22m[2mrefuses a signed-out caller before any backup runtime exists
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:46.896Z","code":"unauthenticated","message":"Sign in to continue."} AppError: Sign in to continue.
+    at Object.unauthenticated (/home/user/setup/lib/errors.js:33:58)
+    at requireBackupAdmin (/home/user/setup/lib/actions/backup.js:30:27)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at processBackupNow (/home/user/setup/lib/actions/backup.js:63:5)
+    at /home/user/setup/tests/backup-admin-actions.test.js:61:20
+
+[90mstderr[2m | tests/backup-admin-actions.test.js[2m > [22m[2mprocessBackupNow (admin-authorized processing)[2m > [22m[2mrefuses a signed-in non-admin, still without touching the runtime
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:46.903Z","code":"forbidden","message":"You do not have permission to manage backups."} AppError: You do not have permission to manage backups.
+    at Object.forbidden (/home/user/setup/lib/errors.js:34:70)
+    at requireBackupAdmin (/home/user/setup/lib/actions/backup.js:32:18)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at processBackupNow (/home/user/setup/lib/actions/backup.js:63:5)
+    at /home/user/setup/tests/backup-admin-actions.test.js:72:20
+
+[90mstderr[2m | tests/backup-admin-actions.test.js[2m > [22m[2mprocessBackupNow (admin-authorized processing)[2m > [22m[2mnever leaks a thrown error to the browser
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:46.908Z","code":"internal","message":"EXPLODE sb_secret_SUPER_SECRET_VALUE postgresql://user:pass@host/db"} Error: EXPLODE sb_secret_SUPER_SECRET_VALUE postgresql://user:pass@host/db
+    at /home/user/setup/tests/backup-admin-actions.test.js:128:44
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:1628:35
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:26
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:3321:20
+    at new Promise (<anonymous>)
+    at runWithCancel (file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:3316:10)
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:3301:20
+    at new Promise (<anonymous>)
+    at runWithTimeout (file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:3259:10)
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:3882:64
+
+[90mstderr[2m | tests/backup-admin-actions.test.js[2m > [22m[2mprocessBackupNow (admin-authorized processing)[2m > [22m[2mstill authorizes retry and disconnect through the same permission gate
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:46.910Z","code":"unauthenticated","message":"Sign in to continue."} AppError: Sign in to continue.
+    at Object.unauthenticated (/home/user/setup/lib/errors.js:33:58)
+    at requireBackupAdmin (/home/user/setup/lib/actions/backup.js:30:27)
+    at processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at retryBackupBatch (/home/user/setup/lib/actions/backup.js:84:5)
+    at /home/user/setup/tests/backup-admin-actions.test.js:153:13
+    at file:///home/user/setup/node_modules/vitest/dist/chunks/run.BTlFXlnv.js:2783:20
+
+ [32m✓[39m tests/backup-admin-actions.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 31[2mms[22m[39m
+ [32m✓[39m tests/navigation.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/validation.test.js [2m([22m[2m20 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/onboarding.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 33[2mms[22m[39m
+ [32m✓[39m tests/backup-restore.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 20[2mms[22m[39m
+ [32m✓[39m tests/utils.test.js [2m([22m[2m21 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/navigation-identity.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 282[2mms[22m[39m
+ [32m✓[39m tests/backup-request-path.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 181[2mms[22m[39m
+ [32m✓[39m tests/signout.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/messaging-live-state.test.js [2m([22m[2m14 tests[22m[2m)[22m[32m 77[2mms[22m[39m
+[90mstderr[2m | tests/study.test.js[2m > [22m[2mstudy data contracts[2m > [22m[2mlists only active requests and reports unavailability instead of throwing
+[22m[39m[campus+] {"level":"error","at":"2026-10-31T14:26:48.749Z","code":"42P01","message":"boom","route":"data/campus/listStudyPosts"} 
+
+ [32m✓[39m tests/study.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/backup-snapshot.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/data-query-counts.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/backup-admin-run.test.js [2m([22m[2m9 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/legal.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/poll-vote-state.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/navigation-notifications.test.js [2m([22m[2m10 tests[22m[2m)[22m[32m 229[2mms[22m[39m
+ [32m✓[39m tests/timetable-clock12.test.js [2m([22m[2m17 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/backup-security.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/data-public-cache.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m tests/discovery.test.js [2m([22m[2m13 tests[22m[2m)[22m[32m 21[2mms[22m[39m
+ [32m✓[39m tests/search-pagination.test.js [2m([22m[2m15 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/messaging-realtime.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m tests/gif.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m tests/home.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/backup-oauth-navigation.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 55[2mms[22m[39m
+[90mstderr[2m | tests/permissions.test.js[2m > [22m[2mcan()[2m > [22m[2mfails closed for unknown permission keys instead of throwing
+[22m[39m[authorization] Unknown permission requested: not_a_real_permission
+
+ [32m✓[39m tests/permissions.test.js [2m([22m[2m12 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/messaging-sync-route.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/divisions.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 18[2mms[22m[39m
+ [32m✓[39m tests/bundle.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 40[2mms[22m[39m
+ [32m✓[39m tests/messaging.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/backup-oauth.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 9[2mms[22m[39m
+ [32m✓[39m tests/backup-crypto.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m tests/backup-retention.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/feed-reconciliation-route.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 15[2mms[22m[39m
+ [32m✓[39m tests/theme.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m tests/feed-visibility-reconciliation.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/navigation-active.test.js [2m([22m[2m8 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/home-feed-cache.test.js [2m([22m[2m5 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/admin-counts.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/backup-admin-ui-states.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m tests/moderation.test.js [2m([22m[2m7 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m tests/messaging-actions.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m tests/errors.test.js [2m([22m[2m6 tests[22m[2m)[22m[32m 13[2mms[22m[39m
+ [32m✓[39m tests/navigation-messages.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 124[2mms[22m[39m
+ [32m✓[39m tests/backup-oauth-connect-route.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m tests/brand-mark.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/depth-field.test.js [2m([22m[2m4 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m tests/perf-sql-projection.test.js [2m([22m[2m3 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/realtime-authorization-errors.test.js [2m([22m[2m11 tests[22m[2m)[22m[32m 5[2mms[22m[39m
+ [32m✓[39m tests/blocks.test.js [2m([22m[2m1 test[22m[2m)[22m[32m 4[2mms[22m[39m
+ [32m✓[39m tests/home-prefetch.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/mobile-interaction-surfaces.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/backup-postgres-target.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/vercel-telemetry.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 3[2mms[22m[39m
+ [32m✓[39m tests/preview.test.js [2m([22m[2m2 tests[22m[2m)[22m[32m 4[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m81 passed[39m[22m[90m (81)[39m
+[2m      Tests [22m [1m[32m960 passed[39m[22m[90m (960)[39m
+[2m   Start at [22m 14:26:40
+[2m   Duration [22m 13.89s[2m (tests 44%, import 33%, transform 20%, worker 3%)[22m
+
+[2m     Import [22m [33m235 modules were evaluated 385 times[39m[2m · 2.33s total, 33% of tracked time[22m
+[2m            [22m [2m~908ms faster with [22m[33misolate: false[39m[2m — shared modules are evaluated once per worker instead of once per file[22m
+[2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#test-isolation[22m
+

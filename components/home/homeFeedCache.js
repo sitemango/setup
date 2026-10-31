@@ -19,6 +19,7 @@ import { dedupeFeed, sortFeed } from '@/lib/social/feed-state';
 export const HOME_FEED_CACHE_TTL_MS = 15_000;
 const MAX_CACHED_USERS = 3;
 const cache = new Map();
+const listeners = new Map();
 
 /**
  * Deduplicate and order a feed payload for storage.
@@ -89,12 +90,38 @@ export function writeHomeFeedCache(userId, payload, revision = 0) {
  * A patch for a user with nothing stored is a no-op — this must never create an
  * entry for somebody else's feed, and it never invents a payload.
  */
-export function patchHomeFeedCache(userId, update, revision = null) {
+export function patchHomeFeedCache(userId, update, revision = null, { notify = true } = {}) {
   if (!userId || typeof update !== 'function') return null;
-  const entry = cache.get(String(userId));
+  const key = String(userId);
+  const entry = cache.get(key);
   if (!entry) return null;
-  const next = update(entry.payload);
-  return writeHomeFeedCache(userId, next, revision == null ? entry.revision : revision);
+  const next = writeHomeFeedCache(userId, update(entry.payload), revision == null ? entry.revision : revision);
+  if (next && notify) {
+    // A vote can settle after its original card/page has unmounted. Notify the
+    // currently mounted Home as well as updating memory so rollback and
+    // reconciliation cannot strand an optimistic snapshot on a navigation return.
+    for (const listener of listeners.get(key) || []) {
+      try {
+        listener(next);
+      } catch {
+        // One unmounted/stale listener must not prevent the cache patch itself.
+      }
+    }
+  }
+  return next;
+}
+
+/** Listen only to explicit local patches, not every network write. */
+export function subscribeHomeFeedCache(userId, listener) {
+  if (!userId || typeof listener !== 'function') return () => {};
+  const key = String(userId);
+  if (!listeners.has(key)) listeners.set(key, new Set());
+  listeners.get(key).add(listener);
+  return () => {
+    const group = listeners.get(key);
+    group?.delete(listener);
+    if (!group?.size) listeners.delete(key);
+  };
 }
 
 export function clearHomeFeedCache(userId) {

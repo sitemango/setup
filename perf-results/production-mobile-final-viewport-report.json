@@ -1,0 +1,1832 @@
+[
+  {
+    "label": "/ · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/ · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/ · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/ · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/ · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/timetable · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/timetable · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/timetable · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/o · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/timetable/o · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/o · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "scrolls 1021px · {\"width\":332,\"scrollWidth\":1351,\"clientWidth\":320,\"needsScroll\":true,\"scrolls\":true,\"reached\":1021,\"moved\":1021,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/o · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/o · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/o · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/b · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/timetable/b · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/b · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "scrolls 1021px · {\"width\":332,\"scrollWidth\":1351,\"clientWidth\":320,\"needsScroll\":true,\"scrolls\":true,\"reached\":1021,\"moved\":1021,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/b · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/b · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/b · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/guide · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/guide · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/guide · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/guide · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/guide · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/onboarding · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/onboarding · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/onboarding · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/onboarding · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/onboarding · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/login · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/login · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/login · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/login · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/login · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/rules · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/rules · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/rules · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/rules · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/rules · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/legal · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/legal · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/legal · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/legal · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/legal · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/community · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/community · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/community · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/community · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/community · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/setup · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/setup · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/setup · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/setup · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/setup · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/home (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/home (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/home (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/home (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/home (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/explore (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/explore (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/explore (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/explore (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/explore (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/campus (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/campus (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/campus (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/campus (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/campus (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/communities (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/communities (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/communities (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/communities (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/communities (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/clubs (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/clubs (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/clubs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/clubs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/clubs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/chat (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/chat (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/chat (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/chat (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/chat (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/notifications (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/notifications (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/notifications (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/notifications (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/notifications (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/profile (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/profile (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/profile (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/profile (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/profile (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/settings (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/settings (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/settings (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/settings (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/settings (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/market (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/market (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/market (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/market (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/market (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/gigs (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/gigs (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/gigs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/gigs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/gigs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/admin (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/admin (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/admin (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/admin (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/admin (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/moderator (signed in) · served page fits 390px",
+    "ok": true,
+    "detail": "scrollW 390"
+  },
+  {
+    "label": "/moderator (signed in) · still fits 390px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/moderator (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/moderator (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/moderator (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/ · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/ · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/ · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/ · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/ · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/timetable · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/timetable · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/timetable · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/o · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/timetable/o · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/o · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "scrolls 1091px · {\"width\":262,\"scrollWidth\":1351,\"clientWidth\":250,\"needsScroll\":true,\"scrolls\":true,\"reached\":1091,\"moved\":1091,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/o · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/o · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/o · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/b · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/timetable/b · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/b · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "scrolls 1091px · {\"width\":262,\"scrollWidth\":1351,\"clientWidth\":250,\"needsScroll\":true,\"scrolls\":true,\"reached\":1091,\"moved\":1091,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/b · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/b · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/b · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/guide · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/guide · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/guide · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/guide · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/guide · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/onboarding · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/onboarding · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/onboarding · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/onboarding · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/onboarding · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/login · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/login · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/login · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/login · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/login · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/rules · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/rules · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/rules · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/rules · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/rules · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/legal · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/legal · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/legal · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/legal · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/legal · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/community · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/community · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/community · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/community · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/community · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/setup · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/setup · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/setup · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/setup · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/setup · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/home (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/home (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/home (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/home (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/home (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/explore (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/explore (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/explore (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/explore (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/explore (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/campus (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/campus (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/campus (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/campus (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/campus (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/communities (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/communities (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/communities (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/communities (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/communities (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/clubs (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/clubs (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/clubs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/clubs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/clubs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/chat (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/chat (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/chat (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/chat (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/chat (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/notifications (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/notifications (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/notifications (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/notifications (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/notifications (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/profile (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/profile (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/profile (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/profile (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/profile (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/settings (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/settings (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 1"
+  },
+  {
+    "label": "/settings (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/settings (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/settings (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/market (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/market (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/market (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/market (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/market (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/gigs (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/gigs (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/gigs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/gigs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/gigs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/admin (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/admin (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/admin (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/admin (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/admin (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/moderator (signed in) · served page fits 320px",
+    "ok": true,
+    "detail": "scrollW 320"
+  },
+  {
+    "label": "/moderator (signed in) · still fits 320px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/moderator (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/moderator (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/moderator (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/ · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/ · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/ · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/ · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/ · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/timetable · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/timetable · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/timetable · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/o · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/timetable/o · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/o · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "fits at this width · {\"width\":1366,\"scrollWidth\":1354,\"clientWidth\":1354,\"needsScroll\":false,\"scrolls\":false,\"reached\":0,\"moved\":0,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/o · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/o · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/o · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/timetable/b · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/timetable/b · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 1"
+  },
+  {
+    "label": "/timetable/b · week grid scrolls the whole way and pins its Day column",
+    "ok": true,
+    "detail": "fits at this width · {\"width\":1366,\"scrollWidth\":1354,\"clientWidth\":1354,\"needsScroll\":false,\"scrolls\":false,\"reached\":0,\"moved\":0,\"lastCellVisibleAtEnd\":true,\"atRest\":0,\"pinned\":0,\"dayColumnPinned\":true}"
+  },
+  {
+    "label": "/timetable/b · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/timetable/b · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover\""
+  },
+  {
+    "label": "/timetable/b · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/guide · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/guide · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/guide · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/guide · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/guide · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/onboarding · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/onboarding · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/onboarding · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/onboarding · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/onboarding · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/login · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/login · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/login · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/login · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/login · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/rules · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/rules · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/rules · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/rules · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/rules · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/legal · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/legal · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/legal · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/legal · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/legal · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/community · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/community · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/community · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/community · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/community · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/setup · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/setup · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0"
+  },
+  {
+    "label": "/setup · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/setup · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/setup · answered",
+    "ok": true,
+    "detail": "HTTP 200 · lands on /login"
+  },
+  {
+    "label": "/home (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/home (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/home (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/home (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/home (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/explore (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/explore (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/explore (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/explore (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/explore (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/campus (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/campus (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/campus (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/campus (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/campus (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/communities (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/communities (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/communities (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/communities (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/communities (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/clubs (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/clubs (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/clubs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/clubs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/clubs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/chat (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/chat (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/chat (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/chat (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/chat (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/notifications (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/notifications (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/notifications (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/notifications (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/notifications (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/profile (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/profile (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/profile (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/profile (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/profile (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/settings (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/settings (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/settings (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/settings (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/settings (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/market (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/market (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/market (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/market (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/market (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/gigs (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/gigs (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/gigs (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/gigs (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/gigs (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/admin (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/admin (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/admin (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/admin (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/admin (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  },
+  {
+    "label": "/moderator (signed in) · served page fits 1440px",
+    "ok": true,
+    "detail": "scrollW 1440"
+  },
+  {
+    "label": "/moderator (signed in) · still fits 1440px with every disclosure open",
+    "ok": true,
+    "detail": "viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2"
+  },
+  {
+    "label": "/moderator (signed in) · no console errors",
+    "ok": true,
+    "detail": ""
+  },
+  {
+    "label": "/moderator (signed in) · viewport meta is device-width and still zoomable",
+    "ok": true,
+    "detail": "content=\"width=device-width, initial-scale=1, maximum-scale=5\""
+  },
+  {
+    "label": "/moderator (signed in) · answered",
+    "ok": true,
+    "detail": "HTTP 200"
+  }
+]

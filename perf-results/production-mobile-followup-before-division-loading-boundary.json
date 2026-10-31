@@ -1,0 +1,10 @@
+{
+  "label": "pre-fix division initial HTML loading boundary",
+  "bytes": 71979,
+  "fallbackTemplate": true,
+  "hiddenCompleteSegment": true,
+  "helpInsideHiddenSegment": true,
+  "revealCall": "$RC(\"B:0\",\"S:0\")",
+  "loadingFile": "app/loading.js",
+  "note": "The fallback and complete hidden timetable arrive in one document; React scheduling determines whether the fallback paints before segment reveal."
+}

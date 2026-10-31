@@ -1,0 +1,4837 @@
+{
+ "label": "production-mobile-after-phones",
+ "base": "http://127.0.0.1:3100",
+ "measuredAt": "2026-10-30T18:36:35.091Z",
+ "sourceRevision": "3b7124727769a7e7cbd104f84143d71daa72a634",
+ "sourceState": "3b71247-dirty",
+ "nodeVersion": "v22.22.3",
+ "runs": 3,
+ "keepIntro": false,
+ "routeSelection": "home,division",
+ "profiles": [
+  {
+   "key": "fast",
+   "throttle": false,
+   "cpu": 1,
+   "label": "Unthrottled"
+  },
+  {
+   "key": "slow4g",
+   "throttle": true,
+   "cpu": 4,
+   "label": "Slow 4G + 4× CPU"
+  }
+ ],
+ "viewports": [
+  {
+   "key": "compact",
+   "label": "Compact Android",
+   "width": 360,
+   "height": 800,
+   "dpr": 3,
+   "mobile": true
+  },
+  {
+   "key": "standard",
+   "label": "Standard phone",
+   "width": 375,
+   "height": 812,
+   "dpr": 3,
+   "mobile": true
+  },
+  {
+   "key": "phone",
+   "label": "Modern phone",
+   "width": 390,
+   "height": 844,
+   "dpr": 3,
+   "mobile": true
+  },
+  {
+   "key": "wide",
+   "label": "Wide Android",
+   "width": 412,
+   "height": 915,
+   "dpr": 3,
+   "mobile": true
+  }
+ ],
+ "results": [
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "compact",
+   "width": 360,
+   "height": 800,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 164,
+   "lcp": 276,
+   "cls": 0.0326,
+   "domContentLoaded": 214,
+   "loadEvent": 221,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 468111,
+   "requestCount": 49,
+   "longTaskCount": 1,
+   "totalTaskTime": 58,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 755,
+   "docHeight": 5029,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 1025,
+    "viewportsDown": 1.28
+   },
+   "firstFeedCard": {
+    "top": 1511,
+    "viewportsDown": 1.89
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0331,
+     "at": 3851,
+     "sources": [
+      "home-pulse__aurora"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "SPAN",
+    "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+    "text": "Loading Campus+…",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 352,
+     "lcp": 352,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0.0331,
+     "shifts": [
+      {
+       "value": 0.0331,
+       "at": 3851,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 192,
+       "duration": 111
+      }
+     ],
+     "domContentLoaded": 328,
+     "loadEvent": 338,
+     "ttfb": 31,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 27,
+     "domNodes": 755,
+     "docHeight": 5029,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1025,
+      "viewportsDown": 1.28
+     },
+     "firstFeedCard": {
+      "top": 1511,
+      "viewportsDown": 1.89
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 37339,
+      "font": 107225,
+      "image": 6093,
+      "other": 7076
+     },
+     "transferJs": 287391,
+     "transferCss": 37339,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 463537,
+     "wallClockMs": 3902,
+     "totalTaskTime": 111,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 164,
+     "lcp": 276,
+     "lcpElement": {
+      "tag": "text",
+      "className": "",
+      "text": "CAMPUS",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [
+      {
+       "start": 72,
+       "duration": 58
+      }
+     ],
+     "domContentLoaded": 214,
+     "loadEvent": 221,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 476,
+     "docHeight": 2461,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 949,
+      "viewportsDown": 1.19
+     },
+     "firstFeedCard": {
+      "top": 1410,
+      "viewportsDown": 1.76
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 1094,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 9975
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 468111,
+     "wallClockMs": 2921,
+     "totalTaskTime": 58,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 136,
+     "lcp": 276,
+     "lcpElement": {
+      "tag": "text",
+      "className": "",
+      "text": "CAMPUS",
+      "url": null
+     },
+     "cls": 0.0326,
+     "shifts": [
+      {
+       "value": 0.0326,
+       "at": 2843,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 137,
+       "duration": 56
+      }
+     ],
+     "domContentLoaded": 209,
+     "loadEvent": 219,
+     "ttfb": 18,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 5029,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1025,
+      "viewportsDown": 1.28
+     },
+     "firstFeedCard": {
+      "top": 1511,
+      "viewportsDown": 1.89
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 9975
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 468111,
+     "wallClockMs": 2870,
+     "totalTaskTime": 56,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    136,
+    352
+   ],
+   "lcpSpread": [
+    276,
+    352
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "compact",
+   "width": 360,
+   "height": 800,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 152,
+   "lcp": 152,
+   "cls": 0,
+   "domContentLoaded": 75,
+   "loadEvent": 145,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13512,
+   "fontTransfer": 50276,
+   "totalTransfer": 313687,
+   "requestCount": 24,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2489,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 192,
+     "lcp": 192,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 95,
+     "loadEvent": 145,
+     "ttfb": 31,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13512,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13512,
+     "transferFonts": 50276,
+     "transferTotal": 313686,
+     "wallClockMs": 1438,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 152,
+     "lcp": 152,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 75,
+     "loadEvent": 183,
+     "ttfb": 19,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 313687,
+     "wallClockMs": 1434,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 148,
+     "lcp": 148,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 70,
+     "loadEvent": 133,
+     "ttfb": 26,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13512,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 6046
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13512,
+     "transferFonts": 50276,
+     "transferTotal": 314411,
+     "wallClockMs": 1419,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    148,
+    192
+   ],
+   "lcpSpread": [
+    148,
+    192
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "standard",
+   "width": 375,
+   "height": 812,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 124,
+   "lcp": 124,
+   "cls": 0.0321,
+   "domContentLoaded": 196,
+   "loadEvent": 206,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 468836,
+   "requestCount": 49,
+   "longTaskCount": 1,
+   "totalTaskTime": 50,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 4948,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 950,
+    "viewportsDown": 1.17
+   },
+   "firstFeedCard": {
+    "top": 1411,
+    "viewportsDown": 1.74
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [],
+   "lcpElement": {
+    "tag": "text",
+    "className": "",
+    "text": "CAMPUS",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 132,
+     "lcp": 264,
+     "lcpElement": {
+      "tag": "text",
+      "className": "",
+      "text": "CAMPUS",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [
+      {
+       "start": 541,
+       "duration": 57
+      }
+     ],
+     "domContentLoaded": 196,
+     "loadEvent": 206,
+     "ttfb": 23,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 476,
+     "docHeight": 2461,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 950,
+      "viewportsDown": 1.17
+     },
+     "firstFeedCard": {
+      "top": 1411,
+      "viewportsDown": 1.74
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 1094,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 10700
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 468836,
+     "wallClockMs": 3163,
+     "totalTaskTime": 57,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 120,
+     "lcp": 120,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0.0321,
+     "shifts": [
+      {
+       "value": 0.0321,
+       "at": 2764,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 150,
+       "duration": 50
+      }
+     ],
+     "domContentLoaded": 218,
+     "loadEvent": 224,
+     "ttfb": 11,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4948,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1026,
+      "viewportsDown": 1.26
+     },
+     "firstFeedCard": {
+      "top": 1512,
+      "viewportsDown": 1.86
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 9988
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 468124,
+     "wallClockMs": 2779,
+     "totalTaskTime": 50,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 124,
+     "lcp": 124,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0.0321,
+     "shifts": [
+      {
+       "value": 0.0321,
+       "at": 2773,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [],
+     "domContentLoaded": 181,
+     "loadEvent": 189,
+     "ttfb": 18,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4948,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1026,
+      "viewportsDown": 1.26
+     },
+     "firstFeedCard": {
+      "top": 1512,
+      "viewportsDown": 1.86
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 11197
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 469333,
+     "wallClockMs": 2798,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    120,
+    132
+   ],
+   "lcpSpread": [
+    120,
+    264
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "standard",
+   "width": 375,
+   "height": 812,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 148,
+   "lcp": 148,
+   "cls": 0,
+   "domContentLoaded": 74,
+   "loadEvent": 158,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 313687,
+   "requestCount": 24,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2466,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 136,
+     "lcp": 136,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 65,
+     "loadEvent": 158,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 313687,
+     "wallClockMs": 1422,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 164,
+     "lcp": 164,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 158,
+     "loadEvent": 164,
+     "ttfb": 24,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13511,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13511,
+     "transferFonts": 50276,
+     "transferTotal": 313685,
+     "wallClockMs": 1480,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 148,
+     "lcp": 148,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 74,
+     "loadEvent": 136,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13515,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13515,
+     "transferFonts": 50276,
+     "transferTotal": 313689,
+     "wallClockMs": 1420,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    136,
+    164
+   ],
+   "lcpSpread": [
+    136,
+    164
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 152,
+   "lcp": 168,
+   "cls": 0,
+   "domContentLoaded": 194,
+   "loadEvent": 202,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 469563,
+   "requestCount": 49,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 476,
+   "docHeight": 2423,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 988,
+    "viewportsDown": 1.17
+   },
+   "firstFeedCard": {
+    "top": 1474,
+    "viewportsDown": 1.75
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0308,
+     "at": 1023,
+     "sources": [
+      "home-pulse__aurora"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "text",
+    "className": "",
+    "text": "CAMPUS",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 152,
+     "lcp": 260,
+     "lcpElement": {
+      "tag": "text",
+      "className": "",
+      "text": "CAMPUS",
+      "url": null
+     },
+     "cls": 0.0308,
+     "shifts": [
+      {
+       "value": 0.0308,
+       "at": 1023,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 75,
+       "duration": 53
+      }
+     ],
+     "domContentLoaded": 194,
+     "loadEvent": 202,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4860,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 988,
+      "viewportsDown": 1.17
+     },
+     "firstFeedCard": {
+      "top": 1474,
+      "viewportsDown": 1.75
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 11439
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 469575,
+     "wallClockMs": 3031,
+     "totalTaskTime": 53,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 108,
+     "lcp": 108,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 213,
+     "loadEvent": 223,
+     "ttfb": 11,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 476,
+     "docHeight": 2423,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 912,
+      "viewportsDown": 1.08
+     },
+     "firstFeedCard": {
+      "top": 1373,
+      "viewportsDown": 1.63
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 1094,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 7076
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 465212,
+     "wallClockMs": 2865,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 168,
+     "lcp": 168,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 178,
+     "loadEvent": 187,
+     "ttfb": 17,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 476,
+     "docHeight": 2423,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 912,
+      "viewportsDown": 1.08
+     },
+     "firstFeedCard": {
+      "top": 1373,
+      "viewportsDown": 1.63
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 1094,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 11427
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 469563,
+     "wallClockMs": 2887,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    108,
+    168
+   ],
+   "lcpSpread": [
+    108,
+    260
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 140,
+   "lcp": 140,
+   "cls": 0,
+   "domContentLoaded": 120,
+   "loadEvent": 170,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 313690,
+   "requestCount": 24,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2445,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 128,
+     "lcp": 128,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 120,
+     "loadEvent": 161,
+     "ttfb": 14,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13516,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13516,
+     "transferFonts": 50276,
+     "transferTotal": 313690,
+     "wallClockMs": 1414,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 224,
+     "lcp": 224,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [
+      {
+       "start": 93,
+       "duration": 115
+      }
+     ],
+     "domContentLoaded": 216,
+     "loadEvent": 254,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7538
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315904,
+     "wallClockMs": 1509,
+     "totalTaskTime": 115,
+     "longTaskCount": 1,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 140,
+     "lcp": 140,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 87,
+     "loadEvent": 170,
+     "ttfb": 21,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 313687,
+     "wallClockMs": 1424,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    128,
+    224
+   ],
+   "lcpSpread": [
+    128,
+    224
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "wide",
+   "width": 412,
+   "height": 915,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 128,
+   "lcp": 128,
+   "cls": 0.0842,
+   "domContentLoaded": 186,
+   "loadEvent": 196,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 469563,
+   "requestCount": 49,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 4766,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 947,
+    "viewportsDown": 1.03
+   },
+   "firstFeedCard": {
+    "top": 1433,
+    "viewportsDown": 1.57
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0842,
+     "at": 2503,
+     "sources": [
+      "home-pulse__aurora",
+      "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+      "home-pulse__horizon"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "text",
+    "className": "",
+    "text": "CAMPUS",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 136,
+     "lcp": 252,
+     "lcpElement": {
+      "tag": "text",
+      "className": "",
+      "text": "CAMPUS",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 2503,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 540,
+       "duration": 54
+      }
+     ],
+     "domContentLoaded": 186,
+     "loadEvent": 196,
+     "ttfb": 19,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 14520
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 472656,
+     "wallClockMs": 2539,
+     "totalTaskTime": 54,
+     "longTaskCount": 1,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 128,
+     "lcp": 128,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 2651,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [],
+     "domContentLoaded": 200,
+     "loadEvent": 209,
+     "ttfb": 11,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 11427
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 469563,
+     "wallClockMs": 2671,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 120,
+     "lcp": 120,
+     "lcpElement": {
+      "tag": "SPAN",
+      "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+      "text": "Loading Campus+…",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 1013,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [],
+     "domContentLoaded": 178,
+     "loadEvent": 188,
+     "ttfb": 16,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 10700
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 468836,
+     "wallClockMs": 2763,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    120,
+    136
+   ],
+   "lcpSpread": [
+    120,
+    252
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "wide",
+   "width": 412,
+   "height": 915,
+   "profile": "fast",
+   "runs": 3,
+   "fcp": 148,
+   "lcp": 148,
+   "cls": 0,
+   "domContentLoaded": 75,
+   "loadEvent": 176,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 313687,
+   "requestCount": 24,
+   "longTaskCount": 0,
+   "totalTaskTime": 0,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2381,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 148,
+     "lcp": 148,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 75,
+     "loadEvent": 182,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 313687,
+     "wallClockMs": 1436,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 148,
+     "lcp": 148,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 60,
+     "loadEvent": 176,
+     "ttfb": 19,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 313687,
+     "wallClockMs": 1428,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 124,
+     "lcp": 456,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [],
+     "longTasks": [],
+     "domContentLoaded": 116,
+     "loadEvent": 156,
+     "ttfb": 22,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13511,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 5321
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13511,
+     "transferFonts": 50276,
+     "transferTotal": 313685,
+     "wallClockMs": 1410,
+     "totalTaskTime": 0,
+     "longTaskCount": 0,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    124,
+    148
+   ],
+   "lcpSpread": [
+    148,
+    456
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "compact",
+   "width": 360,
+   "height": 800,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1452,
+   "lcp": 1452,
+   "cls": 0.0331,
+   "domContentLoaded": 1043,
+   "loadEvent": 2485,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 488371,
+   "requestCount": 49,
+   "longTaskCount": 7,
+   "totalTaskTime": 990,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 5029,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 1025,
+    "viewportsDown": 1.28
+   },
+   "firstFeedCard": {
+    "top": 1511,
+    "viewportsDown": 1.89
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0331,
+     "at": 4374,
+     "sources": [
+      "home-pulse__aurora"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "guide-strip__lead",
+    "text": "New to Campus+? There is a two-minute guide to where everything is.",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1328,
+     "lcp": 1328,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0331,
+     "shifts": [
+      {
+       "value": 0.0331,
+       "at": 4374,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1063,
+       "duration": 146
+      },
+      {
+       "start": 2228,
+       "duration": 175
+      },
+      {
+       "start": 2852,
+       "duration": 121
+      },
+      {
+       "start": 3154,
+       "duration": 51
+      },
+      {
+       "start": 3835,
+       "duration": 184
+      },
+      {
+       "start": 4128,
+       "duration": 111
+      }
+     ],
+     "domContentLoaded": 1045,
+     "loadEvent": 2414,
+     "ttfb": 21,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 5029,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1025,
+      "viewportsDown": 1.28
+     },
+     "firstFeedCard": {
+      "top": 1511,
+      "viewportsDown": 1.89
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 26655
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 484791,
+     "wallClockMs": 5944,
+     "totalTaskTime": 788,
+     "longTaskCount": 6,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1796,
+     "lcp": 1796,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0331,
+     "shifts": [
+      {
+       "value": 0.0331,
+       "at": 4848,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1048,
+       "duration": 153
+      },
+      {
+       "start": 2234,
+       "duration": 72
+      },
+      {
+       "start": 2324,
+       "duration": 177
+      },
+      {
+       "start": 2883,
+       "duration": 112
+      },
+      {
+       "start": 3613,
+       "duration": 67
+      },
+      {
+       "start": 3755,
+       "duration": 63
+      },
+      {
+       "start": 4099,
+       "duration": 190
+      },
+      {
+       "start": 4387,
+       "duration": 81
+      },
+      {
+       "start": 4494,
+       "duration": 162
+      },
+      {
+       "start": 4973,
+       "duration": 61
+      }
+     ],
+     "domContentLoaded": 1033,
+     "loadEvent": 2506,
+     "ttfb": 12,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 5029,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1025,
+      "viewportsDown": 1.28
+     },
+     "firstFeedCard": {
+      "top": 1511,
+      "viewportsDown": 1.89
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 34326
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 492462,
+     "wallClockMs": 5947,
+     "totalTaskTime": 1138,
+     "longTaskCount": 10,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1452,
+     "lcp": 1452,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.033,
+     "shifts": [
+      {
+       "value": 0.033,
+       "at": 4348,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1064,
+       "duration": 152
+      },
+      {
+       "start": 2266,
+       "duration": 206
+      },
+      {
+       "start": 2861,
+       "duration": 157
+      },
+      {
+       "start": 3749,
+       "duration": 190
+      },
+      {
+       "start": 4010,
+       "duration": 80
+      },
+      {
+       "start": 4097,
+       "duration": 143
+      },
+      {
+       "start": 4396,
+       "duration": 62
+      }
+     ],
+     "domContentLoaded": 1043,
+     "loadEvent": 2485,
+     "ttfb": 16,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 5029,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1025,
+      "viewportsDown": 1.28
+     },
+     "firstFeedCard": {
+      "top": 1511,
+      "viewportsDown": 1.89
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 30235
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 488371,
+     "wallClockMs": 6005,
+     "totalTaskTime": 990,
+     "longTaskCount": 7,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1328,
+    1796
+   ],
+   "lcpSpread": [
+    1328,
+    1796
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "compact",
+   "width": 360,
+   "height": 800,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1092,
+   "lcp": 1096,
+   "cls": 0,
+   "domContentLoaded": 1090,
+   "loadEvent": 1958,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 315906,
+   "requestCount": 24,
+   "longTaskCount": 3,
+   "totalTaskTime": 315,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2489,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [
+    {
+     "value": 0,
+     "at": 2303,
+     "sources": [
+      "tt-offline__label"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1092,
+     "lcp": 1092,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2303,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 960,
+       "duration": 119
+      },
+      {
+       "start": 1813,
+       "duration": 140
+      },
+      {
+       "start": 2141,
+       "duration": 56
+      }
+     ],
+     "domContentLoaded": 1090,
+     "loadEvent": 1958,
+     "ttfb": 16,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7539
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315905,
+     "wallClockMs": 4596,
+     "totalTaskTime": 315,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1096,
+     "lcp": 1096,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2302,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 962,
+       "duration": 125
+      },
+      {
+       "start": 1805,
+       "duration": 144
+      },
+      {
+       "start": 2130,
+       "duration": 58
+      }
+     ],
+     "domContentLoaded": 1099,
+     "loadEvent": 1953,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13514,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7539
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13514,
+     "transferFonts": 50276,
+     "transferTotal": 315906,
+     "wallClockMs": 4587,
+     "totalTaskTime": 327,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1048,
+     "lcp": 1416,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2245,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1314,
+       "duration": 79
+      },
+      {
+       "start": 1812,
+       "duration": 174
+      },
+      {
+       "start": 2106,
+       "duration": 57
+      }
+     ],
+     "domContentLoaded": 1062,
+     "loadEvent": 1990,
+     "ttfb": 25,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2489,
+     "viewportHeight": 800,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7542
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315908,
+     "wallClockMs": 4640,
+     "totalTaskTime": 310,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1048,
+    1096
+   ],
+   "lcpSpread": [
+    1092,
+    1416
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "standard",
+   "width": 375,
+   "height": 812,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1268,
+   "lcp": 1272,
+   "cls": 0.0326,
+   "domContentLoaded": 1053,
+   "loadEvent": 2967,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 490328,
+   "requestCount": 49,
+   "longTaskCount": 8,
+   "totalTaskTime": 1031,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 4948,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 1026,
+    "viewportsDown": 1.26
+   },
+   "firstFeedCard": {
+    "top": 1512,
+    "viewportsDown": 1.86
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0327,
+     "at": 4990,
+     "sources": [
+      "home-pulse__aurora"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "guide-strip__lead",
+    "text": "New to Campus+? There is a two-minute guide to where everything is.",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1272,
+     "lcp": 1272,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0327,
+     "shifts": [
+      {
+       "value": 0.0327,
+       "at": 4990,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1069,
+       "duration": 152
+      },
+      {
+       "start": 2702,
+       "duration": 251
+      },
+      {
+       "start": 3422,
+       "duration": 105
+      },
+      {
+       "start": 4270,
+       "duration": 221
+      },
+      {
+       "start": 4736,
+       "duration": 180
+      },
+      {
+       "start": 4917,
+       "duration": 111
+      },
+      {
+       "start": 5147,
+       "duration": 89
+      }
+     ],
+     "domContentLoaded": 1053,
+     "loadEvent": 2967,
+     "ttfb": 33,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4948,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1026,
+      "viewportsDown": 1.26
+     },
+     "firstFeedCard": {
+      "top": 1512,
+      "viewportsDown": 1.86
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 34322
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 492458,
+     "wallClockMs": 6528,
+     "totalTaskTime": 1109,
+     "longTaskCount": 7,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1112,
+     "lcp": 1612,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0325,
+     "shifts": [
+      {
+       "value": 0.0325,
+       "at": 4442,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 2251,
+       "duration": 118
+      },
+      {
+       "start": 2756,
+       "duration": 69
+      },
+      {
+       "start": 2997,
+       "duration": 59
+      },
+      {
+       "start": 3408,
+       "duration": 52
+      },
+      {
+       "start": 3750,
+       "duration": 211
+      },
+      {
+       "start": 4131,
+       "duration": 166
+      },
+      {
+       "start": 4483,
+       "duration": 96
+      },
+      {
+       "start": 4718,
+       "duration": 49
+      }
+     ],
+     "domContentLoaded": 1100,
+     "loadEvent": 2370,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4948,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1026,
+      "viewportsDown": 1.26
+     },
+     "firstFeedCard": {
+      "top": 1512,
+      "viewportsDown": 1.86
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 28184
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 486320,
+     "wallClockMs": 5838,
+     "totalTaskTime": 820,
+     "longTaskCount": 8,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1268,
+     "lcp": 1268,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0326,
+     "shifts": [
+      {
+       "value": 0.0326,
+       "at": 4836,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1064,
+       "duration": 142
+      },
+      {
+       "start": 2735,
+       "duration": 287
+      },
+      {
+       "start": 3595,
+       "duration": 88
+      },
+      {
+       "start": 3935,
+       "duration": 55
+      },
+      {
+       "start": 4133,
+       "duration": 70
+      },
+      {
+       "start": 4335,
+       "duration": 144
+      },
+      {
+       "start": 4598,
+       "duration": 149
+      },
+      {
+       "start": 4969,
+       "duration": 96
+      }
+     ],
+     "domContentLoaded": 1043,
+     "loadEvent": 3043,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4948,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 1026,
+      "viewportsDown": 1.26
+     },
+     "firstFeedCard": {
+      "top": 1512,
+      "viewportsDown": 1.86
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 32192
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 490328,
+     "wallClockMs": 6678,
+     "totalTaskTime": 1031,
+     "longTaskCount": 8,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1112,
+    1272
+   ],
+   "lcpSpread": [
+    1268,
+    1612
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "standard",
+   "width": 375,
+   "height": 812,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1124,
+   "lcp": 1124,
+   "cls": 0,
+   "domContentLoaded": 1114,
+   "loadEvent": 1951,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 315906,
+   "requestCount": 24,
+   "longTaskCount": 3,
+   "totalTaskTime": 364,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2466,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [
+    {
+     "value": 0,
+     "at": 2278,
+     "sources": [
+      "tt-offline__label"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1100,
+     "lcp": 1100,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2278,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 986,
+       "duration": 104
+      },
+      {
+       "start": 1805,
+       "duration": 138
+      },
+      {
+       "start": 2134,
+       "duration": 59
+      }
+     ],
+     "domContentLoaded": 1106,
+     "loadEvent": 1947,
+     "ttfb": 21,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315906,
+     "wallClockMs": 4594,
+     "totalTaskTime": 301,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1124,
+     "lcp": 1124,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2319,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 978,
+       "duration": 131
+      },
+      {
+       "start": 1810,
+       "duration": 172
+      },
+      {
+       "start": 2143,
+       "duration": 61
+      }
+     ],
+     "domContentLoaded": 1114,
+     "loadEvent": 1987,
+     "ttfb": 21,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13514,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13514,
+     "transferFonts": 50276,
+     "transferTotal": 315907,
+     "wallClockMs": 4644,
+     "totalTaskTime": 364,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1164,
+     "lcp": 1164,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2321,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 938,
+       "duration": 51
+      },
+      {
+       "start": 1026,
+       "duration": 124
+      },
+      {
+       "start": 1815,
+       "duration": 134
+      },
+      {
+       "start": 2119,
+       "duration": 62
+      }
+     ],
+     "domContentLoaded": 1165,
+     "loadEvent": 1951,
+     "ttfb": 19,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2466,
+     "viewportHeight": 812,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7539
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315905,
+     "wallClockMs": 4604,
+     "totalTaskTime": 371,
+     "longTaskCount": 4,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1100,
+    1164
+   ],
+   "lcpSpread": [
+    1100,
+    1164
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1288,
+   "lcp": 1288,
+   "cls": 0.0314,
+   "domContentLoaded": 1241,
+   "loadEvent": 2973,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 488364,
+   "requestCount": 49,
+   "longTaskCount": 8,
+   "totalTaskTime": 1174,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 4860,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 988,
+    "viewportsDown": 1.17
+   },
+   "firstFeedCard": {
+    "top": 1474,
+    "viewportsDown": 1.75
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0314,
+     "at": 4994,
+     "sources": [
+      "home-pulse__aurora"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "guide-strip__lead",
+    "text": "New to Campus+? There is a two-minute guide to where everything is.",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1288,
+     "lcp": 1288,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0314,
+     "shifts": [
+      {
+       "value": 0.0314,
+       "at": 4994,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1058,
+       "duration": 183
+      },
+      {
+       "start": 2747,
+       "duration": 212
+      },
+      {
+       "start": 3398,
+       "duration": 65
+      },
+      {
+       "start": 3759,
+       "duration": 52
+      },
+      {
+       "start": 4264,
+       "duration": 166
+      },
+      {
+       "start": 4528,
+       "duration": 63
+      },
+      {
+       "start": 4598,
+       "duration": 241
+      },
+      {
+       "start": 4840,
+       "duration": 180
+      },
+      {
+       "start": 5051,
+       "duration": 60
+      }
+     ],
+     "domContentLoaded": 1241,
+     "loadEvent": 2973,
+     "ttfb": 23,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4860,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 988,
+      "viewportsDown": 1.17
+     },
+     "firstFeedCard": {
+      "top": 1474,
+      "viewportsDown": 1.75
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 34327
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 492463,
+     "wallClockMs": 6441,
+     "totalTaskTime": 1222,
+     "longTaskCount": 9,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1248,
+     "lcp": 1248,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0314,
+     "shifts": [
+      {
+       "value": 0.0314,
+       "at": 5107,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1070,
+       "duration": 141
+      },
+      {
+       "start": 2653,
+       "duration": 321
+      },
+      {
+       "start": 3518,
+       "duration": 114
+      },
+      {
+       "start": 3929,
+       "duration": 74
+      },
+      {
+       "start": 4491,
+       "duration": 175
+      },
+      {
+       "start": 4837,
+       "duration": 165
+      },
+      {
+       "start": 5156,
+       "duration": 57
+      }
+     ],
+     "domContentLoaded": 1052,
+     "loadEvent": 2985,
+     "ttfb": 18,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4860,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 988,
+      "viewportsDown": 1.17
+     },
+     "firstFeedCard": {
+      "top": 1474,
+      "viewportsDown": 1.75
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 30228
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 488364,
+     "wallClockMs": 6612,
+     "totalTaskTime": 1047,
+     "longTaskCount": 7,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1380,
+     "lcp": 1380,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0313,
+     "shifts": [
+      {
+       "value": 0.0313,
+       "at": 4973,
+       "sources": [
+        "home-pulse__aurora"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1072,
+       "duration": 187
+      },
+      {
+       "start": 2240,
+       "duration": 244
+      },
+      {
+       "start": 3156,
+       "duration": 135
+      },
+      {
+       "start": 3796,
+       "duration": 54
+      },
+      {
+       "start": 4261,
+       "duration": 312
+      },
+      {
+       "start": 4679,
+       "duration": 115
+      },
+      {
+       "start": 5075,
+       "duration": 68
+      },
+      {
+       "start": 5306,
+       "duration": 59
+      }
+     ],
+     "domContentLoaded": 1300,
+     "loadEvent": 2496,
+     "ttfb": 18,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4860,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 988,
+      "viewportsDown": 1.17
+     },
+     "firstFeedCard": {
+      "top": 1474,
+      "viewportsDown": 1.75
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 26323
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 484459,
+     "wallClockMs": 6311,
+     "totalTaskTime": 1174,
+     "longTaskCount": 8,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1248,
+    1380
+   ],
+   "lcpSpread": [
+    1248,
+    1380
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "phone",
+   "width": 390,
+   "height": 844,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1108,
+   "lcp": 1168,
+   "cls": 0,
+   "domContentLoaded": 1103,
+   "loadEvent": 2025,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 315906,
+   "requestCount": 24,
+   "longTaskCount": 3,
+   "totalTaskTime": 353,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2445,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [
+    {
+     "value": 0,
+     "at": 2353,
+     "sources": [
+      "tt-offline__label"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1000,
+     "lcp": 1412,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2353,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1293,
+       "duration": 93
+      },
+      {
+       "start": 1829,
+       "duration": 195
+      },
+      {
+       "start": 2222,
+       "duration": 65
+      }
+     ],
+     "domContentLoaded": 1022,
+     "loadEvent": 2031,
+     "ttfb": 14,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315906,
+     "wallClockMs": 4683,
+     "totalTaskTime": 353,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1168,
+     "lcp": 1168,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2378,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 982,
+       "duration": 161
+      },
+      {
+       "start": 1816,
+       "duration": 203
+      },
+      {
+       "start": 2229,
+       "duration": 57
+      },
+      {
+       "start": 2382,
+       "duration": 55
+      }
+     ],
+     "domContentLoaded": 1171,
+     "loadEvent": 2025,
+     "ttfb": 28,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315906,
+     "wallClockMs": 4703,
+     "totalTaskTime": 476,
+     "longTaskCount": 4,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1108,
+     "lcp": 1108,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2253,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 985,
+       "duration": 112
+      },
+      {
+       "start": 1818,
+       "duration": 136
+      },
+      {
+       "start": 2126,
+       "duration": 62
+      }
+     ],
+     "domContentLoaded": 1103,
+     "loadEvent": 1958,
+     "ttfb": 30,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2445,
+     "viewportHeight": 844,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13512,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13512,
+     "transferFonts": 50276,
+     "transferTotal": 315905,
+     "wallClockMs": 4607,
+     "totalTaskTime": 310,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1000,
+    1168
+   ],
+   "lcpSpread": [
+    1108,
+    1412
+   ]
+  },
+  {
+   "route": "Home",
+   "routeKey": "home",
+   "href": "/home",
+   "authentication": "student",
+   "viewport": "wide",
+   "width": 412,
+   "height": 915,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1276,
+   "lcp": 1276,
+   "cls": 0.0842,
+   "domContentLoaded": 1039,
+   "loadEvent": 2606,
+   "jsTransfer": 287391,
+   "cssTransfer": 39014,
+   "documentTransfer": 18413,
+   "fontTransfer": 107225,
+   "totalTransfer": 492460,
+   "requestCount": 49,
+   "longTaskCount": 7,
+   "totalTaskTime": 1071,
+   "horizontalOverflow": 0,
+   "introShown": true,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/home"
+   ],
+   "domNodes": 756,
+   "docHeight": 4766,
+   "headerHeight": 58,
+   "dockHeight": 68,
+   "composerPosition": {
+    "top": 947,
+    "viewportsDown": 1.03
+   },
+   "firstFeedCard": {
+    "top": 1433,
+    "viewportsDown": 1.57
+   },
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "2k90conyp36_x.css",
+    "1qgd9encswg0f.css"
+   ],
+   "shifts": [
+    {
+     "value": 0.0842,
+     "at": 4411,
+     "sources": [
+      "home-pulse__aurora",
+      "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+      "home-pulse__horizon"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "guide-strip__lead",
+    "text": "New to Campus+? There is a two-minute guide to where everything is.",
+    "url": null
+   },
+   "consoleErrors": [
+    "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+   ],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 2020,
+     "lcp": 2020,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 4411,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1079,
+       "duration": 182
+      },
+      {
+       "start": 2282,
+       "duration": 210
+      },
+      {
+       "start": 2956,
+       "duration": 122
+      },
+      {
+       "start": 3294,
+       "duration": 51
+      },
+      {
+       "start": 3868,
+       "duration": 175
+      },
+      {
+       "start": 4210,
+       "duration": 131
+      },
+      {
+       "start": 4488,
+       "duration": 54
+      },
+      {
+       "start": 4625,
+       "duration": 56
+      }
+     ],
+     "domContentLoaded": 1059,
+     "loadEvent": 2502,
+     "ttfb": 26,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 28176
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 486312,
+     "wallClockMs": 6059,
+     "totalTaskTime": 981,
+     "longTaskCount": 8,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1276,
+     "lcp": 1276,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 4891,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1052,
+       "duration": 151
+      },
+      {
+       "start": 2325,
+       "duration": 285
+      },
+      {
+       "start": 3075,
+       "duration": 93
+      },
+      {
+       "start": 3928,
+       "duration": 386
+      },
+      {
+       "start": 4482,
+       "duration": 94
+      },
+      {
+       "start": 4596,
+       "duration": 172
+      }
+     ],
+     "domContentLoaded": 1036,
+     "loadEvent": 2630,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 34329
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 492465,
+     "wallClockMs": 6104,
+     "totalTaskTime": 1181,
+     "longTaskCount": 6,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1260,
+     "lcp": 1260,
+     "lcpElement": {
+      "tag": "P",
+      "className": "guide-strip__lead",
+      "text": "New to Campus+? There is a two-minute guide to where everything is.",
+      "url": null
+     },
+     "cls": 0.0842,
+     "shifts": [
+      {
+       "value": 0.0842,
+       "at": 4680,
+       "sources": [
+        "home-pulse__aurora",
+        "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow",
+        "home-pulse__horizon"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 1058,
+       "duration": 151
+      },
+      {
+       "start": 2290,
+       "duration": 303
+      },
+      {
+       "start": 3046,
+       "duration": 101
+      },
+      {
+       "start": 4000,
+       "duration": 203
+      },
+      {
+       "start": 4274,
+       "duration": 56
+      },
+      {
+       "start": 4334,
+       "duration": 192
+      },
+      {
+       "start": 4792,
+       "duration": 65
+      }
+     ],
+     "domContentLoaded": 1039,
+     "loadEvent": 2606,
+     "ttfb": 13,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/home",
+     "introVisible": false,
+     "requestCount": 49,
+     "domNodes": 756,
+     "docHeight": 4766,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": {
+      "top": 947,
+      "viewportsDown": 1.03
+     },
+     "firstFeedCard": {
+      "top": 1433,
+      "viewportsDown": 1.57
+     },
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "2k90conyp36_x.css",
+      "1qgd9encswg0f.css"
+     ],
+     "bodyTextBytes": 3298,
+     "headerHeight": 58,
+     "dockHeight": 68,
+     "introShown": true,
+     "transfer": {
+      "document": 18413,
+      "script": 287391,
+      "stylesheet": 39014,
+      "font": 107225,
+      "image": 6093,
+      "other": 34324
+     },
+     "transferJs": 287391,
+     "transferCss": 39014,
+     "transferDocument": 18413,
+     "transferFonts": 107225,
+     "transferTotal": 492460,
+     "wallClockMs": 6119,
+     "totalTaskTime": 1071,
+     "longTaskCount": 7,
+     "consoleErrors": [
+      "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+     ],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1260,
+    2020
+   ],
+   "lcpSpread": [
+    1260,
+    2020
+   ]
+  },
+  {
+   "route": "Division timetable",
+   "routeKey": "division",
+   "href": "/timetable/a",
+   "authentication": "signed-out",
+   "viewport": "wide",
+   "width": 412,
+   "height": 915,
+   "profile": "slow4g",
+   "runs": 3,
+   "fcp": 1108,
+   "lcp": 1108,
+   "cls": 0,
+   "domContentLoaded": 1105,
+   "loadEvent": 1975,
+   "jsTransfer": 203604,
+   "cssTransfer": 34880,
+   "documentTransfer": 13513,
+   "fontTransfer": 50276,
+   "totalTransfer": 315905,
+   "requestCount": 24,
+   "longTaskCount": 3,
+   "totalTaskTime": 334,
+   "horizontalOverflow": 0,
+   "introShown": false,
+   "introVisibleAtCapture": false,
+   "finalPaths": [
+    "/timetable/a"
+   ],
+   "domNodes": 378,
+   "docHeight": 2381,
+   "headerHeight": 0,
+   "dockHeight": 0,
+   "composerPosition": null,
+   "firstFeedCard": null,
+   "stylesheets": [
+    "067vgrk7xgxef.css",
+    "3b3-vc801262q.css",
+    "1e93i59nb_0q9.css"
+   ],
+   "shifts": [
+    {
+     "value": 0,
+     "at": 2345,
+     "sources": [
+      "tt-offline__label"
+     ]
+    }
+   ],
+   "lcpElement": {
+    "tag": "P",
+    "className": "tt-help",
+    "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+    "url": null
+   },
+   "consoleErrors": [],
+   "failedResponses": [],
+   "attempts": [
+    {
+     "fcp": 1112,
+     "lcp": 1112,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2345,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 974,
+       "duration": 131
+      },
+      {
+       "start": 1809,
+       "duration": 161
+      },
+      {
+       "start": 2165,
+       "duration": 75
+      }
+     ],
+     "domContentLoaded": 1119,
+     "loadEvent": 1975,
+     "ttfb": 20,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13512,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7540
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13512,
+     "transferFonts": 50276,
+     "transferTotal": 315905,
+     "wallClockMs": 4644,
+     "totalTaskTime": 367,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1104,
+     "lcp": 1104,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2337,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 976,
+       "duration": 115
+      },
+      {
+       "start": 1798,
+       "duration": 149
+      },
+      {
+       "start": 2136,
+       "duration": 70
+      }
+     ],
+     "domContentLoaded": 1105,
+     "loadEvent": 1951,
+     "ttfb": 15,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7539
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315905,
+     "wallClockMs": 4609,
+     "totalTaskTime": 334,
+     "longTaskCount": 3,
+     "consoleErrors": [],
+     "failedResponses": []
+    },
+    {
+     "fcp": 1108,
+     "lcp": 1108,
+     "lcpElement": {
+      "tag": "P",
+      "className": "tt-help",
+      "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in different rooms at the same time —",
+      "url": null
+     },
+     "cls": 0,
+     "shifts": [
+      {
+       "value": 0,
+       "at": 2383,
+       "sources": [
+        "tt-offline__label"
+       ]
+      }
+     ],
+     "longTasks": [
+      {
+       "start": 976,
+       "duration": 120
+      },
+      {
+       "start": 1815,
+       "duration": 156
+      }
+     ],
+     "domContentLoaded": 972,
+     "loadEvent": 1975,
+     "ttfb": 31,
+     "redirectCount": 0,
+     "redirectMs": 0,
+     "finalPath": "/timetable/a",
+     "introVisible": false,
+     "requestCount": 24,
+     "domNodes": 378,
+     "docHeight": 2381,
+     "viewportHeight": 915,
+     "horizontalOverflow": 0,
+     "composerPosition": null,
+     "firstFeedCard": null,
+     "stylesheets": [
+      "067vgrk7xgxef.css",
+      "3b3-vc801262q.css",
+      "1e93i59nb_0q9.css"
+     ],
+     "bodyTextBytes": 2007,
+     "headerHeight": 0,
+     "dockHeight": 0,
+     "introShown": false,
+     "transfer": {
+      "document": 13513,
+      "script": 203604,
+      "stylesheet": 34880,
+      "font": 50276,
+      "image": 6093,
+      "other": 7541
+     },
+     "transferJs": 203604,
+     "transferCss": 34880,
+     "transferDocument": 13513,
+     "transferFonts": 50276,
+     "transferTotal": 315907,
+     "wallClockMs": 4656,
+     "totalTaskTime": 276,
+     "longTaskCount": 2,
+     "consoleErrors": [],
+     "failedResponses": []
+    }
+   ],
+   "fcpSpread": [
+    1104,
+    1112
+   ],
+   "lcpSpread": [
+    1104,
+    1112
+   ]
+  }
+ ]
+}

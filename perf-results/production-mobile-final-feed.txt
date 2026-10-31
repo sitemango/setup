@@ -1,0 +1,27 @@
+
+> campus-plus@1.0.0 verify:feed
+> node scripts/dev/feed-refresh-check.mjs
+
+
+[1mFeed refresh check[0m  http://127.0.0.1:3100  author=perf.student1@pccoepune.org viewer=perf.student2@pccoepune.org
+
+ok    harness: two signed-in feeds are open                  author @aarav_p · viewer perf.student2@pccoepune.org · /communities/computer-engineering
+ok    author: post appears with no reload or navigation      one copy in 2.3s · no reload · view kept at 481px · 3 feed read(s) total
+ok    author: the card is a complete post, not a placeholder “A Aarav Patil @aarav_p · just now feed-refresh-check mvvcfql8 campus…”
+ok    author: composer cleared only after the server confirmed body empty, form reset
+ok    viewer: discovers the post with no manual reload       one copy in 32.1s · no reload · 3 feed read(s) total
+ok    viewer: one copy survives repeated invalidation        deduplicated across focus-driven re-reads
+ok    moderation: an older loaded page reconciles without losing valid entries older hidden row gone in 26.1s · valid older + accepted head retained · 1 bounded read(s)
+ok    moderation: a hidden post leaves both open feeds       gone from the viewer in 38.1s, from the author in 0.0s
+ok    moderation: a pending post never enters an open feed   invisible on both open feeds while the row exists
+ok    community board: appears on the open page without a reload one copy in 2.0s on a server-rendered page
+ok    community board: reaches the other member too          one copy in 28.1s
+ok    community post is never placed on the campus feed      Home stayed out of it, exactly as campus_feed() does
+ok    failure: no false success, draft preserved, retry works refused cleanly (Failed to fetch ), draft kept, published on retry
+FAIL  no polling: an idle open feed stops reading            2 feed reads during 24s of doing nothing
+ok    no client-side errors escaped to the console           clean
+
+note  the viewer converged in 32.1s on the degraded (no-websocket) path 
+note  the pending row stayed readable in the database and invisible on the feed 
+
+1 check(s) failed

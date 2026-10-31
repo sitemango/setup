@@ -1,0 +1,131 @@
+
+> campus-plus@1.0.0 prebuild
+> node scripts/build-sw.mjs
+
+sw:bundle ✓ public/timetable/sw.js already current (15.2 kB)
+
+> campus-plus@1.0.0 build
+> next build
+
+▲ Next.js 16.3.8 (Turbopack)
+✓ Running next.config.mjs took 13ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 4.4s
+  Running TypeScript ...
+  Finished TypeScript in 6ms ...
+  Collecting page data using 1 worker ...
+  Generating static pages using 1 worker (0/87) ...
+  Generating static pages using 1 worker (21/87) 
+  Generating static pages using 1 worker (43/87) 
+  Generating static pages using 1 worker (65/87) 
+✓ Generating static pages using 1 worker (87/87) in 554ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /account-status
+├ ƒ /admin
+├ ƒ /api/backup/drive/callback
+├ ƒ /api/backup/drive/connect
+├ ƒ /api/backup/snapshot
+├ ƒ /api/backup/worker
+├ ƒ /api/giphy/search
+├ ƒ /api/home/feed
+├ ƒ /api/messages/sync
+├ ƒ /api/notifications/unread-count
+├ ƒ /api/search
+├   /api/timetable/[division]
+│ ├ ● /api/timetable/a
+│ ├ ● /api/timetable/b
+│ ├ ● /api/timetable/c
+│ └ ● [+15 more paths]
+├ ○ /apple-icon.png
+├ ƒ /auth/callback
+├ ƒ /campus
+├ ƒ /campus/clubs
+├ ƒ /campus/clubs/[id]
+├ ƒ /campus/events
+├ ƒ /campus/events/[id]
+├ ƒ /campus/events/new
+├ ƒ /campus/housing
+├ ƒ /campus/housing/new
+├ ƒ /campus/lost-found
+├ ƒ /campus/lost-found/[id]
+├ ƒ /campus/lost-found/new
+├ ƒ /campus/noticeboard
+├ ƒ /campus/noticeboard/[id]
+├ ƒ /campus/rides
+├ ƒ /campus/rides/new
+├ ƒ /campus/study
+├ ƒ /campus/study/[id]
+├ ƒ /campus/study/new
+├ ƒ /campus/teams
+├ ƒ /campus/teams/new
+├ ƒ /campus/utilities
+├ ƒ /chat
+├ ƒ /chat/[id]
+├ ƒ /clubs
+├ ƒ /clubs/[id]
+├ ƒ /clubs/[id]/edit
+├ ƒ /clubs/[id]/manage
+├ ƒ /clubs/new
+├ ƒ /clubs/request
+├ ƒ /communities
+├ ƒ /communities/[slug]
+├ ƒ /communities/new
+├ ƒ /community/[slug]
+├ ƒ /explore
+├ ƒ /explore/collections/[subject]
+├ ƒ /explore/opportunities
+├ ƒ /explore/opportunities/[id]
+├ ƒ /explore/opportunities/new
+├ ƒ /explore/projects
+├ ƒ /explore/projects/[id]
+├ ƒ /explore/projects/new
+├ ƒ /explore/resources
+├ ƒ /explore/resources/[id]
+├ ƒ /explore/resources/new
+├ ƒ /gigs
+├ ƒ /gigs/[id]
+├ ƒ /gigs/[id]/edit
+├ ƒ /gigs/new
+├ ƒ /guide
+├ ƒ /home
+├ ○ /icon.png
+├ ○ /legal
+├ ○ /login
+├ ƒ /login/verify
+├ ƒ /market
+├ ƒ /market/gigs/[id]
+├ ƒ /market/listing/[id]
+├ ƒ /market/listing/[id]/edit
+├ ƒ /market/new
+├ ƒ /moderator
+├ ƒ /notifications
+├ ○ /onboarding
+├ ƒ /post/[id]
+├ ƒ /profile
+├ ○ /rules
+├ ƒ /settings
+├ ○ /setup
+├ ○ /timetable
+├ ƒ /timetable/[division]
+├ ○ /timetable/apple-icon.png
+├ ○ /timetable/icon.png
+├   /timetable/manifest/[division]
+│ ├ ● /timetable/manifest/a
+│ ├ ● /timetable/manifest/b
+│ ├ ● /timetable/manifest/c
+│ └ ● [+15 more paths]
+├ ○ /timetable/offline
+└ ƒ /user/[username]
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+

@@ -1,0 +1,34 @@
+
+[1mCampus+ mobile browser — production-mobile-final-phones[0m
+  http://127.0.0.1:3100 · 2 routes · 4 viewports · Unthrottled, Slow 4G + 4× CPU · 3 runs
+
+[1mRoute           Viewport        FCP    LCP    CLS    DCL    JS        CSS       Tasks  Overflow[0m
+Home            360×800         128ms  268ms  0.000  200ms  279kB     37kB      1      0
+Division timetable360×800         148ms  212ms  0.000  99ms   197kB     34kB      0      0
+Home            375×812         116ms  116ms  0.000  184ms  279kB     37kB      1      0
+Division timetable375×812         136ms  144ms  0.000  121ms  197kB     34kB      0      0
+Home            390×844         120ms  140ms  0.031  180ms  279kB     37kB      1      0
+Division timetable390×844         172ms  180ms  0.000  134ms  197kB     34kB      0      0
+Home            412×915         112ms  112ms  0.084  188ms  279kB     37kB      1      0
+Division timetable412×915         136ms  140ms  0.000  133ms  197kB     34kB      0      0
+Home            360×800 ⏳       1336ms 1336ms 0.033  1063ms 279kB     37kB      7      0
+Division timetable360×800 ⏳       996ms  1412ms 0.000  1000ms 197kB     34kB      3      0
+Home            375×812 ⏳       1312ms 1556ms 0.033  1064ms 279kB     37kB      7      0
+Division timetable375×812 ⏳       1116ms 1132ms 0.000  1111ms 197kB     34kB      3      0
+Home            390×844 ⏳       1360ms 1360ms 0.031  1080ms 279kB     37kB      7      0
+Division timetable390×844 ⏳       1100ms 1124ms 0.000  998ms  197kB     34kB      3      0
+Home            412×915 ⏳       1324ms 1324ms 0.084  1065ms 279kB     37kB      9      0
+Division timetable412×915 ⏳       1016ms 1440ms 0.000  1036ms 197kB     34kB      3      0
+
+[33mConsole errors:[0m
+  Home@360px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@375px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@390px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@412px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@360px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@375px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@390px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+  Home@412px: WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404
+
+wrote perf-results/production-mobile-final-phones.json
+

@@ -1,0 +1,10 @@
+{
+  "label": "poll workflow production-browser acceptance",
+  "base": "http://127.0.0.1:3100",
+  "marker": "poll-acceptance-mvvsd1i8",
+  "checks": [],
+  "errors": [],
+  "voter": "perf.student7@pccoepune.org",
+  "ok": false,
+  "failure": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for locator('article').filter({ hasText: 'poll-acceptance-mvvsd1i8-a' }).first() to be visible\n\n    at /home/user/setup/scripts/dev/poll-vote-check.mjs:132:31"
+}

@@ -1,0 +1,102 @@
+
+> campus-plus@1.0.0 verify:offline
+> node scripts/dev/timetable-offline-check.mjs
+
+
+[1m0. the build under test[22m
+✓ a production build (a dev server registers no worker on purpose)
+✓ the timetable service worker is registered and activated  — activated · http://127.0.0.1:3100/timetable/sw.js
+✓ one registration, controlling this origin from the wide scope  — http://127.0.0.1:3100/
+✓ the real timetable is on the page  — Division O · 7 rows
+✓ nothing was written to the device before the student asked
+✓ the action asks to save, and does not claim an install yet  — Save timetable for offline use
+
+[1m1. saving O while online[22m
+✓ one record for this batch, holding its whole week  — 30 events · 10886 bytes
+✓ the record is versioned and timed  — v1 · 2026-10-30T18:53:03.584Z
+✓ the button names the batch once the copy is on the device  — Add Division O (IT) timetable to Home Screen
+✓ the header reports the saved copy  — Offline copy ready · saved today 12:23 AM
+✓ this batch’s document is cached, so a reload needs no network
+✓ the other batch was not touched by this save
+✓ no signed-in, admin or auth page was cached
+✓ no API response is in CacheStorage (the data lives in IndexedDB)
+✓ only this feature’s own caches exist on the origin  — campusplus-timetable-core-v1, campusplus-timetable-assets-v1, campusplus-timetable-documents-v1
+
+[1m2. the saved page, reloaded with the radio off[22m
+✓ the timetable renders with no network at all  — Division O · 7 rows
+✓ the entries are the real subject lines, not a skeleton  — WDL-1/ENG-2/WDL-3
+✓ the five weekday controls still work offline  — 5 tabs
+✓ today’s marker and the NOW/NEXT line agree with the campus calendar (Saturday)  — 0 marker(s), status: none
+✓ the page labels its copy as saved, with a time  — Saved copy · today 12:23 AM
+✓ an offline load never throws inside the page
+✓ every weekday can be switched offline, and the choice is announced  — rows per day: 7,6,7,8,7
+✓ coming back online does not empty the page  — 7 rows
+✓ and the offline rows were the same rows the network has  — WDL-1/ENG-2/WDL-3 · EPH-1/DEL-2/WDL-3
+
+[1m3. an unsaved batch (B), offline[22m
+✓ an unsaved batch explains itself instead of showing a blank page  — Campus+ PCCOE Open Campus+ OFFLINE Nothing saved for this timetable yet Division B (Mech) 
+
+[1m4. a second batch, and reconstruction from the shell alone[22m
+✓ both batches are stored on this device  — J, O
+✓ each batch kept its own checksum  — J:bd7262ab O:07c0b9b4
+✓ the second record holds the second week, not a copy of the first
+✓ the shell rebuilds the saved batch from IndexedDB with no document cached  — Division J · 8 rows
+✓ the address stays the batch that was asked for  — http://127.0.0.1:3100/timetable/j
+✓ and the first batch still renders as itself  — Division O · 7 rows
+✓ no page error escaped through any offline step
+
+[1m5. a cold start: every page closed, still offline[22m
+✓ the reopened page still renders the saved week with no network  — Division O · 7 rows
+✓ a cold worker took control without a network  — controller: true
+✓ the chip reports the copy’s age, from disk  — Saved copy · today 12:23 AM
+✓ the cold start threw nothing
+
+[1m6. placement, keyboard and motion[22m
+✓ the timetable index carries no install action  — button=null
+✓ sign-in carries none either
+✓ the page is reachable from the keyboard  — first stop: <a>
+✓ Enter on the action opens the sheet
+✓ the sheet names this batch  — Add Division O (IT) to your Home Screen A page cannot press the browser’s own bu
+✓ and it tells the truth about the platform in front of us  — Add Division O (IT) to your Home Screen A page cannot press the browser’s own bu
+✓ Escape closes it
+✓ reduced motion stops the offline pill and the spinner  — {"pillTransition":[0.000001],"spinnerAnimation":"none","spinnerSeconds":[0],"cardPaddingBottom":"20px"}
+✓ the card has real bottom padding for a notched phone  — 20px
+
+[1m7. a browser that refuses the worker (private profile, blocked storage)[22m
+✓ the timetable is still saved without a service worker  — O
+✓ and the page still renders its rows  — 7 rows
+✓ the action is not stuck on “preparing”  — Add Division O (IT) timetable to Home Screen
+✓ the copy names the limitation instead of hiding it  — Up to date This browser would not keep the page files, so an offline reload may need a connectio
+✓ no error escaped into the console
+
+[1m8. what the platform actually offered[22m
+  beforeinstallprompt offered: no (headless Chromium never fires it) · appinstalled: no · standalone: false
+✓ an unoffered prompt becomes a guide, never a fake success or a failure  — Add Division O (IT) timetable to Home Screen
+  storage: 1322 kB used · durable grant: not granted (browser decides)
+
+[1m9. the mobile offer, in a browser that can touch[22m
+✗ the offer opens itself on a phone, unprompted  — save-first
+✗ exactly one install surface is on screen  — dialogs=0
+✗ the offer explains the home screen, not a design idea
+✗ it states the offline state it is standing on
+✗ it says what this browser can do, and this one cannot  — path=manual
+✗ there is a dismissal in the user’s words
+✗ the manual case is offered steps, never a fake install button
+✓ no button in the offer is inert  — none disabled
+✓ the timetable behind it is intact  — 7 rows · secure context: true
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+locator.click: Timeout 30000ms exceeded.
+Call log:
+  - waiting for locator('[role="dialog"] button').filter({ hasText: /installation steps/i }).first()
+
+    at /home/user/setup/scripts/dev/timetable-offline-check.mjs:577:103 {
+  log: [
+    `  - waiting for locator('[role="dialog"] button').filter({ hasText: /installation steps/i }).first()`
+  ],
+  name: 'TimeoutError'
+}
+
+Node.js v22.22.3

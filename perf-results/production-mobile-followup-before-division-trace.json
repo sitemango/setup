@@ -1,0 +1,1166 @@
+{
+  "label": "pre-fix division paint/resource trace",
+  "profile": "390x844 DPR3 Slow4G CPU4 cold",
+  "runs": [
+    {
+      "run": 1,
+      "wall": 3360,
+      "paints": [
+        {
+          "name": "first-paint",
+          "start": 1036
+        },
+        {
+          "name": "first-contentful-paint",
+          "start": 1036
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+          "start": 169.70000000001164,
+          "responseEnd": 805.2000000000116,
+          "duration": 635.5,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+          "start": 176.39999999999418,
+          "responseEnd": 854.7999999999884,
+          "duration": 678.3999999999942,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1mblj5b6_cn_n.css",
+          "start": 196.29999999998836,
+          "responseEnd": 934.2000000000116,
+          "duration": 737.9000000000233,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3b3-vc801262q.css",
+          "start": 196.39999999999418,
+          "responseEnd": 412.70000000001164,
+          "duration": 216.30000000001746,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1e93i59nb_0q9.css",
+          "start": 197.10000000000582,
+          "responseEnd": 491.1000000000058,
+          "duration": 294,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "start": 197.20000000001164,
+          "responseEnd": 441.1000000000058,
+          "duration": 243.89999999999418,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0e132rp4s3prs.js",
+          "start": 197.20000000001164,
+          "responseEnd": 826.7999999999884,
+          "duration": 629.5999999999767,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+          "start": 197.29999999998836,
+          "responseEnd": 1070,
+          "duration": 872.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/36hei7oa9r0rt.js",
+          "start": 197.29999999998836,
+          "responseEnd": 1498.5,
+          "duration": 1301.2000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "start": 197.29999999998836,
+          "responseEnd": 1785.2999999999884,
+          "duration": 1588,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2gtofkb1zof5q.js",
+          "start": 197.39999999999418,
+          "responseEnd": 1148.2999999999884,
+          "duration": 950.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1yf2xi5tb-fut.js",
+          "start": 197.5,
+          "responseEnd": 1034.5,
+          "duration": 837,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/259w2_xl4atm0.js",
+          "start": 197.5,
+          "responseEnd": 1277.1000000000058,
+          "duration": 1079.6000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/244no_wyc4vdc.js",
+          "start": 197.5,
+          "responseEnd": 1348.3999999999942,
+          "duration": 1150.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2j3tpssg7twc_.js",
+          "start": 197.5,
+          "responseEnd": 1356.5,
+          "duration": 1159,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/083w1zjhmjigs.js",
+          "start": 197.5,
+          "responseEnd": 1671.6000000000058,
+          "duration": 1474.1000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1fwhyx6-o5a7a.js",
+          "start": 197.60000000000582,
+          "responseEnd": 1592.8999999999942,
+          "duration": 1395.2999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3-z2r56tgfa4x.js",
+          "start": 197.60000000000582,
+          "responseEnd": 1700.2000000000116,
+          "duration": 1502.6000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+          "start": 1422.6000000000058,
+          "responseEnd": 1713.7999999999884,
+          "duration": 291.19999999998254,
+          "initiator": "img",
+          "transfer": 0
+        },
+        {
+          "name": "/home",
+          "start": 2076.100000000006,
+          "responseEnd": 2557.2999999999884,
+          "duration": 481.19999999998254,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2076.2999999999884,
+          "responseEnd": 2243.2999999999884,
+          "duration": 167,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2262.7000000000116,
+          "responseEnd": 2435.5,
+          "duration": 172.79999999998836,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3i7g0lgpbmuu1.css",
+          "start": 2561.5,
+          "responseEnd": 2577.2000000000116,
+          "duration": 15.700000000011642,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/Boldonse_Regular-s.p.1fpl405l5gcfl.ttf",
+          "start": 2562,
+          "responseEnd": 2577.5,
+          "duration": 15.5,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/login",
+          "start": 2562.7000000000116,
+          "responseEnd": 2729.899999999994,
+          "duration": 167.19999999998254,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0h6s2voe-9xs7.js",
+          "start": 2733.5,
+          "responseEnd": 2741.2999999999884,
+          "duration": 7.7999999999883585,
+          "initiator": "script",
+          "transfer": 0
+        }
+      ],
+      "nav": {
+        "responseStart": 126.5,
+        "domContentLoaded": 980.7000000000116,
+        "load": 1929
+      },
+      "trace": {
+        "lcp": [
+          {
+            "startTime": 1036,
+            "renderTime": 1036,
+            "loadTime": 0,
+            "size": 2010,
+            "tag": "SPAN",
+            "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+            "text": "Loading Campus+…",
+            "url": null
+          },
+          {
+            "startTime": 1528,
+            "renderTime": 1528,
+            "loadTime": 0,
+            "size": 42602,
+            "tag": "P",
+            "className": "tt-help",
+            "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in diff",
+            "url": null
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1346.1000000000058,
+            "duration": 68
+          },
+          {
+            "start": 1787.3999999999942,
+            "duration": 130
+          }
+        ],
+        "shifts": []
+      },
+      "help": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fonts": [
+        {
+          "family": "Campus Galactic Syne",
+          "status": "unloaded",
+          "weight": "400 800"
+        },
+        {
+          "family": "Campus Galactic Space",
+          "status": "unloaded",
+          "weight": "300 700"
+        },
+        {
+          "family": "microFont",
+          "status": "unloaded",
+          "weight": "400"
+        },
+        {
+          "family": "microFont",
+          "status": "loaded",
+          "weight": "500"
+        },
+        {
+          "family": "microFont Fallback",
+          "status": "unloaded",
+          "weight": "normal"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "run": 2,
+      "wall": 3340,
+      "paints": [
+        {
+          "name": "first-paint",
+          "start": 1072
+        },
+        {
+          "name": "first-contentful-paint",
+          "start": 1072
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+          "start": 172.79999999998836,
+          "responseEnd": 854.2999999999884,
+          "duration": 681.5,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+          "start": 173,
+          "responseEnd": 860.8999999999942,
+          "duration": 687.8999999999942,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1mblj5b6_cn_n.css",
+          "start": 189.79999999998836,
+          "responseEnd": 931.8999999999942,
+          "duration": 742.1000000000058,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3b3-vc801262q.css",
+          "start": 189.89999999999418,
+          "responseEnd": 403.70000000001164,
+          "duration": 213.80000000001746,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1e93i59nb_0q9.css",
+          "start": 189.89999999999418,
+          "responseEnd": 481.79999999998836,
+          "duration": 291.8999999999942,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "start": 190.70000000001164,
+          "responseEnd": 446.8999999999942,
+          "duration": 256.19999999998254,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0e132rp4s3prs.js",
+          "start": 191.5,
+          "responseEnd": 817.2000000000116,
+          "duration": 625.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "start": 191.5,
+          "responseEnd": 1790.6000000000058,
+          "duration": 1599.1000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+          "start": 191.60000000000582,
+          "responseEnd": 1060.8999999999942,
+          "duration": 869.2999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/36hei7oa9r0rt.js",
+          "start": 191.60000000000582,
+          "responseEnd": 1483.3999999999942,
+          "duration": 1291.7999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1yf2xi5tb-fut.js",
+          "start": 191.70000000001164,
+          "responseEnd": 1047,
+          "duration": 855.2999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2gtofkb1zof5q.js",
+          "start": 191.70000000001164,
+          "responseEnd": 1176.1000000000058,
+          "duration": 984.3999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/259w2_xl4atm0.js",
+          "start": 191.79999999998836,
+          "responseEnd": 1297,
+          "duration": 1105.2000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/244no_wyc4vdc.js",
+          "start": 191.79999999998836,
+          "responseEnd": 1339.7000000000116,
+          "duration": 1147.9000000000233,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2j3tpssg7twc_.js",
+          "start": 191.79999999998836,
+          "responseEnd": 1347.2000000000116,
+          "duration": 1155.4000000000233,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/083w1zjhmjigs.js",
+          "start": 191.79999999998836,
+          "responseEnd": 1697.2999999999884,
+          "duration": 1505.5,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1fwhyx6-o5a7a.js",
+          "start": 191.89999999999418,
+          "responseEnd": 1633,
+          "duration": 1441.1000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3-z2r56tgfa4x.js",
+          "start": 191.89999999999418,
+          "responseEnd": 1712,
+          "duration": 1520.1000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+          "start": 1057.3999999999942,
+          "responseEnd": 1668.8999999999942,
+          "duration": 611.5,
+          "initiator": "img",
+          "transfer": 0
+        },
+        {
+          "name": "/home",
+          "start": 2079.7000000000116,
+          "responseEnd": 2549.2000000000116,
+          "duration": 469.5,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2079.899999999994,
+          "responseEnd": 2241,
+          "duration": 161.10000000000582,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2282.5,
+          "responseEnd": 2455.7000000000116,
+          "duration": 173.20000000001164,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3i7g0lgpbmuu1.css",
+          "start": 2556.7000000000116,
+          "responseEnd": 2573,
+          "duration": 16.29999999998836,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/Boldonse_Regular-s.p.1fpl405l5gcfl.ttf",
+          "start": 2559,
+          "responseEnd": 2580.5,
+          "duration": 21.5,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/login",
+          "start": 2560.100000000006,
+          "responseEnd": 2726.899999999994,
+          "duration": 166.79999999998836,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0h6s2voe-9xs7.js",
+          "start": 2730.2999999999884,
+          "responseEnd": 2738,
+          "duration": 7.7000000000116415,
+          "initiator": "script",
+          "transfer": 0
+        }
+      ],
+      "nav": {
+        "responseStart": 35.70000000001164,
+        "domContentLoaded": 1065.1000000000058,
+        "load": 1916.2999999999884
+      },
+      "trace": {
+        "lcp": [
+          {
+            "startTime": 1072,
+            "renderTime": 1072,
+            "loadTime": 0,
+            "size": 42602,
+            "tag": "P",
+            "className": "tt-help",
+            "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in diff",
+            "url": null
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 953.7999999999884,
+            "duration": 103
+          },
+          {
+            "start": 1796.6000000000058,
+            "duration": 107
+          }
+        ],
+        "shifts": []
+      },
+      "help": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fonts": [
+        {
+          "family": "Campus Galactic Syne",
+          "status": "unloaded",
+          "weight": "400 800"
+        },
+        {
+          "family": "Campus Galactic Space",
+          "status": "unloaded",
+          "weight": "300 700"
+        },
+        {
+          "family": "microFont",
+          "status": "unloaded",
+          "weight": "400"
+        },
+        {
+          "family": "microFont",
+          "status": "loaded",
+          "weight": "500"
+        },
+        {
+          "family": "microFont Fallback",
+          "status": "unloaded",
+          "weight": "normal"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "run": 3,
+      "wall": 3339,
+      "paints": [
+        {
+          "name": "first-paint",
+          "start": 1088
+        },
+        {
+          "name": "first-contentful-paint",
+          "start": 1088
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+          "start": 170.19999999998254,
+          "responseEnd": 849.5,
+          "duration": 679.3000000000175,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+          "start": 170.39999999999418,
+          "responseEnd": 857.3999999999942,
+          "duration": 687,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1mblj5b6_cn_n.css",
+          "start": 187.69999999998254,
+          "responseEnd": 943,
+          "duration": 755.3000000000175,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3b3-vc801262q.css",
+          "start": 188,
+          "responseEnd": 392.5,
+          "duration": 204.5,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1e93i59nb_0q9.css",
+          "start": 188.19999999998254,
+          "responseEnd": 471.19999999998254,
+          "duration": 283,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "start": 188.29999999998836,
+          "responseEnd": 434.8999999999942,
+          "duration": 246.60000000000582,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0e132rp4s3prs.js",
+          "start": 188.29999999998836,
+          "responseEnd": 801.1999999999825,
+          "duration": 612.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1yf2xi5tb-fut.js",
+          "start": 188.39999999999418,
+          "responseEnd": 1036.1000000000058,
+          "duration": 847.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+          "start": 188.39999999999418,
+          "responseEnd": 1049.8999999999942,
+          "duration": 861.5,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2gtofkb1zof5q.js",
+          "start": 188.39999999999418,
+          "responseEnd": 1157.6000000000058,
+          "duration": 969.2000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/36hei7oa9r0rt.js",
+          "start": 188.39999999999418,
+          "responseEnd": 1493.6999999999825,
+          "duration": 1305.2999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "start": 188.39999999999418,
+          "responseEnd": 1787.1000000000058,
+          "duration": 1598.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/244no_wyc4vdc.js",
+          "start": 188.5,
+          "responseEnd": 1358.2999999999884,
+          "duration": 1169.7999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/259w2_xl4atm0.js",
+          "start": 188.60000000000582,
+          "responseEnd": 1278.7999999999884,
+          "duration": 1090.1999999999825,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2j3tpssg7twc_.js",
+          "start": 188.60000000000582,
+          "responseEnd": 1329.6000000000058,
+          "duration": 1141,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1fwhyx6-o5a7a.js",
+          "start": 188.60000000000582,
+          "responseEnd": 1608.1000000000058,
+          "duration": 1419.5,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/083w1zjhmjigs.js",
+          "start": 188.60000000000582,
+          "responseEnd": 1686.5,
+          "duration": 1497.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3-z2r56tgfa4x.js",
+          "start": 188.60000000000582,
+          "responseEnd": 1701.3999999999942,
+          "duration": 1512.7999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+          "start": 1079.1999999999825,
+          "responseEnd": 1672.7999999999884,
+          "duration": 593.6000000000058,
+          "initiator": "img",
+          "transfer": 0
+        },
+        {
+          "name": "/home",
+          "start": 2085.6999999999825,
+          "responseEnd": 2559.399999999994,
+          "duration": 473.70000000001164,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2087.399999999994,
+          "responseEnd": 2251.5,
+          "duration": 164.10000000000582,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2275.7999999999884,
+          "responseEnd": 2445.399999999994,
+          "duration": 169.60000000000582,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3i7g0lgpbmuu1.css",
+          "start": 2565.6999999999825,
+          "responseEnd": 2584.6999999999825,
+          "duration": 19,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/Boldonse_Regular-s.p.1fpl405l5gcfl.ttf",
+          "start": 2569.6999999999825,
+          "responseEnd": 2590,
+          "duration": 20.300000000017462,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/login",
+          "start": 2571.7999999999884,
+          "responseEnd": 2740.100000000006,
+          "duration": 168.30000000001746,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0h6s2voe-9xs7.js",
+          "start": 2742.2999999999884,
+          "responseEnd": 2749,
+          "duration": 6.7000000000116415,
+          "initiator": "script",
+          "transfer": 0
+        }
+      ],
+      "nav": {
+        "responseStart": 23.29999999998836,
+        "domContentLoaded": 1087.5,
+        "load": 1917.6999999999825
+      },
+      "trace": {
+        "lcp": [
+          {
+            "startTime": 1088,
+            "renderTime": 1088,
+            "loadTime": 0,
+            "size": 42602,
+            "tag": "P",
+            "className": "tt-help",
+            "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in diff",
+            "url": null
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 967.5,
+            "duration": 112
+          },
+          {
+            "start": 1790.8999999999942,
+            "duration": 118
+          },
+          {
+            "start": 1991.3999999999942,
+            "duration": 50
+          }
+        ],
+        "shifts": []
+      },
+      "help": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fonts": [
+        {
+          "family": "Campus Galactic Syne",
+          "status": "unloaded",
+          "weight": "400 800"
+        },
+        {
+          "family": "Campus Galactic Space",
+          "status": "unloaded",
+          "weight": "300 700"
+        },
+        {
+          "family": "microFont",
+          "status": "unloaded",
+          "weight": "400"
+        },
+        {
+          "family": "microFont",
+          "status": "loaded",
+          "weight": "500"
+        },
+        {
+          "family": "microFont Fallback",
+          "status": "unloaded",
+          "weight": "normal"
+        }
+      ],
+      "overflow": 0
+    },
+    {
+      "run": 4,
+      "wall": 3359,
+      "paints": [
+        {
+          "name": "first-paint",
+          "start": 968
+        },
+        {
+          "name": "first-contentful-paint",
+          "start": 968
+        }
+      ],
+      "resources": [
+        {
+          "name": "/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+          "start": 171.10000000000582,
+          "responseEnd": 850.7999999999884,
+          "duration": 679.6999999999825,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+          "start": 171.29999999998836,
+          "responseEnd": 857.2999999999884,
+          "duration": 686,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3b3-vc801262q.css",
+          "start": 189.20000000001164,
+          "responseEnd": 400.3999999999942,
+          "duration": 211.19999999998254,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1e93i59nb_0q9.css",
+          "start": 189.20000000001164,
+          "responseEnd": 478.20000000001164,
+          "duration": 289,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1mblj5b6_cn_n.css",
+          "start": 189.20000000001164,
+          "responseEnd": 929.2000000000116,
+          "duration": 740,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3s6nzrbk-8mnv.js",
+          "start": 189.29999999998836,
+          "responseEnd": 442.5,
+          "duration": 253.20000000001164,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0e132rp4s3prs.js",
+          "start": 189.39999999999418,
+          "responseEnd": 814.2999999999884,
+          "duration": 624.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3g4px251sg85e.js",
+          "start": 189.39999999999418,
+          "responseEnd": 1787.1000000000058,
+          "duration": 1597.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1yf2xi5tb-fut.js",
+          "start": 189.5,
+          "responseEnd": 1043.5,
+          "duration": 854,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+          "start": 189.5,
+          "responseEnd": 1072.7000000000116,
+          "duration": 883.2000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2gtofkb1zof5q.js",
+          "start": 189.5,
+          "responseEnd": 1179.5,
+          "duration": 990,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/36hei7oa9r0rt.js",
+          "start": 189.5,
+          "responseEnd": 1473.3999999999942,
+          "duration": 1283.8999999999942,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/244no_wyc4vdc.js",
+          "start": 189.60000000000582,
+          "responseEnd": 1343.2999999999884,
+          "duration": 1153.6999999999825,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/259w2_xl4atm0.js",
+          "start": 190,
+          "responseEnd": 1286,
+          "duration": 1096,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/2j3tpssg7twc_.js",
+          "start": 193.39999999999418,
+          "responseEnd": 1351.7000000000116,
+          "duration": 1158.3000000000175,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/1fwhyx6-o5a7a.js",
+          "start": 193.5,
+          "responseEnd": 1630.2000000000116,
+          "duration": 1436.7000000000116,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/083w1zjhmjigs.js",
+          "start": 193.5,
+          "responseEnd": 1694.2999999999884,
+          "duration": 1500.7999999999884,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3-z2r56tgfa4x.js",
+          "start": 193.5,
+          "responseEnd": 1708.6000000000058,
+          "duration": 1515.1000000000058,
+          "initiator": "script",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+          "start": 1349,
+          "responseEnd": 1672.2000000000116,
+          "duration": 323.20000000001164,
+          "initiator": "img",
+          "transfer": 0
+        },
+        {
+          "name": "/home",
+          "start": 2096.899999999994,
+          "responseEnd": 2566.7000000000116,
+          "duration": 469.80000000001746,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2097.100000000006,
+          "responseEnd": 2259.5,
+          "duration": 162.39999999999418,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/timetable",
+          "start": 2294.7000000000116,
+          "responseEnd": 2466.600000000006,
+          "duration": 171.89999999999418,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/3i7g0lgpbmuu1.css",
+          "start": 2570.600000000006,
+          "responseEnd": 2587.899999999994,
+          "duration": 17.29999999998836,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/media/Boldonse_Regular-s.p.1fpl405l5gcfl.ttf",
+          "start": 2575,
+          "responseEnd": 2596.7999999999884,
+          "duration": 21.79999999998836,
+          "initiator": "link",
+          "transfer": 0
+        },
+        {
+          "name": "/login",
+          "start": 2575.899999999994,
+          "responseEnd": 2738.2999999999884,
+          "duration": 162.39999999999418,
+          "initiator": "fetch",
+          "transfer": 0
+        },
+        {
+          "name": "/_next/static/chunks/0h6s2voe-9xs7.js",
+          "start": 2740.100000000006,
+          "responseEnd": 2748.7000000000116,
+          "duration": 8.60000000000582,
+          "initiator": "script",
+          "transfer": 0
+        }
+      ],
+      "nav": {
+        "responseStart": 27.29999999998836,
+        "domContentLoaded": 974.3999999999942,
+        "load": 1936.6000000000058
+      },
+      "trace": {
+        "lcp": [
+          {
+            "startTime": 968,
+            "renderTime": 968,
+            "loadTime": 0,
+            "size": 2010,
+            "tag": "SPAN",
+            "className": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+            "text": "Loading Campus+…",
+            "url": null
+          },
+          {
+            "startTime": 1368,
+            "renderTime": 1368,
+            "loadTime": 0,
+            "size": 42602,
+            "tag": "P",
+            "className": "tt-help",
+            "text": "How to read practicals: an entry like EG-1/ENG-2/FES-3 means the three batches are in diff",
+            "url": null
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1262.2000000000116,
+            "duration": 79
+          },
+          {
+            "start": 1790.5,
+            "duration": 133
+          },
+          {
+            "start": 2010.2000000000116,
+            "duration": 50
+          }
+        ],
+        "shifts": []
+      },
+      "help": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+      "fonts": [
+        {
+          "family": "Campus Galactic Syne",
+          "status": "unloaded",
+          "weight": "400 800"
+        },
+        {
+          "family": "Campus Galactic Space",
+          "status": "unloaded",
+          "weight": "300 700"
+        },
+        {
+          "family": "microFont",
+          "status": "unloaded",
+          "weight": "400"
+        },
+        {
+          "family": "microFont",
+          "status": "loaded",
+          "weight": "500"
+        },
+        {
+          "family": "microFont Fallback",
+          "status": "unloaded",
+          "weight": "normal"
+        }
+      ],
+      "overflow": 0
+    }
+  ]
+}

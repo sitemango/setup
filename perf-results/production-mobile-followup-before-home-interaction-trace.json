@@ -1,0 +1,2865 @@
+{
+  "label": "pre-fix controlled Discussion tab diagnostics",
+  "runs": [
+    {
+      "variant": "normal",
+      "run": 1,
+      "click": {
+        "name": "click",
+        "start": 8751.599999999977,
+        "duration": 624,
+        "inputDelay": 54.29999999998836,
+        "processing": 23.20000000001164,
+        "target": "BUTTON"
+      },
+      "max": 624,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 2.300000000046566,
+          "processing": 4.099999999976717,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.400000000023283,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.5,
+          "processing": 0.1000000000349246,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 8751.399999999965,
+          "duration": 624,
+          "inputDelay": 6.600000000034925,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 8751.5,
+          "duration": 624,
+          "inputDelay": 18.099999999976717,
+          "processing": 26.600000000034925,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 8751.5,
+          "duration": 624,
+          "inputDelay": 44.70000000001164,
+          "processing": 0.5,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 8751.599999999977,
+          "duration": 624,
+          "inputDelay": 54.100000000034925,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 8751.599999999977,
+          "duration": 624,
+          "inputDelay": 54.100000000034925,
+          "processing": 0.19999999995343387,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 8751.599999999977,
+          "duration": 624,
+          "inputDelay": 54.29999999998836,
+          "processing": 23.20000000001164,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 8711.899999999965,
+          "duration": 210.10000000003492,
+          "renderStart": 8889,
+          "styleAndLayoutStart": 8913.599999999977,
+          "blockingDuration": 94.3,
+          "scripts": [
+            {
+              "invoker": "IntersectionObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 16.20000000001164
+            },
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 23.20000000001164
+            }
+          ]
+        },
+        {
+          "start": 8953.099999999977,
+          "duration": 187.29999999998836,
+          "renderStart": 9131.299999999988,
+          "styleAndLayoutStart": 9132.399999999965,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 9.199999999953434
+            }
+          ]
+        },
+        {
+          "start": 9414.200000000012,
+          "duration": 95.19999999995343,
+          "renderStart": 9506.399999999965,
+          "styleAndLayoutStart": 9506.599999999977,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "PerformanceObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "",
+              "sourceFunctionName": "",
+              "duration": 5.599999999976717
+            }
+          ]
+        },
+        {
+          "start": 9181.599999999977,
+          "duration": 217.70000000001164,
+          "renderStart": 9377.599999999977,
+          "styleAndLayoutStart": 9384.799999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 9533.399999999965,
+          "duration": 106.10000000003492,
+          "renderStart": 9633.5,
+          "styleAndLayoutStart": 9633.700000000012,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.799999999999272,
+        16.700000000000728,
+        16.599999999998545,
+        199.90000000000146,
+        250,
+        16.69999999999891,
+        216.70000000000073,
+        133.39999999999964,
+        16.600000000000364,
+        16.600000000000364,
+        100
+      ],
+      "clickAt": 8601.799999999988,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 8728.299999999988,
+          "end": 8887.599999999977
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 8978.099999999977,
+          "end": 9144.799999999988
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-depth",
+      "run": 1,
+      "click": {
+        "name": "click",
+        "start": 6635.299999999988,
+        "duration": 488,
+        "inputDelay": 20.900000000023283,
+        "processing": 5.099999999976717,
+        "target": "BUTTON"
+      },
+      "max": 488,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.5,
+          "processing": 0.19999999995343387,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.699999999953434,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0.09999999997671694,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 6.899999999965075,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 11.899999999965075,
+          "processing": 5.7000000000116415,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6635.200000000012,
+          "duration": 488,
+          "inputDelay": 17.599999999976717,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6635.299999999988,
+          "duration": 488,
+          "inputDelay": 20.400000000023283,
+          "processing": 0.5,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6635.299999999988,
+          "duration": 488,
+          "inputDelay": 20.900000000023283,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6635.299999999988,
+          "duration": 488,
+          "inputDelay": 20.900000000023283,
+          "processing": 5.099999999976717,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6502.099999999977,
+          "duration": 102.60000000003492,
+          "renderStart": 6599.299999999988,
+          "styleAndLayoutStart": 6599.5,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6641.399999999965,
+          "duration": 190.80000000004657,
+          "renderStart": 6824.700000000012,
+          "styleAndLayoutStart": 6831.899999999965,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7137.299999999988,
+          "duration": 119,
+          "renderStart": 7256,
+          "styleAndLayoutStart": 7256.099999999977,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "PerformanceObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "",
+              "sourceFunctionName": "",
+              "duration": 5.2999999999883585
+            }
+          ]
+        },
+        {
+          "start": 6851.099999999977,
+          "duration": 153.60000000003492,
+          "renderStart": 6989.299999999988,
+          "styleAndLayoutStart": 7001.099999999977,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 9.299999999988358
+            },
+            {
+              "invoker": "BODY.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 10.5
+            }
+          ]
+        },
+        {
+          "start": 7273.399999999965,
+          "duration": 108.5,
+          "renderStart": 7379.299999999988,
+          "styleAndLayoutStart": 7379.299999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7012,
+          "duration": 121.70000000001164,
+          "renderStart": 7125.099999999977,
+          "styleAndLayoutStart": 7126.5,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7421.5,
+          "duration": 93.20000000001164,
+          "renderStart": 7513.700000000012,
+          "styleAndLayoutStart": 7513.799999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.699999999999818,
+        116.59999999999945,
+        16.700000000000728,
+        16.699999999999818,
+        183.30000000000018,
+        16.699999999999818,
+        150,
+        133.30000000000018,
+        133.29999999999927,
+        16.700000000000728,
+        99.89999999999964,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        83.29999999999927
+      ],
+      "clickAt": 6460.099999999977,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6724.599999999977,
+          "end": 6877.899999999965
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6891.399999999965,
+          "end": 7057.200000000012
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "normal",
+      "run": 2,
+      "click": {
+        "name": "click",
+        "start": 6801.900000000023,
+        "duration": 456,
+        "inputDelay": 19.399999999965075,
+        "processing": 7.2000000000116415,
+        "target": "BUTTON"
+      },
+      "max": 456,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.300000000046566,
+          "processing": 0.19999999995343387,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6801.799999999988,
+          "duration": 456,
+          "inputDelay": 5.5,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6801.900000000023,
+          "duration": 456,
+          "inputDelay": 6.899999999965075,
+          "processing": 9.300000000046566,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6801.900000000023,
+          "duration": 456,
+          "inputDelay": 16.20000000001164,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6801.900000000023,
+          "duration": 456,
+          "inputDelay": 18.29999999998836,
+          "processing": 1.099999999976717,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6801.900000000023,
+          "duration": 456,
+          "inputDelay": 19.399999999965075,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6801.900000000023,
+          "duration": 456,
+          "inputDelay": 19.399999999965075,
+          "processing": 7.2000000000116415,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6660.200000000012,
+          "duration": 108.70000000001164,
+          "renderStart": 6765,
+          "styleAndLayoutStart": 6767.900000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6806.900000000023,
+          "duration": 141.20000000001164,
+          "renderStart": 6937.200000000012,
+          "styleAndLayoutStart": 6945,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 7
+            },
+            {
+              "invoker": "IntersectionObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 5.900000000023283
+            }
+          ]
+        },
+        {
+          "start": 6963.700000000012,
+          "duration": 143.29999999998836,
+          "renderStart": 7103.100000000035,
+          "styleAndLayoutStart": 7105.400000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7437.299999999988,
+          "duration": 140.60000000003492,
+          "renderStart": 7575.700000000012,
+          "styleAndLayoutStart": 7575.900000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7128.900000000023,
+          "duration": 151.70000000001164,
+          "renderStart": 7259.900000000023,
+          "styleAndLayoutStart": 7274.700000000012,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 7.2999999999883585
+            }
+          ]
+        },
+        {
+          "start": 7289.100000000035,
+          "duration": 138.19999999995343,
+          "renderStart": 7423.299999999988,
+          "styleAndLayoutStart": 7424.600000000035,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7605.700000000012,
+          "duration": 134.29999999998836,
+          "renderStart": 7733.400000000023,
+          "styleAndLayoutStart": 7733.5,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.600000000000364,
+        16.699999999999818,
+        133.30000000000018,
+        166.59999999999945,
+        16.700000000000728,
+        133.39999999999964,
+        166.60000000000036,
+        16.699999999999818,
+        133.30000000000018,
+        16.699999999999818,
+        16.599999999999454,
+        133.40000000000055
+      ],
+      "clickAt": 6679.700000000012,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6895.100000000035,
+          "end": 7049.799999999988
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 7056.799999999988,
+          "end": 7222.600000000035
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-depth",
+      "run": 2,
+      "click": {
+        "name": "click",
+        "start": 6522.5,
+        "duration": 240,
+        "inputDelay": 59.29999999998836,
+        "processing": 16.100000000034925,
+        "target": "BUTTON"
+      },
+      "max": 240,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 11.299999999988358,
+          "processing": 2.599999999976717,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 13.899999999965075,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14,
+          "processing": 0.09999999997671694,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 14.099999999976717,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 27.099999999976717,
+          "processing": 20.20000000001164,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6522.400000000023,
+          "duration": 240,
+          "inputDelay": 47.29999999998836,
+          "processing": 0.7999999999883585,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6522.5,
+          "duration": 240,
+          "inputDelay": 59.09999999997672,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6522.5,
+          "duration": 240,
+          "inputDelay": 59.20000000001164,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6522.5,
+          "duration": 240,
+          "inputDelay": 59.29999999998836,
+          "processing": 16.100000000034925,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6438.599999999977,
+          "duration": 68.90000000002328,
+          "renderStart": 6499.599999999977,
+          "styleAndLayoutStart": 6503.200000000012,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6515.099999999977,
+          "duration": 108.10000000003492,
+          "renderStart": 6614.400000000023,
+          "styleAndLayoutStart": 6621.599999999977,
+          "blockingDuration": 48.6,
+          "scripts": [
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 16.100000000034925
+            }
+          ]
+        },
+        {
+          "start": 6674.299999999988,
+          "duration": 109.20000000001164,
+          "renderStart": 6770.5,
+          "styleAndLayoutStart": 6771.400000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6786.700000000012,
+          "duration": 169.29999999998836,
+          "renderStart": 6935.599999999977,
+          "styleAndLayoutStart": 6952.5,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 7.599999999976717
+            },
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 8.300000000046566
+            },
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 5.099999999976717
+            }
+          ]
+        },
+        {
+          "start": 6972.5,
+          "duration": 130.79999999998836,
+          "renderStart": 7102,
+          "styleAndLayoutStart": 7102.5,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7128.099999999977,
+          "duration": 104.30000000004657,
+          "renderStart": 7230.799999999988,
+          "styleAndLayoutStart": 7231.400000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7260.5,
+          "duration": 84.59999999997672,
+          "renderStart": 7343.700000000012,
+          "styleAndLayoutStart": 7343.799999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7401,
+          "duration": 80.5,
+          "renderStart": 7480.700000000012,
+          "styleAndLayoutStart": 7481.200000000012,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.599999999999454,
+        16.700000000000728,
+        116.59999999999945,
+        16.800000000000182,
+        99.89999999999964,
+        166.70000000000073,
+        33.399999999999636,
+        133.19999999999982,
+        16.699999999999818,
+        16.700000000000728,
+        100,
+        16.699999999999818,
+        16.599999999999454,
+        83.30000000000018,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        83.30000000000018
+      ],
+      "clickAt": 6442.200000000012,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6642.900000000023,
+          "end": 6800.299999999988
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6813.099999999977,
+          "end": 6979.200000000012
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "normal",
+      "run": 3,
+      "click": {
+        "name": "click",
+        "start": 6599.400000000023,
+        "duration": 424,
+        "inputDelay": 61.20000000001164,
+        "processing": 5,
+        "target": "BUTTON"
+      },
+      "max": 432,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 19,
+          "processing": 1.7000000000116415,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.70000000001164,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.70000000001164,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.70000000001164,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.70000000001164,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.800000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 20.800000000046566,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 21.800000000046566,
+          "processing": 0.29999999998835847,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6599.299999999988,
+          "duration": 432,
+          "inputDelay": 22.100000000034925,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6599.400000000023,
+          "duration": 424,
+          "inputDelay": 39.5,
+          "processing": 17.099999999976717,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6599.400000000023,
+          "duration": 424,
+          "inputDelay": 56.59999999997672,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6599.400000000023,
+          "duration": 424,
+          "inputDelay": 59.59999999997672,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6599.400000000023,
+          "duration": 424,
+          "inputDelay": 59.70000000001164,
+          "processing": 1.2999999999883585,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6599.400000000023,
+          "duration": 424,
+          "inputDelay": 61.20000000001164,
+          "processing": 5,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6447.799999999988,
+          "duration": 96.10000000003492,
+          "renderStart": 6541.600000000035,
+          "styleAndLayoutStart": 6543.299999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6585,
+          "duration": 121,
+          "renderStart": 6704.700000000012,
+          "styleAndLayoutStart": 6705.600000000035,
+          "blockingDuration": 19.8,
+          "scripts": [
+            {
+              "invoker": "IntersectionObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 7.600000000034925
+            }
+          ]
+        },
+        {
+          "start": 6727.799999999988,
+          "duration": 159.30000000004657,
+          "renderStart": 6883.799999999988,
+          "styleAndLayoutStart": 6884.200000000012,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 9.400000000023283
+            }
+          ]
+        },
+        {
+          "start": 7195.799999999988,
+          "duration": 134.70000000001164,
+          "renderStart": 7328.600000000035,
+          "styleAndLayoutStart": 7328.700000000012,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6905.400000000023,
+          "duration": 163.20000000001164,
+          "renderStart": 7029.600000000035,
+          "styleAndLayoutStart": 7056.700000000012,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 11.200000000011642
+            },
+            {
+              "invoker": "BODY.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 8.900000000023283
+            }
+          ]
+        },
+        {
+          "start": 7087.700000000012,
+          "duration": 95.20000000001164,
+          "renderStart": 7175.900000000023,
+          "styleAndLayoutStart": 7179.600000000035,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7355.900000000023,
+          "duration": 123.5,
+          "renderStart": 7475.799999999988,
+          "styleAndLayoutStart": 7476,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.700000000000728,
+        16.599999999999454,
+        116.69999999999982,
+        16.700000000000728,
+        16.699999999999818,
+        116.59999999999945,
+        183.30000000000018,
+        16.699999999999818,
+        133.40000000000055,
+        150,
+        16.5,
+        133.39999999999964,
+        16.699999999999818,
+        16.600000000000364,
+        116.69999999999982
+      ],
+      "clickAt": 6386,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6606,
+          "end": 6764.400000000023
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6781.700000000012,
+          "end": 6951.400000000023
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-depth",
+      "run": 3,
+      "click": {
+        "name": "click",
+        "start": 6583.799999999988,
+        "duration": 376,
+        "inputDelay": 42.40000000002328,
+        "processing": 23,
+        "target": "BUTTON"
+      },
+      "max": 376,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 4.600000000034925,
+          "processing": 1.599999999976717,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2000000000116415,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6583.599999999977,
+          "duration": 376,
+          "inputDelay": 6.2999999999883585,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6583.700000000012,
+          "duration": 376,
+          "inputDelay": 14,
+          "processing": 8.099999999976717,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6583.700000000012,
+          "duration": 376,
+          "inputDelay": 22.099999999976717,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6583.799999999988,
+          "duration": 376,
+          "inputDelay": 41.29999999998836,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6583.799999999988,
+          "duration": 376,
+          "inputDelay": 41.40000000002328,
+          "processing": 1,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6583.799999999988,
+          "duration": 376,
+          "inputDelay": 42.40000000002328,
+          "processing": 23,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6408.5,
+          "duration": 125.29999999998836,
+          "renderStart": 6530.899999999965,
+          "styleAndLayoutStart": 6533.099999999977,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6561.599999999977,
+          "duration": 147.20000000001164,
+          "renderStart": 6693,
+          "styleAndLayoutStart": 6707.200000000012,
+          "blockingDuration": 56.7,
+          "scripts": [
+            {
+              "invoker": "IntersectionObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 7.599999999976717
+            },
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 22.70000000001164
+            }
+          ]
+        },
+        {
+          "start": 6726.099999999977,
+          "duration": 96.79999999998836,
+          "renderStart": 6820.5,
+          "styleAndLayoutStart": 6821.599999999977,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 7.2000000000116415
+            }
+          ]
+        },
+        {
+          "start": 6842.799999999988,
+          "duration": 130,
+          "renderStart": 6967.200000000012,
+          "styleAndLayoutStart": 6967.399999999965,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7130,
+          "duration": 98.70000000001164,
+          "renderStart": 7224.200000000012,
+          "styleAndLayoutStart": 7224.299999999988,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6981.799999999988,
+          "duration": 140.29999999998836,
+          "renderStart": 7100.799999999988,
+          "styleAndLayoutStart": 7118.599999999977,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "PerformanceObserverCallback",
+              "invokerType": "user-callback",
+              "sourceURL": "",
+              "sourceFunctionName": "",
+              "duration": 5
+            },
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 5.2999999999883585
+            },
+            {
+              "invoker": "BODY.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 9.599999999976717
+            }
+          ]
+        },
+        {
+          "start": 7234.799999999988,
+          "duration": 108.59999999997672,
+          "renderStart": 7342.200000000012,
+          "styleAndLayoutStart": 7343,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 7380.599999999977,
+          "duration": 75.79999999998836,
+          "renderStart": 7455.299999999988,
+          "styleAndLayoutStart": 7455.399999999965,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        116.59999999999945,
+        16.699999999999818,
+        16.700000000000728,
+        133.29999999999927,
+        133.30000000000018,
+        16.699999999999818,
+        116.60000000000036,
+        133.39999999999964,
+        133.40000000000055,
+        16.599999999999454,
+        100,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        66.70000000000073
+      ],
+      "clickAt": 6383.599999999977,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6570.799999999988,
+          "end": 6729.700000000012
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6759.5,
+          "end": 6922.099999999977
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-backdrop",
+      "run": 1,
+      "click": {
+        "name": "click",
+        "start": 6594.799999999988,
+        "duration": 160,
+        "inputDelay": 34,
+        "processing": 17.599999999976717,
+        "target": "BUTTON"
+      },
+      "max": 160,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.099999999976717,
+          "processing": 0.7000000000116415,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.7999999999883585,
+          "processing": 0.09999999997671694,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 4.899999999965075,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 15.200000000011642,
+          "processing": 7.7999999999883585,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 23,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 33.79999999998836,
+          "processing": 0.20000000001164153,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 34,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6594.799999999988,
+          "duration": 160,
+          "inputDelay": 34,
+          "processing": 17.599999999976717,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6589.299999999988,
+          "duration": 96.5,
+          "renderStart": 6676.099999999977,
+          "styleAndLayoutStart": 6684.299999999988,
+          "blockingDuration": 38.3,
+          "scripts": [
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 17.599999999976717
+            }
+          ]
+        },
+        {
+          "start": 6800.5,
+          "duration": 279,
+          "renderStart": 7057.899999999965,
+          "styleAndLayoutStart": 7075.399999999965,
+          "blockingDuration": 0,
+          "scripts": [
+            {
+              "invoker": "ReadableStreamDefaultReader.read.then",
+              "invokerType": "resolve-promise",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+              "sourceFunctionName": "",
+              "duration": 10.900000000023283
+            },
+            {
+              "invoker": "#document.ontransitionend",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fF",
+              "duration": 13.900000000023283
+            }
+          ]
+        }
+      ],
+      "frames": [
+        16.599999999999454,
+        16.699999999999818,
+        16.700000000000728,
+        16.599999999999454,
+        16.699999999999818,
+        16.700000000000728,
+        116.69999999999982,
+        16.599999999999454,
+        33.30000000000018,
+        16.699999999999818,
+        33.30000000000018,
+        250,
+        33.400000000000546,
+        16.599999999999454,
+        16.699999999999818,
+        16.700000000000728,
+        16.599999999999454,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        16.699999999999818,
+        16.5,
+        16.800000000000182,
+        16.599999999999454,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.700000000000728,
+        16.599999999999454,
+        16.600000000000364,
+        16.800000000000182,
+        16.599999999999454,
+        16.699999999999818,
+        16.600000000000364
+      ],
+      "clickAt": 6465.5,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6709.099999999977,
+          "end": 6865.699999999953
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6881.299999999988,
+          "end": 7051.799999999988
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-backdrop",
+      "run": 2,
+      "click": {
+        "name": "click",
+        "start": 6834.900000000023,
+        "duration": 80,
+        "inputDelay": 26,
+        "processing": 9.200000000011642,
+        "target": "BUTTON"
+      },
+      "max": 80,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 3.699999999953434,
+          "processing": 3,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.699999999953434,
+          "processing": 0.1000000000349246,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 6.7999999999883585,
+          "processing": 2.3999999999650754,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6834.800000000047,
+          "duration": 80,
+          "inputDelay": 9.199999999953434,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6834.900000000023,
+          "duration": 80,
+          "inputDelay": 16.599999999976717,
+          "processing": 6.7000000000116415,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6834.900000000023,
+          "duration": 80,
+          "inputDelay": 23.29999999998836,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6834.900000000023,
+          "duration": 80,
+          "inputDelay": 25.900000000023283,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6834.900000000023,
+          "duration": 80,
+          "inputDelay": 25.900000000023283,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6834.900000000023,
+          "duration": 80,
+          "inputDelay": 26,
+          "processing": 9.200000000011642,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6820.300000000047,
+          "duration": 67.59999999997672,
+          "renderStart": 6883.300000000047,
+          "styleAndLayoutStart": 6887.300000000047,
+          "blockingDuration": 3.6,
+          "scripts": [
+            {
+              "invoker": "#document.onclick",
+              "invokerType": "event-listener",
+              "sourceURL": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+              "sourceFunctionName": "fI",
+              "duration": 9.200000000011642
+            }
+          ]
+        }
+      ],
+      "frames": [
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.600000000000364,
+        16.699999999999818,
+        66.69999999999982,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.799999999999272,
+        16.600000000000364,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454,
+        16.800000000000182,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454,
+        16.700000000000728,
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.599999999999454
+      ],
+      "clickAt": 6732.5,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6962.300000000047,
+          "end": 7114.900000000023
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 7129.700000000012,
+          "end": 7294.400000000023
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    },
+    {
+      "variant": "no-backdrop",
+      "run": 3,
+      "click": {
+        "name": "click",
+        "start": 6462,
+        "duration": 80,
+        "inputDelay": 6,
+        "processing": 10.600000000034925,
+        "target": "BUTTON"
+      },
+      "max": 80,
+      "capture": false,
+      "events": [
+        {
+          "name": "pointerout",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 2.900000000023283,
+          "processing": 0.19999999995343387,
+          "target": "svg"
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerleave",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerover",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "pointerenter",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0
+        },
+        {
+          "name": "mouseout",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.099999999976717,
+          "processing": 0.1000000000349246,
+          "target": "svg"
+        },
+        {
+          "name": "mouseover",
+          "start": 6461.900000000023,
+          "duration": 80,
+          "inputDelay": 3.2000000000116415,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerdown",
+          "start": 6462,
+          "duration": 80,
+          "inputDelay": 4,
+          "processing": 1.400000000023283,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mousedown",
+          "start": 6462,
+          "duration": 80,
+          "inputDelay": 5.5,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "pointerup",
+          "start": 6462,
+          "duration": 80,
+          "inputDelay": 5.900000000023283,
+          "processing": 0.09999999997671694,
+          "target": "BUTTON"
+        },
+        {
+          "name": "mouseup",
+          "start": 6462,
+          "duration": 80,
+          "inputDelay": 6,
+          "processing": 0,
+          "target": "BUTTON"
+        },
+        {
+          "name": "click",
+          "start": 6462,
+          "duration": 80,
+          "inputDelay": 6,
+          "processing": 10.600000000034925,
+          "target": "BUTTON"
+        }
+      ],
+      "loaf": [
+        {
+          "start": 6596.5,
+          "duration": 74,
+          "renderStart": 6655.5,
+          "styleAndLayoutStart": 6655.700000000012,
+          "blockingDuration": 0,
+          "scripts": []
+        },
+        {
+          "start": 6716.300000000047,
+          "duration": 94.69999999995343,
+          "renderStart": 6802.800000000047,
+          "styleAndLayoutStart": 6804.400000000023,
+          "blockingDuration": 0,
+          "scripts": []
+        }
+      ],
+      "frames": [
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        66.69999999999982,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        66.69999999999982,
+        16.600000000000364,
+        16.699999999999818,
+        116.69999999999982,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.599999999999454,
+        16.700000000000728,
+        16.799999999999272,
+        16.600000000000364,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.599999999999454,
+        16.800000000000182,
+        16.600000000000364,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364,
+        16.699999999999818,
+        16.699999999999818,
+        16.600000000000364
+      ],
+      "clickAt": 6347.600000000035,
+      "newResources": [
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6464.5,
+          "end": 6622.100000000035
+        },
+        {
+          "name": "/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc",
+          "start": 6631.900000000023,
+          "end": 6794.200000000012
+        }
+      ],
+      "titleVisible": true,
+      "selected": "Discussion",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+
+> campus-plus@1.0.0 verify:security
+> node scripts/verify-security.mjs
+
+
+[1mAnonymous (publishable-key) probes[0m
+  [32m✓[0m anon cannot read profiles — denied (42501)
+  [32m✓[0m anon cannot read profile_private — denied (42501)
+  [32m✓[0m anon cannot read notifications — denied (42501)
+  [32m✓[0m anon cannot read audit_logs — denied (42501)
+  [32m✓[0m anon cannot read moderation_actions — denied (42501)
+  [32m✓[0m anon cannot read reports — denied (42501)
+  [32m✓[0m anon cannot read blocks — denied (42501)
+  [32m✓[0m anon cannot read messages — denied (42501)
+  [32m✓[0m anon cannot read conversations — denied (42501)
+  [32m✓[0m anon cannot read random_sessions — denied (42501)
+  [32m✓[0m anon cannot read random_session_participants — denied (42501)
+  [32m✓[0m anon cannot read random_messages — denied (42501)
+  [32m✓[0m anon cannot read rate_limits — denied (42501)
+  [32m✓[0m anon cannot read backup_change_log — denied (42501)
+  [32m✓[0m anon cannot read backup_batches — denied (42501)
+  [32m✓[0m anon cannot read backup_checkpoints — denied (42501)
+  [32m✓[0m anon cannot read backup_snapshots — denied (42501)
+  [32m✓[0m anon cannot read backup_jobs — denied (42501)
+  [32m✓[0m anon cannot read backup_drive_connections — denied (42501)
+  [32m✓[0m anon cannot read backup_tracked_tables — denied (42501)
+  [32m✓[0m anon cannot read the seller contact note — denied (42501)
+  [32m✓[0m anon cannot call grant_role() — denied (42501)
+  [32m✓[0m anon cannot call admin_set_account_status() — denied (42883)
+  [32m✓[0m anon cannot call consume_rate_limit() as another key — denied (42501)
+  [32m✓[0m anon cannot read backup health — denied (42501)
+  [32m✓[0m anon cannot claim a backup batch — denied (42501)
+  [32m✓[0m anon cannot read encrypted Drive credentials — denied (42501)
+  [32m✓[0m anon cannot enqueue a backup job — denied (42501)
+
+[1mRepository hygiene[0m
+  [31m✗[0m a secret-looking value is committed:
+docs/CONTRAST-AUDIT.md:119:export SUPABASE_SECRET_KEY=sb_secret_perf_harness_key
+docs/IMPLEMENTATION-REPORT.md:20:| `npm run verify:security` | ⚠️ 1 of the hygiene greps flags the perf harness's deliberate placeholder (`sb_secret_perf_harness_key` in `scripts/dev/perf/*` and one doc command). Every live-probe check passes; see *Genuine blockers* |
+docs/IMPLEMENTATION-REPORT.md:263:    (`sb_secret_perf_harness_key` in `scripts/dev/perf/lib.mjs`,
+docs/performance/2026-10-29-repository-wide-optimization.md:132:| Security verification | All anonymous probes and browser-bundle secret scan passed. The sole failure is the deliberate `sb_secret_perf_harness_key` placeholder hygiene grep in harness/docs. |
+docs/performance/2026-10-29-repository-wide-optimization.md:279:| `sb_secret_perf_harness_key` hygiene grep | **Informational/deliberate harness placeholder, not a leaked credential.** All live anonymous probes and the built-browser secret scan pass. The assertion was not disabled. |
+  [32m✓[0m .env.local is git-ignored
+  [32m✓[0m the publishable key is not a secret key
+
+[1mBrowser bundle scan[0m
+  [32m✓[0m no secret values in .next/static
+
+1 security check failed.
+
+
+verify:security exit status: 1

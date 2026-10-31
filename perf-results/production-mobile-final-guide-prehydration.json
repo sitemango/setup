@@ -1,0 +1,49 @@
+{
+  "measuredAt": "2026-10-30T18:52:50.709Z",
+  "scenario": "Returning device with existing local guide flag; parser mutation observation is diagnostic, not a comparable performance run",
+  "home": {
+    "cls": 0.09051021919431279,
+    "shifts": [
+      {
+        "value": 0.09051021919431279,
+        "startTime": 4290.600000000559,
+        "sources": [
+          "home-pulse__aurora",
+          "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow"
+        ]
+      }
+    ],
+    "firstStrip": {
+      "display": "none",
+      "stylePresent": true,
+      "scriptPresent": true
+    },
+    "finalPath": "/home",
+    "finalStripCount": 0,
+    "scriptCount": 1
+  },
+  "other": {
+    "/login": {
+      "finalPath": "/login",
+      "script": false,
+      "style": false,
+      "strip": false
+    },
+    "/explore": {
+      "finalPath": "/explore",
+      "script": false,
+      "style": false,
+      "strip": false
+    }
+  },
+  "checks": {
+    "returningStripHiddenBeforeHydration": true,
+    "returningStripRemoved": true,
+    "homeHasOneScopedScript": true,
+    "noGuideElementInShiftAttribution": true,
+    "loginHasNoGuideHelper": true,
+    "exploreHasNoGuideHelper": true
+  },
+  "pageErrors": [],
+  "note": "Total diagnostic CLS is retained, but the assertion is guide-specific: the already-hidden guide node cannot move other content when hydration removes it."
+}

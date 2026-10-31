@@ -72,6 +72,21 @@ describe('the offline shell page', () => {
   });
 });
 
+describe('automatic snapshot refresh', () => {
+  it('skips the network when there is no saved copy, but keeps explicit save and saved-copy refresh', () => {
+    const provider = code(read('components/timetable/TimetableOfflineProvider.js'));
+    const refresh = provider.slice(provider.indexOf('const refresh ='), provider.indexOf('Capture the install event'));
+    const skip = refresh.indexOf('if (!savedRef.current)');
+    const fetch = refresh.indexOf('fetch(batch.apiUrl,');
+    expect(skip).toBeGreaterThanOrEqual(0);
+    expect(fetch).toBeGreaterThan(skip);
+    expect(refresh.match(/skipped: 'not-saved'/g)).toHaveLength(1);
+    expect(refresh).toContain('saveBatch({ ...validated.snapshot');
+    // The opt-in preparation path is independent and must still fetch.
+    expect(provider).toContain('const fetched = await fetchSnapshot(batch)');
+  });
+});
+
 describe('placement: the install action belongs to the timetable and nowhere else', () => {
   const offenders = files('app', (file) => !relative(file).startsWith('app/timetable')).filter((file) =>
     OFFLINE_UI.some((name) => fs.readFileSync(file, 'utf8').includes(name)),

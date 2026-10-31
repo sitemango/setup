@@ -1,0 +1,5194 @@
+{
+  "label": "production-mobile-followup-after-home-repeat-slow4g",
+  "base": "http://127.0.0.1:3100",
+  "measuredAt": "2026-10-31T02:42:56.845Z",
+  "sourceRevision": "3b7124727769a7e7cbd104f84143d71daa72a634",
+  "sourceState": "3b71247-dirty",
+  "nodeVersion": "v22.22.3",
+  "keepIntro": false,
+  "noWebgl": false,
+  "runs": 3,
+  "viewport": {
+    "key": "phone",
+    "width": 390,
+    "height": 844,
+    "dpr": 3,
+    "mobile": true
+  },
+  "profile": {
+    "key": "slow4g",
+    "latency": 150,
+    "downloadThroughput": 209715.2,
+    "uploadThroughput": 96000,
+    "cpu": 4
+  },
+  "settleMs": 2500,
+  "publicPaths": [
+    "/login",
+    "/timetable/a",
+    "/timetable",
+    "/guide"
+  ],
+  "results": [
+    {
+      "href": "/home",
+      "cold": {
+        "samples": 3,
+        "fcp": 1284,
+        "lcp": 1284,
+        "cls": 0.0313,
+        "ttfb": 116,
+        "domContentLoaded": 1031,
+        "loadEvent": 2492,
+        "transferTotal": 477535,
+        "fontTransfer": 107225,
+        "longTaskCount": 8,
+        "totalTaskTime": 904,
+        "labInteractionMs": 152,
+        "labInteractionInputDelayMs": 85,
+        "labInteractionProcessingMs": 17,
+        "interactionSamples": 3,
+        "installOfferShown": false,
+        "redirectMs": 0,
+        "finalPaths": [
+          "/home"
+        ],
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "spreads": {
+          "fcp": [
+            1268,
+            2092
+          ],
+          "lcp": [
+            1268,
+            2092
+          ],
+          "transferTotal": [
+            471581,
+            479582
+          ],
+          "totalTaskTime": [
+            796,
+            984
+          ],
+          "labInteractionMs": [
+            136,
+            208
+          ]
+        }
+      },
+      "repeat": {
+        "samples": 3,
+        "fcp": 596,
+        "lcp": 596,
+        "cls": 0.0313,
+        "ttfb": 116,
+        "domContentLoaded": 384,
+        "loadEvent": 416,
+        "transferTotal": 51174,
+        "fontTransfer": 822,
+        "longTaskCount": 9,
+        "totalTaskTime": 902,
+        "labInteractionMs": 96,
+        "labInteractionInputDelayMs": 45,
+        "labInteractionProcessingMs": 7,
+        "interactionSamples": 3,
+        "installOfferShown": false,
+        "redirectMs": 0,
+        "finalPaths": [
+          "/home"
+        ],
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "spreads": {
+          "fcp": [
+            588,
+            604
+          ],
+          "lcp": [
+            588,
+            604
+          ],
+          "transferTotal": [
+            46965,
+            51177
+          ],
+          "totalTaskTime": [
+            837,
+            1014
+          ],
+          "labInteractionMs": [
+            72,
+            96
+          ]
+        }
+      },
+      "errors": []
+    }
+  ],
+  "rawRuns": [
+    {
+      "href": "/home",
+      "run": 1,
+      "cold": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3194,
+            "responseEnd": 3667,
+            "duration": 473
+          }
+        ],
+        "fcp": 2092,
+        "lcp": 2092,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0312,
+        "shifts": [
+          {
+            "value": 0.0312495683606767,
+            "startTime": 3827.5,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 21.221467971801758,
+                  "width": 390,
+                  "height": 822.7785034179688
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1202,
+            "duration": 95
+          },
+          {
+            "start": 2257,
+            "duration": 56
+          },
+          {
+            "start": 2323,
+            "duration": 150
+          },
+          {
+            "start": 2729,
+            "duration": 61
+          },
+          {
+            "start": 2929,
+            "duration": 79
+          },
+          {
+            "start": 3375,
+            "duration": 156
+          },
+          {
+            "start": 3695,
+            "duration": 75
+          },
+          {
+            "start": 6095,
+            "duration": 124
+          }
+        ],
+        "domContentLoaded": 1079,
+        "loadEvent": 2492,
+        "ttfb": 214,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 19,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 20,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 21,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 69,
+              "processingMs": 5,
+              "interactionId": 627,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 74,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 86,
+              "processingMs": 0,
+              "interactionId": 627,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 86,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 6078,
+              "duration": 208,
+              "inputDelayMs": 86,
+              "processingMs": 17,
+              "interactionId": 627,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 208,
+          "maxInputDelayMs": 86,
+          "maxProcessingMs": 17,
+          "error": null
+        },
+        "visit": "cold",
+        "introShown": true,
+        "wallClockMs": 6778,
+        "transfer": {
+          "document": 15214,
+          "script": 277730,
+          "stylesheet": 38181,
+          "font": 107225,
+          "image": 6093,
+          "other": 27138
+        },
+        "transferTotal": 471581,
+        "longTaskCount": 8,
+        "totalTaskTime": 796,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 27489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2791,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6226,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2593,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25229,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25047,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 23660,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 33289,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 9279,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4869,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6093,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1244,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7897,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 12157,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7534,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 8752,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11223,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4658,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 44496,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 10698,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11733,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 72184,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2067,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2057,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2055,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 68413,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1532,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2060,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1675,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      },
+      "repeat": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3057,
+            "responseEnd": 3402,
+            "duration": 345
+          }
+        ],
+        "fcp": 604,
+        "lcp": 604,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0313,
+        "shifts": [
+          {
+            "value": 0.031337141425688685,
+            "startTime": 3678.6999999999534,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 19.292266845703125,
+                  "width": 390,
+                  "height": 824.707763671875
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 244,
+            "duration": 88
+          },
+          {
+            "start": 384,
+            "duration": 147
+          },
+          {
+            "start": 804,
+            "duration": 58
+          },
+          {
+            "start": 883,
+            "duration": 62
+          },
+          {
+            "start": 1011,
+            "duration": 143
+          },
+          {
+            "start": 2988,
+            "duration": 70
+          },
+          {
+            "start": 3427,
+            "duration": 53
+          },
+          {
+            "start": 3486,
+            "duration": 137
+          },
+          {
+            "start": 4252,
+            "duration": 79
+          }
+        ],
+        "domContentLoaded": 531,
+        "loadEvent": 531,
+        "ttfb": 136,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 33,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 34,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 35,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 39,
+              "processingMs": 12,
+              "interactionId": 6502,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 51,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 54,
+              "processingMs": 1,
+              "interactionId": 6502,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 55,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 4236,
+              "duration": 96,
+              "inputDelayMs": 55,
+              "processingMs": 7,
+              "interactionId": 6502,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 96,
+          "maxInputDelayMs": 55,
+          "maxProcessingMs": 12,
+          "error": null
+        },
+        "visit": "repeat",
+        "introShown": true,
+        "wallClockMs": 4932,
+        "transfer": {
+          "document": 15214,
+          "script": 0,
+          "stylesheet": 0,
+          "font": 822,
+          "image": 0,
+          "other": 30929
+        },
+        "transferTotal": 46965,
+        "longTaskCount": 9,
+        "totalTaskTime": 837,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2055,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2056,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1531,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2060,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1767,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2051,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1488,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2043,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      }
+    },
+    {
+      "href": "/home",
+      "run": 2,
+      "cold": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3524,
+            "responseEnd": 3918,
+            "duration": 394
+          }
+        ],
+        "fcp": 1284,
+        "lcp": 1284,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0313,
+        "shifts": [
+          {
+            "value": 0.03130873006667006,
+            "startTime": 4199.399999999907,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 19.918190002441406,
+                  "width": 390,
+                  "height": 824.081787109375
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1139,
+            "duration": 89
+          },
+          {
+            "start": 2447,
+            "duration": 141
+          },
+          {
+            "start": 2970,
+            "duration": 178
+          },
+          {
+            "start": 3562,
+            "duration": 64
+          },
+          {
+            "start": 3627,
+            "duration": 198
+          },
+          {
+            "start": 3984,
+            "duration": 120
+          },
+          {
+            "start": 6347,
+            "duration": 114
+          }
+        ],
+        "domContentLoaded": 1031,
+        "loadEvent": 2611,
+        "ttfb": 113,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 25,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 26,
+              "processingMs": 2,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 28,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 48,
+              "processingMs": 11,
+              "interactionId": 1427,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 59,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 83,
+              "processingMs": 2,
+              "interactionId": 1427,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 85,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 6335,
+              "duration": 136,
+              "inputDelayMs": 85,
+              "processingMs": 7,
+              "interactionId": 1427,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 136,
+          "maxInputDelayMs": 85,
+          "maxProcessingMs": 11,
+          "error": null
+        },
+        "visit": "cold",
+        "introShown": true,
+        "wallClockMs": 7069,
+        "transfer": {
+          "document": 15214,
+          "script": 277730,
+          "stylesheet": 38181,
+          "font": 107225,
+          "image": 6093,
+          "other": 33092
+        },
+        "transferTotal": 477535,
+        "longTaskCount": 7,
+        "totalTaskTime": 904,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2791,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 27489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6226,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2593,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25229,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25047,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 23660,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 33289,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 9279,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6093,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4869,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1244,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7897,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 12157,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7534,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 8752,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11223,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4658,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 44496,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 10698,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11733,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 72184,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 68413,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2068,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2054,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2058,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1532,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2058,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1767,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2136,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2052,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1675,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      },
+      "repeat": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3202,
+            "responseEnd": 3603,
+            "duration": 401
+          }
+        ],
+        "fcp": 588,
+        "lcp": 588,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0314,
+        "shifts": [
+          {
+            "value": 0.0313533493692841,
+            "startTime": 3853.7999999998137,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 18.93524932861328,
+                  "width": 390,
+                  "height": 825.0647583007812
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 258,
+            "duration": 122
+          },
+          {
+            "start": 384,
+            "duration": 62
+          },
+          {
+            "start": 455,
+            "duration": 91
+          },
+          {
+            "start": 889,
+            "duration": 265
+          },
+          {
+            "start": 2770,
+            "duration": 112
+          },
+          {
+            "start": 3100,
+            "duration": 114
+          },
+          {
+            "start": 3350,
+            "duration": 55
+          },
+          {
+            "start": 3648,
+            "duration": 102
+          },
+          {
+            "start": 5953,
+            "duration": 91
+          }
+        ],
+        "domContentLoaded": 384,
+        "loadEvent": 408,
+        "ttfb": 116,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 13,
+              "processingMs": 3,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 16,
+              "processingMs": 2,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 18,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 33,
+              "processingMs": 6,
+              "interactionId": 9986,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 39,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 45,
+              "processingMs": 0,
+              "interactionId": 9986,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 45,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 5950,
+              "duration": 96,
+              "inputDelayMs": 45,
+              "processingMs": 7,
+              "interactionId": 9986,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 96,
+          "maxInputDelayMs": 45,
+          "maxProcessingMs": 7,
+          "error": null
+        },
+        "visit": "repeat",
+        "introShown": true,
+        "wallClockMs": 6638,
+        "transfer": {
+          "document": 15214,
+          "script": 0,
+          "stylesheet": 0,
+          "font": 822,
+          "image": 0,
+          "other": 35138
+        },
+        "transferTotal": 51174,
+        "longTaskCount": 9,
+        "totalTaskTime": 1014,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2068,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2054,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2058,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1533,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2060,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1768,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2137,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2052,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1488,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2042,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      }
+    },
+    {
+      "href": "/home",
+      "run": 3,
+      "cold": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3178,
+            "responseEnd": 3497,
+            "duration": 318
+          }
+        ],
+        "fcp": 1268,
+        "lcp": 1268,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0313,
+        "shifts": [
+          {
+            "value": 0.031279550344458125,
+            "startTime": 3967.600000000093,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 20.561012268066406,
+                  "width": 390,
+                  "height": 823.43896484375
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 1128,
+            "duration": 87
+          },
+          {
+            "start": 2270,
+            "duration": 105
+          },
+          {
+            "start": 2722,
+            "duration": 190
+          },
+          {
+            "start": 3340,
+            "duration": 59
+          },
+          {
+            "start": 3403,
+            "duration": 193
+          },
+          {
+            "start": 3776,
+            "duration": 136
+          },
+          {
+            "start": 4031,
+            "duration": 58
+          },
+          {
+            "start": 5961,
+            "duration": 156
+          }
+        ],
+        "domContentLoaded": 1013,
+        "loadEvent": 2391,
+        "ttfb": 116,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 4,
+              "processingMs": 2,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 5,
+              "processingMs": 4,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 9,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 19,
+              "processingMs": 19,
+              "interactionId": 8719,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 38,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 67,
+              "processingMs": 0,
+              "interactionId": 8719,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 67,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 5960,
+              "duration": 152,
+              "inputDelayMs": 67,
+              "processingMs": 11,
+              "interactionId": 8719,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 152,
+          "maxInputDelayMs": 67,
+          "maxProcessingMs": 19,
+          "error": null
+        },
+        "visit": "cold",
+        "introShown": true,
+        "wallClockMs": 6715,
+        "transfer": {
+          "document": 15214,
+          "script": 277730,
+          "stylesheet": 38181,
+          "font": 107225,
+          "image": 6093,
+          "other": 35139
+        },
+        "transferTotal": 479582,
+        "longTaskCount": 8,
+        "totalTaskTime": 984,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 27489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2791,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6226,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2593,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25229,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 25047,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 23660,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 33289,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 9279,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 6093,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4869,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1244,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7897,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 12157,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7534,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 8752,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11223,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 4658,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 44496,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 10698,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 11733,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 72184,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 68413,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1532,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2067,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2062,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1768,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2138,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2055,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1489,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2056,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1675,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2051,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2043,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      },
+      "repeat": {
+        "apiTiming": [
+          {
+            "path": "/api/home/feed",
+            "startTime": 3158,
+            "responseEnd": 3410,
+            "duration": 251
+          }
+        ],
+        "fcp": 596,
+        "lcp": 596,
+        "lcpElement": {
+          "tag": "P",
+          "className": "guide-strip__lead",
+          "text": "New to Campus+? There is a two-minute guide to where everything is.",
+          "url": null
+        },
+        "cls": 0.0313,
+        "shifts": [
+          {
+            "value": 0.03134179906257521,
+            "startTime": 3771.9000000001397,
+            "sources": [
+              {
+                "tag": "SPAN",
+                "className": "home-pulse__aurora",
+                "previousRect": {
+                  "x": 0,
+                  "y": 19.189661026000977,
+                  "width": 390,
+                  "height": 824.8103637695312
+                },
+                "currentRect": {
+                  "x": 0,
+                  "y": 0,
+                  "width": 390,
+                  "height": 844
+                }
+              }
+            ]
+          }
+        ],
+        "longTasks": [
+          {
+            "start": 282,
+            "duration": 123
+          },
+          {
+            "start": 448,
+            "duration": 82
+          },
+          {
+            "start": 772,
+            "duration": 125
+          },
+          {
+            "start": 956,
+            "duration": 99
+          },
+          {
+            "start": 1086,
+            "duration": 131
+          },
+          {
+            "start": 3104,
+            "duration": 60
+          },
+          {
+            "start": 3193,
+            "duration": 73
+          },
+          {
+            "start": 3504,
+            "duration": 136
+          },
+          {
+            "start": 4509,
+            "duration": 73
+          }
+        ],
+        "domContentLoaded": 258,
+        "loadEvent": 416,
+        "ttfb": 116,
+        "redirectCount": 0,
+        "redirectMs": 0,
+        "finalPath": "/home",
+        "introVisibleAtCapture": false,
+        "domNodes": 751,
+        "horizontalOverflow": 0,
+        "interaction": {
+          "action": "Open the Discussion composer tab",
+          "installOfferShown": false,
+          "supported": true,
+          "events": [
+            {
+              "name": "pointerout",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 1,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerleave",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerover",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 6,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "pointerenter",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": null
+            },
+            {
+              "name": "mouseout",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 7,
+              "processingMs": 2,
+              "interactionId": 0,
+              "target": "svg"
+            },
+            {
+              "name": "mouseover",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 8,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerdown",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 15,
+              "processingMs": 6,
+              "interactionId": 1782,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mousedown",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 20,
+              "processingMs": 3,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "pointerup",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 27,
+              "processingMs": 1,
+              "interactionId": 1782,
+              "target": "BUTTON"
+            },
+            {
+              "name": "mouseup",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 27,
+              "processingMs": 0,
+              "interactionId": 0,
+              "target": "BUTTON"
+            },
+            {
+              "name": "click",
+              "startTime": 4507,
+              "duration": 72,
+              "inputDelayMs": 27,
+              "processingMs": 6,
+              "interactionId": 1782,
+              "target": "BUTTON"
+            }
+          ],
+          "maxEventDurationMs": 72,
+          "maxInputDelayMs": 27,
+          "maxProcessingMs": 6,
+          "error": null
+        },
+        "visit": "repeat",
+        "introShown": true,
+        "wallClockMs": 5155,
+        "transfer": {
+          "document": 15214,
+          "script": 0,
+          "stylesheet": 0,
+          "font": 822,
+          "image": 0,
+          "other": 35141
+        },
+        "transferTotal": 51177,
+        "longTaskCount": 9,
+        "totalTaskTime": 902,
+        "consoleErrors": [
+          "WebSocket connection to 'ws://127.0.0.1:3111/realtime/v1/websocket?apikey=sb_publishable_perf_harness_key&vsn=2.0.0' failed: Error during WebSocket handshake: Unexpected response code: 404"
+        ],
+        "requests": [
+          {
+            "url": "http://127.0.0.1:3100/home",
+            "status": 200,
+            "mime": "text/html",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 15214,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Medium-s.p.1_fagkhdc28kq.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/DMMono_Regular-s.p.00kmgyrwf8rdn.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1v4262k6846z8.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3b3-vc801262q.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/17vswblxqh1g0.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0e132rp4s3prs.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3s6nzrbk-8mnv.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/36hei7oa9r0rt.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/2gtofkb1zof5q.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1yf2xi5tb-fut.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/244no_wyc4vdc.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/turbopack-0o6gy1muemybi.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3nal5_zmp_wh9.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3smntsejlzy74.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3g4px251sg85e.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/21ps9ac9px7va.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1wvnudyzsqoqz.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/1vhrl52voag9h.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/35ftnbtqqmsri.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/Syne.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/fonts/SpaceGrotesk.ttf",
+            "status": 200,
+            "mime": "font/ttf",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 411,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/media/campus-mark.1e-vk48tz6xrw.webp",
+            "status": 200,
+            "mime": "image/webp",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/3gtwt0vb0tbnj.js",
+            "status": 200,
+            "mime": "application/javascript",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 728,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 725,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/explore?_rsc=44ie9A6t8adhsx3W",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2068,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/market?_rsc=j_DdCK-zAlf190PZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2056,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/notifications?_rsc=bdtNMCQyAF44h3DX",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2056,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/api/home/feed",
+            "status": 200,
+            "mime": "application/json",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 7076,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 712,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 740,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 734,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 745,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 727,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/guide?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1533,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/noticeboard?_rsc=GUZKFdguY2pEfBWM",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2058,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=zJfq_0BgmaprbqQT",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 723,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/timetable/a?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1767,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/clubs?_rsc=NTrdT1H9rwkL0ecZ",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2137,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/_next/static/chunks/0ikdp8ot5kgp9.css",
+            "status": 200,
+            "mime": "text/css",
+            "fromDiskCache": true,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 0,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/chat?_rsc=0yoAh0REA_WQfd0g",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2052,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 1492,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/profile?_rsc=sPDWgApeeL1YR27q",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 2044,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=f9CEIYu9QTK0sWpu",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": 780,
+            "failed": null
+          },
+          {
+            "url": "http://127.0.0.1:3100/campus/events/e14a3b15-2f93-4a25-9dab-99d889f033bc?_rsc=cLjl8F5MJ0R55GAr",
+            "status": 200,
+            "mime": "text/x-component",
+            "fromDiskCache": false,
+            "fromServiceWorker": false,
+            "fromPrefetchCache": false,
+            "encodedBytes": null,
+            "failed": "cancelled"
+          }
+        ]
+      }
+    }
+  ]
+}

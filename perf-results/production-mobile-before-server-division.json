@@ -1,0 +1,117 @@
+{
+  "label": "production-mobile-before-division",
+  "base": "http://127.0.0.1:3100",
+  "rtt": 25,
+  "user": "student",
+  "extended": true,
+  "requestedRuns": 5,
+  "sourceRevision": "3b7124727769a7e7cbd104f84143d71daa72a634",
+  "nodeVersion": "v22.22.3",
+  "platform": "linux-x64",
+  "measuredAt": "2026-10-30T17:48:27.508Z",
+  "pages": [
+    {
+      "label": "Timetable division",
+      "href": "/timetable/a",
+      "pageStart": 1793382507483,
+      "ttfb": 15.956821999999988,
+      "total": 20.06432000000001,
+      "bytes": 71814,
+      "status": 200,
+      "requests": 0,
+      "supabaseMs": 0,
+      "slowestMs": 0,
+      "slowest": null,
+      "broken": false,
+      "requestBytes": 0,
+      "spreads": {
+        "ttfb": [
+          14.650859999999966,
+          34.39259400000003
+        ],
+        "total": [
+          16.908176999999966,
+          38.19678600000003
+        ],
+        "requests": [
+          0,
+          0
+        ],
+        "supabaseMs": [
+          0,
+          0
+        ]
+      },
+      "sampleRuns": [
+        {
+          "run": 1,
+          "status": 200,
+          "ttfb": 34.39259400000003,
+          "total": 38.19678600000003,
+          "bytes": 71814,
+          "epochStart": 1793382507370,
+          "requests": 0,
+          "supabaseMs": 0,
+          "slowestMs": 0,
+          "requestBytes": 0,
+          "entries": []
+        },
+        {
+          "run": 2,
+          "status": 200,
+          "ttfb": 15.956821999999988,
+          "total": 24.917879000000028,
+          "bytes": 71814,
+          "epochStart": 1793382507411,
+          "requests": 0,
+          "supabaseMs": 0,
+          "slowestMs": 0,
+          "requestBytes": 0,
+          "entries": []
+        },
+        {
+          "run": 3,
+          "status": 200,
+          "ttfb": 16.90677599999998,
+          "total": 20.06432000000001,
+          "bytes": 71814,
+          "epochStart": 1793382507440,
+          "requests": 0,
+          "supabaseMs": 0,
+          "slowestMs": 0,
+          "requestBytes": 0,
+          "entries": []
+        },
+        {
+          "run": 4,
+          "status": 200,
+          "ttfb": 15.373763999999994,
+          "total": 18.669606999999985,
+          "bytes": 71814,
+          "epochStart": 1793382507463,
+          "requests": 0,
+          "supabaseMs": 0,
+          "slowestMs": 0,
+          "requestBytes": 0,
+          "entries": []
+        },
+        {
+          "run": 5,
+          "status": 200,
+          "ttfb": 14.650859999999966,
+          "total": 16.908176999999966,
+          "bytes": 71814,
+          "epochStart": 1793382507483,
+          "requests": 0,
+          "supabaseMs": 0,
+          "slowestMs": 0,
+          "requestBytes": 0,
+          "entries": []
+        }
+      ]
+    }
+  ],
+  "waterfalls": {
+    "/timetable/a": []
+  }
+}

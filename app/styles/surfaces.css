@@ -489,12 +489,10 @@
     }
   }
 
-  /* Touch devices: the ladder survives, one notch down. Collapsing every tier
-     to a single radius made the chrome read as one flat fog on phones — the
-     floating layers stopped sitting above the content ones. The values below
-     stay inside each tier's band (base 20-26, floating 28-36, premium 30-40)
-     and the page never carries more than a handful of blurred layers, so the
-     cost is a few large surfaces, not dozens of small ones. */
+  /* Touch devices: the ladder survives through radius, rim, gradients and
+     opacity rather than backdrop sampling. Fixed chrome and the interactive
+     composer become opaque: repainting their blur on every content change was
+     measurable interaction latency. The remaining tiers keep a reduced blur. */
   @media (pointer: coarse), (max-width: 767px) {
     .glass {
       -webkit-backdrop-filter: blur(20px) saturate(155%);
@@ -512,8 +510,9 @@
     }
 
     .glass-floating {
-      -webkit-backdrop-filter: blur(30px) saturate(170%);
-      backdrop-filter: blur(30px) saturate(170%);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background-color: color-mix(in oklab, var(--cp-bg-elevated) 97%, transparent);
     }
 
     .glass-featured {
@@ -522,8 +521,9 @@
     }
 
     .glass-premium {
-      -webkit-backdrop-filter: blur(32px) saturate(175%);
-      backdrop-filter: blur(32px) saturate(175%);
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background-color: color-mix(in oklab, var(--cp-bg-elevated) 97%, transparent);
     }
 
     .glass-cinematic {

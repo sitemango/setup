@@ -60,6 +60,8 @@ const {
   clearGuideSeen,
   deviceStorage,
   GUIDE_SEEN_KEY,
+  GUIDE_SEEN_PREHYDRATION_SCRIPT,
+  GUIDE_SEEN_STYLE_ID,
   markGuideSeen,
   readGuideSeen,
   shouldOfferGuide,
@@ -366,10 +368,11 @@ describe('the guide is public, and public means empty', () => {
   });
 
   it('styles what it renders, where it renders it', () => {
-    // The strip is mounted by `AppShell`, not by /guide, so it cannot borrow the
+    // The strip is mounted by Home, not by /guide, so it cannot borrow the
     // guide's sheet: without its own import the offer would render as a bare
-    // sentence under the header on every authenticated page.
-    expect(read('app/(app)/layout.js')).toContain("@/app/styles/guide-strip.css");
+    // sentence under the header. Home's layout keeps it out of other routes.
+    expect(read('app/(app)/home/layout.js')).toContain("@/app/styles/guide-strip.css");
+    expect(read('app/(app)/layout.js')).not.toContain("@/app/styles/guide-strip.css");
     expect(read('app/styles/guide-strip.css')).toContain('.guide-strip__dismiss');
     expect(read('app/styles/guide-strip.css')).toMatch(/prefers-reduced-motion/);
     // …and the page sheet keeps the page, so nothing else downloads it.
@@ -407,6 +410,47 @@ describe('the first-visit flag, on the device', () => {
     expect(clearGuideSeen(storage)).toBe(true);
     expect(readGuideSeen(storage)).toBe(false);
     expect(clearGuideSeen(storageStub({ throws: true }))).toBe(false);
+  });
+
+  it('hides only an already-seen SSR offer before paint, including legacy values', () => {
+    const runPrehydration = ({ value = null, throws = false } = {}) => {
+      const appended = [];
+      const document = {
+        createElement(tag) {
+          expect(tag).toBe('style');
+          return {};
+        },
+        head: { appendChild: (node) => appended.push(node) },
+      };
+      const window = {
+        localStorage: {
+          getItem(key) {
+            expect(key).toBe(GUIDE_SEEN_KEY);
+            if (throws) throw new DOMException('The operation is insecure.');
+            return value;
+          },
+        },
+      };
+      const execute = new Function('window', 'document', GUIDE_SEEN_PREHYDRATION_SCRIPT);
+      expect(() => execute(window, document)).not.toThrow();
+      return appended;
+    };
+
+    for (const value of [null, '', '0']) expect(runPrehydration({ value })).toEqual([]);
+    for (const value of ['1', '2026-10-26T10:00:00.000Z']) {
+      const [style] = runPrehydration({ value });
+      expect(style.id).toBe(GUIDE_SEEN_STYLE_ID);
+      expect(style.textContent).toBe('.guide-strip{display:none!important}');
+    }
+    expect(runPrehydration({ throws: true })).toEqual([]);
+
+    const home = read('app/(app)/home/page.js');
+    expect(home).toContain('{GUIDE_SEEN_PREHYDRATION_SCRIPT}</script>');
+    expect(home.indexOf('{GUIDE_SEEN_PREHYDRATION_SCRIPT}</script>')).toBeLessThan(home.indexOf('<GuideWelcomeStrip />'));
+    expect(read('app/layout.js')).not.toContain('GUIDE_SEEN_PREHYDRATION_SCRIPT');
+    expect(read('components/layout/AppShell.js')).not.toContain('GuideWelcomeStrip');
+    const strip = read('components/guide/GuideWelcomeStrip.js');
+    expect(strip).toMatch(/function readServerSnapshot\(\) \{\s*return false;/);
   });
 
   it('offers itself only on Home, only to a device that has not seen it', () => {

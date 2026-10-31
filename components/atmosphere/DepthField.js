@@ -12,11 +12,14 @@
  * things can go wrong:
  *   - the scene module is loaded on demand, so `three` is not in the first
  *     chunk of a page that may never need it;
- *   - no WebGL, a failed import, a thrown scene, or a lost context all switch
- *     `mode` to `fallback`, which is a finished CSS composition — never an
- *     empty band where the atmosphere should be;
- *   - `prefers-reduced-motion` builds the scene but renders a single still
- *     frame, and the loop is never started.
+ *   - phone-sized, coarse-pointer, reduced-motion and data-saving visits keep
+ *     the finished CSS composition instead of downloading and compiling a
+ *     decorative GPU scene while the student is trying to read or tap;
+ *   - capability is checked **before** the import. No WebGL, a failed import,
+ *     a thrown scene, or a lost context all select the same CSS composition —
+ *     never an empty band where the atmosphere should be;
+ *   - the CSS composition is also the loading surface, so capable desktops do
+ *     not flash an empty background before their scene arrives.
  *
  */
 
@@ -40,9 +43,14 @@ function DepthFieldFallback() {
   );
 }
 
+/** Pure device policy, kept separate from browser globals for direct tests. */
+export function shouldUseStaticDepthField({ reducedMotion = false, coarse = false, narrow = false, saveData = false } = {}) {
+  return Boolean(reducedMotion || coarse || narrow || saveData);
+}
+
 export function DepthField({ className = '' }) {
   const containerRef = useRef(null);
-  const [mode, setMode] = useState('loading');
+  const [mode, setMode] = useState('fallback');
 
   useEffect(() => {
     const container = containerRef.current;
@@ -51,14 +59,20 @@ export function DepthField({ className = '' }) {
     let cancelled = false;
     let dispose = null;
     const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
+    const staticField = shouldUseStaticDepthField({
+      reducedMotion,
+      coarse: window.matchMedia?.('(pointer: coarse)').matches ?? false,
+      narrow: Math.min(window.innerWidth, window.innerHeight) < 720,
+      saveData: navigator.connection?.saveData,
+    });
+
+    // A decorative scene must not download a renderer on a path that will only
+    // replace it with CSS. On a capable desktop the dynamic chunk remains.
+    if (staticField || !webglAvailable()) return undefined;
 
     import('./depth/createDepthField')
       .then(({ createDepthField }) => {
         if (cancelled) return;
-        if (!webglAvailable()) {
-          setMode('fallback');
-          return;
-        }
         try {
           dispose = createDepthField(container, {
             reducedMotion,
@@ -91,7 +105,7 @@ export function DepthField({ className = '' }) {
 
   return (
     <div ref={containerRef} className={cn('depth-field', className)} data-state={mode} aria-hidden="true">
-      {mode === 'fallback' ? <DepthFieldFallback /> : null}
+      {mode !== 'webgl' ? <DepthFieldFallback /> : null}
       {/* Separates the environment from the interface: a wash at the top so the
           sticky glass header keeps a compatible backdrop, and a vignette at the
           bottom so the field never competes with the feed. */}

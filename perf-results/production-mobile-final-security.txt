@@ -1,0 +1,7 @@
+
+> campus-plus@1.0.0 verify:security
+> node scripts/verify-security.mjs
+
+
+  ✗ Missing NEXT_PUBLIC_SUPABASE_URL.
+
