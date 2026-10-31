@@ -1,0 +1,23 @@
+/ run 1: cold LCP 1656ms / 453.3kB; repeat LCP 508ms / 26.1kB
+/ run 2: cold LCP 1336ms / 453.3kB; repeat LCP 484ms / 9.3kB
+/ run 3: cold LCP 1324ms / 453.3kB; repeat LCP 552ms / 26.1kB
+/home run 1: cold LCP 1800ms / 460.4kB; repeat LCP 644ms / 47.8kB
+/home run 2: cold LCP 1356ms / 462.1kB; repeat LCP 684ms / 49.2kB
+/home run 3: cold LCP 1552ms / 464.7kB; repeat LCP 604ms / 49.8kB
+/timetable/a run 1: cold LCP 1116ms / 296.0kB; repeat LCP 304ms / 7.0kB
+/timetable/a run 2: cold LCP 1064ms / 296.0kB; repeat LCP 340ms / 7.0kB
+/timetable/a run 3: cold LCP 1072ms / 296.1kB; repeat LCP 296ms / 5.6kB
+/explore run 1: cold LCP 1092ms / 368.2kB; repeat LCP 444ms / 27.8kB
+/explore run 2: cold LCP 1076ms / 368.2kB; repeat LCP 532ms / 29.1kB
+/explore run 3: cold LCP 1120ms / 368.2kB; repeat LCP 376ms / 25.8kB
+/login run 1: cold LCP 1180ms / 453.3kB; repeat LCP 340ms / 9.3kB
+/login run 2: cold LCP 1164ms / 453.3kB; repeat LCP 368ms / 9.3kB
+/login run 3: cold LCP 1192ms / 453.3kB; repeat LCP 316ms / 9.3kB
+/timetable run 1: cold LCP 1072ms / 254.3kB; repeat LCP 340ms / 9.9kB
+/timetable run 2: cold LCP 1068ms / 254.3kB; repeat LCP 364ms / 6.5kB
+/timetable run 3: cold LCP 1060ms / 253.5kB; repeat LCP 308ms / 9.9kB
+/guide run 1: cold LCP 1140ms / 267.3kB; repeat LCP 384ms / 18.4kB
+/guide run 2: cold LCP 1112ms / 267.3kB; repeat LCP 364ms / 18.4kB
+/guide run 3: cold LCP 1084ms / 267.3kB; repeat LCP 392ms / 18.4kB
+
+wrote perf-results/production-mobile-followup-final-matched-slow4g.json

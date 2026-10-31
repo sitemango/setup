@@ -1,0 +1,32 @@
+{
+  "checks": [
+    {
+      "name": "HTTP 200 and embedded profile renders",
+      "pass": true
+    },
+    {
+      "name": "Unblock uses related profile id and deletes owned row",
+      "pass": true
+    },
+    {
+      "name": "Reload removes unblocked profile and retains unrelated fixture block",
+      "pass": true
+    },
+    {
+      "name": "No browser page errors",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "httpStatus": 200,
+  "listedText": "Meera Joshi @meera_j · blocked 31 Oct 2026 Unblock",
+  "initialList": [
+    "Meera Joshi @meera_j · blocked 31 Oct 2026 Unblock",
+    "Sara Fernandes @sara_f · blocked 31 Oct 2026 Unblock"
+  ],
+  "remainingAfterUnblock": 0,
+  "finalList": [
+    "Sara Fernandes@sara_f · blocked 31 Oct 2026Unblock"
+  ],
+  "pass": true
+}

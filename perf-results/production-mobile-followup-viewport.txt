@@ -1,0 +1,379 @@
+
+> campus-plus@1.0.0 verify:viewport
+> node scripts/dev/mobile-fit-check.mjs
+
+  session: perf.student1@pccoepune.org
+
+[1mphone · 390px[22m
+  [32mok[39m   / · served page fits 390px — scrollW 390
+  [32mok[39m   / · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   / · no console errors
+  [32mok[39m   / · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   / · answered — HTTP 200 · lands on /login
+  [32mok[39m   /timetable · served page fits 390px — scrollW 390
+  [32mok[39m   /timetable · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /timetable · no console errors
+  [32mok[39m   /timetable · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable · answered — HTTP 200
+  [32mok[39m   /timetable/o · served page fits 390px — scrollW 390
+  [32mok[39m   /timetable/o · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/o · week grid scrolls the whole way and pins its Day column — scrolls 1021px · {"width":332,"scrollWidth":1351,"clientWidth":320,"needsScroll":true,"scrolls":true,"reached":1021,"moved":1021,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/o · no console errors
+  [32mok[39m   /timetable/o · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/o · answered — HTTP 200
+  [32mok[39m   /timetable/b · served page fits 390px — scrollW 390
+  [32mok[39m   /timetable/b · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/b · week grid scrolls the whole way and pins its Day column — scrolls 1021px · {"width":332,"scrollWidth":1351,"clientWidth":320,"needsScroll":true,"scrolls":true,"reached":1021,"moved":1021,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/b · no console errors
+  [32mok[39m   /timetable/b · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/b · answered — HTTP 200
+  [32mok[39m   /guide · served page fits 390px — scrollW 390
+  [32mok[39m   /guide · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /guide · no console errors
+  [32mok[39m   /guide · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /guide · answered — HTTP 200
+  [32mok[39m   /onboarding · served page fits 390px — scrollW 390
+  [32mok[39m   /onboarding · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /onboarding · no console errors
+  [32mok[39m   /onboarding · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /onboarding · answered — HTTP 200 · lands on /login
+  [32mok[39m   /login · served page fits 390px — scrollW 390
+  [32mok[39m   /login · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /login · no console errors
+  [32mok[39m   /login · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /login · answered — HTTP 200
+  [32mok[39m   /rules · served page fits 390px — scrollW 390
+  [32mok[39m   /rules · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /rules · no console errors
+  [32mok[39m   /rules · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /rules · answered — HTTP 200
+  [32mok[39m   /legal · served page fits 390px — scrollW 390
+  [32mok[39m   /legal · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /legal · no console errors
+  [32mok[39m   /legal · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /legal · answered — HTTP 200
+  [32mok[39m   /community · served page fits 390px — scrollW 390
+  [32mok[39m   /community · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /community · no console errors
+  [32mok[39m   /community · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /community · answered — HTTP 200 · lands on /login
+  [32mok[39m   /setup · served page fits 390px — scrollW 390
+  [32mok[39m   /setup · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0
+  [32mok[39m   /setup · no console errors
+  [32mok[39m   /setup · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /setup · answered — HTTP 200 · lands on /login
+  [32mok[39m   /home (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /home (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1
+  [32mok[39m   /home (signed in) · no console errors
+  [32mok[39m   /home (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /home (signed in) · answered — HTTP 200
+  [32mok[39m   /explore (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /explore (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /explore (signed in) · no console errors
+  [32mok[39m   /explore (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /explore (signed in) · answered — HTTP 200
+  [32mok[39m   /campus (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /campus (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /campus (signed in) · no console errors
+  [32mok[39m   /campus (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /campus (signed in) · answered — HTTP 200
+  [32mok[39m   /communities (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /communities (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /communities (signed in) · no console errors
+  [32mok[39m   /communities (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /communities (signed in) · answered — HTTP 200
+  [32mok[39m   /clubs (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /clubs (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /clubs (signed in) · no console errors
+  [32mok[39m   /clubs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /clubs (signed in) · answered — HTTP 200
+  [32mok[39m   /chat (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /chat (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /chat (signed in) · no console errors
+  [32mok[39m   /chat (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /chat (signed in) · answered — HTTP 200
+  [32mok[39m   /notifications (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /notifications (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 1
+  [32mok[39m   /notifications (signed in) · no console errors
+  [32mok[39m   /notifications (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /notifications (signed in) · answered — HTTP 200
+  [32mok[39m   /profile (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /profile (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /profile (signed in) · no console errors
+  [32mok[39m   /profile (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /profile (signed in) · answered — HTTP 200
+  [32mok[39m   /settings (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /settings (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /settings (signed in) · no console errors
+  [32mok[39m   /settings (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /settings (signed in) · answered — HTTP 200
+  [32mok[39m   /market (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /market (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /market (signed in) · no console errors
+  [32mok[39m   /market (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /market (signed in) · answered — HTTP 200
+  [32mok[39m   /gigs (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /gigs (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /gigs (signed in) · no console errors
+  [32mok[39m   /gigs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /gigs (signed in) · answered — HTTP 200
+  [32mok[39m   /admin (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /admin (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /admin (signed in) · no console errors
+  [32mok[39m   /admin (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /admin (signed in) · answered — HTTP 200
+  [32mok[39m   /moderator (signed in) · served page fits 390px — scrollW 390
+  [32mok[39m   /moderator (signed in) · still fits 390px with every disclosure open — viewport 390/390px · doc 390 vs 390 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /moderator (signed in) · no console errors
+  [32mok[39m   /moderator (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /moderator (signed in) · answered — HTTP 200
+
+[1msmall · 320px[22m
+  [32mok[39m   / · served page fits 320px — scrollW 320
+  [32mok[39m   / · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   / · no console errors
+  [32mok[39m   / · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   / · answered — HTTP 200 · lands on /login
+  [32mok[39m   /timetable · served page fits 320px — scrollW 320
+  [32mok[39m   /timetable · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /timetable · no console errors
+  [32mok[39m   /timetable · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable · answered — HTTP 200
+  [32mok[39m   /timetable/o · served page fits 320px — scrollW 320
+  [32mok[39m   /timetable/o · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/o · week grid scrolls the whole way and pins its Day column — scrolls 1091px · {"width":262,"scrollWidth":1351,"clientWidth":250,"needsScroll":true,"scrolls":true,"reached":1091,"moved":1091,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/o · no console errors
+  [32mok[39m   /timetable/o · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/o · answered — HTTP 200
+  [32mok[39m   /timetable/b · served page fits 320px — scrollW 320
+  [32mok[39m   /timetable/b · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/b · week grid scrolls the whole way and pins its Day column — scrolls 1091px · {"width":262,"scrollWidth":1351,"clientWidth":250,"needsScroll":true,"scrolls":true,"reached":1091,"moved":1091,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/b · no console errors
+  [32mok[39m   /timetable/b · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/b · answered — HTTP 200
+  [32mok[39m   /guide · served page fits 320px — scrollW 320
+  [32mok[39m   /guide · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /guide · no console errors
+  [32mok[39m   /guide · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /guide · answered — HTTP 200
+  [32mok[39m   /onboarding · served page fits 320px — scrollW 320
+  [32mok[39m   /onboarding · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /onboarding · no console errors
+  [32mok[39m   /onboarding · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /onboarding · answered — HTTP 200 · lands on /login
+  [32mok[39m   /login · served page fits 320px — scrollW 320
+  [32mok[39m   /login · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /login · no console errors
+  [32mok[39m   /login · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /login · answered — HTTP 200
+  [32mok[39m   /rules · served page fits 320px — scrollW 320
+  [32mok[39m   /rules · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /rules · no console errors
+  [32mok[39m   /rules · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /rules · answered — HTTP 200
+  [32mok[39m   /legal · served page fits 320px — scrollW 320
+  [32mok[39m   /legal · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /legal · no console errors
+  [32mok[39m   /legal · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /legal · answered — HTTP 200
+  [32mok[39m   /community · served page fits 320px — scrollW 320
+  [32mok[39m   /community · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /community · no console errors
+  [32mok[39m   /community · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /community · answered — HTTP 200 · lands on /login
+  [32mok[39m   /setup · served page fits 320px — scrollW 320
+  [32mok[39m   /setup · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0
+  [32mok[39m   /setup · no console errors
+  [32mok[39m   /setup · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /setup · answered — HTTP 200 · lands on /login
+  [32mok[39m   /home (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /home (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /home (signed in) · no console errors
+  [32mok[39m   /home (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /home (signed in) · answered — HTTP 200
+  [32mok[39m   /explore (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /explore (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /explore (signed in) · no console errors
+  [32mok[39m   /explore (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /explore (signed in) · answered — HTTP 200
+  [32mok[39m   /campus (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /campus (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /campus (signed in) · no console errors
+  [32mok[39m   /campus (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /campus (signed in) · answered — HTTP 200
+  [32mok[39m   /communities (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /communities (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /communities (signed in) · no console errors
+  [32mok[39m   /communities (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /communities (signed in) · answered — HTTP 200
+  [32mok[39m   /clubs (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /clubs (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /clubs (signed in) · no console errors
+  [32mok[39m   /clubs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /clubs (signed in) · answered — HTTP 200
+  [32mok[39m   /chat (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /chat (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /chat (signed in) · no console errors
+  [32mok[39m   /chat (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /chat (signed in) · answered — HTTP 200
+  [32mok[39m   /notifications (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /notifications (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /notifications (signed in) · no console errors
+  [32mok[39m   /notifications (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /notifications (signed in) · answered — HTTP 200
+  [32mok[39m   /profile (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /profile (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /profile (signed in) · no console errors
+  [32mok[39m   /profile (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /profile (signed in) · answered — HTTP 200
+  [32mok[39m   /settings (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /settings (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /settings (signed in) · no console errors
+  [32mok[39m   /settings (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /settings (signed in) · answered — HTTP 200
+  [32mok[39m   /market (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /market (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /market (signed in) · no console errors
+  [32mok[39m   /market (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /market (signed in) · answered — HTTP 200
+  [32mok[39m   /gigs (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /gigs (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /gigs (signed in) · no console errors
+  [32mok[39m   /gigs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /gigs (signed in) · answered — HTTP 200
+  [32mok[39m   /admin (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /admin (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /admin (signed in) · no console errors
+  [32mok[39m   /admin (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /admin (signed in) · answered — HTTP 200
+  [32mok[39m   /moderator (signed in) · served page fits 320px — scrollW 320
+  [32mok[39m   /moderator (signed in) · still fits 320px with every disclosure open — viewport 320/320px · doc 320 vs 320 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /moderator (signed in) · no console errors
+  [32mok[39m   /moderator (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /moderator (signed in) · answered — HTTP 200
+
+[1mdesktop · 1440px[22m
+  [32mok[39m   / · served page fits 1440px — scrollW 1440
+  [32mok[39m   / · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   / · no console errors
+  [32mok[39m   / · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   / · answered — HTTP 200 · lands on /login
+  [32mok[39m   /timetable · served page fits 1440px — scrollW 1440
+  [32mok[39m   /timetable · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /timetable · no console errors
+  [32mok[39m   /timetable · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable · answered — HTTP 200
+  [32mok[39m   /timetable/o · served page fits 1440px — scrollW 1440
+  [32mok[39m   /timetable/o · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/o · week grid scrolls the whole way and pins its Day column — fits at this width · {"width":1366,"scrollWidth":1354,"clientWidth":1354,"needsScroll":false,"scrolls":false,"reached":0,"moved":0,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/o · no console errors
+  [32mok[39m   /timetable/o · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/o · answered — HTTP 200
+  [32mok[39m   /timetable/b · served page fits 1440px — scrollW 1440
+  [32mok[39m   /timetable/b · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 1
+  [32mok[39m   /timetable/b · week grid scrolls the whole way and pins its Day column — fits at this width · {"width":1366,"scrollWidth":1354,"clientWidth":1354,"needsScroll":false,"scrolls":false,"reached":0,"moved":0,"lastCellVisibleAtEnd":true,"atRest":0,"pinned":0,"dayColumnPinned":true}
+  [32mok[39m   /timetable/b · no console errors
+  [32mok[39m   /timetable/b · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5, viewport-fit=cover"
+  [32mok[39m   /timetable/b · answered — HTTP 200
+  [32mok[39m   /guide · served page fits 1440px — scrollW 1440
+  [32mok[39m   /guide · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /guide · no console errors
+  [32mok[39m   /guide · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /guide · answered — HTTP 200
+  [32mok[39m   /onboarding · served page fits 1440px — scrollW 1440
+  [32mok[39m   /onboarding · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /onboarding · no console errors
+  [32mok[39m   /onboarding · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /onboarding · answered — HTTP 200 · lands on /login
+  [32mok[39m   /login · served page fits 1440px — scrollW 1440
+  [32mok[39m   /login · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /login · no console errors
+  [32mok[39m   /login · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /login · answered — HTTP 200
+  [32mok[39m   /rules · served page fits 1440px — scrollW 1440
+  [32mok[39m   /rules · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /rules · no console errors
+  [32mok[39m   /rules · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /rules · answered — HTTP 200
+  [32mok[39m   /legal · served page fits 1440px — scrollW 1440
+  [32mok[39m   /legal · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /legal · no console errors
+  [32mok[39m   /legal · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /legal · answered — HTTP 200
+  [32mok[39m   /community · served page fits 1440px — scrollW 1440
+  [32mok[39m   /community · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /community · no console errors
+  [32mok[39m   /community · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /community · answered — HTTP 200 · lands on /login
+  [32mok[39m   /setup · served page fits 1440px — scrollW 1440
+  [32mok[39m   /setup · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0
+  [32mok[39m   /setup · no console errors
+  [32mok[39m   /setup · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /setup · answered — HTTP 200 · lands on /login
+  [32mok[39m   /home (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /home (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 1
+  [32mok[39m   /home (signed in) · no console errors
+  [32mok[39m   /home (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /home (signed in) · answered — HTTP 200
+  [32mok[39m   /explore (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /explore (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /explore (signed in) · no console errors
+  [32mok[39m   /explore (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /explore (signed in) · answered — HTTP 200
+  [32mok[39m   /campus (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /campus (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /campus (signed in) · no console errors
+  [32mok[39m   /campus (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /campus (signed in) · answered — HTTP 200
+  [32mok[39m   /communities (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /communities (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /communities (signed in) · no console errors
+  [32mok[39m   /communities (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /communities (signed in) · answered — HTTP 200
+  [32mok[39m   /clubs (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /clubs (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /clubs (signed in) · no console errors
+  [32mok[39m   /clubs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /clubs (signed in) · answered — HTTP 200
+  [32mok[39m   /chat (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /chat (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /chat (signed in) · no console errors
+  [32mok[39m   /chat (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /chat (signed in) · answered — HTTP 200
+  [32mok[39m   /notifications (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /notifications (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /notifications (signed in) · no console errors
+  [32mok[39m   /notifications (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /notifications (signed in) · answered — HTTP 200
+  [32mok[39m   /profile (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /profile (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /profile (signed in) · no console errors
+  [32mok[39m   /profile (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /profile (signed in) · answered — HTTP 200
+  [32mok[39m   /settings (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /settings (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /settings (signed in) · no console errors
+  [32mok[39m   /settings (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /settings (signed in) · answered — HTTP 200
+  [32mok[39m   /market (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /market (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /market (signed in) · no console errors
+  [32mok[39m   /market (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /market (signed in) · answered — HTTP 200
+  [32mok[39m   /gigs (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /gigs (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /gigs (signed in) · no console errors
+  [32mok[39m   /gigs (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /gigs (signed in) · answered — HTTP 200
+  [32mok[39m   /admin (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /admin (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 1
+  [32mok[39m   /admin (signed in) · no console errors
+  [32mok[39m   /admin (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /admin (signed in) · answered — HTTP 200
+  [32mok[39m   /moderator (signed in) · served page fits 1440px — scrollW 1440
+  [32mok[39m   /moderator (signed in) · still fits 1440px with every disclosure open — viewport 1440/1440px · doc 1440 vs 1440 · scale 1 · disclosures 0 · noise: 2
+  [32mok[39m   /moderator (signed in) · no console errors
+  [32mok[39m   /moderator (signed in) · viewport meta is device-width and still zoomable — content="width=device-width, initial-scale=1, maximum-scale=5"
+  [32mok[39m   /moderator (signed in) · answered — HTTP 200
+
+366/366 checks passed · report: node_modules/.cache/mobile-fit/report.json

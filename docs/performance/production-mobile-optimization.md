@@ -3,9 +3,11 @@
 **Date:** 2026-10-31 (Asia/Calcutta; raw artifact timestamps are UTC)  
 **Branch:** `arena/afd7e725-setup`  
 **Baseline source:** merge commit `3b7124727769a7e7cbd104f84143d71daa72a634`  
-**Final status:** implementation and local verification complete; not merged or deployed, and no new production RES/field result exists.
+**Final status:** implementation and regenerated local verification complete; ready for review with the explicit findings in §17. Not merged or deployed; no new production RES/field result exists.
 
 This is an implementation report, not a prediction of a Vercel Real Experience Score. Lab results below are diagnostic evidence from a local production build. Only a later, normally authorized deployment with enough real mobile visits can establish a new production RES or field P75.
+
+**Current-tree authority:** §§1–10 retain the original investigation and first optimization run. §§11–17 contain the current follow-up implementation and regenerated evidence.
 
 ## 1. Supplied production baseline and targets
 
@@ -331,4 +333,113 @@ One additional disposable-fixture limit appeared in the production-server log: S
 
 ## 10. Bottom line
 
-The implementation removes an unnecessary unsaved timetable snapshot and first-use obstruction, avoids decorative mobile WebGL startup, reduces intro font bytes by 59.9% on the wire, and removes the measured returning-guide layout insertion. Final local evidence shows substantially lower Home transfer/long-task time, repeat Home CLS 0, preserved pagination/offline/security behavior, and clean mobile-fit and contrast audits. It also shows mixed division LCP and a cold Home synthetic-interaction regression. Those limitations, the non-green feed assertion, and existing repository audit findings remain part of the result. **No new production RES is claimed.**
+The initial implementation removed unnecessary timetable work, decorative mobile WebGL startup, intro-font bytes, and the returning-guide insertion. The follow-up below resolves its division and Discussion regressions, completes poll voting, and reruns the affected workflows. Historical failures remain in the raw evidence. **No new production RES is claimed.**
+
+## 11. Current matched mobile results
+
+The regenerated comparison uses the same three cold/repeat visits, 390×844 DPR-3 touch context, Slow-4G/4×-CPU profile, fixtures, and seven routes. Public paths explicitly include `/`; the older `production-mobile-followup-final-slow4g` root row is not comparable. Raw: `production-mobile-followup-final-matched-slow4g.{json,txt}`.
+
+LCP cells are **original baseline → initial final → current**, in milliseconds.
+
+| Route | Cold LCP | Repeat LCP | Current cold/repeat CLS |
+| --- | ---: | ---: | ---: |
+| `/` → Login | 1,184 → 1,180 → **1,336** | 296 → 280 → **508** | 0 / 0 |
+| `/home` | 3,224 → 1,328 → **1,552** | 720 → 724 → **644** | 0 / 0 |
+| `/timetable/a` | 1,116 → 1,412 → **1,072** | 372 → 392 → **304** | 0 / 0 |
+| `/explore` | 976 → 1,012 → **1,092** | 424 → 472 → **444** | 0.0096 / 0.0096 |
+| `/login` | 1,184 → 1,184 → **1,180** | 344 → 348 → **340** | 0 / 0 |
+| `/timetable` | 1,072 → 1,076 → **1,068** | 332 → 340 → **340** | 0 / 0 |
+| `/guide` | 1,400 → 1,424 → **1,112** | 396 → 432 → **384** | 0 / 0 |
+
+Home cold runs were **1,800 / 1,356 / 1,552 ms**. Its **1,552 ms median is slower than the initial final 1,328 ms**, while remaining below the original 3,224 ms; neither run is hidden or substituted for the other. Current Home cold transfer is **473,172 B**, cold long-task time **788 ms**, and Discussion Event Timing **96/96 ms**. Division cold/repeat transfer is **303,154/7,179 B**, long-task time **252/138 ms**, and Tuesday timing **40/40 ms**.
+
+The original Home **3,224→1,328 ms**, repeat CLS **0.2574→0**, transfer **−30.5%**, tasks **9,227→1,096 ms**, font transfer **−59.9%**, and Tuesday **112→48 ms** artifacts remain valid for the initial final revision. Current numbers describe the current revision and are lab medians, not field P75.
+
+## 12. Division LCP cause and fix
+
+The late LCP element was **`p.tt-help`** (size 42,602), not an image or data response. Affected pre-fix traces painted a 2,010-size loading span around 992–1,036 ms, then the real help paragraph around 1,368–1,528 ms. Other identical runs painted the paragraph directly. Division has zero Supabase/API reads and roughly 20 ms complete HTML in the server trace.
+
+The root `app/loading.js` emitted a spinner plus a hidden complete timetable segment and React `$RC` reveal. Hydration scheduling therefore determined whether the fallback painted before reveal. CSS/DM Mono loading accounts for first-paint cost, but not this extra content replacement; offline/install mutations around 2.1 seconds and the clock around 3 seconds were later still.
+
+The loading boundary now lives at **`app/(app)/loading.js`**, so authenticated routes retain it without wrapping the public division stream. Current initial HTML contains visible timetable/help content, with no fallback/hidden segment/reveal call. Current division LCP is **1,072 ms cold** (1,064–1,116) and **304 ms repeat** (296–340), with `p.tt-help` the element in every current raw run. Offline behavior remains **98/98**. Raw diagnosis: `production-mobile-followup-before-division-trace.json`, `...before-division-layout-trace.json`, and `...before/after-division-loading-boundary.json`.
+
+## 13. Discussion interaction and phone geometry
+
+The composer tab handler only calls **`setKind('discussion')`**. That mounts the existing title field and updates labels/selection; it does not fetch or rebuild the feed. Pre-fix controlled durations were **624/456/424 ms**, with only about 5–23 ms click processing. Frame/paint diagnostics isolated backdrop re-rasterization after the state update. Removing DepthField alone was insufficient; disabling visible backdrop sampling reduced the same diagnostic to **160/80/80 ms**. Event-detail requests occurred in slow and fast variants and were not the cause.
+
+Scoped mobile rules now disable backdrop sampling for `.glass-floating`, `.glass-premium`, and `.home-pulse__stats`, using opaque computed backgrounds while retaining radii, gradients, rims, shadows, content, and desktop materials. Current matched Event Timing is **96 ms cold** (80–136) and **96 ms repeat** (56–96), below 200 ms in all six probes. This is synthetic Event Timing, not field INP. `tests/mobile-interaction-surfaces.test.js` guards the fix.
+
+Phone aurora `top` and `height` use stable rem geometry so late real stats cannot move the decorative light. Current required-phone Slow-4G results:
+
+| Width | Home LCP / CLS | Division LCP / CLS |
+| --- | ---: | ---: |
+| 360×800 | 1,300 ms / 0 | 1,064 ms / 0 |
+| 375×812 | 1,276 ms / 0 | 1,072 ms / 0 |
+| 390×844 | 1,328 ms / 0 | 1,116 ms / 0 |
+| 412×915 | 1,272 ms / **0.0048** | 1,064 ms / 0 |
+
+All **48 attempts** had zero horizontal overflow. The 412-wide residual is retained, not rounded away. Raw: `production-mobile-followup-final-required-phones.{json,txt}`.
+
+## 14. Poll voting
+
+`PollBlock` now applies a complete optimistic snapshot for selected styling, counts, percentages, and total. A ref prevents same-frame duplicate submissions; each card owns its own state. The server action retains the caller's RLS session, validates option/post membership, inserts one authorized vote, and reads trigger-maintained counts for reconciliation. Rejection restores the authoritative snapshot with `role="alert"`; a failed count read after a committed insert is not misreported as a rollback.
+
+Full poll overlays prevent stale feed responses and Realtime/refetch double-counts. Home memory is patched per user for navigation return, while the mounted card owns its visible update. Voting causes no page reload, `router.refresh()`, whole-feed read, or new subscription.
+
+Ten scenarios in `tests/poll-vote-state.test.js` cover immediate UI, unknown options, one-vote behavior, reconciliation, rollback, independent cards, cache synchronization, stale hydration, idempotent overlays, and closed polls. Production-browser/real-PostgreSQL acceptance passed all five workflows: immediate UI, rapid-click protection/independence, authoritative database counts, navigation away/back without a feed read/reload, and accessible rollback.
+
+| Measurement | Before | Initial fixed run | Current fixed run |
+| --- | ---: | ---: | ---: |
+| Click Event Timing | 168 ms | 176 ms | **144 ms** |
+| Visible selected-state mutation | None after 2,500 ms; still 0 votes | 83.1 ms | **69.2 ms** |
+
+Current evidence: `production-mobile-followup-final-poll.{json,txt}`. Only the two initial feed GETs occurred; temporary rows were cleaned.
+
+## 15. Feed, Blocked, and contrast follow-up
+
+### Feed
+
+The unchanged product and unchanged 20-second fallback now pass **15/15**. The idle check recorded **one POST at +0.0 seconds** when the page was brought to front, within the unchanged `≤1` assertion; no continuing idle polling occurred. Viewer convergence took **32.1 seconds** on the expected no-WebSocket path. This supports a visibility/reconciliation timing explanation rather than a feed correctness defect. The older two-read failure cannot be reconstructed retroactively and remains retained. Latest: `production-mobile-followup-feed-diagnostic-rerun.txt`.
+
+### Settings → Blocked
+
+Two separate defects were fixed:
+
+1. The disposable SQL stub treated the output alias in `alias:resource!fk` as the resource table, causing a harness-only `PGRST100`. `scripts/dev/perf/sql.mjs` now separates alias, resource, and FK hint; three focused tests cover aliased/unaliased embeds.
+2. The app also consumed PostgREST's nested `blocked` profile as a flat profile. `lib/blocks.js` now flattens it while retaining `created_at` and the related profile id, preventing the block-row id from reaching `ProfileActions`. A focused mapping test guards this.
+
+No production FK, relationship, policy, or RLS changed. Rebuilt browser smoke loaded `/settings?tab=blocked` with HTTP 200, rendered **Meera Joshi / @meera_j**, unblocked the exact owned row, and confirmed after reload that Meera was removed while unrelated **@sara_f** remained. Raw: `production-mobile-followup-settings-blocked-smoke.json`.
+
+**Hosted smoke remains required:** after an authorized deployment, repeat block/unblock with two ordinary institutional accounts, multiple blocked profiles, and ownership/anonymous denial checks. Local stub success is not hosted relationship-cache proof.
+
+### Contrast
+
+The settled intro-handover audit awaits the existing finite stats animation through `getAnimations()` rather than sampling transient opacity as settled content. Product colors, animation, and the 4.5:1 threshold were not changed; motion-phase checks remain. Current full result: **101 pages, 285 paints, 22,319 foregrounds (15,394 text; 6,925 icons), 29 focus states, 2 layout checks, 0 failures**. Raw: `production-mobile-followup-contrast-current.txt` and `...contrast-current-report.json`.
+
+## 16. Current verification and security comparison
+
+| Check | Current result | Evidence |
+| --- | --- | --- |
+| Build / lint / service worker | Passed; 87 static-generation steps; 15.2 kB worker current | `production-mobile-followup-final-blocked-build.txt`, `...final-lint.txt`, `...final-sw.txt` |
+| Units | **81 files / 960 tests passed** | `production-mobile-followup-final-unit.txt` |
+| Migrations / SQL suites | **37 migrations / 18 suites passed** | `production-mobile-followup-database-tests.txt` |
+| Feed / pagination | **15/15; 11/11** | `production-mobile-followup-feed-diagnostic-rerun.txt`, `...pagination.txt` |
+| Poll browser acceptance | **5/5 workflows; 69.2 ms visible mutation** | `production-mobile-followup-final-poll.json` |
+| Offline / mobile fit | **98/98; 366/366** | `production-mobile-followup-offline.txt`, `...viewport.txt` |
+| Contrast | **101 pages / 285 paints / 0 failures** | `production-mobile-followup-contrast-current-report.json` |
+| Blocked browser smoke | Passed locally with correct target/unrelated-row preservation | `production-mobile-followup-settings-blocked-smoke.json` |
+| Database audit | **67 passed / 0 warnings / 3 failed**, identical base/current | `production-mobile-followup-baseline-db-audit.txt`, `...current-db-audit.txt` |
+| Security verification | Anonymous denials and browser secret scan pass; one pre-existing placeholder hygiene failure | `production-mobile-followup-final-security.txt` |
+| Dependency audit | **19 vulnerabilities: 16 moderate, 2 high, 1 critical** | `production-mobile-followup-npm-audit.json` |
+
+The three base/current database findings are unchanged: PUBLIC execute on five club/community helpers; `club_creation_requests` absent from the backup snapshot catalogue (65/66); and its missing capture trigger. No audit, grant, trigger, migration, or safeguard was changed to suppress them.
+
+The placeholder grep reports only the same pre-existing harness/documentation matches. No real credential or new non-evidence placeholder was added. The dependency manifest/lockfile is unchanged, so the 19 vulnerable dependency versions were not introduced by this optimization. Critical/high entries include Next.js and Zod advisories; no unreviewed `npm audit fix` was run.
+
+## 17. Review readiness
+
+**Ready for code review, not release-approved or field-validated.** Local implementation and requested verification are complete, but the three database findings, placeholder hygiene failure, and 19 dependency vulnerabilities remain release-review items. Home's current **1,552 ms** cold median remains slower than the prior 1,328 ms run; Home 412-wide CLS is **0.0048** and Explore **0.0096**.
+
+Fixture WebSocket 404s are expected. Hosted Realtime/OAuth/Supabase smoke, physical-device behavior, and real-user INP remain unmeasured. Hosted smoke must include Blocked and poll navigation return plus publishing, moderation/deletion, pagination, offline updates, and reconnect.
+
+No merge, deployment, production migration, or production RES claim has been made. The only field result remains **RES 57/100 from 267 events**. Use §9 after an authorized deployment and record actual event counts and available P75 metrics, never estimates.

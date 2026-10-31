@@ -1,0 +1,128 @@
+
+> campus-plus@1.0.0 verify:offline
+> node scripts/dev/timetable-offline-check.mjs
+
+
+[1m0. the build under test[22m
+✓ a production build (a dev server registers no worker on purpose)
+✓ the timetable service worker is registered and activated  — activated · http://127.0.0.1:3100/timetable/sw.js
+✓ one registration, controlling this origin from the wide scope  — http://127.0.0.1:3100/
+✓ the real timetable is on the page  — Division O · 7 rows
+✓ nothing was written to the device before the student asked
+✓ the action asks to save, and does not claim an install yet  — Save timetable for offline use
+
+[1m1. saving O while online[22m
+✓ one record for this batch, holding its whole week  — 30 events · 10886 bytes
+✓ the record is versioned and timed  — v1 · 2026-10-31T14:32:30.874Z
+✓ the button names the batch once the copy is on the device  — Add Division O (IT) timetable to Home Screen
+✓ the header reports the saved copy  — Offline copy ready · saved today 8:02 PM
+✓ this batch’s document is cached, so a reload needs no network
+✓ the other batch was not touched by this save
+✓ no signed-in, admin or auth page was cached
+✓ no API response is in CacheStorage (the data lives in IndexedDB)
+✓ only this feature’s own caches exist on the origin  — campusplus-timetable-core-v1, campusplus-timetable-assets-v1, campusplus-timetable-documents-v1
+
+[1m2. the saved page, reloaded with the radio off[22m
+✓ the timetable renders with no network at all  — Division O · 7 rows
+✓ the entries are the real subject lines, not a skeleton  — WDL-1/ENG-2/WDL-3
+✓ the five weekday controls still work offline  — 5 tabs
+✓ today’s marker and the NOW/NEXT line agree with the campus calendar (Saturday)  — 0 marker(s), status: none
+✓ the page labels its copy as saved, with a time  — Saved copy · today 8:02 PM
+✓ an offline load never throws inside the page
+✓ every weekday can be switched offline, and the choice is announced  — rows per day: 7,6,7,8,7
+✓ coming back online does not empty the page  — 7 rows
+✓ and the offline rows were the same rows the network has  — WDL-1/ENG-2/WDL-3 · EPH-1/DEL-2/WDL-3
+
+[1m3. an unsaved batch (B), offline[22m
+✓ an unsaved batch explains itself instead of showing a blank page  — Campus+ PCCOE Open Campus+ OFFLINE Nothing saved for this timetable yet Division B (Mech) 
+
+[1m4. a second batch, and reconstruction from the shell alone[22m
+✓ both batches are stored on this device  — J, O
+✓ each batch kept its own checksum  — J:bd7262ab O:07c0b9b4
+✓ the second record holds the second week, not a copy of the first
+✓ the shell rebuilds the saved batch from IndexedDB with no document cached  — Division J · 8 rows
+✓ the address stays the batch that was asked for  — http://127.0.0.1:3100/timetable/j
+✓ and the first batch still renders as itself  — Division O · 7 rows
+✓ no page error escaped through any offline step
+
+[1m5. a cold start: every page closed, still offline[22m
+✓ the reopened page still renders the saved week with no network  — Division O · 7 rows
+✓ a cold worker took control without a network  — controller: true
+✓ the chip reports the copy’s age, from disk  — Saved copy · today 8:02 PM
+✓ the cold start threw nothing
+
+[1m6. placement, keyboard and motion[22m
+✓ the timetable index carries no install action  — button=null
+✓ sign-in carries none either
+✓ the page is reachable from the keyboard  — first stop: <a>
+✓ Enter on the action opens the sheet
+✓ the sheet names this batch  — Add Division O (IT) to your Home Screen A page cannot press the browser’s own bu
+✓ and it tells the truth about the platform in front of us  — Add Division O (IT) to your Home Screen A page cannot press the browser’s own bu
+✓ Escape closes it
+✓ reduced motion stops the offline pill and the spinner  — {"pillTransition":[0.000001],"spinnerAnimation":"none","spinnerSeconds":[0],"cardPaddingBottom":"20px"}
+✓ the card has real bottom padding for a notched phone  — 20px
+
+[1m7. a browser that refuses the worker (private profile, blocked storage)[22m
+✓ the timetable is still saved without a service worker  — O
+✓ and the page still renders its rows  — 7 rows
+✓ the action is not stuck on “preparing”  — Add Division O (IT) timetable to Home Screen
+✓ the copy names the limitation instead of hiding it  — Up to date This browser would not keep the page files, so an offline reload may need a connectio
+✓ no error escaped into the console
+
+[1m8. what the platform actually offered[22m
+  beforeinstallprompt offered: no (headless Chromium never fires it) · appinstalled: no · standalone: false
+✓ an unoffered prompt becomes a guide, never a fake success or a failure  — Add Division O (IT) timetable to Home Screen
+  storage: 1318 kB used · durable grant: not granted (browser decides)
+
+[1m9. the mobile offer, in a browser that can touch[22m
+✓ a fresh phone visit does not open an unsolicited install sheet  — save-first
+✓ no install dialog competes with the timetable  — dialogs=0
+✓ the explicit action asks to save before offering installation  — Save timetable for offline use
+✓ the fresh page did not download a snapshot behind the student’s back
+✓ no button on the card is inert  — none disabled
+✓ the timetable behind the quiet card is intact  — 7 rows · secure context: true
+✓ the explicit save unlocks the saved-copy install offer  — Add Division O (IT) to your Home Screen One tap keeps this division’s week a screen away: the icon o
+✓ the offer opens the honest manual steps  — 3 steps
+✓ and the copy got saved while it was deciding
+✓ the saved batch is in IndexedDB for this division  — O
+✓ closing the guide is not treated as a refusal
+✓ the offer comes back, because nobody said no  — already-asked
+✓ the offer has a Not now, not only an X
+✓ declining closes it and installs nothing  — already-asked
+✓ a repeated visit does not ask again  — dismissed-recently
+✓ the card is still the way back in  — Add Division O (IT) timetable to Home Screen
+✓ nothing threw on the phone path
+✓ an installed app is never interrupted again  — installed
+✓ and the card already says what is true
+✓ the native-capable fresh visit also waits for a saved copy  — save-first
+✓ nothing has been prompted before a click  — calls=0
+✓ the explicit native-path save still prepares offline access
+✓ the saved-copy manual offer is up while no event exists
+✓ the page prevents the browser’s own promotion, so one UI asks at a time  — true
+✓ the captured event is not left parked for a second listener
+✓ the offer turns into the native action without a reload  — Install app · Not now
+✓ the wording changes with the capability it found  — Add Division O (IT) to your Home Screen One tap keeps this division’s 
+✓ one click calls prompt() once, after saving first  — calls=1
+✓ an accepted prompt closes the offer  — installed
+✓ the card reports what the browser confirmed  — Added to Home Screen
+✓ and it is disabled, so the same claim cannot be clicked twice
+✓ an install that was accepted is not offered again next visit  — installed-recently
+✓ the timetable still renders after all of that  — 7 rows
+✓ no page error on the native path
+✓ the page links exactly one manifest, under /timetable/  — links=1
+✓ the served manifest carries name, short_name and a standalone display  — standalone
+✓ start_url is inside the manifest scope and on this origin  — /timetable/o in /timetable/
+✓ the manifest’s per-batch id is present and stable  — campusplus-timetable-o
+✓ every icon it names is served as a PNG  — 192x192:200 512x512:200 192x192:200 512x512:200 180x180:200
+✓ the offline worker is registered over a scope that covers start_url  — http://127.0.0.1:3100/
+✓ every asset the install reads is inside the public /timetable prefix  — manifest:/timetable/manifest/o icon:/timetable/icon.png apple-touch-icon:/timetable/apple-icon.png
+✓ and a signed-out browser is served the real file, not a redirect to /login  — /timetable/manifest/o=200 application/manifest+json /timetable/icon.png=200 image/png /timetable/apple-icon.png=200 image/png
+✓ the page is a secure context (HTTPS, or localhost while checking)
+✓ another mobile browser also starts quiet and manual  — save-first
+✓ another mobile browser is offered the steps, not Chrome’s dialog  — Show installation steps · Not now
+✓ and its guide is the one for that platform  — already-asked
+✓ a narrow desktop window is not interrupted by the offer  — not-mobile
+
+[1msummary[22m
+98/98 checks passed against http://127.0.0.1:3100
+offline check OK

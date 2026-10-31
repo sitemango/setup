@@ -358,6 +358,16 @@ try {
         await screenshot(page, label, false, 60000);
         await page.keyboard.press('Escape');
         await page.locator(INTRO).waitFor({ state: 'detached', timeout: 15000 });
+        // This is the settled post-handover check, not a mid-fade sample. Real
+        // stats can mount during the intro and run their existing 120 ms +
+        // 700 ms threshold arrival. Let that finite animation finish instead
+        // of attributing its transient opacity to the static colour tokens.
+        // The motion suite below still audits the animation at multiple phases.
+        await page.evaluate(async () => {
+          const stats = document.querySelector('.home-pulse__stats');
+          if (!stats) return;
+          await Promise.all(stats.getAnimations().map((animation) => animation.finished.catch(() => {})));
+        });
         await paint(page, `${label}-handover`);
         await context.close();
       }

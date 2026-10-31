@@ -1,0 +1,182 @@
+
+> campus-plus@1.0.0 audit:db
+> node scripts/dev/audit.mjs
+
+
+[1mStarting disposable PostgreSQL…[0m
+The files belonging to this database system will be owned by user "user".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C".
+The default database encoding has accordingly been set to "SQL_ASCII".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+
+creating directory /tmp/campus-base-audit.0i5mp5/node_modules/.cache/pg-audit-data ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 
+100
+selecting default "shared_buffers" ... 
+128MB
+selecting default time zone ... 
+Etc/UTC
+creating configuration files ... 
+ok
+running bootstrap script ... 
+ok
+
+performing post-bootstrap initialization ... 
+ok
+syncing data to disk ... 
+ok
+
+Success. You can now start the database server using:
+
+    '/tmp/campus-perf-tools/node_modules/@embedded-postgres/linux-x64/native/bin/pg_ctl' -D /tmp/campus-base-audit.0i5mp5/node_modules/.cache/pg-audit-data -l logfile start
+
+
+2026-10-31 14:51:12.423 UTC [7428] LOG:  starting PostgreSQL 17.10 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0, 64-bit
+
+2026-10-31 14:51:12.424 UTC [7428] LOG:  listening on IPv6 address "::1", port 55436
+2026-10-31 14:51:12.424 UTC [7428] LOG:  listening on IPv4 address "127.0.0.1", port 55436
+
+2026-10-31 14:51:12.425 UTC [7428] LOG:  listening on Unix socket "/tmp/.s.PGSQL.55436"
+
+2026-10-31 14:51:12.427 UTC [7431] LOG:  database system was shut down at 2026-10-31 14:51:12 UTC
+
+2026-10-31 14:51:12.429 UTC [7428] LOG:  database system is ready to accept connections
+
+
+[1mInstalling Supabase compatibility surface…[0m
+2026-10-31 14:51:12.486 UTC [7436] WARNING:  "wal_level" is insufficient to publish logical changes
+2026-10-31 14:51:12.486 UTC [7436] HINT:  Set "wal_level" to "logical" before creating subscriptions.
+2026-10-31 14:51:12.486 UTC [7436] CONTEXT:  SQL statement "create publication supabase_realtime"
+	PL/pgSQL function inline_code_block line 3 at SQL statement
+
+
+[1mApplying migrations…[0m
+
+[1mAuditing schema…[0m
+(node:7400) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///tmp/campus-base-audit.0i5mp5/lib/constants.js is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to /tmp/campus-base-audit.0i5mp5/package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+2026-10-31 14:51:13.176 UTC [7428] LOG:  received fast shutdown request
+
+2026-10-31 14:51:13.178 UTC [7428] LOG:  aborting any active transactions
+
+2026-10-31 14:51:13.180 UTC [7428] LOG:  background worker "logical replication launcher" (PID 7434) exited with exit code 1
+
+2026-10-31 14:51:13.180 UTC [7429] LOG:  shutting down
+
+2026-10-31 14:51:13.181 UTC [7429] LOG:  checkpoint starting: shutdown immediate
+
+2026-10-31 14:51:13.337 UTC [7429] LOG:  checkpoint complete: wrote 1759 buffers (10.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.026 s, sync=0.128 s, total=0.157 s; sync files=935, longest=0.001 s, average=0.001 s; distance=11109 kB, estimate=11109 kB; lsn=0/1FB2938, redo lsn=0/1FB2938
+
+2026-10-31 14:51:13.343 UTC [7428] LOG:  database system is shut down
+
+
+[1mAudit report[0m
+
+[1mMigrations[0m
+  [32m✓[0m Single authoritative history — 37 files in supabase/migrations/, lexicographic order = apply order
+  [32m✓[0m No duplicate sequence numbers — 001 002 003 004 005 006 007 008 009 010 011 012 013 014 015 016 017 018 019 020 021 022 023 024 025 026 027 028 029 030 031 032 033 034 035 036 037
+  [32m✓[0m Exactly one migrations directory — supabase/migrations
+  [32m✓[0m Fresh database from zero — 37 migrations applied to an empty PostgreSQL 15 database
+
+[1mRLS[0m
+  [32m✓[0m RLS enabled on every table — 75/75 public tables
+  [32m✓[0m Every client-facing table has a policy — deny-all by design: rate_limits
+  [32m✓[0m No policy grants access to anon — 264 policies checked
+  [32m✓[0m Blanket USING (true) appears only on reference-data tables — 264 policies checked
+  [32m✓[0m Sensitive tables all define SELECT policies — messages, conversations, conversation_members, random_sessions, random_session_participants, random_messages, reports, audit_logs, moderation_actions, notifications, profile_private
+
+[1mGrants[0m
+  [32m✓[0m anon holds no table privileges in public
+  [31m✗[0m anon can execute only the pre-auth helpers — 5 unexpected: guard_club_creation_request_insert(), guard_club_linked_content(), guard_community_membership_write(), notify_club_request_admins(), sync_club_admin_assignment() (PUBLIC grants remaining: 5)
+      [33mfix:[0m REVOKE EXECUTE ON ALL FUNCTIONS IN SCHEMA public FROM PUBLIC; then grant to authenticated + service_role.
+  [32m✓[0m PUBLIC holds no table privileges in public
+  [32m✓[0m authenticated holds table privileges — 451 grants (RLS + column privileges narrow them)
+
+[1mDefiner hygiene[0m
+  [32m✓[0m Every SECURITY DEFINER function pins search_path — 145 functions
+  [32m✓[0m SECURITY DEFINER functions owned by postgres
+  [32m✓[0m SECURITY DEFINER inventory — 145 functions, each the sole write path for privileged state
+  [32m✓[0m Definer views are limited to the two audited Random projections — (none)
+
+[1mRealtime[0m
+  [32m✓[0m Channel policies call only functions the subscribing role can execute — every public function referenced by a realtime.messages policy is executable by authenticated
+  [32m✓[0m Random channel access uses a current-user-only predicate — campus_channels_read, campus_channels_write → can_access_own_random_session(uuid)
+  [32m✓[0m The session-membership oracle is not client-callable — service_role only (granted)
+  [32m✓[0m The channel predicate is granted explicitly — authenticated yes, anon no
+
+[1mData model[0m
+  [32m✓[0m Every table has a primary key — 75 tables
+  [32m✓[0m Every table records when a row was created
+  [32m✓[0m All timestamps are timestamptz
+  [32m✓[0m Every *_id column is backed by a foreign key — only reports.target_id is polymorphic by design
+  [32m✓[0m Every FK used for filtering is indexed — 60 audit-only FKs (created_by/updated_by) intentionally left unindexed
+  [32m✓[0m No duplicate indexes
+  [32m✓[0m Identifiers are consistently snake_case
+  [32m✓[0m Hard-delete cascades from profiles — 43 tables follow a deliberate hard delete of auth.users; normal account deletion is a status change
+  [32m✓[0m Status-like text columns are constrained
+
+[1mColumn privileges[0m
+  [32m✓[0m Tables with narrowed UPDATE grants — 55 of 75
+  [32m✓[0m Tables where UPDATE is not granted to clients — audit_logs, backup_batches, backup_change_log, backup_checkpoints, backup_drive_connections, backup_jobs, backup_run_leases, backup_run_log, backup_snapshots, backup_tracked_tables, club_creation_requests, community_join_requests, conversations, feature_flags, moderation_actions, platform_settings, poll_options, profile_private, random_sessions, reports, reserved_usernames, role_permissions, roles, user_roles
+  [32m✓[0m Privileged columns are not client-writable — 20 columns spot-checked
+  [32m✓[0m Expected editable columns are writable — profiles.display_name, profiles.bio, posts.body, posts.visibility, comments.body, messages.body, marketplace_listings.title, profiles.allow_dms_from_everyone
+
+[1mContract[0m
+  [32m✓[0m account_status enum — 6 values
+  [32m✓[0m content_status enum — 7 values
+  [32m✓[0m notification_type enum — 15 values
+  [32m✓[0m report_status enum — 4 values
+  [32m✓[0m report_target_type enum — 19 values
+  [32m✓[0m Permission catalogue matches the database — 56 permissions, both directions
+  [32m✓[0m Roles match — student → moderator → admin → super_admin
+  [32m✓[0m Feature flags match — 27 flags
+  [32m✓[0m role_permissions baseline: student — 26 permissions
+  [32m✓[0m role_permissions baseline: moderator — 39 permissions
+  [32m✓[0m role_permissions baseline: admin — 53 permissions
+  [32m✓[0m role_permissions baseline: super_admin — 56 permissions
+  [32m✓[0m Notification types used in SQL exist in the enum — 5 literals checked
+  [32m✓[0m Every RPC the JS layer calls exists with matching parameter names — 64 call sites
+  [32m✓[0m Every JS table/column reference exists in the schema — 210 files scanned
+
+[1mPrivacy[0m
+  [32m✓[0m No personal email/phone/PRN/credential columns in the public schema — only colleges.email_domains (the institutional allow-list) matches the pattern
+  [32m✓[0m The institutional email exists only in auth.users — no duplicate in profile_private
+  [32m✓[0m Random tables carry no username/email/url columns — identity lives only in random_session_participants + random_sessions (staff-only policies)
+  [32m✓[0m Random participant views expose no identity columns
+  [32m✓[0m Seller contact notes are not readable from the base table — released only through record_listing_interest()
+  [32m✓[0m audit_logs has no write policies for clients
+  [32m✓[0m notifications cannot be forged by clients (no INSERT policy)
+  [32m✓[0m messages access requires membership or a staff permission — 7 policies; moderation access additionally requires an open report
+
+[1mRate limiting[0m
+  [32m✓[0m consume_rate_limit() exists
+
+[1mBackup[0m
+  [31m✗[0m Every application table is in the snapshot catalogue — 65 tracked / 66 application tables
+      [33mfix:[0m Run backup_sync_triggers().
+  [31m✗[0m Transactional capture trigger on every table — club_creation_requests
+      [33mfix:[0m Re-run backup_sync_triggers().
+  [32m✓[0m Backup bookkeeping tables are excluded from capture — no recursion path
+  [32m✓[0m OAuth credential schema has no API-role grants — encrypted refresh verifiers/credentials isolated
+  [32m✓[0m Outbox row images are not readable by students — worker-only service role
+  [32m✓[0m No anonymous policy on the outbox — RLS + column privileges
+  [32m✓[0m manage_backups is Super Admin only — super_admin
+  [32m✓[0m Capture path contains no HTTP/webhook call — AFTER ROW trigger inserts into backup_change_log
+  [32m✓[0m Run-lease RPCs are service-role only — admin UI cannot forge or steal a processing lease
+  [32m✓[0m Backup run state is read-only for API roles — leases and run log are written only by gated RPCs
+  [32m✓[0m Admin backup RPCs are authenticated-only and gated inside — backup_admin_state + backup_record_run deny anon
+  [32m✓[0m Admin run log stores summaries only — empty on a fresh database
+
+67 passed, 0 warnings, 3 failures
+
+
+base audit exit status: 1 (the same three findings are expected)

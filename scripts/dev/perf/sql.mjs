@@ -306,10 +306,16 @@ export function buildProjection(catalog, table, select, { searchParams, params, 
     }
     const head = piece.slice(0, paren);
     const inner = piece.slice(paren + 1, piece.lastIndexOf(')'));
-    const [aliasOrTable, hint] = head.includes(':') ? head.split(':') : [null, null];
-    let target = (aliasOrTable ? aliasOrTable.split('!')[0] : head.split('!')[0]).trim();
-    const fkHint = hint || (head.includes('!') ? head.split('!')[1] : null);
-    const outputName = aliasOrTable ? aliasOrTable.split('!')[0] : target;
+    // Split the output alias from the resource before parsing the resource's
+    // relationship hint. In `blocked:profiles!blocks_blocked_id_fkey`, the
+    // related table is `profiles`, not `blocked`; treating the alias as both
+    // made the disposable stub reject a valid PostgREST production query.
+    const colon = head.indexOf(':');
+    const outputName = (colon === -1 ? head.split('!')[0] : head.slice(0, colon)).trim();
+    const resource = (colon === -1 ? head : head.slice(colon + 1)).trim();
+    const [targetPart, ...hintParts] = resource.split('!');
+    const target = targetPart.trim();
+    const fkHint = hintParts[0]?.trim() || null;
     const { fk, forward } = findRelationship(catalog, table, target, fkHint);
     // Each embed level gets its own alias so nested embeds can reference the
     // outer row without shadowing it (PostgREST does the same).

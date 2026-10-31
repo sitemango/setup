@@ -1,0 +1,67 @@
+{
+  "base": "http://127.0.0.1:3100",
+  "expectedPage": null,
+  "taps": 2,
+  "checks": [
+    {
+      "label": "the first paint is one page — ten entries, not the whole feed",
+      "kind": "ok",
+      "detail": "10 entries, page size 10"
+    },
+    {
+      "label": "the page is complete, not a skeleton that fills in later",
+      "kind": "ok",
+      "detail": "10 cards, each with content"
+    },
+    {
+      "label": "the rail and the stream agree about how much is loaded",
+      "kind": "ok",
+      "detail": "10 entries"
+    },
+    {
+      "label": "the route reports a full page and that an older page exists",
+      "kind": "ok",
+      "detail": "10 rows, hasMore true"
+    },
+    {
+      "label": "the next page continues the list without repeating or skipping",
+      "kind": "ok",
+      "detail": "10 + 10 distinct entries, no overlap"
+    },
+    {
+      "label": "\"Show more\" tap 1 appends one page under what is on screen",
+      "kind": "ok",
+      "detail": "10 → 20 entries"
+    },
+    {
+      "label": "\"Show more\" tap 2 appends one page under what is on screen",
+      "kind": "ok",
+      "detail": "20 → 30 entries"
+    },
+    {
+      "label": "it offers another page while one exists, and the rail keeps count",
+      "kind": "ok",
+      "detail": "button: Show more · rail: 30 entries"
+    },
+    {
+      "label": "the pages stay in the feed’s own order across every seam",
+      "kind": "ok",
+      "detail": "19 timestamps, descending across 2 page boundary(ies)"
+    },
+    {
+      "label": "a fresh post lands in front without evicting the loaded tail",
+      "kind": "ok",
+      "detail": "30 → 31 entries, new post in front of the loaded pages"
+    },
+    {
+      "label": "nothing in the run threw in the page",
+      "kind": "ok",
+      "detail": "no page errors"
+    }
+  ],
+  "startedAt": "2026-10-31T14:35:11.508Z",
+  "page": 10,
+  "loaded": 30,
+  "finishedAt": "2026-10-31T14:36:14.557Z",
+  "failures": 0
+}
