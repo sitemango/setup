@@ -108,12 +108,15 @@ async function openPage(session, { route = '/home' } = {}) {
     { name: 'campus_intro', value: '1', url: BASE },
   ]);
   const page = await context.newPage();
-  const counters = { navigations: 0, feedReads: 0, errors: [] };
+  const counters = { navigations: 0, feedReads: 0, feedRequests: [], errors: [] };
   page.on('framenavigated', (frame) => {
     if (frame === page.mainFrame()) counters.navigations += 1;
   });
   page.on('request', (request) => {
-    if (request.url().includes('/api/home/feed')) counters.feedReads += 1;
+    if (request.url().includes('/api/home/feed')) {
+      counters.feedReads += 1;
+      counters.feedRequests.push({ at: Date.now(), method: request.method(), url: request.url() });
+    }
   });
   page.on('pageerror', (error) => counters.errors.push(error.message));
   await page.goto(`${BASE}${route}`, { waitUntil: 'load', timeout: 60_000 });
@@ -417,11 +420,16 @@ await check('failure: no false success, draft preserved, retry works', async () 
 /* 6 · nothing polls */
 await check('no polling: an idle open feed stops reading', async () => {
   const start = authorHome.__counters.feedReads;
+  const startedAt = Date.now();
   await authorHome.bringToFront();
   await authorHome.waitForTimeout(IDLE_MS);
   const reads = authorHome.__counters.feedReads - start;
-  expect(reads <= 1, `${reads} feed reads during ${Math.round(IDLE_MS / 1000)}s of doing nothing`);
-  return `≤${reads} read(s) while idle`;
+  const requests = authorHome.__counters.feedRequests
+    .filter((request) => request.at >= startedAt)
+    .map((request) => `${request.method} +${((request.at - startedAt) / 1000).toFixed(1)}s`)
+    .join(', ');
+  expect(reads <= 1, `${reads} feed reads during ${Math.round(IDLE_MS / 1000)}s of doing nothing${requests ? ` (${requests})` : ''}`);
+  return `≤${reads} read(s) while idle${requests ? ` (${requests})` : ''}`;
 });
 
 await check('no client-side errors escaped to the console', async () => {

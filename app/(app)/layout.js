@@ -5,9 +5,6 @@ import { ROUTES } from '@/lib/constants';
 import { getTimetableHref } from '@/lib/timetable/meta';
 import { toShellUser } from '@/lib/identity/shell-user';
 import { AppShell } from '@/components/layout/AppShell';
-// The shell hosts the first-visit offer (see components/guide/GuideWelcomeStrip),
-// so the sheet that styles it belongs to this layout, not to /guide.
-import '@/app/styles/guide-strip.css';
 import { getUnreadMessageState } from '@/lib/data/messaging';
 
 // Every page in this group depends on the signed-in student, so nothing here is

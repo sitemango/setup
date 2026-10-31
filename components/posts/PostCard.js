@@ -44,6 +44,7 @@ export function PostCard({
   canModerate = false,
   reactions = { count: 0, mine: false },
   poll = null,
+  onPollVote = null,
   showCommunity = true,
   detail = false,
   variant = 'card',
@@ -130,7 +131,9 @@ export function PostCard({
           </div>
         ) : null}
 
-        {poll && !isDeleted ? <PollBlock postId={post.id} poll={poll} canVote={Boolean(currentUserId)} /> : null}
+        {poll && !isDeleted ? (
+          <PollBlock postId={post.id} poll={poll} canVote={Boolean(currentUserId)} onVoteChange={onPollVote} />
+        ) : null}
 
         {showCommunity && post.community_slug ? (
           <p className="mt-2.5 text-2xs text-muted">

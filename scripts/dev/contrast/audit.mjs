@@ -367,7 +367,7 @@ try {
       const context = await contextFor(theme, 'student', false, 'no-preference');
       const moving = await context.newPage();
       await navigate(moving, '/home');
-      await moving.getByRole('link', { name: 'Explore campus' }).hover();
+      await moving.getByRole('link', { name: 'Explore campus', exact: true }).hover();
       for (const phase of [0, 650, 1350]) { await moving.waitForTimeout(phase); await paint(moving, `${theme}-home-animated-${phase}`); }
       await screenshot(moving, `${theme}-home-motion`);
       await context.close();

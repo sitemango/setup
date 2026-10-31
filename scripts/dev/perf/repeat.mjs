@@ -33,6 +33,7 @@ const { values } = parseArgs({
     viewport: { type: 'string', default: 'phone' },
     throttle: { type: 'boolean', default: false },
     'keep-intro': { type: 'boolean', default: false },
+    'no-webgl': { type: 'boolean', default: false },
     settle: { type: 'string', default: '1200' },
     json: { type: 'string' },
   },
@@ -64,7 +65,16 @@ const session = await createSessionCookie(
 const browser = await launchBrowser();
 
 const INIT_SCRIPT = () => {
-  window.__repeatPerf = { lcp: null, cls: 0, longTasks: [] };
+  window.__repeatPerf = {
+    lcp: null,
+    cls: 0,
+    longTasks: [],
+    shifts: [],
+    captureEvents: false,
+    eventStart: 0,
+    eventTimingSupported: null,
+    events: [],
+  };
   try {
     new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
@@ -82,7 +92,27 @@ const INIT_SCRIPT = () => {
   try {
     new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {
-        if (!entry.hadRecentInput) window.__repeatPerf.cls += entry.value;
+        if (!entry.hadRecentInput) {
+          window.__repeatPerf.cls += entry.value;
+          if (entry.value > 0) {
+            window.__repeatPerf.shifts.push({
+              value: entry.value,
+              startTime: entry.startTime,
+              sources: (entry.sources || []).map((source) => ({
+                tag: source.node?.tagName || null,
+                className: typeof source.node?.className === 'string' ? source.node.className.slice(0, 160) : '',
+                previousRect: source.previousRect ? {
+                  x: source.previousRect.x, y: source.previousRect.y,
+                  width: source.previousRect.width, height: source.previousRect.height,
+                } : null,
+                currentRect: source.currentRect ? {
+                  x: source.currentRect.x, y: source.currentRect.y,
+                  width: source.currentRect.width, height: source.currentRect.height,
+                } : null,
+              })).slice(0, 4),
+            });
+          }
+        }
       }
     }).observe({ type: 'layout-shift', buffered: true });
   } catch { /* unsupported stays zero */ }
@@ -93,6 +123,29 @@ const INIT_SCRIPT = () => {
       }
     }).observe({ type: 'longtask', buffered: true });
   } catch { /* unsupported stays empty */ }
+  try {
+    new PerformanceObserver((list) => {
+      if (!window.__repeatPerf.captureEvents) return;
+      for (const entry of list.getEntries()) {
+        // Event Timing's duration includes input delay, processing and the
+        // next-paint delay. This is a lab interaction probe, not a claim about
+        // the field INP percentile; entries before the explicit probe are ignored.
+        if (entry.startTime < window.__repeatPerf.eventStart) continue;
+        window.__repeatPerf.events.push({
+          name: entry.name,
+          startTime: entry.startTime,
+          duration: entry.duration,
+          inputDelayMs: Math.max(0, entry.processingStart - entry.startTime),
+          processingMs: Math.max(0, entry.processingEnd - entry.processingStart),
+          interactionId: entry.interactionId || 0,
+          target: entry.target?.tagName || null,
+        });
+      }
+    }).observe({ type: 'event', buffered: true, durationThreshold: 16 });
+    window.__repeatPerf.eventTimingSupported = true;
+  } catch {
+    window.__repeatPerf.eventTimingSupported = false;
+  }
 };
 
 function resourceKind(mime, url) {
@@ -104,8 +157,94 @@ function resourceKind(mime, url) {
   return 'other';
 }
 
+/**
+ * A deterministic, non-destructive interaction for routes where one exists.
+ * These entries come from Event Timing after a real Playwright input. They are
+ * useful before/after evidence for responsiveness, but one or two scripted
+ * actions are not a real-user INP sample and are never labelled as such.
+ */
+async function probeInteraction(page, href) {
+  let action = null;
+  if (href === '/home') action = 'Open the Discussion composer tab';
+  else if (href === '/explore') action = 'Type robotics into Campus+ search';
+  else if (/^\/timetable\/[a-z]$/i.test(href)) action = 'Select the Tuesday timetable';
+  if (!action) return { action: null, supported: null, events: [], maxEventDurationMs: null };
+
+  // A fresh division visit can open the proactive install sheet over the day
+  // tabs. Dismiss it as setup, outside the measured Event Timing window, then
+  // run the same Tuesday probe on every visit. Its presence stays in the raw
+  // result so a responsiveness improvement cannot be confused with hiding it.
+  let installOfferShown = false;
+  if (/^\/timetable\/[a-z]$/i.test(href)) {
+    const notNow = page.getByRole('button', { name: 'Not now', exact: true });
+    installOfferShown = (await notNow.count()) > 0;
+    if (installOfferShown) {
+      await notNow.click({ timeout: 10_000 });
+      await page.waitForTimeout(500);
+    }
+  }
+
+  await page.evaluate(() => {
+    window.__repeatPerf.eventStart = performance.now();
+    window.__repeatPerf.events = [];
+    window.__repeatPerf.captureEvents = true;
+  });
+
+  let error = null;
+  try {
+    if (href === '/home') {
+      await page.getByRole('tab', { name: 'Discussion', exact: true }).click({ timeout: 5000 });
+      await page.waitForTimeout(500);
+    } else if (href === '/explore') {
+      await page.getByRole('searchbox', { name: 'Search Campus+' }).pressSequentially('robotics', { delay: 35 });
+      await page.waitForTimeout(1200);
+    } else {
+      await page.getByRole('button', { name: /^Tuesday(?:, today)?$/ }).click({ timeout: 5000 });
+      await page.waitForTimeout(500);
+    }
+  } catch (caught) {
+    error = String(caught.message || caught).slice(0, 1000);
+  }
+
+  const captured = await page.evaluate(() => {
+    window.__repeatPerf.captureEvents = false;
+    return {
+      supported: window.__repeatPerf.eventTimingSupported,
+      events: window.__repeatPerf.events,
+    };
+  });
+  const events = captured.events.map((event) => ({
+    ...event,
+    startTime: Math.round(event.startTime),
+    inputDelayMs: Math.round(event.inputDelayMs),
+    processingMs: Math.round(event.processingMs),
+  }));
+  return {
+    action,
+    installOfferShown,
+    supported: captured.supported,
+    events,
+    maxEventDurationMs: events.length ? Math.max(...events.map((event) => event.duration)) : null,
+    maxInputDelayMs: events.length ? Math.max(...events.map((event) => event.inputDelayMs)) : null,
+    maxProcessingMs: events.length ? Math.max(...events.map((event) => event.processingMs)) : null,
+    error,
+  };
+}
+
 async function visit(context, href, { cold }) {
   const page = await context.newPage();
+  if (values['no-webgl']) {
+    // Diagnostic only: exercise the app's real CSS fallback without changing
+    // its source or hiding the dynamic module download. This separates GPU /
+    // shader work from JavaScript transfer and ordinary React work.
+    await page.addInitScript(() => {
+      const getContext = HTMLCanvasElement.prototype.getContext;
+      HTMLCanvasElement.prototype.getContext = function (type, ...args) {
+        if (['webgl', 'webgl2', 'experimental-webgl'].includes(type)) return null;
+        return getContext.call(this, type, ...args);
+      };
+    });
+  }
   const consoleErrors = [];
   page.on('console', (message) => {
     if (message.type() === 'error') consoleErrors.push(message.text().slice(0, 300));
@@ -159,21 +298,37 @@ async function visit(context, href, { cold }) {
     }
   }
   await page.waitForTimeout(Math.max(Number(values.settle) || 1200, values.throttle ? 2500 : 0));
+  const interaction = await probeInteraction(page, href);
 
   const metrics = await page.evaluate(() => {
     const nav = performance.getEntriesByType('navigation')[0] || {};
     const fcp = performance.getEntriesByType('paint').find((entry) => entry.name === 'first-contentful-paint');
+    const apiTiming = performance.getEntriesByType('resource')
+      .filter((entry) => new URL(entry.name, location.href).pathname.startsWith('/api/'))
+      .map((entry) => ({
+        path: new URL(entry.name, location.href).pathname + new URL(entry.name, location.href).search,
+        startTime: Math.round(entry.startTime),
+        responseEnd: Math.round(entry.responseEnd),
+        duration: Math.round(entry.duration),
+      }));
     return {
+      apiTiming,
       fcp: fcp ? Math.round(fcp.startTime) : null,
       lcp: window.__repeatPerf?.lcp == null ? null : Math.round(window.__repeatPerf.lcp),
       lcpElement: window.__repeatPerf?.lcpElement || null,
       cls: Number((window.__repeatPerf?.cls || 0).toFixed(4)),
+      shifts: window.__repeatPerf?.shifts || [],
       longTasks: (window.__repeatPerf?.longTasks || []).map((task) => ({
         start: Math.round(task.start), duration: Math.round(task.duration),
       })),
       domContentLoaded: Math.round(nav.domContentLoadedEventEnd || 0),
       loadEvent: Math.round(nav.loadEventEnd || 0),
       ttfb: Math.round(nav.responseStart || 0),
+      redirectCount: typeof nav.redirectCount === 'number' ? nav.redirectCount : null,
+      redirectMs: nav.redirectEnd && nav.redirectStart ? Math.round(nav.redirectEnd - nav.redirectStart) : 0,
+      finalPath: location.pathname + location.search,
+      introVisibleAtCapture: Boolean(document.querySelector('section[aria-label="Campus+ intro"]')),
+      domNodes: document.getElementsByTagName('*').length,
       horizontalOverflow: Math.max(0, document.documentElement.scrollWidth - window.innerWidth),
     };
   });
@@ -182,6 +337,7 @@ async function visit(context, href, { cold }) {
   for (const row of responseRows) transfer[resourceKind(row.mime, row.url)] += row.encodedBytes || 0;
   const result = {
     ...metrics,
+    interaction,
     visit: cold ? 'cold' : 'repeat',
     introShown,
     wallClockMs: Date.now() - started,
@@ -208,15 +364,28 @@ function summarize(samples) {
     const numbers = samples.map((sample) => sample[field]).filter((value) => typeof value === 'number' && Number.isFinite(value));
     return numbers.length ? [Math.min(...numbers), Math.max(...numbers)] : null;
   };
+  const interactionDurations = samples
+    .map((sample) => sample.interaction?.maxEventDurationMs)
+    .filter((value) => typeof value === 'number' && Number.isFinite(value));
   return {
     samples: samples.length,
     fcp: pick('fcp'), lcp: pick('lcp'), cls: pick('cls'), ttfb: pick('ttfb'),
     domContentLoaded: pick('domContentLoaded'), loadEvent: pick('loadEvent'),
     transferTotal: pick('transferTotal'), fontTransfer: median(samples.map((sample) => sample.transfer.font)),
     longTaskCount: pick('longTaskCount'), totalTaskTime: pick('totalTaskTime'),
+    labInteractionMs: median(samples.map((sample) => sample.interaction?.maxEventDurationMs)),
+    labInteractionInputDelayMs: median(samples.map((sample) => sample.interaction?.maxInputDelayMs)),
+    labInteractionProcessingMs: median(samples.map((sample) => sample.interaction?.maxProcessingMs)),
+    interactionSamples: samples.filter((sample) => typeof sample.interaction?.maxEventDurationMs === 'number').length,
+    installOfferShown: samples.some((sample) => sample.interaction?.installOfferShown),
+    redirectMs: pick('redirectMs'),
+    finalPaths: [...new Set(samples.map((sample) => sample.finalPath).filter(Boolean))],
+    introVisibleAtCapture: samples.some((sample) => sample.introVisibleAtCapture),
+    domNodes: pick('domNodes'),
     horizontalOverflow: Math.max(0, ...samples.map((sample) => sample.horizontalOverflow)),
     spreads: {
       fcp: spread('fcp'), lcp: spread('lcp'), transferTotal: spread('transferTotal'), totalTaskTime: spread('totalTaskTime'),
+      labInteractionMs: interactionDurations.length ? [Math.min(...interactionDurations), Math.max(...interactionDurations)] : null,
     },
   };
 }
@@ -273,7 +442,10 @@ await writeFile(target, JSON.stringify({
   base: values.base,
   measuredAt: new Date().toISOString(),
   sourceRevision: (await import('node:child_process')).execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+  sourceState: (await import('node:child_process')).execFileSync('git', ['describe', '--always', '--dirty'], { cwd: root, encoding: 'utf8' }).trim(),
   nodeVersion: process.version,
+  keepIntro: values['keep-intro'],
+  noWebgl: values['no-webgl'],
   runs,
   viewport,
   profile,

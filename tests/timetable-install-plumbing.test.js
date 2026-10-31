@@ -569,11 +569,11 @@ describe('who is asked to install, and when', () => {
     now,
   };
 
-  it('asks a phone-shaped device with something to install', () => {
+  it('asks a phone-shaped device only after it has something to open offline', () => {
     expect(installOfferDecision(eligible)).toEqual({ show: true, reason: 'ready' });
-    // Nothing saved yet is still an offer worth making — the action prepares
-    // first, which is the card's existing order of operations.
-    expect(installOfferDecision({ ...eligible, savedReady: false }).reason).toBe('save-then-install');
+    // A fresh phone keeps the weekday controls visible. The manual card still
+    // saves first, and the successful save can then lead to this same offer.
+    expect(installOfferDecision({ ...eligible, savedReady: false })).toEqual({ show: false, reason: 'save-first' });
   });
 
   it('never interrupts a device where the answer is already known', () => {

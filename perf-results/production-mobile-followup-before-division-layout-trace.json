@@ -1,0 +1,561 @@
+{
+  "runs": [
+    {
+      "run": 1,
+      "lcp": [
+        {
+          "t": 1220,
+          "size": 42602,
+          "tag": "P",
+          "cls": "tt-help",
+          "html": "<p class=\"tt-help\">How to read practicals: an entry like <span class=\"text-ink-soft\">EG-1/ENG-2/FES-3</span> means the three batches are in different rooms at the same time — the [faculty] and [room] lists below it follow the same batch order. Lunch "
+        }
+      ],
+      "frames": [
+        {
+          "t": 948.2,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 1064.9,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 1081.5,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1898.2,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "complete"
+        }
+      ],
+      "mut": [
+        {
+          "t": 2080.2999999999884,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2080.2999999999884,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 1,
+          "removed": 0
+        },
+        {
+          "t": 2080.2999999999884,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2080.2999999999884,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2080.2999999999884,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-install__status",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2083.9000000000233,
+          "type": "attributes",
+          "attr": "data-offer",
+          "target": "tt-install card",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3052.9000000000233,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3052.9000000000233,
+          "type": "attributes",
+          "attr": "datetime",
+          "target": "TIME",
+          "added": 0,
+          "removed": 0
+        }
+      ]
+    },
+    {
+      "run": 2,
+      "lcp": [
+        {
+          "t": 1076,
+          "size": 42602,
+          "tag": "P",
+          "cls": "tt-help",
+          "html": "<p class=\"tt-help\">How to read practicals: an entry like <span class=\"text-ink-soft\">EG-1/ENG-2/FES-3</span> means the three batches are in different rooms at the same time — the [faculty] and [room] lists below it follow the same batch order. Lunch "
+        }
+      ],
+      "frames": [
+        {
+          "t": 935.2,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 1051.8,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 1068.5,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1918.5,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "complete"
+        }
+      ],
+      "mut": [
+        {
+          "t": 2108,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2108,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 1,
+          "removed": 0
+        },
+        {
+          "t": 2108,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2108,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2108,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-install__status",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2118,
+          "type": "attributes",
+          "attr": "data-offer",
+          "target": "tt-install card",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3066.399999999965,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3066.399999999965,
+          "type": "attributes",
+          "attr": "datetime",
+          "target": "TIME",
+          "added": 0,
+          "removed": 0
+        }
+      ]
+    },
+    {
+      "run": 3,
+      "lcp": [
+        {
+          "t": 1004,
+          "size": 2010,
+          "tag": "SPAN",
+          "cls": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+          "html": "<span class=\"inline-flex items-center gap-2.5 text-[0.8125rem] text-muted\" role=\"status\"><span class=\"orb-loader\" role=\"status\" aria-label=\"Loading Campus+…\"><span class=\"orb-loader__dot\"></span><span class=\"orb-loader__dot\"></span><span class=\"orb-l"
+        },
+        {
+          "t": 1396,
+          "size": 42602,
+          "tag": "P",
+          "cls": "tt-help",
+          "html": "<p class=\"tt-help\">How to read practicals: an entry like <span class=\"text-ink-soft\">EG-1/ENG-2/FES-3</span> means the three batches are in different rooms at the same time — the [faculty] and [room] lists below it follow the same batch order. Lunch "
+        }
+      ],
+      "frames": [
+        {
+          "t": 944.3,
+          "missing": true,
+          "ready": "loading"
+        },
+        {
+          "t": 977.6,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 994.3,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1277.7,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1894.3,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "complete"
+        }
+      ],
+      "mut": [
+        {
+          "t": 2116.5,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2116.5,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 1,
+          "removed": 0
+        },
+        {
+          "t": 2116.5,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2116.5,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2116.5,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-install__status",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2134.2000000000116,
+          "type": "attributes",
+          "attr": "data-offer",
+          "target": "tt-install card",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3020.899999999965,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3021,
+          "type": "attributes",
+          "attr": "datetime",
+          "target": "TIME",
+          "added": 0,
+          "removed": 0
+        }
+      ]
+    },
+    {
+      "run": 4,
+      "lcp": [
+        {
+          "t": 992,
+          "size": 2010,
+          "tag": "SPAN",
+          "cls": "inline-flex items-center gap-2.5 text-[0.8125rem] text-muted",
+          "html": "<span class=\"inline-flex items-center gap-2.5 text-[0.8125rem] text-muted\" role=\"status\"><span class=\"orb-loader\" role=\"status\" aria-label=\"Loading Campus+…\"><span class=\"orb-loader__dot\"></span><span class=\"orb-loader__dot\"></span><span class=\"orb-l"
+        },
+        {
+          "t": 1408,
+          "size": 42602,
+          "tag": "P",
+          "cls": "tt-help",
+          "html": "<p class=\"tt-help\">How to read practicals: an entry like <span class=\"text-ink-soft\">EG-1/ENG-2/FES-3</span> means the three batches are in different rooms at the same time — the [faculty] and [room] lists below it follow the same batch order. Lunch "
+        }
+      ],
+      "frames": [
+        {
+          "t": 953.9,
+          "missing": true,
+          "ready": "loading"
+        },
+        {
+          "t": 970.6,
+          "missing": true,
+          "ready": "loading"
+        },
+        {
+          "t": 987.3,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "loading"
+        },
+        {
+          "t": 1020.5,
+          "x": 0,
+          "y": 0,
+          "w": 0,
+          "h": 0,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1287.2,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "interactive"
+        },
+        {
+          "t": 1870.5,
+          "x": 16,
+          "y": 397.84375,
+          "w": 358,
+          "h": 124.78125,
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1",
+          "font": "Inter, Geist, ui-sans-serif, system-ui, -apple-system, \"Segoe UI\", sans-serif",
+          "text": 281,
+          "ready": "complete"
+        }
+      ],
+      "mut": [
+        {
+          "t": 2113.600000000035,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2113.600000000035,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-offline__pill tt-offline__pill--muted",
+          "added": 1,
+          "removed": 0
+        },
+        {
+          "t": 2113.600000000035,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2113.7000000000116,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 2113.7000000000116,
+          "type": "childList",
+          "attr": null,
+          "target": "tt-install__status",
+          "added": 0,
+          "removed": 1
+        },
+        {
+          "t": 2124,
+          "type": "attributes",
+          "attr": "data-offer",
+          "target": "tt-install card",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3045.3000000000466,
+          "type": "characterData",
+          "attr": null,
+          "target": "#text",
+          "added": 0,
+          "removed": 0
+        },
+        {
+          "t": 3045.3000000000466,
+          "type": "attributes",
+          "attr": "datetime",
+          "target": "TIME",
+          "added": 0,
+          "removed": 0
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,9 @@ import { preload } from 'react-dom';
  * shared stylesheet every other page has to download.
  */
 import '@/app/styles/home.css';
+// Home owns the first-visit offer too; neither its stylesheet nor its tiny
+// pre-paint storage check belongs in the shared shell or on public routes.
+import '@/app/styles/guide-strip.css';
 
 export default function HomeLayout({ children }) {
   preload('/fonts/Syne.ttf', {

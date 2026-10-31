@@ -101,6 +101,11 @@ const SPACE_GLYPHS = `${TAGLINE_TEXT}${SKIP_LABEL}`;
    The CSS keyframe delays in GalacticIntro.module.css mirror these values. */
 const FADE_AT_MS = 5250;
 const FINISH_AT_MS = 5650;
+/* Phones get the same identity, not a six-second gate in front of the feed.
+   The compact CSS choreography below lands with these times. */
+const MOBILE_FONT_WAIT_MS = 1000;
+const MOBILE_FADE_AT_MS = 1300;
+const MOBILE_FINISH_AT_MS = 1700;
 
 /* Bounded font wait. The old fixed 400 ms timer started the animation while a
    slow font request was still in flight, so a late load could swap the
@@ -246,6 +251,10 @@ export default function GalacticIntro({ children, enabled = true }) {
       setPhase('done');
     };
     const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    const compact = window.matchMedia('(max-width: 767px)').matches;
+    const fontWaitMs = compact ? MOBILE_FONT_WAIT_MS : FONT_WAIT_MS;
+    const fadeAtMs = compact ? MOBILE_FADE_AT_MS : FADE_AT_MS;
+    const finishAtMs = compact ? MOBILE_FINISH_AT_MS : FINISH_AT_MS;
     const onMotion = () => {
       if (motion.matches) end();
     };
@@ -294,8 +303,8 @@ export default function GalacticIntro({ children, enabled = true }) {
       setPhase('playing');
       later(() => {
         if (!disposed && !finished && !completed) setPhase('fading');
-      }, FADE_AT_MS);
-      later(end, FINISH_AT_MS);
+      }, fadeAtMs);
+      later(end, finishAtMs);
     }
 
     // The font-loaded callback, the bounded timeout and any early exit all
@@ -312,7 +321,7 @@ export default function GalacticIntro({ children, enabled = true }) {
       // Reduced motion never needs the choreography or the font wait.
       later(end, 100);
     } else {
-      fontTimer = later(() => settle(true), FONT_WAIT_MS);
+      fontTimer = later(() => settle(true), fontWaitMs);
       // A rejection (network/parse error) is a definitive failure and falls
       // back immediately; a hanging request is caught by the timer above.
       introFontsReady().then(

@@ -1,0 +1,45 @@
+{
+  "measuredAt": "2026-10-30T18:52:23.010Z",
+  "scenario": "Returning device with existing local guide flag; parser mutation observation is diagnostic, not a comparable performance run",
+  "home": {
+    "cls": 0.09051021919431279,
+    "shifts": [
+      {
+        "value": 0.09051021919431279,
+        "startTime": 4393.0999999996275,
+        "sources": [
+          "home-pulse__aurora",
+          "glass-premium rounded-[var(--radius-lg)] overflow-hidden transition-shadow"
+        ]
+      }
+    ],
+    "firstStrip": {
+      "display": "none",
+      "stylePresent": true,
+      "scriptPresent": true
+    },
+    "finalStripCount": 0,
+    "scriptCount": 1
+  },
+  "other": {
+    "/login": {
+      "script": true,
+      "style": true,
+      "strip": true
+    },
+    "/explore": {
+      "script": false,
+      "style": false,
+      "strip": false
+    }
+  },
+  "checks": {
+    "returningStripHiddenBeforeHydration": true,
+    "returningStripRemoved": true,
+    "homeHasOneScopedScript": true,
+    "noPostPaintGuideShift": false,
+    "loginHasNoGuideHelper": false,
+    "exploreHasNoGuideHelper": true
+  },
+  "pageErrors": []
+}

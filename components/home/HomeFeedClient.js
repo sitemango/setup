@@ -14,6 +14,7 @@ import {
   clearHomeFeedCache,
   patchHomeFeedCache,
   readHomeFeedCache,
+  subscribeHomeFeedCache,
   writeHomeFeedCache,
 } from '@/components/home/homeFeedCache';
 import { useLiveFeed } from '@/components/layout/LiveFeedProvider';
@@ -27,6 +28,7 @@ import {
   reconcileFeed,
   removePostFromFeed,
 } from '@/lib/social/feed-state';
+import { patchFeedPoll, reconcileFeedPollOverlays } from '@/lib/social/poll-state';
 
 /**
  * A live change is folded into at most one re-read per window, and that window is
@@ -129,6 +131,16 @@ export function HomeFeedClient({
   // feed between the write and the re-read, then dropped so the server always wins.
   const [held] = useState(() => new Map());
   const liveTimerRef = useRef(null);
+  // Full poll snapshots, keyed by post id. They bridge optimistic voting and
+  // the first authorized response that actually contains the committed vote.
+  const pollOverlaysRef = useRef(new Map());
+  const mountedRef = useRef(false);
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
 
   const refresh = useCallback(async (force = false) => {
     const cached = readHomeFeedCache(userId);
@@ -222,7 +234,13 @@ export function HomeFeedClient({
           readHomeFeedCache(userId)?.payload?.feed || [],
           { removedPostIds },
         );
-        const next = writeHomeFeedCache(userId, { ...payload, feed: feedWindow }, feedRevision());
+        const overlaid = reconcileFeedPollOverlays(
+          feedWindow,
+          pollOverlaysRef.current,
+          feedPostIds(payload.feed),
+        );
+        for (const id of overlaid.settled) pollOverlaysRef.current.delete(id);
+        const next = writeHomeFeedCache(userId, { ...payload, feed: overlaid.feed }, feedRevision());
         setSnapshot(next);
         setError(false);
         return next;
@@ -286,6 +304,41 @@ export function HomeFeedClient({
     invalidateFeed('local', [post.id]);
   }, [feedRevision, held, invalidateFeed, userId]);
 
+  /**
+   * Patch only the voted card and its remembered Home entry. The overlay also
+   * wins over an older in-flight response until the authorized read contains
+   * the committed vote, so voting needs no feed refresh or extra subscription.
+   */
+  const applyPollVote = useCallback(({ postId, optionId, poll, previousPoll, phase, mutation }) => {
+    const id = String(postId || '');
+    if (!id || !poll) return;
+    const overlays = pollOverlaysRef.current;
+    const current = overlays.get(id);
+    if (current && current.mutation > mutation) return;
+
+    let nextPoll = poll;
+    if (phase === 'rollback') {
+      nextPoll = current?.basePoll || previousPoll || poll;
+      overlays.delete(id);
+    } else {
+      overlays.set(id, {
+        optionId,
+        poll,
+        phase,
+        mutation,
+        basePoll: current?.basePoll || previousPoll || null,
+      });
+    }
+
+    const patch = (payload) => ({
+      ...payload,
+      feed: patchFeedPoll(payload?.feed || [], id, nextPoll),
+    });
+    patchHomeFeedCache(userId, patch, feedRevision(), { notify: !mountedRef.current });
+    // The card owns its visible optimistic/rollback state. Re-rendering the
+    // entire Home snapshot here would make every unrelated card pay for a vote.
+  }, [feedRevision, userId]);
+
   // Live changes: one subscription for the whole surface (never per card), and it
   // only ever triggers a re-read — the rows are hydrated by the shared read path.
   useEffect(() => {
@@ -315,6 +368,11 @@ export function HomeFeedClient({
       }
     };
   }, [feedRevision, held, refresh, subscribeToFeed, userId]);
+
+  useEffect(() => subscribeHomeFeedCache(userId, (payload) => {
+    setSnapshot(payload);
+    setLoading(false);
+  }), [userId]);
 
   useEffect(() => {
     const cached = readHomeFeedCache(userId);
@@ -390,9 +448,15 @@ export function HomeFeedClient({
       if (!response.ok) throw new Error('Home feed page request failed.');
       const payload = await response.json();
       if (!payload?.ok || payload.unavailable) throw new Error('Home feed page response was invalid.');
+      const overlaid = reconcileFeedPollOverlays(
+        mergeFeedPages(loaded, payload.feed),
+        pollOverlaysRef.current,
+        feedPostIds(payload.feed),
+      );
+      for (const id of overlaid.settled) pollOverlaysRef.current.delete(id);
       const next = {
         ...(snapshot || payload),
-        feed: mergeFeedPages(loaded, payload.feed),
+        feed: overlaid.feed,
         page: payload.page,
       };
       writeHomeFeedCache(userId, next, feedRevision());
@@ -479,6 +543,7 @@ export function HomeFeedClient({
                           post={post}
                           currentUserId={currentUserId}
                           canModerate={canModerate}
+                          onPollVote={applyPollVote}
                           reactions={{
                             count: post?.reaction_count || 0,
                             mine: Boolean(post?.reacted_by_me),

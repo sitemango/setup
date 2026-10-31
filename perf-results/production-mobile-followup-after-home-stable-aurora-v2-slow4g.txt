@@ -1,0 +1,3 @@
+/home run 1: cold LCP 2004ms / 462.6kB; repeat LCP 560ms / 48.2kB
+
+wrote perf-results/production-mobile-followup-after-home-stable-aurora-v2-slow4g.json

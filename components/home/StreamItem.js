@@ -66,7 +66,7 @@ function NoticeMeta({ item }) {
   );
 }
 
-export function StreamItem({ item, post, currentUserId, canModerate, reactions = { count: 0, mine: false } }) {
+export function StreamItem({ item, post, currentUserId, canModerate, onPollVote = null, reactions = { count: 0, mine: false } }) {
   const kind = kindOf(item.type);
 
   if (kind === 'event') {
@@ -170,6 +170,7 @@ export function StreamItem({ item, post, currentUserId, canModerate, reactions =
       canModerate={canModerate}
       reactions={reactions}
       poll={post.poll}
+      onPollVote={onPollVote}
     />
   );
 }

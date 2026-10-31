@@ -1,0 +1,5 @@
+ok  immediate selected style, option count/percentage and total before the action completes — 83 ms while the response was held
+ok  rapid alternate click is protected and the other poll is independent — one action; second card unchanged
+ok  authoritative database counts reconcile without a feed read or reload — one database vote; 2 initial feed read only
+ok  client navigation away/back retains the vote from Home memory — answer and count intact; no feed read or reload
+ok  same-frame rapid clicks issue one failed write and roll back with an accessible error — one refused action; original UI/database restored; role=alert

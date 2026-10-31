@@ -1,32 +1,29 @@
 /* ==========================================================================
    The one-line offer Home shows a device that has not opened the guide yet.
 
-   It lives in its own sheet because it is mounted by `AppShell`, on every
-   authenticated route, while the guide itself is a single page. Importing
-   `guide.css` here would ship the whole notebook to a student who only ever
-   sees this strip, and *forgetting* to import anything is the subtler failure:
-   the strip would render as an unstyled sentence under the header. So
-   `app/(app)/layout.js` imports this file and `app/guide/layout.js` does not
-   need to — the guide never contains the offer.
+   It lives in its own sheet because it is mounted by Home while the guide
+   itself is a single page. Importing `guide.css` here would ship the whole
+   notebook to a student who only ever sees this strip, and *forgetting* to
+   import anything is the subtler failure: the strip would render as an
+   unstyled sentence under the header. So `app/(app)/home/layout.js` imports
+   this file and `app/guide/layout.js` does not need to — the guide never
+   contains the offer.
 
    Colours are the same --cp-* roles as the rest of the app, and the shape is
    the uneven border-radius the onboarding note uses, so the strip reads as part
    of the same hand-written sheet rather than a banner someone bolted on.
    ========================================================================== */
 
-/* --- the Home offer (rendered inside the app shell) ----------------------- */
-/* Two lines of defence for a note that is inserted into `<main>` after hydration.
+/* --- the Home offer (rendered inside Home's stage) ------------------------ */
+/* Two lines of defence for the SSR offer inside `.home-stage`.
 
-   `animation: none` — the shell gives every direct child of `main` a filled
-   `route-arrive` (`night.css`), which is meant for a route's own wrapper. A
-   second wrapper in that slot would repeat the containing-block problem the island
-   sheet documents for the depth field, so the strip opts out; it also means the
-   note is never left at the animation's `opacity: 0` keyframe by a frozen or
-   throttled renderer, which would be text nobody can read or dismiss.
+   `animation: none` — a filled transform animation would make the strip a
+   containing block and could leave its text at `opacity: 0` on a throttled
+   renderer. The offer is already present in the first HTML; it needs no arrival.
 
    `z-index` — Home paints its depth field from a sibling that comes *after* this
    element, so a note with no stacking order of its own can end up under the sky. */
-.shell-main > .guide-strip {
+.home-stage > .guide-strip {
   animation: none;
 }
 

@@ -6,7 +6,6 @@ import { CommandPaletteHost } from '@/components/search/CommandPalette';
 import { isStaffRoles } from '@/lib/identity/shell-user';
 import { MessagingProvider } from '@/components/layout/MessagingProvider';
 import { LiveFeedProvider } from '@/components/layout/LiveFeedProvider';
-import { GuideWelcomeStrip } from '@/components/guide/GuideWelcomeStrip';
 import { NavigationTour } from '@/components/navigation/NavigationTour';
 
 /**
@@ -87,9 +86,6 @@ export function AppShell({
               id="content"
               className="shell-content shell-main mx-auto w-full px-4 pb-28 pt-4 sm:px-6 lg:pb-16 lg:pt-5"
             >
-              {/* One line, only on Home, only on a device that has not opened
-                  the guide — and it never blocks the feed behind it. */}
-              <GuideWelcomeStrip />
               {children}
             </main>
           </div>

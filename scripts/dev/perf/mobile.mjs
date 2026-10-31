@@ -36,6 +36,7 @@
 import { parseArgs } from 'node:util';
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
+import { execFileSync } from 'node:child_process';
 import { createSessionCookie } from './session.mjs';
 import { root } from './lib.mjs';
 
@@ -62,9 +63,11 @@ const { values } = parseArgs({
  */
 const VIEWPORTS = {
   small: { key: 'small', label: 'Small phone', width: 320, height: 700, dpr: 2, mobile: true },
+  compact: { key: 'compact', label: 'Compact Android', width: 360, height: 800, dpr: 3, mobile: true },
   standard: { key: 'standard', label: 'Standard phone', width: 375, height: 812, dpr: 3, mobile: true },
   phone: { key: 'phone', label: 'Modern phone', width: 390, height: 844, dpr: 3, mobile: true },
   large: { key: 'large', label: 'Large phone', width: 430, height: 932, dpr: 3, mobile: true },
+  wide: { key: 'wide', label: 'Wide Android', width: 412, height: 915, dpr: 3, mobile: true },
   tablet: { key: 'tablet', label: 'Tablet', width: 768, height: 1024, dpr: 2, mobile: true },
   desktop: { key: 'desktop', label: 'Desktop', width: 1440, height: 900, dpr: 1, mobile: false },
 };
@@ -72,7 +75,10 @@ const VIEWPORTS = {
 const VIEWPORT_SETS = {
   phone: ['phone'],
   phones: ['small', 'standard', 'phone', 'large'],
-  all: ['small', 'standard', 'phone', 'large', 'tablet', 'desktop'],
+  // The production-mobile task's explicit phone matrix. Keep the historical
+  // sets above intact so an older artifact can still be reproduced exactly.
+  required: ['compact', 'standard', 'phone', 'wide'],
+  all: ['small', 'compact', 'standard', 'phone', 'large', 'wide', 'tablet', 'desktop'],
 };
 
 /** Documented mobile profile: Lighthouse's "Slow 4G" numbers. */
@@ -85,9 +91,13 @@ const SLOW_4G = {
 const CPU_THROTTLE = 4;
 
 const ROUTES = {
+  root: { label: 'Root redirect', href: '/', public: true },
   home: { label: 'Home', href: '/home' },
   explore: { label: 'Explore', href: '/explore' },
   login: { label: 'Login', href: '/login', public: true },
+  timetable: { label: 'Timetable index', href: '/timetable', public: true },
+  division: { label: 'Division timetable', href: '/timetable/a', public: true },
+  guide: { label: 'Guide', href: '/guide', public: true },
   notifications: { label: 'Notifications', href: '/notifications' },
   profile: { label: 'Profile', href: '/profile' },
   market: { label: 'Marketplace', href: '/market' },
@@ -95,9 +105,20 @@ const ROUTES = {
   gigs: { label: 'Gigs', href: '/gigs' },
 };
 
+// `--routes production` names the supplied field-baseline routes without
+// changing the historical default matrix. Onboarding is deliberately absent:
+// the seeded student has a complete profile and would be redirected to Home,
+// which must not be mislabeled as an Onboarding measurement.
+const PRODUCTION_ROUTES = ['root', 'home', 'division', 'explore', 'login', 'timetable', 'guide'];
+
 const runs = Math.max(1, Number(values.runs) || 3);
 const viewportKeys = VIEWPORT_SETS[values.viewports] || (VIEWPORTS[values.viewports] ? [values.viewports] : ['phone']);
-const routeKeys = (values.routes ? values.routes.split(',').map((key) => key.trim()) : Object.keys(ROUTES)).filter(Boolean);
+const routeKeys = (values.routes === 'production'
+  ? PRODUCTION_ROUTES
+  : values.routes
+    ? values.routes.split(',').map((key) => key.trim())
+    : Object.keys(ROUTES).filter((key) => !PRODUCTION_ROUTES.includes(key) || ['home', 'explore', 'login'].includes(key))
+).filter(Boolean);
 
 const harness = JSON.parse(await readFile(path.join(root, 'node_modules/.cache/perf/harness.json'), 'utf8'));
 
@@ -140,10 +161,19 @@ const studentSession = await createSessionCookie(
 
 /** Runs in the page before any app code: installs the observers we read later. */
 const INIT_SCRIPT = () => {
-  window.__perf = { lcp: 0, cls: 0, longTasks: [], shifts: [] };
+  window.__perf = { lcp: 0, lcpElement: null, cls: 0, longTasks: [], shifts: [] };
   try {
     new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) window.__perf.lcp = entry.startTime;
+      for (const entry of list.getEntries()) {
+        window.__perf.lcp = entry.startTime;
+        const element = entry.element;
+        window.__perf.lcpElement = element ? {
+          tag: element.tagName,
+          className: typeof element.className === 'string' ? element.className : '',
+          text: (element.textContent || '').trim().slice(0, 120),
+          url: entry.url || null,
+        } : null;
+      }
     }).observe({ type: 'largest-contentful-paint', buffered: true });
   } catch {
     /* older engines: LCP stays 0 → reported as not measured */
@@ -299,13 +329,19 @@ async function measureOnce(route, viewport, profile) {
     return {
       fcp: fcpEntry ? Math.round(fcpEntry.startTime) : null,
       lcp: window.__perf?.lcp ? Math.round(window.__perf.lcp) : null,
+      lcpElement: window.__perf?.lcpElement || null,
       cls: Number((window.__perf?.cls || 0).toFixed(4)),
       shifts: (window.__perf?.shifts || []).slice(0, 5),
       longTasks: window.__perf?.longTasks || [],
       domContentLoaded: Math.round(nav.domContentLoadedEventEnd || 0),
       loadEvent: Math.round(nav.loadEventEnd || 0),
       ttfb: Math.round(nav.responseStart || 0),
+      redirectCount: typeof nav.redirectCount === 'number' ? nav.redirectCount : null,
+      redirectMs: nav.redirectEnd && nav.redirectStart ? Math.round(nav.redirectEnd - nav.redirectStart) : 0,
+      finalPath: location.pathname + location.search,
+      introVisible: Boolean(document.querySelector('section[aria-label="Campus+ intro"]')),
       requestCount: performance.getEntriesByType('resource').length + 1,
+      domNodes: document.getElementsByTagName('*').length,
       docHeight: Math.round(doc.scrollHeight),
       viewportHeight: vh,
       horizontalOverflow: overflow > 0 ? overflow : 0,
@@ -360,6 +396,10 @@ const median = (numbers) => {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2;
 };
+const metricSpread = (samples, field) => {
+  const numbers = samples.map((sample) => sample[field]).filter((value) => typeof value === 'number' && Number.isFinite(value));
+  return numbers.length > 1 ? [Math.min(...numbers), Math.max(...numbers)] : null;
+};
 
 console.log(`\n\x1b[1mCampus+ mobile browser — ${values.label}\x1b[0m`);
 console.log(`  ${values.base} · ${routeKeys.length} routes · ${viewportKeys.length} viewports · ${profiles.map((p) => p.label).join(', ')} · ${runs} runs\n`);
@@ -389,6 +429,7 @@ for (const profile of profiles) {
         route: route.label,
         routeKey,
         href: route.href,
+        authentication: route.public ? 'signed-out' : values.user,
         viewport: viewport.key,
         width: viewport.width,
         height: viewport.height,
@@ -409,6 +450,9 @@ for (const profile of profiles) {
         totalTaskTime: pick('totalTaskTime'),
         horizontalOverflow: Math.max(...good.map((sample) => sample.horizontalOverflow || 0)),
         introShown: good.some((sample) => sample.introShown),
+        introVisibleAtCapture: good.some((sample) => sample.introVisible),
+        finalPaths: [...new Set(good.map((sample) => sample.finalPath).filter(Boolean))],
+        domNodes: pick('domNodes'),
         docHeight: pick('docHeight'),
         headerHeight: pick('headerHeight'),
         dockHeight: pick('dockHeight'),
@@ -416,12 +460,16 @@ for (const profile of profiles) {
         firstFeedCard: good[0].firstFeedCard,
         stylesheets: good[0].stylesheets,
         shifts: good[0].shifts,
+        lcpElement: good[0].lcpElement,
         consoleErrors: good[0].consoleErrors,
         failedResponses: [...new Map(
           good.flatMap((sample) => sample.failedResponses || []).map((item) => [`${item.status}:${item.url}`, item]),
         ).values()],
-        // Spread of the headline metric, so a noisy run is visible.
-        lcpSpread: good.length > 1 ? [Math.min(...good.map((s) => s.lcp || Infinity)), Math.max(...good.map((s) => s.lcp || 0))] : null,
+        // Every attempt is retained: medians hide both spread and the element
+        // that actually painted, and an unavailable metric must stay null.
+        attempts: samples,
+        fcpSpread: metricSpread(good, 'fcp'),
+        lcpSpread: metricSpread(good, 'lcp'),
       });
     }
   }
@@ -477,7 +525,12 @@ await writeFile(
       label: values.label,
       base: values.base,
       measuredAt: new Date().toISOString(),
+      sourceRevision: execFileSync('git', ['rev-parse', 'HEAD'], { cwd: root, encoding: 'utf8' }).trim(),
+      sourceState: execFileSync('git', ['describe', '--always', '--dirty'], { cwd: root, encoding: 'utf8' }).trim(),
+      nodeVersion: process.version,
       runs,
+      keepIntro: values['keep-intro'],
+      routeSelection: values.routes || 'historical-default',
       profiles,
       viewports: viewportKeys.map((key) => VIEWPORTS[key]),
       results,

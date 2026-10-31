@@ -1,0 +1,192 @@
+{
+  "label": "pre-fix poll visible interaction",
+  "marker": "poll-before-mvvs6wju",
+  "postId": "ff885c71-fa29-40d7-aae9-d2901469e54d",
+  "voter": {
+    "id": "0dd973de-9ecc-431a-b905-e27b081e05ac",
+    "email": "perf.student7@pccoepune.org"
+  },
+  "before": "A\nAarav Patil\n@aarav_p\n·\njust now\nPoll\nReport\npoll-before-mvvs6wju\n\npoll-before-mvvs6wju\n\nMachine Learning\nCloud Computing\n\n0 votes\n·\nOne vote per student\n\nLike\nComment\njust now",
+  "after": "A\nAarav Patil\n@aarav_p\n·\njust now\nPoll\nReport\npoll-before-mvvs6wju\n\npoll-before-mvvs6wju\n\nMachine Learning\nCloud Computing\n\n0 votes\n·\nOne vote per student\n\nLike\nComment\njust now",
+  "events": [
+    {
+      "name": "pointerout",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 13.900000000023283,
+      "processing": 4.399999999906868
+    },
+    {
+      "name": "pointerleave",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 18.29999999993015,
+      "processing": 0
+    },
+    {
+      "name": "pointerover",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 18.29999999993015,
+      "processing": 1.900000000023283
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.199999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "pointerenter",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0
+    },
+    {
+      "name": "mouseout",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.699999999953434,
+      "processing": 0.09999999997671694
+    },
+    {
+      "name": "mouseover",
+      "start": 6318.599999999977,
+      "duration": 168,
+      "inputDelay": 20.79999999993015,
+      "processing": 0
+    },
+    {
+      "name": "pointerdown",
+      "start": 6318.79999999993,
+      "duration": 168,
+      "inputDelay": 41.300000000046566,
+      "processing": 26.5
+    },
+    {
+      "name": "mousedown",
+      "start": 6318.79999999993,
+      "duration": 168,
+      "inputDelay": 67.80000000004657,
+      "processing": 0.09999999997671694
+    },
+    {
+      "name": "pointerup",
+      "start": 6318.79999999993,
+      "duration": 168,
+      "inputDelay": 77.09999999997672,
+      "processing": 0.9000000000232831
+    },
+    {
+      "name": "mouseup",
+      "start": 6318.79999999993,
+      "duration": 168,
+      "inputDelay": 78,
+      "processing": 1
+    },
+    {
+      "name": "click",
+      "start": 6318.79999999993,
+      "duration": 168,
+      "inputDelay": 79,
+      "processing": 44.800000000046566
+    }
+  ],
+  "visibleLatency": null,
+  "feedReads": 1,
+  "actions": 1,
+  "elapsed": 3358
+}

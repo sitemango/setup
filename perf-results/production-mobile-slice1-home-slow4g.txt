@@ -1,0 +1,5 @@
+/home run 1: cold LCP 2836ms / 479.3kB; repeat LCP 636ms / 50.4kB
+/home run 2: cold LCP 2772ms / 479.3kB; repeat LCP 656ms / 42.7kB
+/home run 3: cold LCP 2728ms / 475.2kB; repeat LCP 648ms / 48.9kB
+
+wrote perf-results/production-mobile-slice1-home-slow4g.json

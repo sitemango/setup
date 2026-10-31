@@ -1,0 +1,4 @@
+FAIL  locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+  - waiting for locator('article').filter({ hasText: 'poll-acceptance-mvvsd1i8-a' }).first() to be visible
+

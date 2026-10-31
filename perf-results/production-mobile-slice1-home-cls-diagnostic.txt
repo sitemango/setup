@@ -1,0 +1,3 @@
+/home run 1: cold LCP 5988ms / 479.3kB; repeat LCP 720ms / 52.4kB
+
+wrote perf-results/production-mobile-slice1-home-cls-diagnostic.json

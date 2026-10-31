@@ -166,6 +166,15 @@ export function TimetableOfflineProvider({ division, children }) {
         return { ok: false, offline: true };
       }
 
+      // Only a batch the student has already saved is auto-refreshed. Check
+      // that before touching the network: with no stored copy there is nothing
+      // to reconcile, and a public page must not download a snapshot it cannot
+      // persist. The explicit Save action still uses fetchSnapshot below.
+      if (!savedRef.current) {
+        if (mounted.current) setRefreshFailed(false);
+        return { ok: true, changed: false, skipped: 'not-saved' };
+      }
+
       if (!silent && mounted.current) {
         setPhase('refreshing');
         setError(null);
@@ -177,14 +186,6 @@ export function TimetableOfflineProvider({ division, children }) {
         const body = await response.json();
         const validated = validateSnapshot(body?.snapshot, { expectDivision: batch.division });
         if (!validated.ok) throw new Error(`invalid-${validated.error}`);
-
-        // Only a batch the student has already saved is auto-refreshed. A
-        // public page that anyone can open must not start writing persistent
-        // data to their phone by itself — the first write is the card's job.
-        if (!savedRef.current) {
-          if (mounted.current) setRefreshFailed(false);
-          return { ok: true, changed: false, skipped: 'not-saved' };
-        }
 
         // The store compares checksums, so an unchanged week is a no-op write
         // and "last saved" does not creep forward on every reload.

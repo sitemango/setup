@@ -1,0 +1,9 @@
+{
+  "label": "post-fix division initial HTML loading boundary",
+  "bytes": 69703,
+  "fallbackTemplate": false,
+  "hiddenCompleteSegment": false,
+  "helpInInitialVisibleHtml": true,
+  "revealCall": false,
+  "loadingFile": "app/(app)/loading.js"
+}

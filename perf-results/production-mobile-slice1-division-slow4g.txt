@@ -1,0 +1,5 @@
+/timetable/a run 1: cold LCP 1300ms / 306.1kB; repeat LCP 364ms / 7.1kB
+/timetable/a run 2: cold LCP 1424ms / 306.1kB; repeat LCP 408ms / 7.1kB
+/timetable/a run 3: cold LCP 1392ms / 306.1kB; repeat LCP 688ms / 7.1kB
+
+wrote perf-results/production-mobile-slice1-division-slow4g.json

@@ -5,6 +5,8 @@ import { DepthField } from '@/components/atmosphere/DepthField';
 import { HomeFeedClient } from '@/components/home/HomeFeedClient';
 import { HomeAreas, HomeCoda } from '@/components/home/HomePulse';
 import { HomeFeatureTiles } from '@/components/home/HomeFeatureTiles';
+import { GuideWelcomeStrip } from '@/components/guide/GuideWelcomeStrip';
+import { GUIDE_SEEN_PREHYDRATION_SCRIPT, GUIDE_SEEN_STYLE_ID } from '@/lib/guide/first-visit';
 
 export const metadata = { title: 'Home' };
 
@@ -40,6 +42,11 @@ export default async function HomePage() {
 
   return (
     <div className="home-stage">
+      {/* Emit the offer with Home's first HTML so it cannot insert itself above
+          a painted feed. A returning device's static pre-paint style hides the
+          SSR node until hydration removes it. No account data is involved. */}
+      <script id={`${GUIDE_SEEN_STYLE_ID}-script`}>{GUIDE_SEEN_PREHYDRATION_SCRIPT}</script>
+      <GuideWelcomeStrip />
       {/* Decorative only; the feed and rail do not wait for Supabase queries. */}
       <DepthField />
       <HomeFeedClient
