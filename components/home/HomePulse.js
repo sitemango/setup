@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ROUTES } from '@/lib/constants';
 import { Icon } from '@/components/ui/icons';
-import { HandWave } from '@/components/home/HandWave';
+import { AnimatedStat } from '@/components/home/AnimatedStat';
 
 /**
  * The threshold combines the personalized greeting with campus shortcuts.
@@ -25,33 +25,20 @@ const DISCOVERY = [
 
 export function HomePulse({ user, stats = [], children }) {
   const name = (user.profile.display_name || user.profile.username).split(' ')[0];
-  const context =
-    user.profile.branch && user.profile.show_branch_year
-      ? `${user.profile.branch} · everything happening on campus, right now`
-      : 'Everything happening on campus, right now';
-
   return (
     <section className="home-pulse" aria-labelledby="home-greeting">
-      <span className="home-pulse__aurora" aria-hidden="true" />
-      <span className="home-pulse__spark home-pulse__spark--teal" aria-hidden="true" />
-      <span className="home-pulse__spark home-pulse__spark--warm" aria-hidden="true" />
-
       <div className="home-pulse__grid">
         <div className="home-pulse__intro min-w-0">
           <p className="home-pulse__eyebrow">
-            <span className="home-pulse__dot" aria-hidden="true" />
-            PCCOE · Campus feed
+            PCCOE · CAMPUS FEED
           </p>
           <h1 id="home-greeting" className="home-pulse__title">
-            <span className="home-pulse__greet">Hey,</span>
+            <span className="home-pulse__greet">Hey,</span>{' '}
             <span className="home-pulse__name">
-              <span className="home-pulse__name-text" title={name}>{name}</span>
-              <HandWave />
+              <span className="home-pulse__name-text" title={name}>{name}</span>.
             </span>
           </h1>
-          <p className="home-pulse__lead">{context}</p>
-
-          <Link href={ROUTES.explore} className="home-explore-link">Explore campus →</Link>
+          <p className="home-pulse__lead">Here&apos;s what&apos;s happening around campus today.</p>
           {children}
           {stats.length ? (
             <dl
@@ -62,7 +49,7 @@ export function HomePulse({ user, stats = [], children }) {
               {stats.map((stat) => (
                 <div className="home-pulse__stat" key={stat.label} data-empty={stat.value === 0 ? 'true' : undefined}>
                   <dt>{stat.label}</dt>
-                  <dd>{stat.value}</dd>
+                  <dd><AnimatedStat value={stat.value} /></dd>
                 </div>
               ))}
             </dl>
@@ -71,7 +58,6 @@ export function HomePulse({ user, stats = [], children }) {
 
       </div>
 
-      <span className="home-pulse__horizon" aria-hidden="true" />
     </section>
   );
 }
@@ -103,7 +89,7 @@ export function HomeZone({ eyebrow, title, note = null, aside = null, id = null 
   return (
     <header className="home-zone">
       <div className="min-w-0">
-        <p className="home-zone__eyebrow">{eyebrow}</p>
+        {eyebrow ? <p className="home-zone__eyebrow">{eyebrow}</p> : null}
         <h2 id={id} className="home-zone__title">
           {title}
         </h2>

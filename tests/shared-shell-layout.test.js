@@ -20,6 +20,19 @@ describe('shared application shell route boundary', () => {
 });
 
 describe('shared sidebar layout ownership', () => {
+  it('shows the sidebar toggle only in the desktop header and keeps the mobile menu', () => {
+    const header = read('components/layout/ShellHeader.js');
+    const mobile = header.slice(header.indexOf('{/* Mobile */}'), header.indexOf('{/* Desktop */}'));
+    const desktop = header.slice(header.indexOf('{/* Desktop */}'));
+    expect(mobile).not.toContain('{sidebarToggle}');
+    expect(mobile).toContain('<MobileMenu');
+    expect(desktop).toContain('{sidebarToggle}');
+    const menu = read('components/layout/MobileMenu.js');
+    expect(menu).toContain('getTimetableHref(user?.division)');
+    expect(menu).toContain('ROUTES.map');
+    expect(menu).toContain('createItems.map');
+  });
+
   it('keeps desktop shell spacing controlled by the sidebar state, not route material sheets', () => {
     const css = read('app/styles/shell-frame.css');
     expect(css).toMatch(/:root \.app-frame \.shell-root\s*\{\s*padding-left:\s*0/);

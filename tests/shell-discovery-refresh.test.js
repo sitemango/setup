@@ -32,7 +32,8 @@ describe('campus discovery refresh', () => {
   it('routes each permitted create shortcut to the same Home composer', () => {
     const frame = read('components/layout/AuthenticatedAppFrame.js');
     for (const kind of ['post', 'poll', 'discussion']) expect(frame).toContain(`/home?compose=${kind}`);
-    expect(read('components/home/HomeComposer.js')).toContain('Post what&apos;s happening on campus...');
+    expect(read('components/home/HomeComposer.js')).toContain('<PostComposer');
+    expect(read('components/posts/PostComposer.js')).toContain('Post what&apos;s happening on campus...');
     expect(read('components/posts/PostComposer.js')).toContain('setKind(requestedKind.kind)');
   });
 });

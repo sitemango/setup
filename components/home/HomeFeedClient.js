@@ -574,6 +574,13 @@ export function HomeFeedClient({
         <div className="home-body">
           <div className="home-body__main">
             <HomePulse user={user} stats={stats}>{heroFeatures}</HomePulse>
+            <HomeZone id="home-stream-title" title="Campus feed" aside={feedMode === 'for-you' && feed.length ? (
+              <span className="home-zone__count text-2xs text-muted">
+                {typeof snapshot?.page?.total === 'number' && snapshot.page.total > feed.length
+                  ? `${feed.length} of ${snapshot.page.total} entries`
+                  : `${feed.length} ${feed.length === 1 ? 'entry' : 'entries'}`}
+              </span>
+            ) : null} />
             <HomeComposer
               canPost={canPost}
               authorName={user.profile.display_name || user.profile.username}
@@ -597,20 +604,6 @@ export function HomeFeedClient({
               aria-labelledby="home-stream-title"
               aria-busy={!snapshot && loading}
             >
-              <HomeZone
-                id="home-stream-title"
-                eyebrow="Campus feed"
-                title="What's moving right now"
-                note="Pinned posts first, then the database’s newest-first order — no ranking, no AI, no engagement theatre."
-                aside={feed.length ? (
-                  <span className="home-zone__count text-2xs text-muted">
-                    {typeof snapshot?.page?.total === 'number' && snapshot.page.total > feed.length
-                      ? `${feed.length} of ${snapshot.page.total} entries`
-                      : `${feed.length} ${feed.length === 1 ? 'entry' : 'entries'}`}
-                  </span>
-                ) : null}
-              />
-
               {snapshot && feed.length === 0 && !unavailable ? (
                 <EmptyState
                   icon="sparkle"

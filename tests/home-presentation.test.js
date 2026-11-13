@@ -21,29 +21,23 @@ const render = (props = {}) => renderToStaticMarkup(React.createElement(HomePuls
 }));
 
 describe('Home presentation refinement', () => {
-  it('keeps the greeting separate and the real first name beside the interactive hand', () => {
+  it('renders a compact personalized introduction without academic data or decoration', () => {
     const html = render();
     expect(html).toContain('aria-labelledby="home-greeting"');
+    expect(html).toContain('PCCOE · CAMPUS FEED');
     expect(html).toContain('<span class="home-pulse__greet">Hey,</span>');
-    expect(html).toMatch(/home-pulse__name"><span class="home-pulse__name-text" title="Yash">Yash<\/span><button/);
-    expect(html).toContain('aria-label="Wave hello"');
-    expect(html).toContain('Computer Engineering · everything happening on campus, right now');
-    expect(html).toContain('href="/explore"');
-  });
-
-  it('does not hard-code the preview identity or reveal a hidden department', () => {
-    const html = render({ user: { profile: { ...profile, display_name: '', username: 'meera_j', show_branch_year: false } } });
-    expect(html).toContain('title="meera_j">meera_j</span>');
-    expect(html).not.toContain('Yash');
+    expect(html).toContain('title="Yash">Yash</span>.');
+    expect(html).toContain('Here&#x27;s what&#x27;s happening around campus today.');
     expect(html).not.toContain('Computer Engineering');
-    expect(html).toContain('Everything happening on campus, right now');
+    expect(html).not.toContain('Wave hello');
+    expect(html).not.toContain('Explore campus');
+    expect(html).not.toContain('home-pulse__spark');
   });
 
-  it('retains the full name for accessible text and the long-name tooltip', () => {
-    const html = render({ user: { profile: { ...profile, display_name: 'Chandrasekharan' } } });
-    expect(html).toContain('title="Chandrasekharan">Chandrasekharan</span>');
-    const css = read('app/styles/home.css');
-    expect(css).toMatch(/\.home-pulse__name-text\s*\{[^}]*min-width: 0;[^}]*text-overflow: ellipsis;[^}]*white-space: nowrap;/);
+  it('falls back to the username and does not expose branch information', () => {
+    const html = render({ user: { profile: { ...profile, display_name: '', username: 'meera_j' } } });
+    expect(html).toContain('title="meera_j">meera_j</span>.');
+    expect(html).not.toContain('Computer Engineering');
   });
 
   it('renders only supplied statistics, with equal tracks for their actual count', () => {
@@ -52,7 +46,7 @@ describe('Home presentation refinement', () => {
     const html = render({ stats });
     expect(html).toContain('style="--home-stat-count:2"');
     expect(html).toContain('aria-label="Campus right now"');
-    expect(html).toContain('<dt>Posts in feed</dt><dd>10</dd>');
+    expect(html).toContain('<dt>Posts in feed</dt><dd><span class="sr-only">10</span><span aria-hidden="true">10</span></dd>');
     expect(html).not.toContain('Market listings');
     expect(render({ stats: [{ label: 'Posts in feed', value: 0 }] })).toContain('data-empty="true"');
   });

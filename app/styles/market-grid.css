@@ -17,3 +17,13 @@
 .market-product__meta span { display: inline-flex; align-items: center; gap: .25rem; }
 .market-product__seller { margin-top: auto; padding-top: .5rem; color: var(--color-muted); font-size: .7rem; }
 @media (prefers-reduced-motion: reduce) { .market-product { transition: none; } }
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .market-cover__image { transition: transform 350ms ease; }
+  .market-product:hover .market-cover__image { transform: scale(1.04); }
+  .market-product:hover { box-shadow: 0 14px 28px color-mix(in oklab, var(--color-accent) 22%, transparent); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .market-product:hover { transform: none; }
+  .market-cover__image { transition: none; }
+}

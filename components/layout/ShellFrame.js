@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { Sidebar } from '@/components/layout/Sidebar';
 import { ShellHeader } from '@/components/layout/ShellHeader';
 
@@ -9,6 +10,18 @@ export function ShellFrame({ children, ...props }) {
   const [open, setOpen] = useState(true);
   const [mobile, setMobile] = useState(false);
   const frameRef = useRef(null);
+  const contentRef = useRef(null);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    const content = contentRef.current;
+    if (!content || !window.matchMedia('(min-width: 768px) and (prefers-reduced-motion: no-preference)').matches) return undefined;
+    const animation = content.animate(
+      [{ opacity: 0.92, transform: 'translateY(5px)' }, { opacity: 1, transform: 'translateY(0)' }],
+      { duration: 220, easing: 'ease-out' },
+    );
+    return () => animation.cancel();
+  }, [pathname]);
 
   useEffect(() => {
     const media = window.matchMedia('(max-width: 1023px)');
@@ -62,7 +75,7 @@ export function ShellFrame({ children, ...props }) {
       </div>
       <div className="shell-root">
         <ShellHeader {...props} sidebarOpen={open} onToggleSidebar={() => setOpen((value) => !value)} />
-        <main id="content" className="shell-content shell-main mx-auto w-full px-4 pb-28 pt-4 sm:px-6 lg:pb-16 lg:pt-5">
+        <main ref={contentRef} id="content" className="shell-content shell-main mx-auto w-full px-4 pb-28 pt-4 sm:px-6 lg:pb-16 lg:pt-5">
           {children}
         </main>
       </div>

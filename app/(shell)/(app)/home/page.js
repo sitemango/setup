@@ -32,8 +32,6 @@ export default async function HomePage() {
     profile: {
       username: profile.username,
       display_name: profile.display_name,
-      branch: profile.branch,
-      show_branch_year: profile.show_branch_year,
     },
   };
 
