@@ -37,9 +37,6 @@
 :root .home-pulse__stat { flex: 1; padding: .65rem 1rem; }
 :root .home-pulse__stat dd { font-size: 1.15rem; }
 :root .home-composer { padding: 1rem; }
-.home-composer__open { display: block; width: 100%; text-align: left; padding: .75rem 1rem; border: 1px solid var(--color-rule); border-radius: var(--radius-md); color: var(--color-muted); background: var(--color-paper); cursor: pointer; }
-.home-composer__open:hover { border-color: var(--color-accent); color: var(--color-ink); }
-.home-composer__open:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
 .home-feed-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--color-rule); padding: 0 0 .75rem; font-size: .8125rem; color: var(--color-ink-2); }
 .home-feed-nav a:hover { color: var(--color-accent-text); }
 .home-feed-nav__current { color: var(--color-accent-text); font-weight: 600; }
@@ -137,10 +134,12 @@
   0%, 100% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
 }
-@media (prefers-reduced-motion: no-preference) {
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
   :root .home-explore-link { animation: home-explore-flow 5s ease-in-out infinite; }
 }
-:root .home-explore-link:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(91, 161, 218, .32), inset 0 1px 0 rgba(255, 255, 255, .55); }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :root .home-explore-link:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(91, 161, 218, .32), inset 0 1px 0 rgba(255, 255, 255, .55); }
+}
 :root .home-explore-link:active { transform: translateY(0); }
 :root .home-explore-link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
 :root .home-pulse .home-pulse__stats {
@@ -205,3 +204,204 @@
 .home-feed-nav button.home-feed-nav__current { color: var(--color-accent-text); }
 .home-feed-nav button:disabled { cursor: not-allowed; color: var(--color-muted); }
 .home-feed-nav button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+
+/* Homepage-only composition: the introduction belongs to the canvas, not a card. */
+:root .home-stage .home-pulse {
+  padding: .25rem 0 0;
+  gap: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+:root .home-stage .home-pulse__eyebrow {
+  padding: 0;
+  border: 0;
+  background: none;
+  box-shadow: none;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: .6875rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+:root .home-stage .home-pulse__title { margin: .55rem 0 0; line-height: 1.2; }
+:root .home-stage .home-pulse__greet,
+:root .home-stage .home-pulse__name {
+  display: inline;
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.025em;
+  color: var(--color-ink);
+  -webkit-text-fill-color: currentColor;
+  background: none;
+  filter: none;
+}
+:root .home-stage .home-pulse__name-text { display: inline; white-space: normal; overflow-wrap: anywhere; }
+:root .home-stage .home-pulse__lead { margin: .35rem 0 0; font-size: .875rem; }
+:root .home-stage .home-features { margin-top: 1rem; }
+:root .home-stage .home-features__title { margin-bottom: .5rem; }
+:root .home-stage .home-features__grid { display: flex; flex-wrap: wrap; gap: .4rem; }
+:root .home-stage .feature-tile {
+  flex: 0 0 auto;
+  width: auto;
+  min-height: 38px;
+  padding: .45rem .65rem;
+  gap: .4rem;
+}
+:root .home-stage .feature-tile__title { display: inline; font-size: .75rem; }
+:root .home-stage .home-pulse .home-pulse__stats { margin-top: .9rem; padding-top: .7rem; }
+:root .home-stage .home-pulse .home-pulse__stat { gap: .2rem; }
+:root .home-stage .home-pulse .home-pulse__stat dd { font-size: 1.35rem; }
+:root .home-stage .home-zone { margin: .25rem 0 0; }
+:root .home-stage .rail-notice__headline,
+:root .home-stage .rail-event__title,
+:root .home-stage .rail-activity__text { line-height: 1.4; overflow-wrap: anywhere; }
+:root .home-stage .rail-notice__date,
+:root .home-stage .rail-event__meta { line-height: 1.4; }
+
+/* Home glass islands: keep the surrounding canvas and global theme untouched. */
+:root .home-stage .home-pulse {
+  padding: clamp(1.15rem, 2.4vw, 1.8rem);
+  border: 1px solid color-mix(in oklab, var(--color-accent) 25%, var(--color-rule));
+  border-radius: 1.5rem;
+  background:
+    radial-gradient(ellipse at 88% 0%, color-mix(in oklab, var(--color-accent) 21%, transparent), transparent 52%),
+    linear-gradient(145deg, color-mix(in oklab, var(--color-paper-2) 93%, var(--color-accent) 7%), color-mix(in oklab, var(--color-paper) 94%, transparent));
+  box-shadow: inset 0 1px 0 var(--edge-light-soft), 0 18px 48px -24px var(--glow-accent), var(--depth-1);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(18px) saturate(130%);
+}
+:root .home-stage .home-pulse__eyebrow {
+  width: fit-content;
+  padding: .35rem .6rem;
+  border: 1px solid color-mix(in oklab, var(--color-accent) 24%, var(--color-rule));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--color-paper-2) 78%, transparent);
+  color: var(--color-accent-text);
+}
+:root .home-stage .home-pulse__title { margin-top: .85rem; }
+:root .home-stage .home-pulse__greet,
+:root .home-stage .home-pulse__name { font-size: clamp(1.75rem, 2.7vw, 2.35rem); }
+:root .home-stage .home-features { margin-top: 1.15rem; }
+:root .home-stage .feature-tile {
+  border: 1px solid color-mix(in oklab, var(--color-accent) 22%, var(--color-rule));
+  border-radius: .8rem;
+  background: color-mix(in oklab, var(--color-paper-2) 75%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--edge-light-soft) 45%, transparent);
+}
+:root .home-stage .home-pulse .home-pulse__stats {
+  margin-top: 1rem;
+  padding: .85rem 1rem;
+  border: 1px solid color-mix(in oklab, var(--color-accent) 18%, var(--color-rule));
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--color-paper) 45%, transparent);
+}
+:root .home-stage .home-composer,
+:root .home-stage .rail-island,
+:root .home-stage .stream-card {
+  border: 1px solid color-mix(in oklab, var(--color-accent) 18%, var(--color-rule));
+  background:
+    linear-gradient(155deg, color-mix(in oklab, var(--color-accent) 10%, transparent), transparent 55%),
+    color-mix(in oklab, var(--color-paper-2) 94%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--edge-light-soft) 55%, transparent), 0 12px 28px -20px var(--glow-accent), var(--depth-1);
+  -webkit-backdrop-filter: blur(14px) saturate(125%);
+  backdrop-filter: blur(14px) saturate(125%);
+}
+:root .home-stage .home-composer { border-radius: 1.2rem; }
+:root .home-stage .home-feed-nav {
+  padding: .6rem .8rem;
+  border: 1px solid color-mix(in oklab, var(--color-accent) 16%, var(--color-rule));
+  border-radius: 1rem;
+  background: color-mix(in oklab, var(--color-paper-2) 88%, transparent);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--edge-light-soft) 35%, transparent);
+}
+:root .home-stage .rail-island { border-radius: 1.25rem; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :root .home-stage .feature-tile { transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease; }
+  :root .home-stage .feature-tile:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-accent);
+    box-shadow: 0 8px 20px -8px var(--glow-accent);
+  }
+}
+@media (max-width: 639px) {
+  :root .home-stage .home-pulse { padding: 1.15rem; border-radius: 1.2rem; }
+  :root .home-stage .home-pulse,
+  :root .home-stage .home-composer,
+  :root .home-stage .rail-island,
+  :root .home-stage .stream-card { -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root .home-stage .home-pulse,
+  :root .home-stage .home-composer,
+  :root .home-stage .rail-island,
+  :root .home-stage .stream-card { background: var(--color-paper-2); -webkit-backdrop-filter: none; backdrop-filter: none; }
+}
+
+/* Midnight Copper, scoped to the Home islands, never the global canvas. */
+:root .home-stage {
+  --home-midnight: #202A37;
+  --home-slate: #455466;
+  --home-copper: #92715A;
+  --home-copper-light: #BE9671;
+  --home-copper-gradient: linear-gradient(115deg, var(--home-midnight) 0%, var(--home-slate) 36%, var(--home-copper) 70%, var(--home-copper-light) 100%);
+}
+:root .home-stage .home-pulse {
+  /* Keep every supplied stop intact beneath a theme-aware contrast veil. */
+  background: linear-gradient(color-mix(in oklab, var(--color-paper-2) 80%, transparent), color-mix(in oklab, var(--color-paper-2) 80%, transparent)), var(--home-copper-gradient);
+}
+:root[data-theme='dark'] .home-stage .home-pulse {
+  background: linear-gradient(rgb(20 24 30 / .52), rgb(20 24 30 / .52)), var(--home-copper-gradient);
+}
+:root .home-stage .feature-tile { --home-tile-tint: var(--home-slate); }
+:root .home-stage .feature-tile--events,
+:root .home-stage .feature-tile--gigs { --home-tile-tint: var(--home-copper-light); }
+:root .home-stage .feature-tile--clubs,
+:root .home-stage .feature-tile--market { --home-tile-tint: var(--home-copper); }
+:root .home-stage .feature-tile {
+  border-color: color-mix(in oklab, var(--home-tile-tint) 38%, var(--color-rule));
+  background: linear-gradient(145deg, color-mix(in oklab, var(--home-tile-tint) 18%, var(--color-paper-2)), color-mix(in oklab, var(--color-paper) 87%, transparent));
+}
+:root .home-stage .home-pulse .home-pulse__stats {
+  background: linear-gradient(105deg, color-mix(in oklab, var(--home-slate) 12%, var(--color-paper)), color-mix(in oklab, var(--home-copper-light) 11%, var(--color-paper)));
+}
+:root .home-stage .home-pulse .home-pulse__stat + .home-pulse__stat dd { color: var(--color-accent-text); }
+:root .home-stage .rail-island--notices { --home-island-tint: var(--home-slate); }
+:root .home-stage .rail-island--activity { --home-island-tint: var(--home-copper); }
+:root .home-stage .rail-island--events,
+:root .home-stage .rail-island--market { --home-island-tint: var(--home-copper-light); }
+:root .home-stage .rail-island {
+  border-color: color-mix(in oklab, var(--home-island-tint, var(--home-slate)) 32%, var(--color-rule));
+  background:
+    radial-gradient(ellipse at 100% 0%, color-mix(in oklab, var(--home-island-tint, var(--home-slate)) 23%, transparent), transparent 64%),
+    linear-gradient(145deg, color-mix(in oklab, var(--home-island-tint, var(--home-slate)) 10%, var(--color-paper-2)), var(--color-paper-2));
+}
+:root .home-stage .home-composer {
+  background:
+    radial-gradient(ellipse at 90% 0%, color-mix(in oklab, var(--home-copper) 15%, transparent), transparent 60%),
+    linear-gradient(120deg, color-mix(in oklab, var(--home-slate) 13%, var(--color-paper-2)), var(--color-paper-2));
+}
+:root .home-stage .stream-slot { --home-stream-tint: var(--home-slate); }
+:root .home-stage .stream-slot[data-kind='event'],
+:root .home-stage .stream-slot[data-kind='opportunity'] { --home-stream-tint: var(--home-copper-light); }
+:root .home-stage .stream-slot[data-kind='poll'],
+:root .home-stage .stream-slot[data-kind='discussion'],
+:root .home-stage .stream-slot[data-kind='listing'] { --home-stream-tint: var(--home-copper); }
+:root .home-stage .stream-slot .stream-card {
+  border-color: color-mix(in oklab, var(--home-stream-tint) 25%, var(--color-rule));
+  background: linear-gradient(120deg, color-mix(in oklab, var(--home-stream-tint) 12%, var(--color-paper-2)), var(--color-paper-2) 65%);
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :root .home-stage .feature-tile:hover { border-color: var(--home-tile-tint); }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root .home-stage .home-pulse,
+  :root[data-theme='dark'] .home-stage .home-pulse,
+  :root .home-stage .home-composer,
+  :root .home-stage .rail-island,
+  :root .home-stage .stream-slot .stream-card { background: var(--color-paper-2); }
+}

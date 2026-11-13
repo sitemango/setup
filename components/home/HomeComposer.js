@@ -7,7 +7,6 @@ import { Notice } from '@/components/ui';
 
 /** The sidebar's Create shortcuts open the same composer used on Home. */
 export function HomeComposer({ canPost = true, authorName, authorUsername, onCreated }) {
-  const [open, setOpen] = useState(false);
   const [requestedKind, setRequestedKind] = useState(null);
   const root = useRef(null);
   const params = useSearchParams();
@@ -16,7 +15,6 @@ export function HomeComposer({ canPost = true, authorName, authorUsername, onCre
     if (!canPost || !['post', 'poll', 'discussion'].includes(compose)) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setRequestedKind({ kind: compose });
-    setOpen(true);
     const timer = window.setTimeout(() => {
       root.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
       root.current?.querySelector(compose === 'post' ? '#post-body' : '#post-title')?.focus({ preventScroll: true });
@@ -30,12 +28,8 @@ export function HomeComposer({ canPost = true, authorName, authorUsername, onCre
   return (
     <div className="home-composer" ref={root}>
       <p className="home-composer__label">New on campus <span aria-hidden="true">·</span> <span className="text-muted-soft">Posts, discussions and polls</span></p>
-      {!canPost ? <Notice tone="neutral" icon="lock">Your account cannot publish posts right now.</Notice> : open ? (
+      {!canPost ? <Notice tone="neutral" icon="lock">Your account cannot publish posts right now.</Notice> : (
         <PostComposer authorName={authorName} authorUsername={authorUsername} onCreated={onCreated} defaultKind={requestedKind?.kind || 'post'} requestedKind={requestedKind} />
-      ) : (
-        <button type="button" className="home-composer__open" onClick={() => setOpen(true)}>
-          Post what&apos;s happening on campus...
-        </button>
       )}
     </div>
   );

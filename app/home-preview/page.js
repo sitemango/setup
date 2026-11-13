@@ -163,20 +163,13 @@ export default function HomePreviewPage() {
               <HomePulse user={DEMO_USER} stats={DEMO_STATS}>
                 <HomeFeatureTiles division={DEMO_USER.profile.division} />
               </HomePulse>
+              <HomeZone id="home-stream-title" title="Campus feed" />
               <div inert>
                 <HomeComposer authorName={DEMO_USER.profile.display_name} authorUsername={DEMO_USER.profile.username} />
               </div>
 
               <section className="flex flex-col gap-4" aria-labelledby="home-stream-title">
                 <HomeFeedNavigation />
-                <HomeZone
-                  id="home-stream-title"
-                  eyebrow="Campus feed"
-                  title="What's moving right now"
-                  note="Demo entries below — the live feed keeps the database's newest-first order, no ranking, no AI."
-                  aside={<span className="home-zone__count text-2xs text-muted">{DEMO_FEED.length} demo entries</span>}
-                />
-
                 <div className="home-stream">
                   {DEMO_FEED.map((item, index) => (
                     <StreamSlot key={`${item.type}-${item.id}`} kind={item.type} order={index}>

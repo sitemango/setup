@@ -21,6 +21,7 @@ export function CreateMenu({ items = [] }) {
       matchTriggerWidth
       trigger={({ open, toggle }) => (
         <Button
+          className="create-menu__trigger"
           variant="primary"
           size="md"
           block

@@ -84,7 +84,6 @@ export function ShellHeader({ user = null, unreadNotifications = 0, isStaff = fa
       <GlassSurface as="header" tone="floating" className="shell-header__bar mx-auto w-full">
         {/* Mobile */}
         <div className="flex h-14 items-center gap-1.5 px-2 lg:hidden">
-          {sidebarToggle}
           {!searchOpen ? (
             <>
               <MobileMenu

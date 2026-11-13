@@ -45,3 +45,29 @@
 }
 .sidebar-close:hover { background: var(--color-paper-3); }
 .sidebar-close:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* A small, contained accent rather than another full-canvas gradient. */
+:root .side-panel .btn.cp-btn.create-menu__trigger {
+  background: linear-gradient(110deg, #a5d3f2, #72b1e1, #99c8ed, #a5d3f2);
+  background-size: 220% 100%;
+  animation: none;
+  color: #122d42;
+  transition: filter 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+@keyframes create-gradient-flow {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@media (min-width: 768px) and (prefers-reduced-motion: no-preference) {
+  :root .side-panel .btn.cp-btn.create-menu__trigger { animation: create-gradient-flow 7s ease-in-out infinite; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  :root .side-panel .btn.cp-btn.create-menu__trigger:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.05);
+    box-shadow: 0 8px 20px rgb(87 157 211 / .25);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  :root .side-panel .btn.cp-btn.create-menu__trigger { animation: none; transition: none; }
+}

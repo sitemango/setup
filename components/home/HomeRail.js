@@ -31,50 +31,6 @@ export function HomeRail({ events = [], notices = [], trending = [], marketplace
 
   return (
     <aside className="home-body__rail" aria-label="Campus information">
-      {events.length ? (
-        <RailCard
-          variant="island"
-          elevation={2}
-          tone="warm"
-          className="rail-island rail-island--events"
-          icon="calendar"
-          title="Next on campus"
-          action={
-            <Link href="/campus/events" className="text-2xs font-semibold text-muted hover:text-ink">
-              All
-            </Link>
-          }
-        >
-          <ol className="rail-timeline">
-            {events.map((event, index) => {
-              const badge = formatCalendarBadge(event.starts_on);
-              return (
-                <li className="rail-event" key={event.id} data-next={index === 0 ? 'true' : undefined}>
-                  <span className="rail-event__day">
-                    <span className="rail-event__month">{badge.month}</span>
-                    <span className="rail-event__num">{badge.day}</span>
-                  </span>
-                  <span className="rail-event__body">
-                    <Link href={ROUTES.event(event.id)} className="hover:no-underline">
-                      <span className="rail-event__title">{event.title}</span>
-                    </Link>
-                    <span className="rail-event__meta">
-                      {formatTime(event.start_time)}
-                      {event.location ? ` · ${event.location}` : ''}
-                    </span>
-                    {event.is_official ? (
-                      <span className="mt-1 block">
-                        <Badge tone="accent">Official</Badge>
-                      </span>
-                    ) : null}
-                  </span>
-                </li>
-              );
-            })}
-          </ol>
-        </RailCard>
-      ) : null}
-
       {notices.length ? (
         <RailCard
           variant="island"
@@ -150,6 +106,50 @@ export function HomeRail({ events = [], notices = [], trending = [], marketplace
                     data-hot={percentage >= 100 ? 'true' : undefined}
                   >
                     <span style={{ width: `${percentage}%` }} />
+                  </span>
+                </li>
+              );
+            })}
+          </ol>
+        </RailCard>
+      ) : null}
+
+      {events.length ? (
+        <RailCard
+          variant="island"
+          elevation={2}
+          tone="warm"
+          className="rail-island rail-island--events"
+          icon="calendar"
+          title="Next on campus"
+          action={
+            <Link href="/campus/events" className="text-2xs font-semibold text-muted hover:text-ink">
+              All
+            </Link>
+          }
+        >
+          <ol className="rail-timeline">
+            {events.map((event, index) => {
+              const badge = formatCalendarBadge(event.starts_on);
+              return (
+                <li className="rail-event" key={event.id} data-next={index === 0 ? 'true' : undefined}>
+                  <span className="rail-event__day">
+                    <span className="rail-event__month">{badge.month}</span>
+                    <span className="rail-event__num">{badge.day}</span>
+                  </span>
+                  <span className="rail-event__body">
+                    <Link href={ROUTES.event(event.id)} className="hover:no-underline">
+                      <span className="rail-event__title">{event.title}</span>
+                    </Link>
+                    <span className="rail-event__meta">
+                      {formatTime(event.start_time)}
+                      {event.location ? ` · ${event.location}` : ''}
+                    </span>
+                    {event.is_official ? (
+                      <span className="mt-1 block">
+                        <Badge tone="accent">Official</Badge>
+                      </span>
+                    ) : null}
                   </span>
                 </li>
               );
