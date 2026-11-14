@@ -1,134 +1,199 @@
-/* Home composition only: inherit the existing Campus+ materials and colors. */
+/* Home composition only: inherit the existing Campus+ materials and colors.
+   Everything is scoped to .home-stage so shared rail, card, composer and feed
+   primitives keep their appearance on other routes. This sheet is imported by
+   the Home layout and its development preview after the shared material sheets. */
 .shell-content:has(.home-stage) { max-width: 78rem; }
-:root .home-body {
+
+.home-stage {
+  /* The requested white fade on the dark canvas; the light theme below uses
+     the existing ink token so the same detail stays visible on warm paper. */
+  --home-separator: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 15%,
+    rgba(255, 255, 255, 0.24) 50%,
+    rgba(255, 255, 255, 0.12) 85%,
+    transparent 100%
+  );
+}
+
+:root[data-theme='light'] .home-stage {
+  --home-separator: linear-gradient(
+    90deg,
+    transparent 0%,
+    color-mix(in oklab, var(--color-ink) 10%, transparent) 15%,
+    color-mix(in oklab, var(--color-ink) 20%, transparent) 50%,
+    color-mix(in oklab, var(--color-ink) 10%, transparent) 85%,
+    transparent 100%
+  );
+}
+
+/* Two columns and their proportions are unchanged; only the rhythm tightens. */
+:root .home-stage .home-body {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   align-items: start;
-  gap: 1.5rem;
+  gap: 1.25rem;
   padding-top: 0;
 }
-:root .home-body__main { gap: 1rem; }
-:root .home-body__rail { gap: 1rem; position: static; max-height: none; overflow: visible; }
-:root .rail-island--notices { order: 1; }
-:root .rail-island--activity { order: 2; }
-:root .rail-island--events { order: 3; }
-:root .rail-island--market { order: 4; }
+:root .home-stage .home-body__main { gap: 0.75rem; }
+:root .home-stage .home-body__rail {
+  gap: 0;
+  position: static;
+  max-height: none;
+  overflow: visible;
+  padding-bottom: 0;
+}
+:root .home-stage .rail-island--notices { order: 1; }
+:root .home-stage .rail-island--activity { order: 2; }
+:root .home-stage .rail-island--events { order: 3; }
+:root .home-stage .rail-island--market { order: 4; }
 @media (min-width: 1100px) {
-  :root .home-body { grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem); }
-}
-:root .home-pulse { padding: .5rem 0 0; gap: 1rem; }
-:root .home-pulse__grid { display: block; }
-:root .home-pulse__title { margin-top: .5rem; }
-:root .home-pulse__greet { display: inline; font-size: 1.15rem; }
-:root .home-pulse__name { display: inline-flex; margin: 0 0 0 .35rem; font-size: clamp(1.65rem, 2.3vw, 2.4rem); vertical-align: baseline; }
-:root .home-pulse__name .home-pulse__wave { width: 1.5rem; height: 1.5rem; }
-:root .home-pulse__lead { margin-top: .35rem; }
-:root .home-pulse__horizon { display: none; }
-:root .home-features { margin-top: 1rem; }
-:root .home-features__title { margin-bottom: .5rem; }
-:root .home-features__grid { display: flex; flex-wrap: wrap; gap: .5rem; }
-:root .feature-tile { flex: 1 1 auto; min-width: 0; flex-direction: row; align-items: center; justify-content: center; gap: .45rem; padding: .55rem .7rem; }
-:root .feature-tile__top { display: flex; }
-:root .feature-tile__icon { width: 1.4rem; height: 1.4rem; border: 0; background: none; box-shadow: none; }
-:root .feature-tile__icon svg { width: 1rem; height: 1rem; }
-:root .feature-tile__title { margin: 0; font-size: .8rem; white-space: nowrap; }
-:root .feature-tile__copy, :root .feature-tile__arrow { display: none; }
-:root .home-pulse__stats { margin-top: 1rem; display: flex; max-width: none; }
-:root .home-pulse__stat { flex: 1; padding: .65rem 1rem; }
-:root .home-pulse__stat dd { font-size: 1.15rem; }
-:root .home-composer { padding: 1rem; }
-.home-composer__open { display: block; width: 100%; text-align: left; padding: .75rem 1rem; border: 1px solid var(--color-rule); border-radius: var(--radius-md); color: var(--color-muted); background: var(--color-paper); cursor: pointer; }
-.home-composer__open:hover { border-color: var(--color-accent); color: var(--color-ink); }
-.home-composer__open:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
-.home-feed-nav { display: flex; align-items: center; flex-wrap: wrap; gap: 1rem; border-bottom: 1px solid var(--color-rule); padding: 0 0 .75rem; font-size: .8125rem; color: var(--color-ink-2); }
-.home-feed-nav a:hover { color: var(--color-accent-text); }
-.home-feed-nav__current { color: var(--color-accent-text); font-weight: 600; }
-.home-feed-nav__unavailable { color: var(--color-muted); opacity: .7; }
-.home-feed-nav__sort { margin-left: auto; color: var(--color-muted); font-size: .75rem; }
-@media (max-width: 639px) {
-  :root .feature-tile { flex: 1 1 29%; }
-  :root .home-pulse__name { font-size: 1.75rem; }
-  .home-feed-nav { gap: .75rem; }
-}
-.home-explore-link { display: inline-block; margin-top: .35rem; font-size: .75rem; color: var(--color-accent-text); }
-
-/* Keep shortcuts on one line; retain accessible names when space is tight. */
-:root .home-pulse__lead { font-size: .8125rem; line-height: 1.45; }
-:root .home-features__grid {
-  display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: .375rem;
-}
-:root .feature-tile { width: 100%; min-height: 44px; padding: .5rem .25rem; gap: .3rem; }
-:root .feature-tile__title { font-size: .75rem; }
-@container home-features (max-width: 42rem) {
-  :root .feature-tile__title { display: none; }
-  :root .feature-tile { min-width: 0; }
-  :root .feature-tile__icon { width: 1.5rem; height: 1.5rem; }
-  :root .feature-tile__icon svg { width: 1.125rem; height: 1.125rem; }
+  :root .home-stage .home-body { grid-template-columns: minmax(0, 1fr) minmax(15rem, 19rem); }
 }
 
-/* A quiet inline summary, rather than oversized dashboard counters. */
-:root .home-pulse__stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: .5rem 1.25rem;
-  margin-top: .75rem;
-  padding: .65rem 0;
+/* The threshold sits directly on the page canvas, not inside another card. */
+:root .home-stage .home-pulse {
+  padding: 0.25rem 0 1.25rem;
+  gap: 0;
   border: 0;
-  border-top: 1px solid var(--color-rule);
-  border-bottom: 1px solid var(--color-rule);
   border-radius: 0;
-  background: none;
+  background: transparent;
   box-shadow: none;
-  backdrop-filter: none;
 }
-:root .home-pulse__stat {
-  flex: 0 0 auto;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: baseline;
-  gap: .35rem;
-  padding: 0;
-  border: 0;
-}
-:root .home-pulse__stat dt { font-family: var(--font-body); font-size: .75rem; text-transform: none; letter-spacing: 0; }
-:root .home-pulse__stat dd { font-family: var(--font-body); font-size: .875rem; font-weight: 600; }
-
-/* Focused greeting and statistics treatment: distinct shapes, stronger type,
-   and the existing Campus+ accent rather than a new site-wide palette. */
-:root .home-pulse {
-  padding: clamp(1.25rem, 2.5vw, 1.875rem);
-  border: 1px solid var(--color-rule);
-  border-radius: 8px 24px 8px 24px;
-  background: var(--color-paper-2);
-  box-shadow: var(--depth-1);
-}
-:root .home-pulse__title { margin-top: .75rem; }
-:root .home-pulse__greet {
+:root .home-stage .home-pulse__grid { display: block; }
+:root .home-stage .home-pulse__title { margin-top: 0.75rem; }
+:root .home-stage .home-pulse__greet {
+  display: block;
   font-family: var(--font-body);
   font-size: clamp(1.35rem, 2vw, 1.75rem);
   font-weight: 700;
+  line-height: 1.25;
   color: var(--color-ink);
 }
-:root .home-pulse__name {
-  font-size: clamp(2rem, 3.5vw, 2.9rem);
+:root .home-stage .home-pulse__name {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 0.125rem 0 0;
+  font-size: clamp(2.5rem, 3.5vw, 3rem);
   font-weight: 700;
-  line-height: 1.1;
+  line-height: 1.08;
 }
-:root .home-explore-link {
+:root .home-stage .home-pulse__name .home-pulse__wave {
+  width: 2.75rem;
+  height: 2.75rem;
+}
+:root .home-stage .home-pulse__lead {
+  margin-top: 0.625rem;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+}
+:root .home-stage .home-pulse__horizon { display: none; }
+
+/* Keep the existing campus shortcuts, with a sharper small-control radius. */
+:root .home-stage .home-features { margin-top: 1rem; }
+:root .home-stage .home-features__title { margin-bottom: 0.5rem; }
+:root .home-stage .home-features__grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 0.375rem;
+}
+:root .home-stage .feature-tile {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-width: 0;
+  min-height: 44px;
+  gap: 0.3rem;
+  padding: 0.5rem 0.25rem;
+  border-color: color-mix(in oklab, var(--color-rule) 80%, transparent);
+  border-radius: var(--radius-xs);
+  background: color-mix(in oklab, var(--color-paper-2) 65%, transparent);
+  box-shadow: none;
+}
+:root .home-stage .feature-tile__top { display: flex; }
+:root .home-stage .feature-tile__icon { width: 1.5rem; height: 1.5rem; border: 0; background: none; box-shadow: none; }
+:root .home-stage .feature-tile__icon svg { width: 1.125rem; height: 1.125rem; }
+:root .home-stage .feature-tile__title { margin: 0; font-size: 0.75rem; white-space: nowrap; }
+:root .home-stage .feature-tile__copy,
+:root .home-stage .feature-tile__arrow { display: none; }
+@container home-features (max-width: 42rem) {
+  :root .home-stage .feature-tile__title { display: none; }
+}
+
+/* Real feed counts stay inline; the existing hairlines separate the figures. */
+:root .home-stage .home-pulse__stats {
+  display: grid;
+  grid-template-columns: repeat(var(--home-stat-count, 2), minmax(0, 1fr));
+  gap: 0;
+  width: 100%;
+  max-width: none;
+  margin-top: 1rem;
+  padding: 1rem 0 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid color-mix(in oklab, var(--color-rule) 70%, transparent);
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+:root .home-stage .home-pulse__stat,
+:root .home-stage .home-pulse__stat:first-child {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 0.35rem;
+  min-width: 0;
+  padding: 0 1rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+:root .home-stage .home-pulse__stat + .home-pulse__stat {
+  border-left: 1px solid color-mix(in oklab, var(--color-rule) 70%, transparent);
+  padding-left: 1.25rem;
+}
+:root .home-stage .home-pulse__stat dt {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-muted);
+}
+:root .home-stage .home-pulse__stat dd,
+:root .home-stage .home-pulse__stat[data-empty='true'] dd {
+  font-family: var(--font-body);
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  color: var(--color-accent-text);
+  overflow-wrap: anywhere;
+}
+
+/* The existing Explore Campus button keeps its shape, gradient and motion. */
+:root .home-stage .home-explore-link {
   display: inline-flex;
   align-items: center;
   min-height: 40px;
-  margin-top: .8rem;
-  padding: .6rem 1rem;
+  margin-top: 0.8rem;
+  padding: 0.6rem 1rem;
   border: 1px solid var(--color-accent);
   border-radius: 6px 14px 6px 6px;
   background: linear-gradient(110deg, #b8def7 0%, #89c4ef 35%, #72aee3 62%, #b8def7 100%);
   background-size: 220% 100%;
   color: #10243a;
-  box-shadow: 0 6px 18px rgba(91, 161, 218, .25), inset 0 1px 0 rgba(255, 255, 255, .55);
-  font-size: .8125rem;
+  box-shadow: 0 6px 18px rgba(91, 161, 218, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+  font-size: 0.8125rem;
   font-weight: 700;
   text-decoration: none;
   transition: transform 220ms var(--ease-out), filter 220ms ease, box-shadow 220ms ease;
@@ -138,70 +203,151 @@
   50% { background-position: 100% 50%; }
 }
 @media (prefers-reduced-motion: no-preference) {
-  :root .home-explore-link { animation: home-explore-flow 5s ease-in-out infinite; }
+  :root .home-stage .home-explore-link { animation: home-explore-flow 5s ease-in-out infinite; }
 }
-:root .home-explore-link:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(91, 161, 218, .32), inset 0 1px 0 rgba(255, 255, 255, .55); }
-:root .home-explore-link:active { transform: translateY(0); }
-:root .home-explore-link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
-:root .home-pulse .home-pulse__stats {
-  display: grid;
-  grid-template-columns: repeat(var(--home-stat-count, 2), minmax(0, 1fr));
-  gap: 0;
-  width: 100%;
-  max-width: none;
-  margin-top: 1.25rem;
-  padding: 1rem 0 0;
-  overflow: visible;
+:root .home-stage .home-explore-link:hover { transform: translateY(-2px); filter: brightness(1.05); box-shadow: 0 10px 24px rgba(91, 161, 218, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.55); }
+:root .home-stage .home-explore-link:active { transform: translateY(0); }
+:root .home-stage .home-explore-link:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) {
+  :root .home-stage .home-explore-link { transition: none; }
+}
+
+/* The composer wrapper is a section, while its input/expanded form remain
+   genuine interactive containers. No composer markup or behavior changes. */
+:root .home-stage .home-composer {
+  padding: 1.25rem 0;
   border: 0;
-  border-top: 1px solid var(--color-rule);
   border-radius: 0;
   background: transparent;
   box-shadow: none;
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
 }
-:root .home-pulse .home-pulse__stat,
-:root .home-pulse .home-pulse__stat:first-child {
+:root .home-stage .home-composer::before { display: none; content: none; }
+:root .home-stage .home-composer > form { border-radius: var(--radius-md); }
+:root .home-stage .home-composer__open {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-sm);
+  color: var(--color-muted);
+  background: var(--color-paper);
+  cursor: pointer;
+}
+:root .home-stage .home-composer__open:hover { border-color: var(--color-accent); color: var(--color-ink); }
+:root .home-stage .home-composer__open:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+
+/* One quiet fade between the major left-column movements. The feed heading
+   keeps its own structural rule; the navigation row no longer adds another. */
+:root .home-stage .home-pulse::after,
+:root .home-stage .home-composer::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  pointer-events: none;
+  background: var(--home-separator);
+}
+:root .home-stage .home-feed-nav {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-start;
-  gap: .35rem;
-  min-width: 0;
-  padding: 0 1rem 0 0;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 0;
+  padding: 0.5rem 0 0.75rem;
+  font-size: 0.8125rem;
+  color: var(--color-ink-2);
+}
+:root .home-stage .home-feed-nav a:hover { color: var(--color-accent-text); }
+:root .home-stage .home-feed-nav__current { color: var(--color-accent-text); font-weight: 600; }
+:root .home-stage .home-feed-nav__unavailable { color: var(--color-muted); opacity: 0.7; }
+:root .home-stage .home-feed-nav__sort { margin-left: auto; color: var(--color-muted); font-size: 0.75rem; }
+:root .home-stage .home-feed-nav button { cursor: pointer; color: inherit; background: transparent; border: 0; padding: 0; }
+:root .home-stage .home-feed-nav button.home-feed-nav__current { color: var(--color-accent-text); }
+:root .home-stage .home-feed-nav button:disabled { cursor: not-allowed; color: var(--color-muted); }
+:root .home-stage .home-feed-nav button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
+:root .home-stage .home-zone { border-bottom-color: color-mix(in oklab, var(--color-rule) 65%, transparent); }
+
+/* Sidebar modules share the canvas and one internal padding scale. Their
+   existing order, icons, links and content are untouched. */
+:root .home-stage .rail-island {
+  padding: 1.5rem 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  --island-depth: 0px;
+}
+:root .home-stage .rail-island::before { display: none; content: none; }
+:root .home-stage .rail-island:hover {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+:root .home-stage .home-body__rail .island__head { margin-bottom: 0.875rem; }
+:root .home-stage .rail-island::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  pointer-events: none;
+  background: var(--home-separator);
+}
+/* Flex order is visual, not DOM order: suppress the rule after the last
+   module actually present, including empty-feed states with missing modules. */
+:root .home-stage .rail-island--market::after,
+:root .home-stage .home-body__rail:not(:has(.rail-island--market)) .rail-island--events::after,
+:root .home-stage .home-body__rail:not(:has(.rail-island--market, .rail-island--events)) .rail-island--activity::after,
+:root .home-stage .home-body__rail:not(:has(.rail-island--market, .rail-island--events, .rail-island--activity)) .rail-island--notices::after {
+  display: none;
+  content: none;
+}
+:root .home-stage .home-body__rail > .card {
+  padding: 1.5rem 0;
   border: 0;
   border-radius: 0;
   background: transparent;
   box-shadow: none;
 }
-:root .home-pulse .home-pulse__stat + .home-pulse__stat {
-  border-left: 1px solid var(--color-rule);
-  padding-left: 1.25rem;
+
+/* Posts remain distinct interactive entries, but with a quieter tonal surface
+   and a 12px radius instead of another heavy glass panel. Kind markers stay. */
+:root .home-stage .stream-card {
+  border-color: color-mix(in oklab, var(--color-rule) 72%, transparent);
+  border-radius: var(--radius-md);
+  background-color: color-mix(in oklab, var(--color-paper-2) 58%, transparent);
+  background-image: none;
+  box-shadow: none;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
-:root .home-pulse .home-pulse__stat dt {
-  font-family: var(--font-body);
-  font-size: .75rem;
-  font-weight: 500;
-  line-height: 1.35;
-  letter-spacing: 0;
-  text-transform: none;
-  color: var(--color-muted);
+:root .home-stage .stream-slot[data-kind='notice'] .stream-card {
+  border-color: color-mix(in oklab, var(--color-accent) 26%, var(--color-rule));
+  background-image: none;
 }
-:root .home-pulse .home-pulse__stat dd,
-:root .home-pulse .home-pulse__stat[data-empty='true'] dd {
-  font-family: var(--font-body);
-  font-size: clamp(1.6rem, 2vw, 2rem);
-  font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -.03em;
-  color: var(--color-accent-text);
-  overflow-wrap: anywhere;
+:root .home-stage .stream-slot:hover .stream-card {
+  border-color: color-mix(in oklab, var(--color-accent) 36%, var(--color-rule));
+  background-color: color-mix(in oklab, var(--color-paper-2) 76%, transparent);
+  box-shadow: none;
 }
+:root .home-stage .stream-card__glyph,
+:root .home-stage .stream-stamp,
+:root .home-stage .rail-event__day,
+:root .home-stage .rail-market__item { border-radius: var(--radius-xs); }
+:root .home-stage .stream-card .card,
+:root .home-stage .stream-card .card-flush { border-radius: var(--radius-sm); }
+
 @media (max-width: 639px) {
-  :root .home-pulse { padding: 1rem; }
-  :root .home-pulse__name { font-size: 2rem; }
+  :root .home-stage .home-pulse { padding: 0.25rem 0 1.25rem; }
+  :root .home-stage .home-pulse__name { font-size: 2.5rem; }
+  :root .home-stage .home-feed-nav { gap: 0.75rem; }
 }
-@media (prefers-reduced-motion: reduce) { :root .home-explore-link { transition: none; } }
-.home-feed-nav button { cursor: pointer; color: inherit; background: transparent; border: 0; padding: 0; }
-.home-feed-nav button.home-feed-nav__current { color: var(--color-accent-text); }
-.home-feed-nav button:disabled { cursor: not-allowed; color: var(--color-muted); }
-.home-feed-nav button:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 3px; }
