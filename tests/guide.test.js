@@ -538,14 +538,11 @@ describe('one onboarding, not two', () => {
     expect(page).toContain('<OnboardingForm storageId=');
   });
 
-  it('leaves the root route\u2019s authentication decisions alone', () => {
+  it('links from the public root to sign-in and the authenticated app', () => {
     const root = read('app/page.js');
-    expect(root).toContain("redirect('/setup')");
-    expect(root).toContain("redirect('/login')");
-    expect(root).toContain("redirect('/onboarding')");
-    expect(root).toContain('redirect(ROUTES.home)');
-    // The guide is an entrance, never the redirect target of `/`.
-    expect(root).not.toMatch(/guide/);
+    expect(root).toContain('href="/login"');
+    expect(root).toContain('href="/home"');
+    expect(root).toContain('not affiliated with, operated by, or endorsed by PCCOE or PCET');
   });
 });
 

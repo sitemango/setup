@@ -1,6 +1,6 @@
 import { listPublicClubs } from '@/lib/data/public';
 import { listPublishedEvents } from '@/lib/data/public-cache';
-import { ROUTES, CLUB_SLUG_REGEX, UUID_REGEX } from '@/lib/constants';
+import { ROUTES, DIVISIONS, CLUB_SLUG_REGEX, UUID_REGEX } from '@/lib/constants';
 import { SITE_URL } from '@/lib/seo';
 
 /**
@@ -48,6 +48,9 @@ export default async function sitemap() {
     allPages(listPublishedEvents, { allDates: true }),
   ]);
   const staticEntries = [
+    entry('/', null, 'weekly', 1),
+    entry('/timetable', null, 'weekly', 0.9),
+    ...DIVISIONS.map((division) => entry(`/timetable/${division.toLowerCase()}`, null, 'weekly', 0.8)),
     entry(ROUTES.clubs, null, 'daily', 0.9),
     entry('/campus/events', null, 'daily', 0.8),
   ];

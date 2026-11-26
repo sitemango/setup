@@ -13,6 +13,10 @@ describe('sitemap', () => {
     data.events = [event, { ...event, id: '15fe0000-0000-4000-a000-000000000002', status: 'draft' }];
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
+    expect(urls).toContain('https://pccoe.in/');
+    expect(urls).toContain('https://pccoe.in/timetable');
+    expect(urls).toContain('https://pccoe.in/timetable/o');
+    expect(urls).not.toContain('https://pccoe.in/timetable/O');
     expect(urls).toContain('https://pccoe.in/c/coding-club');
     expect(urls).toContain(`https://pccoe.in/campus/events/${event.id}`);
     expect(urls).not.toContain('https://pccoe.in/c/private-club');
@@ -25,7 +29,7 @@ describe('sitemap', () => {
     data.events = [];
     data.clubs = Array.from({ length: 501 }, (_, i) => ({ kind: 'club', status: 'published', visibility: 'public', slug: `club-${i}` }));
     const entries = await sitemap();
-    expect(entries).toHaveLength(503);
+    expect(entries).toHaveLength(523);
     expect(entries.some((entry) => entry.url.endsWith('/c/club-500'))).toBe(true);
   });
 });
