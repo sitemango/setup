@@ -6,7 +6,10 @@ import { HomeAreas, HomeCoda } from '@/components/home/HomePulse';
 import { HomeFeatureTiles } from '@/components/home/HomeFeatureTiles';
 import { Notice } from '@/components/ui';
 
-export const metadata = { title: 'Home' };
+export const metadata = {
+  title: 'Home',
+  robots: { index: false, follow: false, googleBot: { index: false, follow: false } },
+};
 
 /** Modules worth one tap from the contextual rail — real destinations. */
 const QUICK_LINKS = [

@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { clubMetadata, eventMetadata, eventDate, eventSchema, clubSchema, breadcrumbs, serializeJsonLd, absoluteUrl, SOCIAL_IMAGE } from '@/lib/seo';
 import robots from '@/app/robots';
+import nextConfig from '../next.config.mjs';
 import JsonLd from '@/components/seo/JsonLd';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
@@ -56,12 +57,20 @@ describe('production SEO', () => {
     expect(breadcrumbs([['Clubs', '/clubs']]).itemListElement[0].item).toBe('https://pccoe.in/clubs');
     expect(() => absoluteUrl('//other.example')).toThrow();
   });
+  it('sets a noindex response header on the exact private dashboard route', async () => {
+    const rules = await nextConfig.headers();
+    const home = rules.find((rule) => rule.source === '/home');
+    expect(home.headers).toContainEqual({ key: 'X-Robots-Tag', value: 'noindex, nofollow' });
+  });
   it('allows public discovery, restricts management, and never blocks assets', () => {
     const config = robots();
     expect(config.sitemap).toBe('https://pccoe.in/sitemap.xml');
     expect(config.rules[0].allow).toContain('/c/');
     expect(config.rules[0].disallow).toContain('/clubs/*/manage');
     expect(config.rules[0].disallow).toContain('/admin');
+    expect(config.rules[0].disallow).not.toContain('/home');
+    expect(config.rules[0].disallow).toContain('/home-preview');
+    expect(config.rules[0].disallow).not.toContain('/login');
     expect(config.rules[0].disallow).not.toContain('/timetable');
     expect(config.rules[0].disallow).not.toContain('/_next');
   });

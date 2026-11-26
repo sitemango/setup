@@ -538,11 +538,11 @@ describe('one onboarding, not two', () => {
     expect(page).toContain('<OnboardingForm storageId=');
   });
 
-  it('links from the public root to sign-in and the authenticated app', () => {
+  it('reuses the sign-in experience at the root', () => {
     const root = read('app/page.js');
-    expect(root).toContain('href="/login"');
-    expect(root).toContain('href="/home"');
-    expect(root).toContain('not affiliated with, operated by, or endorsed by PCCOE or PCET');
+    expect(root).toContain('<LoginPage searchParams={searchParams} />');
+    expect(root).toContain("redirect('/home')");
+    expect(read('app/login/page.js')).toContain('<IndependenceNotice');
   });
 });
 
