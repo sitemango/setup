@@ -712,8 +712,13 @@
 }
 
 /* Geist is the Home interface typeface; keep that family across every route.
-   Instrument Serif remains loaded for intentional brand treatments, not UI text. */
-h1, h2, h3,
+   Instrument Serif remains loaded for intentional brand treatments, not UI text.
+
+   The sign-in heading is the one deliberate exception. It is a display face by
+   design — the poster title set in `app/styles/login.css`, whose family must be
+   the route-owned poster face — so it is excluded here rather than fought with
+   a second `!important` later in the cascade. No other heading changes. */
+h1:not(.login-title), h2, h3,
 .t-display,
 [class*="__title"] {
   font-family: var(--font-body) !important;

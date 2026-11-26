@@ -58,8 +58,13 @@ export default async function LoginPage({ searchParams }) {
           {/* The independence label stays with the brand; the crest itself
               appears once, beside the full disclosure by the controls below. */}
           <p className="t-label mt-6">Unofficial student project</p>
+          {/* The headline is set as a poster title: one phrase per line, each
+              sized so it fills the column edge to edge (see `.login-title`).
+              The line break is explicit and the two lines stay independent
+              boxes, so "in one place" can take the warm ash falloff. */}
           <h1 className="login-title mt-3">
-            The campus, <span className="login-title-accent">in one place</span>
+            <span className="login-title-line">The campus,</span>
+            <span className="login-title-line login-title-accent">in one place</span>
           </h1>
           <span className="login-rule" aria-hidden="true" />
           <p className="t-secondary mt-3 max-w-md">

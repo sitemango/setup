@@ -56,3 +56,6 @@ yarn-error.log*
 !.vscode/extensions.json
 *.tsbuildinfo
 .eslintcache
+
+# Sandbox scratch — generated preview shots live in docs/previews/
+.arena/

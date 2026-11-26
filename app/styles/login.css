@@ -224,42 +224,154 @@
   }
 }
 
-/* Heading: the reference's display face and glowing emission. The copy is
-   unchanged; only its presentation is. */
-.login-title {
-  font-family: var(--font-display), Impact, sans-serif;
-  font-size: clamp(1.9rem, 6vw, 3rem);
+/* ── The sign-in poster title ───────────────────────────────────────────────
+   The copy is unchanged; its presentation is the poster title from the
+   supplied reference — condensed uppercase forms stacked one phrase per line,
+   each sized to nearly fill the column, the way a film title fills its card.
+
+   Sizing is measured, not eyeballed. `--login-title-fit` is the longest line's
+   advance width in ems, so `100cqw / fit` would land that line at the column's
+   full width; `--login-title-scale` then pulls the block back from the edges.
+   It is the one number to change to size the title: raise it to calm the block
+   down, lower it to push the type wider. Because `cqw` reads the login
+   column's own inline size, the block stays in proportion from a 320px phone
+   to a 512px desktop column with no per-breakpoint type scale.
+
+   Colour is the Campus+ galaxy rather than the reference's ash. Three stops,
+   the same three every atmospheric surface in the product draws from
+   (app/tokens.css): ice-blue, the page's own paper, warm sand. On top of that
+   field sits the glass — a specular band that repeats once per line, so each
+   row of caps catches the light along its own top edge, exactly as light
+   slides over a curved pane. The declaration lives on `.login-stage`, not on
+   the heading, because the rule below the title draws from the same stops.
+
+   Light theme keeps the geometry and swaps the stops for the deeper inks that
+   survive on warm paper. */
+:root .login-stage {
+  /* "THE CAMPUS," measures 4.890em of advance in this face (measured from the
+     binary, not estimated); 5.02 includes the tracking below. */
+  --login-title-fit: 5.02;
+  /* How far the block sits inside the column. 1 = edge to edge. */
+  --login-title-scale: 1.16;
+  /* The galactic stops. Light is the base; dark overrides below. */
+  --login-title-cool: var(--color-accent-text);
+  --login-title-warm: var(--color-accent-2);
+  --login-title-glint: color-mix(in oklab, #FFFFFF 34%, transparent);
+  /* Glass: ice at the top left, paper through the middle, warm sand settling
+     in at the right. */
+  --login-title-field: linear-gradient(
+    148deg,
+    var(--login-title-cool) 0%,
+    color-mix(in oklab, var(--login-title-cool) 46%, var(--login-tagline)) 30%,
+    var(--login-tagline) 54%,
+    color-mix(in oklab, var(--login-title-warm) 58%, var(--login-tagline)) 80%,
+    var(--login-title-warm) 100%
+  );
+  /* The specular pass over each row of caps — a hard highlight at the top
+     edge, a soft one behind it, and a pool of light where the pane is nearest
+     the sky. `repeat-y` is what gives every row its own highlight. */
+  --login-title-sheen:
+    linear-gradient(
+      180deg,
+      var(--login-title-glint) 0%,
+      color-mix(in oklab, var(--login-title-glint) 34%, transparent) 7%,
+      transparent 26%
+    ),
+    radial-gradient(
+      62% 46% at 18% 6%,
+      color-mix(in oklab, var(--login-title-glint) 26%, transparent) 0%,
+      transparent 70%
+    );
+}
+
+:root[data-theme='dark'] .login-stage {
+  --login-title-cool: #A8D8F7;
+  --login-title-warm: #E9C79E;
+  --login-title-glint: color-mix(in oklab, #EAF7FF 52%, transparent);
+}
+
+:root .login-stage .login-title {
+  /* The fallback keeps the condensed proportions while the face loads. */
+  font-family: var(--font-poster), 'Arial Narrow', Impact, sans-serif;
+  display: block;
+  max-width: none;
+  font-size: calc(100cqw / var(--login-title-fit) / var(--login-title-scale));
   font-weight: 400;
-  line-height: 1.14;
-  letter-spacing: -0.035em;
+  /* One weight only: never let the browser fake a bolder cut and smear the
+     already-tight counters. */
+  font-synthesis: none;
+  /* Anton's line box is tall (ascent 1.18em, descent 0.33em), so the natural
+     leading would open a canyon between the two lines. The reference stacks
+     its rows almost kerning-tight; 0.86 sets the caps (0.87em) just under one
+     another, with the comma's tail clearing the row below. */
+  line-height: 0.86;
+  letter-spacing: 0.002em;
   text-transform: uppercase;
+  text-wrap: nowrap;
+  /* The solid colour is the fallback for a browser without
+     `background-clip: text`: the words stay paper-coloured instead of
+     disappearing. */
   color: var(--login-tagline);
-  text-shadow:
-    0 0 4px color-mix(in oklab, var(--login-accent) 40%, transparent),
-    0 0 20px color-mix(in oklab, var(--login-accent) 46%, transparent),
-    0 0 44px color-mix(in oklab, var(--login-tagline) 16%, transparent);
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  /* Three layers share one surface across both lines: the two specular layers
+     repeat once per row (each row is half the block), the field runs the whole
+     block so the colour moves ice → paper → sand across both lines. */
+  background-image: var(--login-title-sheen), var(--login-title-field);
+  background-size: 100% 50%, 100% 50%, 100% 100%;
+  background-repeat: repeat-y, repeat-y, no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Glass again, outside the clip: a lit rim on every glyph edge, then the
+     ambient bloom behind the block. Both keep the letterforms' edges sharp. */
+  filter:
+    drop-shadow(0 0 1px color-mix(in oklab, var(--login-title-cool) 45%, transparent))
+    drop-shadow(0 0 26px color-mix(in oklab, var(--login-title-cool) 18%, transparent));
 }
 
-/* The last phrase keeps the same solid, measurable text treatment as the rest
-   of the tagline; only the shared scene palette changes. */
-.login-title-accent {
-  color: var(--login-tagline);
-  text-shadow: 0 0 22px color-mix(in oklab, var(--login-accent) 55%, transparent);
+/* One phrase per line. Each is its own block so the break is real content
+   (no `<br>`, no accidental wrap) and the two lines cannot reflow together. */
+:root .login-stage .login-title-line {
+  display: block;
 }
 
-:root .login-stage .login-title,
+/* The heading paints both layers for both lines; the lower phrase must not
+   start a paint layer of its own or the surface would restart at its left
+   edge. As a child of the clipped element it simply shares the surface. */
 :root .login-stage .login-title-accent {
-  color: var(--login-tagline);
+  color: transparent;
+  background-image: none;
+  -webkit-text-fill-color: transparent;
+  filter: none;
 }
 
-/* The title rule keeps its existing fade, now with ice-blue and warm ink. */
+/* The column is the container `cqw` reads. `container-type: inline-size` costs
+   no layout change: it only exposes the inline size. */
+:root .login-stage .login-intro {
+  container-type: inline-size;
+}
+
+/* The rule under the title is the poster's baseline of light. It runs most of
+   the block's measure — not all of it, so the title stays the widest element on
+   the screen — and carries the same galactic run: ice on the left, warm sand
+   closing it on the right. */
+:root .login-stage .login-rule {
+  width: min(100%, 68%);
+  margin-top: 1.1rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--login-title-cool) 78%, transparent) 0%,
+    color-mix(in oklab, var(--login-title-cool) 34%, transparent) 38%,
+    color-mix(in oklab, var(--login-title-warm) 30%, transparent) 76%,
+    transparent 100%
+  );
+  box-shadow: 0 0 20px color-mix(in oklab, var(--login-title-cool) 24%, transparent);
+}
+
+/* The rule keeps its own box; only its paint is re-aimed above. */
 .login-rule {
   display: block;
-  width: min(196px, 45vw);
   height: 1px;
-  margin-top: 1.1rem;
-  background: linear-gradient(90deg, transparent, var(--login-accent) 23%, var(--login-tagline) 50%, var(--login-accent) 77%, transparent);
-  box-shadow: 0 0 22px color-mix(in oklab, var(--login-accent) 55%, transparent);
 }
 
 /* Supporting labels take the reference's DM Mono. */
@@ -325,11 +437,6 @@
       color-mix(in oklab, var(--cp-bg-page-deep) 84%, transparent) 0%,
       transparent 86%
     );
-}
-
-/* The sign-in heading carries the identity with warm, readable type. */
-.login-title {
-  text-wrap: balance;
 }
 
 /* Colour-only reconciliation with the shared Lumen foreground rules. */

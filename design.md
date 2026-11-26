@@ -42,6 +42,8 @@ Materials resolve in this order (later wins):
 
 ## Type
 - Page and section headings: Instrument Serif 400, lowercase
+- Sign-in heading: the poster title — Anton 400 (SIL OFL, self-hosted in `app/fonts/`, loaded by `app/login/layout.js` so only `/login` preloads it), uppercase, one phrase per line, stacked at `line-height: 0.86`. The size is fitted to the column, not to breakpoints: `font-size: calc(100cqw / var(--login-title-fit) / var(--login-title-scale))` inside the login column's `container-type: inline-size`; `--login-title-scale` is the one knob for how far the block sits inside the measure (currently `1.16`, i.e. a little in from the edges)
+- Sign-in heading surface: the galactic glass. Three layers clipped to the glyphs (`background-clip: text`) share one surface across both lines — a specular glint and a light pool that repeat once per row of caps (`background-size: 100% 50%`, `background-repeat: repeat-y`), over a diagonal field of the galaxy's three stops: ice-blue `--login-title-cool`, the page's paper, warm sand `--login-title-warm`. The stops live on `.login-stage`, not on the heading, so `.login-rule` can draw the same run (custom properties do not reach a sibling). A solid paper `color` remains the fallback without clip support. The family is the single documented exception to the global `h1` → Geist rule in `app/globals.css`
 - Hero greeting: serif "Hey," over the name in locally hosted Geist 700 with a subtle ice gradient (background-clip: text) and the inline waving hand
 - Interface, labels, buttons, reading copy: Geist 400/500; figures and technical readouts: Geist Mono, tabular
 - Eyebrows: mono uppercase chips; the home stats band is the single blueprint-grid figures well
