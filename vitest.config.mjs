@@ -10,7 +10,7 @@ export default defineConfig({
   oxc: {
     lang: 'jsx',
     jsx: { runtime: 'automatic' },
-    include: /(?:components\/.*|app\/(?:onboarding|guide|timetable|\(shell\)\/\(public\)\/.*|\(shell\)\/\(app\)\/explore)\/page|app\/api\/public\/.*\/route)\.js$/,
+    include: /(?:components\/.*|app\/(?:page|(?:onboarding|guide|timetable(?:\/\[division\])?|\(shell\)\/\(public\)\/.*|\(shell\)\/\(app\)\/explore)\/page)|app\/api\/public\/.*\/route)\.js$/,
     exclude: [],
   },
   test: {

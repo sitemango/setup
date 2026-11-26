@@ -1,11 +1,14 @@
 import { getDivisionSummaries, TIMETABLE_SOURCE } from '@/lib/timetable';
 import { divisionTimetableHref } from '@/lib/timetable/meta';
+import { publicMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Class Timetables — Divisions A to R',
+export const metadata = publicMetadata({
+  title: 'PCCOE Class Timetables — Divisions A to R',
   description:
     'First-year class timetables for divisions A–R, Monday to Friday. Department AS & H, Academic Year 2026–2027, SEM-I. No sign-in needed.',
-};
+  canonical: '/timetable',
+  imageAlt: 'Campus+ class timetables',
+});
 
 /**
  * The division selector — public, static, and useful before a student even

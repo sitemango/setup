@@ -10,6 +10,7 @@ import { TimetableInstallCard, TimetableInstallSheet, TimetableOfflinePill } fro
 import { TimetableOfflineProvider } from '@/components/timetable/TimetableOfflineProvider';
 import { FlaggedNotice, WeekTable } from '@/components/timetable/TimetableViews';
 import { Icon } from '@/components/ui/icons';
+import { publicMetadata } from '@/lib/seo';
 import { Notice } from '@/components/ui/surfaces';
 
 /**
@@ -56,12 +57,15 @@ export async function generateMetadata({ params }) {
   const programme = timetable.friendly ? `${timetable.label} (${timetable.friendly})` : timetable.label;
   const sourceLabel = timetable.specialWeek ? 'the special one-week timetable' : 'the master timetable';
   return {
-    title: `Division ${timetable.division} timetable — ${programme}`,
-    description: `Monday–Friday class timetable for first-year Division ${timetable.division} (${programme}) with the live class for Asia/Kolkata time. Lectures, batch practicals, faculty and rooms as printed in ${sourceLabel}. Save it to read with no signal, or add it to your Home Screen.`,
+    ...publicMetadata({
+      title: `PCCOE Division ${timetable.division} timetable — ${programme}`,
+      canonical: divisionTimetableHref(timetable.division),
+      imageAlt: `Division ${timetable.division} timetable on Campus+`,
+      description: `Monday–Friday class timetable for first-year Division ${timetable.division} (${programme}) with the live class for Asia/Kolkata time. Lectures, batch practicals, faculty and rooms as printed in ${sourceLabel}. Save it to read with no signal, or add it to your Home Screen.`,
+    }),
     // The per-batch manifest: its `id`, `name` and `start_url` are what make
     // the installed app "Division O", not "Campus+".
     manifest: batch ? batch.manifestUrl : undefined,
-    alternates: { canonical: batch ? batch.href : undefined },
     // iOS ignores the manifest for its home-screen entry but honours these
     // three, so a Saved shortcut gets the batch's own label and no browser
     // chrome. `black-translucent` keeps the night palette under the status bar.
