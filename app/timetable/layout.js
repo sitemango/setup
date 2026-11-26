@@ -54,11 +54,16 @@ export default function TimetableLayout({ children }) {
         </Link>
       </div>
 
+      <nav aria-label="Timetable navigation" className="mt-8 flex flex-wrap gap-3 text-sm font-semibold">
+        <a href={ROUTES.timetable} className="rounded-[var(--radius-md)] border border-line px-4 py-2 text-ink hover:border-line-strong">Timetable</a>
+        <Link href="/timetable/fa-ii" className="rounded-[var(--radius-md)] border border-line px-4 py-2 text-ink hover:border-line-strong">FA-II Timetable</Link>
+      </nav>
+
       {children}
 
       <footer className="mt-14 border-t border-line pt-6">
         <p className="max-w-[75ch] text-[0.8125rem] leading-relaxed text-muted">
-          Source: {source.title} — {source.department}, Academic Year{' '}
+          Class timetable source: {source.title} — {source.department}, Academic Year{' '}
           {source.academicYear}, {source.semester} ({source.fileTitle}). Subject
           codes, batch splits, faculty initials and room numbers are reproduced as printed; where the timetable
           changes, official department notices prevail over this page.

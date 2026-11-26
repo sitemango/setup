@@ -1529,3 +1529,46 @@
     }
   }
 }
+
+/* FA-II: a distinct, raised schedule island without changing the page backdrop. */
+.fa-island {
+  padding: clamp(1.1rem, 3vw, 2rem);
+  border: 1px solid color-mix(in oklab, var(--color-accent) 30%, var(--color-rule));
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, color-mix(in oklab, var(--color-paper-2) 91%, var(--color-accent)), var(--color-paper-2) 55%);
+  box-shadow: 0 22px 55px -25px rgb(0 0 0 / .4), 0 2px 10px rgb(0 0 0 / .08), inset 0 1px 0 color-mix(in oklab, var(--color-ink) 8%, transparent);
+}
+.fa-island__heading { display: flex; align-items: flex-start; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.fa-island__eyebrow { color: var(--color-accent-text); font-size: .7rem; font-weight: 750; letter-spacing: .12em; }
+.fa-island__title { margin-top: .35rem; color: var(--color-ink); font-size: clamp(1.4rem, 2.5vw, 1.8rem); font-weight: 700; letter-spacing: -.025em; }
+.fa-island__description { margin-top: .35rem; color: var(--color-ink-2); font-size: .875rem; }
+.fa-island__date { border: 1px solid color-mix(in oklab, var(--color-accent) 35%, var(--color-rule)); border-radius: 999px; padding: .4rem .75rem; color: var(--color-ink-2); background: color-mix(in oklab, var(--color-accent) 10%, var(--color-paper-2)); font-size: .7rem; font-weight: 700; letter-spacing: .06em; white-space: nowrap; }
+.fa-filters { display: flex; flex-wrap: wrap; gap: 1rem; }
+.fa-filters label { display: grid; gap: .45rem; color: var(--color-ink-2); font-size: .8125rem; font-weight: 650; flex: 1 1 15rem; max-width: 25rem; }
+.fa-filters select { width: 100%; min-height: 2.85rem; padding: .5rem .75rem; border: 1px solid var(--color-rule); border-radius: .75rem; background: var(--color-paper); color: var(--color-ink); }
+.fa-filters select:focus-visible { outline: 2px solid var(--color-focus); outline-offset: 2px; }
+.fa-filters select:disabled { opacity: .6; }
+.fa-empty { padding: 1.25rem; border: 1px dashed var(--color-rule); border-radius: 1rem; background: var(--color-paper); color: var(--color-ink-2); }
+.fa-table-wrap { overflow-x: auto; border: 1px solid var(--color-rule); border-radius: 1rem; background: var(--color-paper); }
+.fa-table { width: 100%; border-collapse: collapse; text-align: left; color: var(--color-ink); }
+.fa-table caption { padding: 1rem 1.15rem; text-align: left; font-weight: 700; background: color-mix(in oklab, var(--color-accent) 13%, var(--color-paper)); border-bottom: 1px solid var(--color-rule); }
+.fa-table th, .fa-table td { padding: 1rem .85rem; border-bottom: 1px solid var(--color-rule); vertical-align: top; }
+.fa-table th { color: var(--color-ink-2); background: color-mix(in oklab, var(--color-paper-2) 65%, var(--color-paper)); font-size: .75rem; font-weight: 700; }
+.fa-table tbody tr:last-child td { border-bottom: 0; }
+.fa-table tbody tr:nth-child(even) { background: color-mix(in oklab, var(--color-paper-2) 38%, var(--color-paper)); }
+.fa-table tbody td:nth-child(2) { font-weight: 650; }
+.fa-table tbody td:first-child { color: var(--color-accent-text); font-weight: 700; }
+@media (max-width: 640px) {
+  .fa-island { border-radius: 1.1rem; }
+  .fa-filters label { max-width: none; }
+  .fa-table-wrap { padding: .75rem; }
+  .fa-table, .fa-table tbody, .fa-table tr, .fa-table td { display: block; }
+  .fa-table caption { display: block; margin: -.75rem -.75rem .75rem; padding: 1rem; }
+  .fa-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .fa-table tbody tr, .fa-table tbody tr:nth-child(even) { border: 1px solid var(--color-rule); border-left: 3px solid var(--color-accent); border-radius: .75rem; margin-bottom: .75rem; padding: .5rem .75rem; background: var(--color-paper-2); }
+  .fa-table tbody tr:last-child { margin-bottom: 0; }
+  .fa-table td { display: grid; grid-template-columns: minmax(7rem, 40%) 1fr; gap: .5rem; padding: .45rem 0; overflow-wrap: anywhere; }
+  .fa-table td::before { content: attr(data-label); color: var(--color-ink-2); font-size: .75rem; font-weight: 600; }
+  .fa-table tbody tr td { border-bottom: 1px solid var(--color-rule); }
+  .fa-table tbody tr td:last-child { border-bottom: 0; }
+}
