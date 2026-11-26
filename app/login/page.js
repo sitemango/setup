@@ -12,6 +12,7 @@ import { LoginForm } from '@/components/auth/LoginForm';
 import { GhostScene } from '@/components/atmosphere/GhostScene';
 
 export const metadata = { title: 'Sign in' };
+export const dynamic = 'force-dynamic';
 
 /**
  * Sign-in (spec §7). Google OAuth only: the student picks their institutional

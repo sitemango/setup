@@ -226,8 +226,12 @@ export async function proxy(request) {
     return NextResponse.redirect(target);
   }
 
-  if (signedIn && pathname === '/login') {
-    return NextResponse.redirect(new URL('/home', request.url));
+  // Use an HTTP redirect before rendering on both entry URLs. The dashboard
+  // performs the full account, onboarding and authorization checks.
+  if (signedIn && (pathname === '/' || pathname === '/login')) {
+    const redirect = NextResponse.redirect(new URL('/home', request.url));
+    redirect.headers.set('Cache-Control', 'private, no-store, max-age=0');
+    return redirect;
   }
 
   return response;

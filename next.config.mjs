@@ -45,6 +45,8 @@ const nextConfig = {
     }
     return [
       { source: '/:path*', headers },
+      // Reinforce the private dashboard's noindex even on its guest redirect.
+      { source: '/home', headers: [{ key: 'X-Robots-Tag', value: 'noindex, nofollow' }] },
       // A service worker may only control paths at or above its own directory
       // unless the response says otherwise. The timetable worker lives at
       // /timetable/sw.js — beside the pages it exists for, so it needs no

@@ -1,4 +1,6 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+vi.mock('@/app/login/page', () => ({ default: () => null }));
+vi.mock('@/app/login/layout', () => ({ default: ({ children }) => children }));
 import { metadata as homeMetadata } from '@/app/page';
 import { metadata as timetableMetadata } from '@/app/timetable/page';
 import { generateMetadata } from '@/app/timetable/[division]/page';

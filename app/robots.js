@@ -9,6 +9,9 @@ import { SITE_URL } from '@/lib/seo';
  * routes are disallowed explicitly, even though they are already behind auth.
  */
 export default function robots() {
+  // /home redirects guests to /login, and both need to be crawlable so
+  // crawlers can see the redirect and the sign-in page’s noindex directive.
+  // Neither robots.txt nor noindex protects private data; auth does.
   return {
     rules: [
       {
@@ -16,7 +19,8 @@ export default function robots() {
         allow: ['/clubs', '/c/', '/campus/events', '/api/public/club-image/', '/api/public/event-image/'],
         disallow: [
           '/api/',
-          '/home',
+          '/home/',
+          '/home-preview',
           '/chat',
           '/admin',
           '/moderator',
@@ -30,7 +34,6 @@ export default function robots() {
           '/communities',
           '/explore',
           '/auth/',
-          '/login',
           '/setup',
           '/campus/housing',
           '/campus/lost-found',

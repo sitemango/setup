@@ -14,6 +14,8 @@ describe('sitemap', () => {
     const entries = await sitemap();
     const urls = entries.map((entry) => entry.url);
     expect(urls).toContain('https://pccoe.in/');
+    expect(urls).not.toContain('https://pccoe.in/home');
+    expect(urls).not.toContain('https://pccoe.in/login');
     expect(urls).toContain('https://pccoe.in/timetable');
     expect(urls).toContain('https://pccoe.in/timetable/o');
     expect(urls).not.toContain('https://pccoe.in/timetable/O');
