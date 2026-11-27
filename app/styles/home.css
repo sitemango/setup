@@ -791,28 +791,6 @@
   filter: blur(18px);
 }
 
-.home-composer__label {
-  display: flex;
-  align-items: center;
-  gap: var(--space-xs);
-  margin-bottom: var(--space-sm);
-  font-family: var(--font-body);
-  font-size: var(--text-xs);
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-  color: var(--cp-text-muted);
-}
-
-.home-composer__label::before {
-  content: '';
-  width: 0.3125rem;
-  height: 0.3125rem;
-  border-radius: 999px;
-  background-color: var(--cp-accent-cyan);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--cp-accent-cyan) 16%, transparent);
-}
-
 /* --------------------------------------------------------------------------
    THE STREAM
    --------------------------------------------------------------------------
@@ -1576,18 +1554,4 @@
   }
 }
 
-/* On phones the composer label and its description compete for one row and the
-   description wraps into a stub two-line block above the dock. The description
-   is supplementary, so narrow screens keep only the primary label and the
-   leading dot. */
-@media (max-width: 639px) {
-  .home-composer__label {
-    flex-wrap: wrap;
-    gap: 0.375rem;
-  }
 
-  .home-composer__label > span[aria-hidden='true'],
-  .home-composer__label > .text-muted-soft {
-    display: none;
-  }
-}

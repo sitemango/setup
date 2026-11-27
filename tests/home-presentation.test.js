@@ -21,7 +21,7 @@ const render = (props = {}) => renderToStaticMarkup(React.createElement(HomePuls
 }));
 
 describe('Home presentation refinement', () => {
-  it('renders a compact personalized introduction without academic data or decoration', () => {
+  it('renders a compact personalized introduction with a waving hand beside the name', () => {
     const html = render();
     expect(html).toContain('aria-labelledby="home-greeting"');
     expect(html).toContain('PCCOE · CAMPUS FEED');
@@ -29,7 +29,7 @@ describe('Home presentation refinement', () => {
     expect(html).toContain('title="Yash">Yash.</span>');
     expect(html).toContain('Here&#x27;s what&#x27;s happening around campus today.');
     expect(html).not.toContain('Computer Engineering');
-    expect(html).not.toContain('Wave hello');
+    expect(html).toContain('Wave hello');
     expect(html).not.toContain('Explore campus');
     expect(html).not.toContain('home-pulse__spark');
   });

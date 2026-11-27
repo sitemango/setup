@@ -1379,7 +1379,6 @@
   background-image: none;
 }
 
-:root .home-composer__label::before,
 :root .rail-event::before {
   box-shadow: none;
 }

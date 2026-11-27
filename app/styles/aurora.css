@@ -1070,11 +1070,6 @@ html::-webkit-scrollbar-corner, body::-webkit-scrollbar-corner {
   filter: blur(18px);
 }
 
-:root .home-composer__label::before {
-  background-color: var(--color-accent);
-  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-accent) 16%, transparent), 0 0 10px -2px var(--glow-accent);
-}
-
 /* --------------------------------------------------------------------------
    8. The rail — islands with elevation, rim light and toned edges
    -------------------------------------------------------------------------- */
