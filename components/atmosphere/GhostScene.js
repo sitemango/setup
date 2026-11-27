@@ -15,7 +15,6 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { probeGhostWebGL } from '@/components/atmosphere/ghost/probe';
 
 const GHOST_PATH =
   'm508.374 432.802s-46.6-39.038-79.495-275.781c-8.833-87.68-82.856-156.139-172.879-156.139-90.015 0-164.046 68.458-172.879 156.138-32.895 236.743-79.495 275.782-79.495 275.782-15.107 25.181 20.733 28.178 38.699 27.94 35.254-.478 35.254 40.294 70.516 40.294 35.254 0 35.254-35.261 70.508-35.261s37.396 45.343 72.65 45.343 37.389-45.343 72.651-45.343c35.254 0 35.254 35.261 70.508 35.261s35.27-40.772 70.524-40.294c17.959.238 53.798-2.76 38.692-27.94z';
@@ -66,72 +65,32 @@ export function GhostScene({ className = '', placement = 'login' }) {
 
     let cancelled = false;
     let dispose = null;
-    let idleId = null;
-    let timerId = null;
-    let scheduled = false;
-    let started = false;
-    let probe = null;
+    const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
 
-    // Let the form hydrate and paint first. A software WebGL renderer can
-    // synchronously compile the bloom shaders for many seconds, so use the
-    // existing animated SVG fallback there instead of blocking sign-in.
-    function initialize() {
-      scheduled = false;
-      if (cancelled || document.hidden) return;
-      started = true;
-      probe = probeGhostWebGL();
-      probe.result.then((available) => {
+    import('./ghost/createGhostScene')
+      .then(({ createGhostScene, webglAvailable }) => {
         if (cancelled) return;
-        if (document.hidden) { started = false; return; }
-        if (!available) {
+        if (!webglAvailable()) {
           setMode('fallback');
           return;
         }
-        const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)').matches ?? false;
-        return import('./ghost/createGhostScene')
-          .then(({ createGhostScene }) => {
-            if (cancelled) return;
-            if (document.hidden) { started = false; return; }
-            try {
-              dispose = createGhostScene(container, { reducedMotion, placement });
-              setMode('webgl');
-            } catch (error) {
-              container.querySelectorAll('canvas').forEach((canvas) => canvas.remove());
-              console.error('[Campus+] Ghost scene unavailable; showing the static ghost.', error);
-              setMode('fallback');
-            }
-          });
-      }).catch((error) => {
+        try {
+          dispose = createGhostScene(container, { reducedMotion, placement });
+          setMode('webgl');
+        } catch (error) {
+          // Remove any half-built canvas so only the static ghost remains.
+          container.querySelectorAll('canvas').forEach((canvas) => canvas.remove());
+          console.error('[Campus+] Ghost scene unavailable; showing the static ghost.', error);
+          setMode('fallback');
+        }
+      })
+      .catch((error) => {
         console.error('[Campus+] Ghost scene failed to load; showing the static ghost.', error);
         if (!cancelled) setMode('fallback');
       });
-    }
-
-    function schedule() {
-      if (cancelled || scheduled || started || document.hidden) return;
-      scheduled = true;
-      // A short delay ensures the initial form is interactive before probing.
-      timerId = window.setTimeout(() => {
-        timerId = null;
-        if (typeof window.requestIdleCallback === 'function') {
-          idleId = window.requestIdleCallback(initialize, { timeout: 2000 });
-        } else {
-          initialize();
-        }
-      }, 500);
-    }
-    function onVisibility() {
-      if (!document.hidden) schedule();
-    }
-    document.addEventListener('visibilitychange', onVisibility);
-    schedule();
 
     return () => {
       cancelled = true;
-      document.removeEventListener('visibilitychange', onVisibility);
-      if (timerId !== null) window.clearTimeout(timerId);
-      if (idleId !== null) window.cancelIdleCallback?.(idleId);
-      probe?.cancel();
       dispose?.();
     };
   }, [placement]);
@@ -143,7 +102,7 @@ export function GhostScene({ className = '', placement = 'login' }) {
       data-state={mode}
       aria-hidden="true"
     >
-      {mode !== 'webgl' ? <GhostFallback /> : null}
+      {mode === 'fallback' ? <GhostFallback /> : null}
     </div>
   );
 }
