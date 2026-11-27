@@ -141,7 +141,8 @@ export function createGhostScene(container, { reducedMotion = false, placement =
      spread tight so the glow stays around the ghost instead of washing the sky. */
   const bloomPass = new UnrealBloomPass(new THREE.Vector2(width, height), 0.52, 0.58, 0.34);
   composer.addPass(bloomPass);
-  composer.addPass(new OutputPass());
+  const outputPass = new OutputPass();
+  composer.addPass(outputPass);
 
   const disposables = [];
   const track = (resource) => {
@@ -349,16 +350,25 @@ export function createGhostScene(container, { reducedMotion = false, placement =
   window.addEventListener('touchmove', onTouchMove, { passive: true });
 
   // Resize follows the container, which fills the login stage.
+  let previousWidth = width;
+  let previousHeight = height;
+  let previousRatio = pixelRatio();
   const resize = () => {
     const next = size();
+    const ratio = pixelRatio();
+    if (next.width === previousWidth && next.height === previousHeight && ratio === previousRatio) return;
     camera.aspect = next.width / next.height;
     camera.updateProjectionMatrix();
-    renderer.setPixelRatio(pixelRatio());
+    if (ratio !== previousRatio) {
+      renderer.setPixelRatio(ratio);
+      composer.setPixelRatio(ratio);
+    }
     renderer.setSize(next.width, next.height, false);
-    composer.setPixelRatio(pixelRatio());
     composer.setSize(next.width, next.height);
-    bloomPass.setSize(next.width, next.height);
-    if (reducedMotion) renderer.render(scene, camera);
+    previousWidth = next.width;
+    previousHeight = next.height;
+    previousRatio = ratio;
+    if (reducedMotion) composer.render();
   };
   const observer = typeof ResizeObserver !== 'undefined' ? new ResizeObserver(resize) : null;
   observer?.observe(container);
@@ -369,6 +379,7 @@ export function createGhostScene(container, { reducedMotion = false, placement =
   let elapsed = 0;
   let eyeEnergy = 0.1;
   let running = false;
+  let inView = true;
   const startPosition = new THREE.Vector3();
 
   function step(now) {
@@ -452,7 +463,7 @@ export function createGhostScene(container, { reducedMotion = false, placement =
   }
 
   function start() {
-    if (running || reducedMotion || document.hidden) return;
+    if (running || reducedMotion || document.hidden || !inView) return;
     running = true;
     lastFrame = performance.now();
     frameId = requestAnimationFrame(loop);
@@ -465,6 +476,14 @@ export function createGhostScene(container, { reducedMotion = false, placement =
 
   const onVisibility = () => (document.hidden ? stop() : start());
   document.addEventListener('visibilitychange', onVisibility);
+  const visibilityObserver = typeof IntersectionObserver !== 'undefined'
+    ? new IntersectionObserver(([entry]) => {
+        inView = entry.isIntersecting;
+        if (inView) start();
+        else stop();
+      })
+    : null;
+  visibilityObserver?.observe(container);
 
   // Position the onboarding ghost before the still frame as well as animation.
   if (placement === 'onboarding') {
@@ -492,7 +511,10 @@ export function createGhostScene(container, { reducedMotion = false, placement =
     window.removeEventListener('touchstart', onTouchMove);
     window.removeEventListener('touchmove', onTouchMove);
     observer?.disconnect();
+    visibilityObserver?.disconnect();
     disposables.forEach((resource) => resource.dispose?.());
+    bloomPass.dispose();
+    outputPass.dispose();
     composer.dispose();
     renderer.dispose();
     renderer.forceContextLoss?.();

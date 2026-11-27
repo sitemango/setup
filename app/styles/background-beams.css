@@ -30,19 +30,17 @@
   transition: opacity var(--dur-panel, 320ms) var(--ease-out, ease-out);
 }
 
+/* Keep the same coloured glints, but pulse their opacity instead of
+   repainting every SVG path by animating stroke-dashoffset. */
 .background-beams__trail {
   stroke-dasharray: 0.18 0.82;
   stroke-dashoffset: 1.2;
-  animation: background-beam-travel var(--beam-dur, 14s) linear var(--beam-delay, 0s) infinite;
+  animation: background-beam-glimmer var(--beam-dur, 14s) ease-in-out var(--beam-delay, 0s) infinite;
 }
 
-@keyframes background-beam-travel {
-  0% {
-    stroke-dashoffset: 1.2;
-  }
-  100% {
-    stroke-dashoffset: -0.2;
-  }
+@keyframes background-beam-glimmer {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {

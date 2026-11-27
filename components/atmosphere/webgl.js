@@ -11,15 +11,21 @@
  * further by simply asking.
  */
 
-export function webglAvailable() {
+export function webglAvailable({ requireHardware = false } = {}) {
   try {
     const probe = document.createElement('canvas');
-    const context = probe.getContext('webgl2') || probe.getContext('webgl');
+    const options = requireHardware ? { failIfMajorPerformanceCaveat: true } : undefined;
+    const context = probe.getContext('webgl2', options) || probe.getContext('webgl', options);
     if (!context) return false;
     // Release the probe context straight away (best effort — the call is
     // optional in the spec and absent in some older browsers).
+    // Software rasterizers can block the main thread for seconds compiling the
+    // ghost's shaders. Do not penalize devices whose renderer cannot be identified.
+    const debug = requireHardware && context.getExtension?.('WEBGL_debug_renderer_info');
+    const renderer = debug ? context.getParameter(debug.UNMASKED_RENDERER_WEBGL) : '';
+    const software = /swiftshader|llvmpipe|softpipe|software rasterizer/i.test(renderer || '');
     context.getExtension?.('WEBGL_lose_context')?.loseContext?.();
-    return true;
+    return !software;
   } catch {
     return false;
   }
