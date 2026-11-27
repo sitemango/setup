@@ -67,7 +67,6 @@ const TARGETS = [
   { name: 'stat values', selector: '.home-pulse__stat dd', min: 4.5 },
   { name: 'zone title', selector: '.home-zone__title', min: 4.5 },
   { name: 'zone note', selector: '.home-zone__note', min: 4.5 },
-  { name: 'composer label', selector: '.home-composer__label', min: 4.5 },
   { name: 'rail eyebrow', selector: '.island__eyebrow', min: 4.5 },
   { name: 'rail note', selector: '.island__note', min: 4.5 },
 ];

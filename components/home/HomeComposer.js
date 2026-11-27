@@ -27,8 +27,6 @@ export function HomeComposer({ canPost = true, authorName, authorUsername, onCre
   }, [compose, canPost]);
   return (
     <div className="home-composer" ref={root}>
-      <p className="home-composer__label">New on campus <span aria-hidden="true">·</span> <span className="text-muted-soft">Posts, discussions and polls</span></p>
-      {canPost ? <p className="mb-2 text-xs text-muted">Published Home posts can be read by all signed-in Campus+ users, including visitors.</p> : null}
       {!canPost ? <Notice tone="neutral" icon="lock">Your account cannot publish posts right now.</Notice> : (
         <PostComposer authorName={authorName} authorUsername={authorUsername} onCreated={onCreated} defaultKind={requestedKind?.kind || 'post'} requestedKind={requestedKind} />
       )}

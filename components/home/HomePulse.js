@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { ROUTES } from '@/lib/constants';
 import { Icon } from '@/components/ui/icons';
 import { AnimatedStat } from '@/components/home/AnimatedStat';
+import { HandWave } from '@/components/home/HandWave';
 
 /**
  * The threshold combines the personalized greeting with campus shortcuts.
@@ -36,6 +37,7 @@ export function HomePulse({ user, stats = [], children }) {
             <span className="home-pulse__greet">Hey,</span>{' '}
             <span className="home-pulse__name">
               <span className="home-pulse__name-text" title={name}>{name}.</span>
+              <HandWave />
             </span>
           </h1>
           <p className="home-pulse__lead">Here&apos;s what&apos;s happening around campus today.</p>
