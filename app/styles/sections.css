@@ -473,6 +473,15 @@
     line-height: 1;
   }
 
+  /* A configured club logo: a circle-cropped mark served through Campus+. The
+     companion onError fallback is the ClubMonogram above. */
+  .club-logo {
+    display: inline-block;
+    flex-shrink: 0;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
   .club-hero {
     position: relative;
     overflow: hidden;
