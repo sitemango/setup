@@ -19,10 +19,10 @@ vi.mock('@/lib/clubs/logos', () => ({
   CLUB_LOGO_SLUGS: Object.keys(LOGOS.fixture),
   isClubLogoSlug: (slug) => typeof slug === 'string' && slug in LOGOS.fixture,
   clubLogoFileId: (slug) => (typeof slug === 'string' ? LOGOS.fixture[slug] || null : null),
-  clubLogoSrc: (slug) => (typeof slug === 'string' && LOGOS.fixture[slug] ? `/api/public/club-logo/${slug}` : null),
+  clubLogoSrc: (slug) => (typeof slug === 'string' && LOGOS.fixture[slug] ? `https://lh3.googleusercontent.com/d/${LOGOS.fixture[slug]}=w256` : null),
   clubLogoSrcFromMap: (map, slug) => {
     const id = map[slug];
-    return typeof id === 'string' && /^[A-Za-z0-9_-]{10,200}$/.test(id) ? `/api/public/club-logo/${slug}` : null;
+    return typeof id === 'string' && /^[A-Za-z0-9_-]{10,200}$/.test(id) ? `https://lh3.googleusercontent.com/d/${id}=w256` : null;
   },
 }));
 
@@ -61,14 +61,14 @@ beforeEach(() => {
 describe('club logo slug table', () => {
   it('maps a configured slug to the Campus+ URL and an unknown/empty/malformed one to null', async () => {
     const real = await vi.importActual('@/lib/clubs/logos');
-    expect(real.clubLogoSrcFromMap({ 'team-ambush': 'A'.repeat(28) }, 'team-ambush')).toBe('/api/public/club-logo/team-ambush');
+    expect(real.clubLogoSrcFromMap({ 'team-ambush': 'A'.repeat(28) }, 'team-ambush')).toBe(`https://lh3.googleusercontent.com/d/${'A'.repeat(28)}=w256`);
     expect(real.clubLogoSrcFromMap({ 'team-ambush': '' }, 'team-ambush')).toBeNull();
     expect(real.clubLogoSrcFromMap({ 'team-ambush': 'not id!' }, 'team-ambush')).toBeNull();
     expect(real.clubLogoSrcFromMap({}, 'team-ambush')).toBeNull();
     // Every wired ID is well-formed; clubLogoSrc only emits same-origin paths.
     for (const [slug, id] of Object.entries(real.CLUB_LOGO_FILES)) {
       expect(id === '' || /^[A-Za-z0-9_-]{10,200}$/.test(id), `file ID for ${slug} must be empty or well-formed`).toBe(true);
-      if (id) expect(real.clubLogoSrc(slug)).toBe(`/api/public/club-logo/${slug}`);
+      if (id) expect(real.clubLogoSrc(slug)).toBe(`https://lh3.googleusercontent.com/d/${id}=w256`);
     }
   });
 
@@ -144,9 +144,9 @@ describe('ClubLogo component', () => {
   });
 
   it('renders the streamed logo when configured', () => {
-    const html = renderToStaticMarkup(React.createElement(ClubLogo, { src: '/api/public/club-logo/ciergate', name: 'Cyber Gate', id: 'x', size: 58 }));
+    const html = renderToStaticMarkup(React.createElement(ClubLogo, { src: 'https://lh3.googleusercontent.com/d/fixture=w256', name: 'Cyber Gate', id: 'x', size: 58 }));
     expect(html).toContain('<img');
-    expect(html).toContain('src="/api/public/club-logo/ciergate"');
+    expect(html).toContain('src="https://lh3.googleusercontent.com/d/fixture=w256"');
   });
 });
 
@@ -171,7 +171,7 @@ describe('ClubCard', () => {
 
   it('renders the configured logo image for a listed club', () => {
     const html = renderToStaticMarkup(React.createElement(ClubCard, { club }));
-    expect(html).toContain('/api/public/club-logo/ciergate');
+    expect(html).toContain('https://lh3.googleusercontent.com/d/');
   });
 
   it('renders the monogram for a club with no configured logo', () => {

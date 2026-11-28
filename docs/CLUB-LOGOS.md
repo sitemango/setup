@@ -1,40 +1,29 @@
-# Club logos — registration runbook
+# Club logos — public Drive thumbnails
 
 The clubs directory (`/clubs`) and each club's public page (`/c/<slug>`) show a
 club's official mark, falling back to the deterministic `ClubMonogram` (initials
-on a brand-safe gradient) for any club without one, or whenever the mark
-cannot be served. Nothing about the fallback is an error state.
+on a brand-safe gradient) for any club without one, or whenever the thumbnail
+cannot be loaded. Nothing about the fallback is an error state.
 
-## The model, briefly
+## How delivery works
 
-- The logos are **platform assets**, not user content. They are registered once
-  by the platform operator and reviewed like the catalogue itself.
-- Files are registered **through the same private Apps Script gateway as every
-  other Campus+ upload** (`upload_v3` — see `integrations/google-apps-script/Code.gs`).
-  They land in the private `Campus+ Uploads` Drive folder, are **not shared**,
-  and no "anyone with the link" or public Drive URL is ever needed.
-- The public site serves each mark through **one same-origin endpoint**,
-  `GET /api/public/club-logo/<slug>`, which resolves the slug → Drive file ID
-  from a code-side table (`lib/clubs/logos.js`), reads the bytes through the
-  server-only gateway (`metadata` + checksum-verified `download`), and streams
-  them with a strong ETag (the SHA-256 of the bytes) and
-  `Cache-Control: public, max-age=0, must-revalidate`. A 100 KB JPEG is
-  revalidated as a 304, never re-downloaded, until it changes.
-- The Drive file ID **never reaches the browser**. There is no feature flag
-  and no database column; nothing user-supplied can make the gateway read an
-  arbitrary file. The gateway only serves `campus-upload-v3-*` files from the
-  storage folder, which is why the marks must be registered through it rather
-  than uploaded by hand.
-- Clubs are public pages, so the marks are public assets (like the OG images
-  from `app/api/public/club-image`). They carry no personal data; serving
-  them without a session is deliberate.
+The 17 marks are hosted as **public Drive files** (shared *anyone with the
+link — viewer*) and referenced from `<img>` tags directly via Google's CDN:
 
-> **Why not just use the Drive links?** The gateway only streams files that
-> live in the Campus+ storage folder under its `campus-upload-v3-*` naming, so
-> files uploaded to an arbitrary Drive folder cannot be served by the site.
-> The direct-upload copies made on 2026-11-28 are therefore not referenced by
-> the app and can be moved or deleted; registering via the command below
-> creates fresh, gateway-servable copies and IDs.
+```
+https://lh3.googleusercontent.com/d/<FILE_ID>=w256
+```
+
+No application server is in the image path: nothing to run, no environment
+variables, no upload step, and the monogram fallback covers every failure
+mode. The file IDs live in a code-side table (`lib/clubs/logos.js`) — the
+IDs are not secrets (the files are public by design), but keeping them in one
+reviewed table means a mark can be swapped or flipped to the monogram with a
+one-line change.
+
+The images are ≤ 100 KB JPEGs at ~1280 px; the `=w256` suffix asks Google for
+a 256 px thumbnail, which stays sharp at the 58 px (card) and 64 px (hero)
+render sizes even on 2× screens.
 
 ## The 17 marks
 
@@ -56,64 +45,47 @@ cannot be served. Nothing about the fallback is an error state.
 | `11.28.40 (1).jpeg` | `team-anantam` — Team Anantam |
 | `11.28.40 (2).jpeg` | `team-kratos-racing-electric` — Kratos Racing |
 | `11.28.40.jpeg` | `team-automatons` — Team Automatons |
-| `11.28.41.jpeg` | `team-maverick-india` — Team Maverick |
+| `11.28.41.jpeg` | `team-maverick-india` — Team Maverick *(ID pending — file not shared yet)* |
 
-The filenames above are the exact names of the JPEGs as uploaded on
-2026-11-28; every row was verified against the image contents. The registration
-script maps **file name → slug** exactly as listed here and aborts before
-uploading anything if a file is missing or fails its JPEG signature check.
+File-name → slug was verified image-by-image in the 2026-11-28 review. The
+Drive ID for each mark was recorded from the operator's public-link sharing
+pass the same day (`name-descending` order of the `WhatsApp Image…` files
+matches the pasted link order exactly).
 
-## Registering (one command)
+## Adding or replacing a mark
 
-Prerequisites:
+- **New or replacement file**: upload the JPEG to Drive, share it *anyone with
+  the link — viewer*, copy the ID from `https://drive.google.com/file/d/<ID>/view`,
+  paste it into the matching entry in `lib/clubs/logos.js`, deploy.
+- **Replacing in place** (same Drive file): *Manage versions → Upload new
+  version* — the ID is unchanged and the new mark appears on next load.
+- **Flipping a club back to the monogram**: empty the entry in the table and
+  deploy. No migration, no deletion.
+- **Never** hotlink anything but `lh3.googleusercontent.com` (or
+  `drive.google.com/thumbnail?id=<ID>&sz=w256` as an equivalent fallback) —
+  mixed content and unreliable viewers aside, other hosts are unreviewed
+  change surfaces.
 
-- The 17 files, with the exact names above, in one folder on your machine.
-- `GOOGLE_APPS_SCRIPT_URL` and `GOOGLE_APPS_SCRIPT_SHARED_SECRET` in the
-  environment or in `.env.local` (the same values already used by Campus+
-  storage; the deployed Apps Script stays as-is — no redeploy needed).
-- The existing storage integration working (the script calls the same
-  signed `upload_v3` operation profile photos use).
+## Private delivery (alternative, not currently wired)
 
-```bash
-# 1. Preflight only — validates presence, size and JPEG signatures. Uploads nothing.
-npm run club-logos:register -- --from /path/to/folder
+The repository still carries `/api/public/club-logo/[slug]` — a same-origin,
+server-only endpoint that streams bytes from the private Campus+ storage
+gateway (`upload_v3`-registered files only, checksum-verified, ETag/304),
+and `npm run club-logos:register` (`scripts/register-club-logos.mjs`) which
+registers a folder of marks through that gateway instead of sharing them
+publicly. To switch to that model (e.g. if a mark becomes non-public):
 
-# 2. Apply — uploads the 17 marks sequentially and rewrites lib/clubs/logos.js atomically.
-npm run club-logos:register -- --from /path/to/folder --apply
-```
+1. `npm run club-logos:register -- --from /folder/with/the/17/jpegs --apply`
+2. Point `clubLogoSrc` in `lib/clubs/logos.js` at
+   `/api/public/club-logo/<slug>` again (the route and its tests were kept
+   deliberately).
+3. Keep `GOOGLE_APPS_SCRIPT_URL` and `GOOGLE_APPS_SCRIPT_SHARED_SECRET` set
+   in Vercel (they already are — the rest of Campus+ storage uses them).
 
-What `--apply` does, in order:
-
-1. Validates all 17 files locally; aborts **before any upload** on the first problem.
-2. Uploads each file with a fresh v3 key. If any upload fails it stops and
-   prints the IDs that were already uploaded (the table is left untouched), so
-   a re-run or a manual fix can account for every file.
-3. Rewrites only the 17 ID strings in `lib/clubs/logos.js` (atomic
-   write-then-rename) and verifies the result before saving.
-
-Then:
-
-4. `git diff lib/clubs/logos.js` — you should see 17 one-line ID changes.
-5. Commit and deploy. On Vercel, `GOOGLE_APPS_SCRIPT_URL` and
-   `GOOGLE_APPS_SCRIPT_SHARED_SECRET` must be set for the endpoint to stream.
-   Any failure — missing env, unreachable gateway, replaced file with a
-   mismatched checksum — degrades to the monogram, never to a broken `<img>`.
-6. Smoke-test after deploy: `curl -i https://<host>/api/public/club-logo/team-automatons`
-   should return `200 image/jpeg` (or 304 on revalidation).
-
-## Notes
-
-- **Replacing a logo**: right-click → *Manage versions* → *Upload new version*
-  on the registered Drive file keeps the ID — the next revalidation serves the
-  new mark automatically. Re-running the registration script creates **new**
-  IDs and rewrites the table.
-- **Freshness**: browsers revalidate every load (the ETag answers 304); the
-  server keeps the verified bytes for 5 minutes per process, so a swap may
-  take up to 5 minutes to appear everywhere.
-- **Flipping a club off its logo**: empty the entry — no migration, no
-  deletion, deploy, and the club is back on its monogram.
-- The images are ≤ 100 KB JPEGs; the gateway enforces the storage layer's
-  3 MiB cap and image-only MIME types. Never register non-image files.
+The trade-off is explicit: public thumbnails need no infrastructure and no
+env vars, but the files are world-viewable via an opaque URL; private
+delivery keeps the bytes off Google's public endpoints at the cost of one
+gateway round-trip per cold render.
 
 ## MLSC is not in the catalogue yet
 
@@ -126,3 +98,11 @@ Learn Student Club PCCOE`, organization type `collegiate_team` or
 tool apply migrations to the production project; have the authorized operator
 review it first. Until the row exists, the `mlsc-pccoe` entry stays inert and
 the card/hero simply show monograms.
+
+## Note on the original 2026-11-28 upload set
+
+The marks were uploaded to Drive by hand; the gateway registers only
+`campus-upload-v3-*` files, so hand-uploaded files can never back the private
+route without re-registration (that is what `npm run club-logos:register`
+does). The current public-thumbnail setup deliberately bypasses the gateway,
+so the hand-uploaded files are now exactly what the site uses.
