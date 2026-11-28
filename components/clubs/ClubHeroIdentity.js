@@ -1,5 +1,6 @@
 import { Badge } from '@/components/ui';
-import { ClubMonogram } from '@/components/clubs/ClubMonogram';
+import { ClubLogo } from '@/components/clubs/ClubLogo';
+import { clubLogoSrc } from '@/lib/clubs/logos';
 import { LinkifiedText } from '@/components/content/LinkifiedText';
 import { CLUB_ORGANIZATION_TYPE_LABELS } from '@/lib/constants';
 import { hasVerifiedRecruitment } from '@/lib/discovery/public';
@@ -8,7 +9,7 @@ import { hasVerifiedRecruitment } from '@/lib/discovery/public';
 export function ClubHeroIdentity({ club, isMember = false }) {
   return (
     <div className="flex items-start gap-3.5">
-      <ClubMonogram name={club.name} id={club.id} size={64} />
+      <ClubLogo src={clubLogoSrc(club.slug)} name={club.name} id={club.id} size={64} />
       <div className="min-w-0 flex-1">
         <p className="font-semibold text-ink">{club.name}</p>
         <p className="text-2xs text-muted">{[club.club_category, CLUB_ORGANIZATION_TYPE_LABELS[club.organization_type]].filter(Boolean).join(' · ')}</p>

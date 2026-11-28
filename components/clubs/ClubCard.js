@@ -2,7 +2,8 @@ import Link from 'next/link';
 import { Badge } from '@/components/ui';
 import { Icon } from '@/components/ui/icons';
 import { hasVerifiedRecruitment } from '@/lib/discovery/public';
-import { ClubMonogram } from '@/components/clubs/ClubMonogram';
+import { ClubLogo } from '@/components/clubs/ClubLogo';
+import { clubLogoSrc } from '@/lib/clubs/logos';
 import { truncate } from '@/lib/utils';
 import { ROUTES, CLUB_CATEGORIES, CLUB_ORGANIZATION_TYPE_LABELS } from '@/lib/constants';
 
@@ -42,7 +43,7 @@ export function ClubCard({ club, joined = false, pending = false, viewer = false
         </div>
 
         <div className="club-card__visual-hero">
-          <ClubMonogram name={club.name} id={club.id} size={58} className="club-card__monogram" />
+          <ClubLogo src={clubLogoSrc(club.slug)} name={club.name} id={club.id} size={58} className="club-card__monogram" />
         </div>
       </div>
 

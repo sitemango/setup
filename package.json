@@ -2,7 +2,7 @@
   "name": "campus-plus",
   "version": "1.0.0",
   "private": true,
-  "description": "Campus+ — an unofficial, text-first digital layer for campus life (PCCOE).",
+  "description": "Campus+ \u2014 an unofficial, text-first digital layer for campus life (PCCOE).",
   "license": "UNLICENSED",
   "engines": {
     "node": "24.x"
@@ -45,7 +45,8 @@
     "verify:offline": "node scripts/dev/timetable-offline-check.mjs",
     "verify:feed": "node scripts/dev/feed-refresh-check.mjs",
     "verify:homefeed": "node scripts/dev/home-feed-depth-check.mjs",
-    "verify:viewport": "node scripts/dev/mobile-fit-check.mjs"
+    "verify:viewport": "node scripts/dev/mobile-fit-check.mjs",
+    "club-logos:register": "node scripts/register-club-logos.mjs"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.7",
